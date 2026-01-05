@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import logoText from "@/assets/logo-text.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,13 +44,17 @@ const Navigation = () => {
           {/* Logo */}
           <a
             href="#"
-            className="font-display text-xl font-semibold tracking-tight"
+            className="block"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            HumanSoft.IT
+            <img 
+              src={logoText} 
+              alt="HumanSoft.IT" 
+              className="h-8 md:h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}

@@ -18,7 +18,6 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "/proc", label: "Proč my" },
     { href: "/sluzby", label: "Služby" },
     { href: "/jak-pracujeme", label: "Jak pracujeme" },
     { href: "/tym", label: "Tým" },

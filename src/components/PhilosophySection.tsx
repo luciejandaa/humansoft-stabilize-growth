@@ -20,7 +20,7 @@ const PhilosophySection = () => {
             {values.map((value, index) => (
               <span
                 key={index}
-                className="px-5 py-2 border border-divider text-sm font-medium tracking-wide"
+                className="px-6 py-3 bg-background border border-divider rounded-xl text-sm font-medium tracking-wide shadow-md hover:shadow-lg transition-shadow duration-200"
               >
                 {value}
               </span>

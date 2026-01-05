@@ -1,0 +1,62 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin } from "lucide-react";
+
+const ContactPage = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main className="pt-20">
+        <section className="section-padding">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h1 className="heading-xl mb-6">
+                Chcete změnu dřív, než bude pozdě?
+              </h1>
+              <p className="body-lg text-subtle">
+                Ozvěte se nám — projdeme vaši situaci a navrhneme další krok.
+              </p>
+            </div>
+
+            <div className="max-w-xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <Button variant="default" size="lg">
+                  Domluvit úvodní konzultaci
+                </Button>
+                <Button variant="outline" size="lg">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Napsat nám
+                </Button>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                    <Mail className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <p className="body-sm text-subtle">info@humansoft.it</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                    <Phone className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <p className="body-sm text-subtle">+420 123 456 789</p>
+                </div>
+                <div>
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                    <MapPin className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <p className="body-sm text-subtle">Praha, Česká republika</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default ContactPage;

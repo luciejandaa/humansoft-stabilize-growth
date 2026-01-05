@@ -30,17 +30,17 @@ const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="mb-4">
-                <span className="font-display text-5xl font-light text-muted-foreground/30">
+              <div className="mb-6">
+                <span className="font-display text-6xl font-bold text-muted-foreground/20">
                   {step.number}
                 </span>
               </div>
               <h3 className="heading-sm mb-3">{step.title}</h3>
               <p className="body-sm text-subtle">{step.description}</p>
 
-              {/* Connector line for desktop */}
+              {/* Connector line for desktop - positioned below the number */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-divider -translate-x-6" />
+                <div className="hidden lg:block absolute top-[4.5rem] left-[4rem] w-[calc(100%+3rem-4rem)] h-px bg-divider" />
               )}
             </div>
           ))}

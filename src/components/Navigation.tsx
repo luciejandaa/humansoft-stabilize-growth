@@ -18,10 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "/sluzby", label: "Služby" },
-    { href: "/jak-pracujeme", label: "Jak pracujeme" },
-    { href: "/tym", label: "Tým" },
+    { href: "/", label: "HumanSoft" },
+    { href: "/hodnoceni", label: "Ohodnoťte svoji firmu" },
     { href: "/reference", label: "Reference" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
@@ -33,13 +33,13 @@ const Navigation = () => {
       }`}
     >
       <div className="section-container">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="block">
             <img 
               src={logoText} 
               alt="HumanSoft.IT" 
-              className="h-8 md:h-10 w-auto"
+              className="h-12 md:h-16 w-auto"
             />
           </Link>
 

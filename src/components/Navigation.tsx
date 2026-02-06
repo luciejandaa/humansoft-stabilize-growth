@@ -21,10 +21,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "/", label: t("nav.home") },
-    { href: "/hodnoceni", label: t("nav.evaluation") },
-    { href: "/reference", label: t("nav.references") },
-    { href: "/blog", label: t("nav.blog") },
+    { href: "/", label: t("nav.home"), highlight: false },
+    { href: "/hodnoceni", label: t("nav.evaluation"), highlight: true },
+    { href: "/reference", label: t("nav.references"), highlight: false },
+    { href: "/blog", label: t("nav.blog"), highlight: false },
+    { href: "/kontakt", label: t("nav.contact"), highlight: false },
   ];
 
   return (
@@ -49,22 +50,25 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === link.href
-                    ? "text-foreground"
-                    : "text-subtle hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.highlight ? (
+                <Button key={link.href} variant="default" size="sm" asChild>
+                  <Link to={link.href}>{link.label}</Link>
+                </Button>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors duration-200 ${
+                    location.pathname === link.href
+                      ? "text-foreground"
+                      : "text-subtle hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <LanguageSwitcher />
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/kontakt">{t("nav.contact")}</Link>
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,27 +86,30 @@ const Navigation = () => {
           <div className="lg:hidden py-6 border-t border-divider animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-left text-base font-medium transition-colors duration-200 py-2 ${
-                    location.pathname === link.href
-                      ? "text-foreground"
-                      : "text-subtle hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.highlight ? (
+                  <Button key={link.href} variant="default" className="w-full" asChild>
+                    <Link to={link.href} onClick={() => setIsMobileMenuOpen(false)}>
+                      {link.label}
+                    </Link>
+                  </Button>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-left text-base font-medium transition-colors duration-200 py-2 ${
+                      location.pathname === link.href
+                        ? "text-foreground"
+                        : "text-subtle hover:text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <div className="flex items-center gap-4 mt-4">
                 <LanguageSwitcher />
               </div>
-              <Button variant="outline" className="mt-2 w-full" asChild>
-                <Link to="/kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                  {t("nav.contact")}
-                </Link>
-              </Button>
             </div>
           </div>
         )}

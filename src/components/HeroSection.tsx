@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import logoText from "@/assets/logo-text.png";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -47,11 +48,25 @@ const HeroSection = () => {
 
       <div className="section-container section-padding">
         <div className="max-w-4xl">
+          {/* Large logo */}
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <img 
+              src={logoText} 
+              alt="HumanSoft.IT" 
+              className="h-20 md:h-28 lg:h-36 w-auto"
+            />
+          </motion.div>
+
           <motion.h1 
             className="heading-xl mb-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <span className="bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
               {t("hero.title")}

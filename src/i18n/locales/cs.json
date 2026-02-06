@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "HumanSoft",
+    "evaluation": "Ohodnotte svoji firmu",
+    "references": "Reference",
+    "blog": "Blog",
+    "contact": "Kontaktujte nas"
+  },
+  "hero": {
+    "title": "Pomahame firmam stabilizovat fungovani driv, nez se z problemu stane krize.",
+    "subtitle": "Vstupujeme do organizaci pet minut pred dvanactou - restrukturalizujeme tymy, nastavujeme procesy a obnovujeme funkcni spolupraci. S respektem k lidem i byznysu.",
+    "cta": "Domluvte si uvodni konzultaci"
+  },
+  "why": {
+    "title": "Proc si firmy zvou HumanSoft.IT",
+    "description": "Kdyz firma roste, tlak na lidi, procesy a vedeni se nasobi. Co drive fungovalo, prestava stacit - roste chaos, zmatek v kompetencich a unava tymu.",
+    "conclusion": "My pomahame tyto situace otocit v prilezitost ke zmene a stabilizaci."
+  },
+  "services": {
+    "title": "Co delame",
+    "quote": "Nasim cilem neni dodat dokument. Nasim cilem je firma, ktera skutecne funguje.",
+    "restructuring": {
+      "title": "Restrukturalizace organizace a tymu",
+      "items": [
+        "mapovani soucasneho stavu, roli a odpovednosti",
+        "identifikace slabych mist a duplicit",
+        "navrh nove struktury a rozhodovacich linii",
+        "doprovod pri zavadeni zmen do praxe"
+      ]
+    },
+    "processes": {
+      "title": "Nastaveni procesu a fungovani firmy",
+      "items": [
+        "standardizace workflow a komunikace",
+        "jasne definovane kompetence a zodpovednosti",
+        "procesni a provozni stabilizace",
+        "predchazeni chybam a provoznim kolizim"
+      ]
+    },
+    "leadership": {
+      "title": "Rozvoj leadershipu a tymove spoluprace",
+      "items": [
+        "prace s manazery a klicovymi lidmi",
+        "posileni self-driven pristupu v tymech",
+        "kultura spoluprace misto haseni pozaru",
+        "dlouhodoba udrzitelnost zmeny"
+      ]
+    }
+  },
+  "process": {
+    "title": "Jak pracujeme",
+    "steps": {
+      "step1": {
+        "title": "Diagnostika a rozhovory",
+        "description": "pozname lidi, vztahy a kontext"
+      },
+      "step2": {
+        "title": "Navrh reseni a roadmapa",
+        "description": "konkretni a proveditelny plan zmeny"
+      },
+      "step3": {
+        "title": "Implementace v praxi",
+        "description": "se zapojenim tymu, ne shora"
+      },
+      "step4": {
+        "title": "Upevneni zmeny a mereni dopadu",
+        "description": "zmena se stava standardem"
+      }
+    }
+  },
+  "team": {
+    "title": "Jsme partneri zmeny - ne externi auditori",
+    "subtitle": "Do firem neprichazime shora. Pracujeme s lidmi, naslouchame kontextu a spolecne s tymy hledame reseni, ktera davaji smysl v praxi. Kazdy z nas prinasi jinou zkusenost - dohromady tvorime kombinaci analytickeho pohledu, lidskeho pristupu a tahouna zmeny.",
+    "focusLabel": "Zamereni",
+    "members": {
+      "member1": {
+        "name": "Jan Novak",
+        "role": "Senior Partner",
+        "focus": "Organizacni design a strategie",
+        "description": "Specializuji se na komplexni transformace firem v rustove fazi. Prinasim strukturovany pohled na procesy a schopnost propojit strategii s operativou."
+      },
+      "member2": {
+        "name": "Petra Svobodova",
+        "role": "Leadership Consultant",
+        "focus": "Rozvoj vedeni a tymova dynamika",
+        "description": "Pracuji s lidry na budovani jejich autentickeho stylu vedeni. Do tymu prinasim nastroje pro efektivni komunikaci a spolupraci."
+      },
+      "member3": {
+        "name": "Martin Cerny",
+        "role": "Process Architect",
+        "focus": "Procesni optimalizace a workflow",
+        "description": "Mapuji a navrhuji procesy, ktere skutecne funguji. Propojuji analyticky pristup s praktickou implementaci v realnem prostredi."
+      }
+    }
+  },
+  "contact": {
+    "title": "Chcete zmenu driv, nez bude pozde?",
+    "subtitle": "Ozvete se nam - projdeme vasi situaci a navrhneme dalsi krok.",
+    "cta": "Domluvit uvodni konzultaci",
+    "writeUs": "Napsat nam",
+    "email": "info@humansoft.it",
+    "phone": "+420 123 456 789",
+    "location": "Praha, Ceska republika"
+  },
+  "footer": {
+    "rights": "Vsechna prava vyhrazena."
+  },
+  "evaluation": {
+    "title": "Ohodnotte svoji firmu",
+    "subtitle": "Zjistete, jak na tom vase firma je a kde jsou prilezitosti ke zlepseni.",
+    "comingSoon": "Interaktivni hodnoceni bude brzy k dispozici."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Postrehy a zkusenosti z praxe transformace firem.",
+    "comingSoon": "Clanky budou brzy k dispozici."
+  },
+  "references": {
+    "title": "Reference",
+    "subtitle": "Pribehy firem, kterym jsme pomohli.",
+    "labels": {
+      "situation": "Vychozi situace",
+      "approach": "Nas pristup",
+      "result": "Vysledek"
+    },
+    "cases": {
+      "case1": {
+        "title": "Technologicka firma, 150 zamestnancu",
+        "type": "Restrukturalizace a procesni stabilizace",
+        "situation": "Rychly rust vedl k chaosu v rolich a odpovednostech. Tri oddeleni pracovala paralelne na stejnych ukolech.",
+        "approach": "Diagnostika stavu, navrh nove organizacni struktury, facilitace prechodu s klicovymi stakeholdery.",
+        "result": "Jasna struktura tymu, redukce duplicit o 40%, zvyseni spokojenosti zamestnancu."
+      },
+      "case2": {
+        "title": "Vyrobni podnik, rodinna firma",
+        "type": "Leadership development a nastupnictvi",
+        "situation": "Generacni vymena ve vedeni, nejasna vize a napeti mezi starym a novym managementem.",
+        "approach": "Prace s obema generacemi, facilitace strategickych workshopu, koucovani noveho vedeni.",
+        "result": "Hladky prechod vedeni, nova strategicka vize sdilena celym tymem."
+      },
+      "case3": {
+        "title": "IT agentura, scale-up faze",
+        "type": "Procesni architektura",
+        "situation": "Rust z 20 na 80 lidi behem 2 let. Procesy neexistovaly, vse drzelo na jednotlivcich.",
+        "approach": "Mapovani klicovych procesu, standardizace workflow, zavedeni dokumentace a onboardingu.",
+        "result": "Skalovatelne procesy, zkraceni onboardingu o 60%, stabilni operativa."
+      }
+    }
+  }
+}

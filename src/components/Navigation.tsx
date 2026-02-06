@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import logoText from "@/assets/logo-text.png";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +21,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "HumanSoft" },
-    { href: "/hodnoceni", label: "Ohodnoťte svoji firmu" },
-    { href: "/reference", label: "Reference" },
-    { href: "/blog", label: "Blog" },
+    { href: "/", label: t("nav.home") },
+    { href: "/hodnoceni", label: t("nav.evaluation") },
+    { href: "/reference", label: t("nav.references") },
+    { href: "/blog", label: t("nav.blog") },
   ];
 
   return (
@@ -58,8 +61,9 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Button variant="outline" size="sm" asChild>
-              <Link to="/kontakt">Kontaktujte nás</Link>
+              <Link to="/kontakt">{t("nav.contact")}</Link>
             </Button>
           </div>
 
@@ -91,9 +95,12 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button variant="outline" className="mt-4 w-full" asChild>
+              <div className="flex items-center gap-4 mt-4">
+                <LanguageSwitcher />
+              </div>
+              <Button variant="outline" className="mt-2 w-full" asChild>
                 <Link to="/kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                  Kontaktujte nás
+                  {t("nav.contact")}
                 </Link>
               </Button>
             </div>

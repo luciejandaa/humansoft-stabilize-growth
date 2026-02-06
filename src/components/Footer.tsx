@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import logoIcon from "@/assets/logo-icon.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,7 +21,7 @@ const Footer = () => {
           </div>
           
           <p className="text-sm text-subtle">
-            © {currentYear} HumanSoft.IT. Všechna práva vyhrazena.
+            © {currentYear} HumanSoft.IT. {t("footer.rights")}
           </p>
         </div>
       </div>

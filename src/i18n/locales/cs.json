@@ -1,49 +1,49 @@
 {
   "nav": {
     "home": "HumanSoft",
-    "evaluation": "Ohodnotte svoji firmu",
+    "evaluation": "Ohodnoťte svoji firmu",
     "references": "Reference",
     "blog": "Blog",
-    "contact": "Kontaktujte nas"
+    "contact": "Kontaktujte nás"
   },
   "hero": {
-    "title": "Pomahame firmam stabilizovat fungovani driv, nez se z problemu stane krize.",
-    "subtitle": "Vstupujeme do organizaci pet minut pred dvanactou - restrukturalizujeme tymy, nastavujeme procesy a obnovujeme funkcni spolupraci. S respektem k lidem i byznysu.",
-    "cta": "Domluvte si uvodni konzultaci"
+    "title": "Pomáháme firmám stabilizovat fungování dřív, než se z problému stane krize.",
+    "subtitle": "Vstupujeme do organizací pět minut před dvanáctou - restrukturalizujeme týmy, nastavujeme procesy a obnovujeme funkční spolupráci. S respektem k lidem i byznysu.",
+    "cta": "Domluvte si úvodní konzultaci"
   },
   "why": {
-    "title": "Proc si firmy zvou HumanSoft.IT",
-    "description": "Kdyz firma roste, tlak na lidi, procesy a vedeni se nasobi. Co drive fungovalo, prestava stacit - roste chaos, zmatek v kompetencich a unava tymu.",
-    "conclusion": "My pomahame tyto situace otocit v prilezitost ke zmene a stabilizaci."
+    "title": "Proč si firmy zvolí HumanSoft.IT",
+    "description": "Když firma roste, tlak na lidi, procesy a vedení se násobí. Co dříve fungovalo, přestává stačit - roste chaos, zmatek v kompetencích a únava týmu.",
+    "conclusion": "My pomáháme tyto situace otočit v příležitost ke změně a stabilizaci."
   },
   "services": {
-    "title": "Co delame",
-    "quote": "Nasim cilem neni dodat dokument. Nasim cilem je firma, ktera skutecne funguje.",
+    "title": "Co děláme",
+    "quote": "Naším cílem není dodat dokument. Naším cílem je firma, která skutečně funguje.",
     "restructuring": {
-      "title": "Restrukturalizace organizace a tymu",
+      "title": "Restrukturalizace organizace a týmu",
       "items": [
-        "mapovani soucasneho stavu, roli a odpovednosti",
-        "identifikace slabych mist a duplicit",
-        "navrh nove struktury a rozhodovacich linii",
-        "doprovod pri zavadeni zmen do praxe"
+        "mapování současného stavu, rolí a odpovědnosti",
+        "identifikace slabých míst a duplicit",
+        "návrh nové struktury a rozhodovacích linií",
+        "doprovod při zavádění změn do praxe"
       ]
     },
     "processes": {
-      "title": "Nastaveni procesu a fungovani firmy",
+      "title": "Nastavení procesů a fungování firmy",
       "items": [
         "standardizace workflow a komunikace",
-        "jasne definovane kompetence a zodpovednosti",
-        "procesni a provozni stabilizace",
-        "predchazeni chybam a provoznim kolizim"
+        "jasně definované kompetence a zodpovědnosti",
+        "procesní a provozní stabilizace",
+        "předcházení chybám a provozním kolizím"
       ]
     },
     "leadership": {
-      "title": "Rozvoj leadershipu a tymove spoluprace",
+      "title": "Rozvoj leadershipu a týmové spolupráce",
       "items": [
-        "prace s manazery a klicovymi lidmi",
-        "posileni self-driven pristupu v tymech",
-        "kultura spoluprace misto haseni pozaru",
-        "dlouhodoba udrzitelnost zmeny"
+        "práce s manažery a klíčovými lidmi",
+        "posílení self-driven přístupu v týmech",
+        "kultura spolupráce místo hašení požárů",
+        "dlouhodobá udržitelnost změny"
       ]
     }
   },
@@ -52,98 +52,98 @@
     "steps": {
       "step1": {
         "title": "Diagnostika a rozhovory",
-        "description": "pozname lidi, vztahy a kontext"
+        "description": "poznáme lidi, vztahy a kontext"
       },
       "step2": {
-        "title": "Navrh reseni a roadmapa",
-        "description": "konkretni a proveditelny plan zmeny"
+        "title": "Návrh řešení a roadmapa",
+        "description": "konkrétní a proveditelný plán změny"
       },
       "step3": {
         "title": "Implementace v praxi",
-        "description": "se zapojenim tymu, ne shora"
+        "description": "se zapojením týmu, ne shora"
       },
       "step4": {
-        "title": "Upevneni zmeny a mereni dopadu",
-        "description": "zmena se stava standardem"
+        "title": "Upevnění změny a měření dopadu",
+        "description": "změna se stává standardem"
       }
     }
   },
   "team": {
-    "title": "Jsme partneri zmeny - ne externi auditori",
-    "subtitle": "Do firem neprichazime shora. Pracujeme s lidmi, naslouchame kontextu a spolecne s tymy hledame reseni, ktera davaji smysl v praxi. Kazdy z nas prinasi jinou zkusenost - dohromady tvorime kombinaci analytickeho pohledu, lidskeho pristupu a tahouna zmeny.",
-    "focusLabel": "Zamereni",
+    "title": "Jsme partneři změny - ne externí auditori",
+    "subtitle": "Do firem nepřicházíme shora. Pracujeme s lidmi, nasloucháme kontextu a společně s týmy hledáme řešení, která dávají smysl v praxi. Každý z nás přináší jinou zkušenost - dohromady tvoříme kombinaci analytického pohledu, lidského přístupu a tahoun změny.",
+    "focusLabel": "Zaměření",
     "members": {
       "member1": {
-        "name": "Jan Novak",
+        "name": "Jan Novák",
         "role": "Senior Partner",
-        "focus": "Organizacni design a strategie",
-        "description": "Specializuji se na komplexni transformace firem v rustove fazi. Prinasim strukturovany pohled na procesy a schopnost propojit strategii s operativou."
+        "focus": "Organizační design a strategie",
+        "description": "Specializuji se na komplexní transformace firem v růstové fázi. Přináším strukturovaný pohled na procesy a schopnost propojit strategii s operativou."
       },
       "member2": {
-        "name": "Petra Svobodova",
+        "name": "Petra Svobodová",
         "role": "Leadership Consultant",
-        "focus": "Rozvoj vedeni a tymova dynamika",
-        "description": "Pracuji s lidry na budovani jejich autentickeho stylu vedeni. Do tymu prinasim nastroje pro efektivni komunikaci a spolupraci."
+        "focus": "Rozvoj vedení a týmová dynamika",
+        "description": "Pracuji s lídry na budování jejich autentického stylu vedení. Do týmu přináším nástroje pro efektivní komunikaci a spolupráci."
       },
       "member3": {
-        "name": "Martin Cerny",
+        "name": "Martin Černý",
         "role": "Process Architect",
-        "focus": "Procesni optimalizace a workflow",
-        "description": "Mapuji a navrhuji procesy, ktere skutecne funguji. Propojuji analyticky pristup s praktickou implementaci v realnem prostredi."
+        "focus": "Procesní optimalizace a workflow",
+        "description": "Mapuji a navrhují procesy, které skutečně fungují. Propojuji analytický přístup s praktickou implementací v reálném prostředí."
       }
     }
   },
   "contact": {
-    "title": "Chcete zmenu driv, nez bude pozde?",
-    "subtitle": "Ozvete se nam - projdeme vasi situaci a navrhneme dalsi krok.",
-    "cta": "Domluvit uvodni konzultaci",
-    "writeUs": "Napsat nam",
+    "title": "Chcete změnu dřív, než bude pozdě?",
+    "subtitle": "Ozvěte se nám - projdeme vaší situací a navrhneme další krok.",
+    "cta": "Domluvit úvodní konzultaci",
+    "writeUs": "Napsat nám",
     "email": "info@humansoft.it",
     "phone": "+420 123 456 789",
-    "location": "Praha, Ceska republika"
+    "location": "Praha, Česká republika"
   },
   "footer": {
-    "rights": "Vsechna prava vyhrazena."
+    "rights": "Všechna práva vyhrazena."
   },
   "evaluation": {
-    "title": "Ohodnotte svoji firmu",
-    "subtitle": "Zjistete, jak na tom vase firma je a kde jsou prilezitosti ke zlepseni.",
-    "comingSoon": "Interaktivni hodnoceni bude brzy k dispozici."
+    "title": "Ohodnoťte svoji firmu",
+    "subtitle": "Zjistěte, jak na tom vaše firma je a kde jsou příležitosti ke zlepšení.",
+    "comingSoon": "Interaktivní hodnocení bude brzy k dispozici."
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Postrehy a zkusenosti z praxe transformace firem.",
-    "comingSoon": "Clanky budou brzy k dispozici."
+    "subtitle": "Postřehy a zkušenosti z praxe transformace firem.",
+    "comingSoon": "Články budou brzy k dispozici."
   },
   "references": {
     "title": "Reference",
-    "subtitle": "Pribehy firem, kterym jsme pomohli.",
+    "subtitle": "Příběhy firem, kterým jsme pomohli.",
     "labels": {
-      "situation": "Vychozi situace",
-      "approach": "Nas pristup",
-      "result": "Vysledek"
+      "situation": "Výchozí situace",
+      "approach": "Náš přístup",
+      "result": "Výsledek"
     },
     "cases": {
       "case1": {
-        "title": "Technologicka firma, 150 zamestnancu",
-        "type": "Restrukturalizace a procesni stabilizace",
-        "situation": "Rychly rust vedl k chaosu v rolich a odpovednostech. Tri oddeleni pracovala paralelne na stejnych ukolech.",
-        "approach": "Diagnostika stavu, navrh nove organizacni struktury, facilitace prechodu s klicovymi stakeholdery.",
-        "result": "Jasna struktura tymu, redukce duplicit o 40%, zvyseni spokojenosti zamestnancu."
+        "title": "Technologická firma, 150 zaměstnanců",
+        "type": "Restrukturalizace a procesní stabilizace",
+        "situation": "Rychlý růst vedl k chaosu v rolích a odpovědnostech. Tři oddělení pracovala paralelně na stejných úkolech.",
+        "approach": "Diagnostika stavu, návrh nové organizační struktury, facilitace přechodu s klíčovými stakeholdery.",
+        "result": "Jasná struktura týmů, redukce duplicit o 40%, zvýšení spokojenosti zaměstnanců."
       },
       "case2": {
-        "title": "Vyrobni podnik, rodinna firma",
-        "type": "Leadership development a nastupnictvi",
-        "situation": "Generacni vymena ve vedeni, nejasna vize a napeti mezi starym a novym managementem.",
-        "approach": "Prace s obema generacemi, facilitace strategickych workshopu, koucovani noveho vedeni.",
-        "result": "Hladky prechod vedeni, nova strategicka vize sdilena celym tymem."
+        "title": "Výrobní podnik, rodinná firma",
+        "type": "Leadership development a nástupnictví",
+        "situation": "Generační výměna ve vedení, nejasná vize a napětí mezi starým a novým managementem.",
+        "approach": "Práce s oběma generacemi, facilitace strategických workshopů, koučování nového vedení.",
+        "result": "Hladký přechod vedení, nová strategická vize sdílená celým týmem."
       },
       "case3": {
-        "title": "IT agentura, scale-up faze",
-        "type": "Procesni architektura",
-        "situation": "Rust z 20 na 80 lidi behem 2 let. Procesy neexistovaly, vse drzelo na jednotlivcich.",
-        "approach": "Mapovani klicovych procesu, standardizace workflow, zavedeni dokumentace a onboardingu.",
-        "result": "Skalovatelne procesy, zkraceni onboardingu o 60%, stabilni operativa."
+        "title": "IT agentura, scale-up fáze",
+        "type": "Procesní architektura",
+        "situation": "Růst z 20 na 80 lidí během 2 let. Procesy neexistovaly, vše drželo na jednotlivcích.",
+        "approach": "Mapování klíčových procesů, standardizace workflow, zavedení dokumentace a onboardingu.",
+        "result": "Škálovatelné procesy, zkrácení onboardingu o 60%, stabilní operativa."
       }
     }
   }

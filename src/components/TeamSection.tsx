@@ -1,40 +1,38 @@
-const teamMembers = [
-  {
-    name: "Jan Novák",
-    role: "Senior Partner",
-    focus: "Organizační design & strategie",
-    description:
-      "Specializuji se na komplexní transformace firem v růstové fázi. Přináším strukturovaný pohled na procesy a schopnost propojit strategii s operativou.",
-  },
-  {
-    name: "Petra Svobodová",
-    role: "Leadership Consultant",
-    focus: "Rozvoj vedení & týmová dynamika",
-    description:
-      "Pracuji s lídry na budování jejich autentického stylu vedení. Do týmů přináším nástroje pro efektivní komunikaci a spolupráci.",
-  },
-  {
-    name: "Martin Černý",
-    role: "Process Architect",
-    focus: "Procesní optimalizace & workflow",
-    description:
-      "Mapuji a navrhuji procesy, které skutečně fungují. Propojuji analytický přístup s praktickou implementací v reálném prostředí.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const TeamSection = () => {
+  const { t } = useTranslation();
+
+  const teamMembers = [
+    {
+      name: t("team.members.member1.name"),
+      role: t("team.members.member1.role"),
+      focus: t("team.members.member1.focus"),
+      description: t("team.members.member1.description"),
+    },
+    {
+      name: t("team.members.member2.name"),
+      role: t("team.members.member2.role"),
+      focus: t("team.members.member2.focus"),
+      description: t("team.members.member2.description"),
+    },
+    {
+      name: t("team.members.member3.name"),
+      role: t("team.members.member3.role"),
+      focus: t("team.members.member3.focus"),
+      description: t("team.members.member3.description"),
+    },
+  ];
+
   return (
     <section id="tym" className="section-padding bg-secondary">
       <div className="section-container">
         <div className="max-w-3xl mb-16">
           <h2 className="heading-lg mb-6">
-            Jsme partneři změny — ne externí auditoři
+            {t("team.title")}
           </h2>
           <p className="body-lg text-subtle">
-            Do firem nepřicházíme „shora". Pracujeme s lidmi, nasloucháme kontextu a společně 
-            s týmy hledáme řešení, která dávají smysl v praxi. Každý z nás přináší jinou 
-            zkušenost — dohromady tvoříme kombinaci analytického pohledu, lidského přístupu 
-            a tahouna změny.
+            {t("team.subtitle")}
           </p>
         </div>
 
@@ -56,7 +54,7 @@ const TeamSection = () => {
 
               <div className="mb-4 pb-4 border-b border-divider">
                 <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
-                  Zaměření
+                  {t("team.focusLabel")}
                 </span>
                 <p className="body-sm mt-1">{member.focus}</p>
               </div>

@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   const scrollToContact = () => {
     const element = document.querySelector("#kontakt");
     if (element) {
@@ -14,17 +17,16 @@ const HeroSection = () => {
       <div className="section-container section-padding">
         <div className="max-w-4xl">
           <h1 className="heading-xl mb-8 animate-fade-in-up">
-            Pomáháme firmám stabilizovat fungování dřív, než se z problémů stane krize.
+            {t("hero.title")}
           </h1>
           
           <p className="body-lg text-subtle mb-12 max-w-3xl animate-fade-in-up delay-100">
-            Vstupujeme do organizací „pět minut před dvanáctou" — restrukturalizujeme týmy, 
-            nastavujeme procesy a obnovujeme funkční spolupráci. S respektem k lidem i byznysu.
+            {t("hero.subtitle")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
             <Button variant="hero" onClick={scrollToContact}>
-              Domluvte si úvodní konzultaci
+              {t("hero.cta")}
               <ArrowRight className="ml-2" size={18} />
             </Button>
           </div>

@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "HumanSoft",
+    "evaluation": "Evaluate Your Company",
+    "references": "References",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "We help companies stabilize operations before problems become crises.",
+    "subtitle": "We step into organizations five minutes before midnight - restructuring teams, setting up processes, and restoring functional collaboration. With respect for people and business.",
+    "cta": "Schedule an Initial Consultation"
+  },
+  "why": {
+    "title": "Why Companies Choose HumanSoft.IT",
+    "description": "When a company grows, pressure on people, processes, and leadership multiplies. What used to work is no longer enough - chaos grows, competencies become unclear, and teams get exhausted.",
+    "conclusion": "We help turn these situations into opportunities for change and stabilization."
+  },
+  "services": {
+    "title": "What We Do",
+    "quote": "Our goal is not to deliver a document. Our goal is a company that actually works.",
+    "restructuring": {
+      "title": "Organization and Team Restructuring",
+      "items": [
+        "mapping current state, roles, and responsibilities",
+        "identifying weak points and duplicities",
+        "designing new structure and decision lines",
+        "accompanying implementation of changes"
+      ]
+    },
+    "processes": {
+      "title": "Process and Operations Setup",
+      "items": [
+        "workflow and communication standardization",
+        "clearly defined competencies and responsibilities",
+        "process and operational stabilization",
+        "preventing errors and operational conflicts"
+      ]
+    },
+    "leadership": {
+      "title": "Leadership and Team Development",
+      "items": [
+        "working with managers and key people",
+        "strengthening self-driven approach in teams",
+        "collaboration culture instead of firefighting",
+        "long-term sustainability of change"
+      ]
+    }
+  },
+  "process": {
+    "title": "How We Work",
+    "steps": {
+      "step1": {
+        "title": "Diagnostics and Interviews",
+        "description": "understanding people, relationships, and context"
+      },
+      "step2": {
+        "title": "Solution Design and Roadmap",
+        "description": "concrete and actionable change plan"
+      },
+      "step3": {
+        "title": "Implementation in Practice",
+        "description": "with team involvement, not top-down"
+      },
+      "step4": {
+        "title": "Change Consolidation and Impact Measurement",
+        "description": "change becomes the standard"
+      }
+    }
+  },
+  "team": {
+    "title": "We Are Change Partners - Not External Auditors",
+    "subtitle": "We do not come to companies from above. We work with people, listen to context, and together with teams find solutions that make sense in practice. Each of us brings different experience - together we form a combination of analytical view, human approach, and change driver.",
+    "focusLabel": "Focus",
+    "members": {
+      "member1": {
+        "name": "Jan Novak",
+        "role": "Senior Partner",
+        "focus": "Organizational Design and Strategy",
+        "description": "I specialize in complex transformations of companies in growth phase. I bring a structured view of processes and ability to connect strategy with operations."
+      },
+      "member2": {
+        "name": "Petra Svobodova",
+        "role": "Leadership Consultant",
+        "focus": "Leadership Development and Team Dynamics",
+        "description": "I work with leaders on building their authentic leadership style. I bring tools for effective communication and collaboration to teams."
+      },
+      "member3": {
+        "name": "Martin Cerny",
+        "role": "Process Architect",
+        "focus": "Process Optimization and Workflow",
+        "description": "I map and design processes that actually work. I connect analytical approach with practical implementation in real environment."
+      }
+    }
+  },
+  "contact": {
+    "title": "Want Change Before It Is Too Late?",
+    "subtitle": "Get in touch - we will review your situation and suggest next steps.",
+    "cta": "Schedule Initial Consultation",
+    "writeUs": "Write to Us",
+    "email": "info@humansoft.it",
+    "phone": "+420 123 456 789",
+    "location": "Prague, Czech Republic"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "evaluation": {
+    "title": "Evaluate Your Company",
+    "subtitle": "Find out how your company is doing and where opportunities for improvement lie.",
+    "comingSoon": "Interactive evaluation coming soon."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights and experiences from company transformation practice.",
+    "comingSoon": "Articles coming soon."
+  },
+  "references": {
+    "title": "References",
+    "subtitle": "Stories of companies we have helped.",
+    "labels": {
+      "situation": "Initial Situation",
+      "approach": "Our Approach",
+      "result": "Result"
+    },
+    "cases": {
+      "case1": {
+        "title": "Technology Company, 150 Employees",
+        "type": "Restructuring and Process Stabilization",
+        "situation": "Rapid growth led to chaos in roles and responsibilities. Three departments worked in parallel on the same tasks.",
+        "approach": "State diagnostics, design of new organizational structure, facilitation of transition with key stakeholders.",
+        "result": "Clear team structure, 40% reduction in duplicities, increased employee satisfaction."
+      },
+      "case2": {
+        "title": "Manufacturing Company, Family Business",
+        "type": "Leadership Development and Succession",
+        "situation": "Generational change in leadership, unclear vision and tension between old and new management.",
+        "approach": "Working with both generations, facilitating strategic workshops, coaching new leadership.",
+        "result": "Smooth leadership transition, new strategic vision shared by the entire team."
+      },
+      "case3": {
+        "title": "IT Agency, Scale-up Phase",
+        "type": "Process Architecture",
+        "situation": "Growth from 20 to 80 people in 2 years. Processes did not exist, everything depended on individuals.",
+        "approach": "Mapping key processes, standardizing workflow, implementing documentation and onboarding.",
+        "result": "Scalable processes, 60% reduction in onboarding time, stable operations."
+      }
+    }
+  }
+}

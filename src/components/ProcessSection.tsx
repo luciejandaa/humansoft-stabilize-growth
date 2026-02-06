@@ -1,31 +1,35 @@
-const steps = [
-  {
-    number: "01",
-    title: "Diagnostika & rozhovory",
-    description: "poznáme lidi, vztahy a kontext",
-  },
-  {
-    number: "02",
-    title: "Návrh řešení & roadmapa",
-    description: "konkrétní a proveditelný plán změny",
-  },
-  {
-    number: "03",
-    title: "Implementace v praxi",
-    description: "se zapojením týmů, ne shora",
-  },
-  {
-    number: "04",
-    title: "Upevnění změny & měření dopadu",
-    description: "změna se stává standardem",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ProcessSection = () => {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: "01",
+      title: t("process.steps.step1.title"),
+      description: t("process.steps.step1.description"),
+    },
+    {
+      number: "02",
+      title: t("process.steps.step2.title"),
+      description: t("process.steps.step2.description"),
+    },
+    {
+      number: "03",
+      title: t("process.steps.step3.title"),
+      description: t("process.steps.step3.description"),
+    },
+    {
+      number: "04",
+      title: t("process.steps.step4.title"),
+      description: t("process.steps.step4.description"),
+    },
+  ];
+
   return (
     <section id="jak-pracujeme" className="section-padding bg-secondary">
       <div className="section-container">
-        <h2 className="heading-lg mb-16 text-center">Jak pracujeme</h2>
+        <h2 className="heading-lg mb-16 text-center">{t("process.title")}</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {steps.map((step, index) => (

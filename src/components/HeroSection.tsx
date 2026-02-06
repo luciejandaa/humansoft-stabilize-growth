@@ -47,10 +47,10 @@ const HeroSection = () => {
       />
 
       <div className="section-container section-padding">
-        <div className="max-w-4xl">
-          {/* Large logo */}
+        <div className="w-full text-center">
+          {/* Large centered logo - full width */}
           <motion.div
-            className="mb-12"
+            className="mb-16 flex justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
@@ -58,12 +58,12 @@ const HeroSection = () => {
             <img 
               src={logoText} 
               alt="HumanSoft.IT" 
-              className="h-20 md:h-28 lg:h-36 w-auto"
+              className="w-full max-w-4xl h-auto"
             />
           </motion.div>
 
           <motion.h1 
-            className="heading-xl mb-8"
+            className="heading-xl mb-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -74,16 +74,16 @@ const HeroSection = () => {
           </motion.h1>
           
           <motion.p 
-            className="body-lg text-subtle mb-12 max-w-3xl"
+            className="body-lg text-subtle mb-12 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {t("hero.subtitle")}
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}

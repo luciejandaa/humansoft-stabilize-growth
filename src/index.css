@@ -6,40 +6,45 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
+    --background: 45 20% 98%;
+    --foreground: 220 25% 10%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 5%;
+    --card: 45 15% 96%;
+    --card-foreground: 220 25% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 45 20% 98%;
+    --popover-foreground: 220 25% 10%;
 
-    --primary: 0 0% 5%;
+    --primary: 220 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 5%;
+    --secondary: 45 15% 93%;
+    --secondary-foreground: 220 25% 10%;
 
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 45 10% 90%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 0 0% 90%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 35 85% 55%;
+    --accent-foreground: 220 25% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 0 0% 5%;
+    --border: 45 15% 88%;
+    --input: 45 15% 88%;
+    --ring: 220 70% 45%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
     /* Custom tokens */
-    --text-subtle: 0 0% 50%;
-    --surface-elevated: 0 0% 99%;
-    --divider: 0 0% 85%;
+    --text-subtle: 220 15% 45%;
+    --surface-elevated: 45 20% 99%;
+    --divider: 45 15% 85%;
+    
+    /* Brand colors */
+    --brand-primary: 220 70% 45%;
+    --brand-secondary: 35 85% 55%;
+    --brand-gradient: linear-gradient(135deg, hsl(220 70% 45%) 0%, hsl(260 60% 50%) 100%);
 
     /* Typography */
     --font-display: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -54,34 +59,37 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
+    --background: 220 25% 8%;
+    --foreground: 45 15% 95%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 25% 12%;
+    --card-foreground: 45 15% 95%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 45 15% 95%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 220 70% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 45 15% 95%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 35 85% 55%;
+    --accent-foreground: 220 25% 10%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 85%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 220 70% 55%;
 
-    --text-subtle: 0 0% 55%;
-    --surface-elevated: 0 0% 10%;
-    --divider: 0 0% 20%;
+    --text-subtle: 220 15% 60%;
+    --surface-elevated: 220 25% 12%;
+    --divider: 220 20% 20%;
+    
+    --brand-primary: 220 70% 55%;
+    --brand-secondary: 35 85% 55%;
   }
 }
 

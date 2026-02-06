@@ -1,21 +1,28 @@
 import { useTranslation } from "react-i18next";
 import logoIcon from "@/assets/logo-icon.png";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 border-t border-divider">
+    <motion.footer 
+      className="py-12 border-t border-divider bg-gradient-to-b from-background to-secondary/30"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="section-container">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3 group">
             <img 
               src={logoIcon} 
               alt="HumanSoft.IT" 
-              className="h-8 w-auto"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="font-display text-lg font-bold tracking-tight">
+            <span className="font-display text-xl font-bold tracking-tight">
               HumanSoft.IT
             </span>
           </div>
@@ -25,7 +32,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

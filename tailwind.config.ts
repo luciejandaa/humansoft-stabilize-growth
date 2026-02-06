@@ -54,6 +54,10 @@ export default {
         subtle: "hsl(var(--text-subtle))",
         divider: "hsl(var(--divider))",
         elevated: "hsl(var(--surface-elevated))",
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

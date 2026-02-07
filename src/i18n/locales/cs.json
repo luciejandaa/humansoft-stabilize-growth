@@ -1,8 +1,9 @@
 {
   "nav": {
     "home": "HumanSoft",
+    "services": "Služby",
     "evaluation": "Ohodnoťte svoji firmu",
-    "references": "Reference",
+    "references": "Reference a případové studie",
     "blog": "Blog",
     "contact": "Kontaktujte nás"
   },
@@ -10,6 +11,20 @@
     "title": "Pomáháme firmám stabilizovat fungování dřív, než se z problému stane krize.",
     "subtitle": "Vstupujeme do organizací pět minut před dvanáctou - restrukturalizujeme týmy, nastavujeme procesy a obnovujeme funkční spolupráci. S respektem k lidem i byznysu.",
     "cta": "Domluvte si úvodní konzultaci"
+  },
+  "about": {
+    "title": "O nás",
+    "vision": {
+      "label": "Naše vize",
+      "text": "Věříme ve svět, kde propojení technické odbornosti a klíčových soft skills tvoří jádro špičkových technologických firem."
+    },
+    "mission": {
+      "label": "Naše mise",
+      "text": "Poskytujeme řešení a nástroje šité na míru, které zvyšují efektivitu, posilují jednotlivce a podporují růst týmů. Startujeme samostatně řízený proces řešení firemních výzev s udržitelným efektem."
+    },
+    "valuesLabel": "Naše hodnoty",
+    "values": ["Svoboda", "Smysl", "Osobní růst", "Práce", "Zábava & radost"],
+    "cta": "Pojďme to probrat"
   },
   "why": {
     "title": "Proč si firmy zvolí HumanSoft.IT",
@@ -19,6 +34,7 @@
   "services": {
     "title": "Co děláme",
     "quote": "Naším cílem není dodat dokument. Naším cílem je firma, která skutečně funguje.",
+    "cta": "Zjistěte více o našich službách",
     "restructuring": {
       "title": "Restrukturalizace organizace a týmu",
       "items": [
@@ -49,6 +65,7 @@
   },
   "process": {
     "title": "Jak pracujeme",
+    "cta": "Začněte s námi",
     "steps": {
       "step1": {
         "title": "Diagnostika a rozhovory",
@@ -69,27 +86,37 @@
     }
   },
   "team": {
-    "title": "Jsme partneři změny - ne externí auditori",
-    "subtitle": "Do firem nepřicházíme shora. Pracujeme s lidmi, nasloucháme kontextu a společně s týmy hledáme řešení, která dávají smysl v praxi. Každý z nás přináší jinou zkušenost - dohromady tvoříme kombinaci analytického pohledu, lidského přístupu a tahoun změny.",
-    "focusLabel": "Zaměření",
+    "title": "Náš tým",
+    "subtitle": "Jsme partneři změny - ne externí auditori. Do firem nepřicházíme shora. Pracujeme s lidmi, nasloucháme kontextu a společně s týmy hledáme řešení, která dávají smysl v praxi.",
+    "cta": "Poznejte nás blíže",
     "members": {
       "member1": {
-        "name": "Jan Novák",
-        "role": "Senior Partner",
-        "focus": "Organizační design a strategie",
-        "description": "Specializuji se na komplexní transformace firem v růstové fázi. Přináším strukturovaný pohled na procesy a schopnost propojit strategii s operativou."
+        "name": "Daniela Kolomazníková",
+        "role": "Spolumajitelka"
       },
       "member2": {
-        "name": "Petra Svobodová",
-        "role": "Leadership Consultant",
-        "focus": "Rozvoj vedení a týmová dynamika",
-        "description": "Pracuji s lídry na budování jejich autentického stylu vedení. Do týmu přináším nástroje pro efektivní komunikaci a spolupráci."
+        "name": "Pavel Vřesňák",
+        "role": "Spolumajitel"
       },
       "member3": {
-        "name": "Martin Černý",
-        "role": "Process Architect",
-        "focus": "Procesní optimalizace a workflow",
-        "description": "Mapuji a navrhují procesy, které skutečně fungují. Propojuji analytický přístup s praktickou implementací v reálném prostředí."
+        "name": "Lucie Janda",
+        "role": "Asistentka, koordinátor"
+      },
+      "member4": {
+        "name": "Milan Košdy",
+        "role": "Konzultant"
+      },
+      "member5": {
+        "name": "František Fiala",
+        "role": "Konzultant"
+      },
+      "member6": {
+        "name": "Veronika Hegrová",
+        "role": "Konzultant"
+      },
+      "member7": {
+        "name": "Monika Kunešová",
+        "role": "Konzultant"
       }
     }
   },
@@ -108,7 +135,8 @@
   "evaluation": {
     "title": "Ohodnoťte svoji firmu",
     "subtitle": "Zjistěte, jak na tom vaše firma je a kde jsou příležitosti ke zlepšení.",
-    "comingSoon": "Interaktivní hodnocení bude brzy k dispozici."
+    "comingSoon": "Interaktivní hodnocení bude brzy k dispozici.",
+    "cta": "Chci vyplnit hodnocení"
   },
   "blog": {
     "title": "Blog",
@@ -116,8 +144,9 @@
     "comingSoon": "Články budou brzy k dispozici."
   },
   "references": {
-    "title": "Reference",
+    "title": "Reference a případové studie",
     "subtitle": "Příběhy firem, kterým jsme pomohli.",
+    "cta": "Chci podobné výsledky",
     "labels": {
       "situation": "Výchozí situace",
       "approach": "Náš přístup",

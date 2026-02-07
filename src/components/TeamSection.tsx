@@ -20,7 +20,7 @@ const TeamSection = () => {
   return (
     <section id="tym" className="section-padding bg-gradient-to-b from-secondary/50 to-secondary">
       <div className="section-container">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <AnimatedSection>
             <h2 className="heading-lg mb-6">
               {t("team.title")}
@@ -59,7 +59,7 @@ const TeamSection = () => {
         <AnimatedText delay={0.4}>
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
-              <Link to="/kontakt" className="inline-flex items-center gap-2">
+              <Link to="/tym" className="inline-flex items-center gap-2">
                 {t("team.cta")}
                 <ArrowRight className="w-4 h-4" />
               </Link>

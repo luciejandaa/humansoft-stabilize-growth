@@ -36,25 +36,25 @@ const TeamPage = () => {
               </AnimatedText>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="flex flex-col gap-8 max-w-2xl mx-auto">
               {teamMembers.map((member, index) => (
                 <AnimatedCard key={member.key} delay={index * 0.05}>
                   <div className="bg-background p-8 border border-divider rounded-xl shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
-                    {/* Photo placeholder */}
-                    <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-6 flex items-center justify-center border-2 border-dashed border-divider">
-                      <User className="w-12 h-12 text-muted-foreground" />
-                    </div>
+                    <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                      {/* Photo placeholder */}
+                      <div className="w-32 h-32 flex-shrink-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl flex items-center justify-center border-2 border-dashed border-divider">
+                        <User className="w-12 h-12 text-muted-foreground" />
+                      </div>
 
-                    <div className="text-center">
-                      <h2 className="font-display text-xl font-semibold mb-2">
-                        {t(`team.members.${member.key}.name`)}
-                      </h2>
-                      <p className="text-sm text-primary font-medium mb-4">
-                        {t(`team.members.${member.key}.role`)}
-                      </p>
-                      
-                      {/* Bio */}
-                      <div className="pt-4 border-t border-divider">
+                      <div className="flex-1 text-center sm:text-left">
+                        <h2 className="font-display text-xl font-semibold mb-1">
+                          {t(`team.members.${member.key}.name`)}
+                        </h2>
+                        <p className="text-sm text-primary font-medium mb-4">
+                          {t(`team.members.${member.key}.role`)}
+                        </p>
+                        
+                        {/* Bio */}
                         <p className="text-sm text-subtle leading-relaxed">
                           {t(`team.members.${member.key}.bio`, { defaultValue: "" }) || (
                             <span className="italic text-muted-foreground">Medailonek bude doplněn</span>

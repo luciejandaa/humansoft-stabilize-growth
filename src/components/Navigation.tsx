@@ -28,6 +28,7 @@ const Navigation = () => {
 
   const navLinks = [
     { href: "/", label: t("nav.home"), highlight: false },
+    { href: "/sluzby", label: t("nav.services"), highlight: false },
     { href: "/hodnoceni", label: t("nav.evaluation"), highlight: true },
     { href: "/reference", label: t("nav.references"), highlight: false },
     { href: "/blog", label: t("nav.blog"), highlight: false },

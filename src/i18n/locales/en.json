@@ -1,8 +1,9 @@
 {
   "nav": {
     "home": "HumanSoft",
+    "services": "Services",
     "evaluation": "Evaluate Your Company",
-    "references": "References",
+    "references": "References & Case Studies",
     "blog": "Blog",
     "contact": "Contact Us"
   },
@@ -10,6 +11,20 @@
     "title": "We help companies stabilize operations before problems become crises.",
     "subtitle": "We step into organizations five minutes before midnight - restructuring teams, setting up processes, and restoring functional collaboration. With respect for people and business.",
     "cta": "Schedule an Initial Consultation"
+  },
+  "about": {
+    "title": "About Us",
+    "vision": {
+      "label": "Our Vision",
+      "text": "We hold a vision of the world where the fusion of technical mastery and essential soft skills shapes the core of premier tech companies."
+    },
+    "mission": {
+      "label": "Our Mission",
+      "text": "We provide tailored solutions and tools that enhance efficiency, empower individuals, and foster team growth, kickstarting a self-driven process for resolving company challenges with sustainable effect."
+    },
+    "valuesLabel": "Our Values",
+    "values": ["Freedom", "Sense", "Personal Growth", "Work", "Fun & Joy"],
+    "cta": "Let's Talk"
   },
   "why": {
     "title": "Why Companies Choose HumanSoft.IT",
@@ -19,6 +34,7 @@
   "services": {
     "title": "What We Do",
     "quote": "Our goal is not to deliver a document. Our goal is a company that actually works.",
+    "cta": "Learn More About Our Services",
     "restructuring": {
       "title": "Organization and Team Restructuring",
       "items": [
@@ -49,6 +65,7 @@
   },
   "process": {
     "title": "How We Work",
+    "cta": "Start With Us",
     "steps": {
       "step1": {
         "title": "Diagnostics and Interviews",
@@ -69,27 +86,37 @@
     }
   },
   "team": {
-    "title": "We Are Change Partners - Not External Auditors",
-    "subtitle": "We do not come to companies from above. We work with people, listen to context, and together with teams find solutions that make sense in practice. Each of us brings different experience - together we form a combination of analytical view, human approach, and change driver.",
-    "focusLabel": "Focus",
+    "title": "Our Team",
+    "subtitle": "We are change partners - not external auditors. We do not come to companies from above. We work with people, listen to context, and together with teams find solutions that make sense in practice.",
+    "cta": "Get to Know Us",
     "members": {
       "member1": {
-        "name": "Jan Novak",
-        "role": "Senior Partner",
-        "focus": "Organizational Design and Strategy",
-        "description": "I specialize in complex transformations of companies in growth phase. I bring a structured view of processes and ability to connect strategy with operations."
+        "name": "Daniela Kolomazníková",
+        "role": "Co-owner"
       },
       "member2": {
-        "name": "Petra Svobodova",
-        "role": "Leadership Consultant",
-        "focus": "Leadership Development and Team Dynamics",
-        "description": "I work with leaders on building their authentic leadership style. I bring tools for effective communication and collaboration to teams."
+        "name": "Pavel Vřesňák",
+        "role": "Co-owner"
       },
       "member3": {
-        "name": "Martin Cerny",
-        "role": "Process Architect",
-        "focus": "Process Optimization and Workflow",
-        "description": "I map and design processes that actually work. I connect analytical approach with practical implementation in real environment."
+        "name": "Lucie Janda",
+        "role": "Assistant, Coordinator"
+      },
+      "member4": {
+        "name": "Milan Košdy",
+        "role": "Consultant"
+      },
+      "member5": {
+        "name": "František Fiala",
+        "role": "Consultant"
+      },
+      "member6": {
+        "name": "Veronika Hegrová",
+        "role": "Consultant"
+      },
+      "member7": {
+        "name": "Monika Kunešová",
+        "role": "Consultant"
       }
     }
   },
@@ -108,7 +135,8 @@
   "evaluation": {
     "title": "Evaluate Your Company",
     "subtitle": "Find out how your company is doing and where opportunities for improvement lie.",
-    "comingSoon": "Interactive evaluation coming soon."
+    "comingSoon": "Interactive evaluation coming soon.",
+    "cta": "Start Evaluation"
   },
   "blog": {
     "title": "Blog",
@@ -116,8 +144,9 @@
     "comingSoon": "Articles coming soon."
   },
   "references": {
-    "title": "References",
+    "title": "References & Case Studies",
     "subtitle": "Stories of companies we have helped.",
+    "cta": "I Want Similar Results",
     "labels": {
       "situation": "Initial Situation",
       "approach": "Our Approach",

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const foundedYear = 2023;
 
   return (
     <motion.footer 
@@ -28,7 +29,7 @@ const Footer = () => {
           </div>
           
           <p className="text-sm text-subtle">
-            © {currentYear} HumanSoft.IT. {t("footer.rights")}
+            © {foundedYear}–{currentYear} HumanSoft.IT. {t("footer.rights")}
           </p>
         </div>
       </div>

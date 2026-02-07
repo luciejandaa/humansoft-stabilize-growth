@@ -1,76 +1,81 @@
+import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
-const teamMembers = [
-  {
-    name: "Jan Novák",
-    role: "Senior Partner",
-    focus: "Organizační design & strategie",
-    description:
-      "Specializuji se na komplexní transformace firem v růstové fázi. Přináším strukturovaný pohled na procesy a schopnost propojit strategii s operativou.",
-  },
-  {
-    name: "Petra Svobodová",
-    role: "Leadership Consultant",
-    focus: "Rozvoj vedení & týmová dynamika",
-    description:
-      "Pracuji s lídry na budování jejich autentického stylu vedení. Do týmů přináším nástroje pro efektivní komunikaci a spolupráci.",
-  },
-  {
-    name: "Martin Černý",
-    role: "Process Architect",
-    focus: "Procesní optimalizace & workflow",
-    description:
-      "Mapuji a navrhuji procesy, které skutečně fungují. Propojuji analytický přístup s praktickou implementací v reálném prostředí.",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/animated-section";
+import { ArrowRight, User } from "lucide-react";
 
 const TeamPage = () => {
+  const { t } = useTranslation();
+
+  const teamMembers = [
+    { key: "member1", initials: "DK" },
+    { key: "member2", initials: "PV" },
+    { key: "member3", initials: "LJ" },
+    { key: "member4", initials: "MK" },
+    { key: "member5", initials: "FF" },
+    { key: "member6", initials: "VH" },
+    { key: "member7", initials: "MK" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20">
-        <section className="section-padding bg-secondary">
+        <section className="section-padding bg-gradient-to-b from-secondary/50 to-secondary">
           <div className="section-container">
-            <div className="max-w-3xl mb-16">
-              <h1 className="heading-xl mb-6">
-                Jsme partneři změny — ne externí auditoři
-              </h1>
-              <p className="body-lg text-subtle">
-                Do firem nepřicházíme „shora". Pracujeme s lidmi, nasloucháme kontextu a společně 
-                s týmy hledáme řešení, která dávají smysl v praxi. Každý z nás přináší jinou 
-                zkušenost — dohromady tvoříme kombinaci analytického pohledu, lidského přístupu 
-                a tahouna změny.
-              </p>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <AnimatedSection>
+                <h1 className="heading-xl mb-6">{t("team.title")}</h1>
+              </AnimatedSection>
+              <AnimatedText delay={0.1}>
+                <p className="body-lg text-subtle">
+                  {t("team.subtitle")}
+                </p>
+              </AnimatedText>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-background p-8 border border-divider rounded-lg"
-                >
-                  {/* Avatar placeholder */}
-                  <div className="w-20 h-20 bg-muted rounded-lg mb-6 flex items-center justify-center">
-                    <span className="font-display text-2xl text-muted-foreground">
-                      {member.name.split(" ").map((n) => n[0]).join("")}
-                    </span>
+                <AnimatedCard key={member.key} delay={index * 0.05}>
+                  <div className="bg-background p-8 border border-divider rounded-xl shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                    {/* Photo placeholder */}
+                    <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-6 flex items-center justify-center border-2 border-dashed border-divider">
+                      <User className="w-12 h-12 text-muted-foreground" />
+                    </div>
+
+                    <div className="text-center">
+                      <h2 className="font-display text-xl font-semibold mb-2">
+                        {t(`team.members.${member.key}.name`)}
+                      </h2>
+                      <p className="text-sm text-primary font-medium mb-4">
+                        {t(`team.members.${member.key}.role`)}
+                      </p>
+                      
+                      {/* Bio placeholder */}
+                      <div className="pt-4 border-t border-divider">
+                        <p className="text-sm text-muted-foreground italic">
+                          Medailonek bude doplněn
+                        </p>
+                      </div>
+                    </div>
                   </div>
-
-                  <h2 className="heading-sm mb-1">{member.name}</h2>
-                  <p className="text-sm text-subtle mb-4">{member.role}</p>
-
-                  <div className="mb-4 pb-4 border-b border-divider">
-                    <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
-                      Zaměření
-                    </span>
-                    <p className="body-sm mt-1">{member.focus}</p>
-                  </div>
-
-                  <p className="body-sm text-subtle">{member.description}</p>
-                </div>
+                </AnimatedCard>
               ))}
             </div>
+
+            {/* CTA */}
+            <AnimatedText delay={0.5}>
+              <div className="text-center mt-16">
+                <Button size="lg" asChild>
+                  <Link to="/kontakt" className="inline-flex items-center gap-2">
+                    {t("contact.cta")}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedText>
           </div>
         </section>
       </main>

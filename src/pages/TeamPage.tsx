@@ -53,10 +53,12 @@ const TeamPage = () => {
                         {t(`team.members.${member.key}.role`)}
                       </p>
                       
-                      {/* Bio placeholder */}
+                      {/* Bio */}
                       <div className="pt-4 border-t border-divider">
-                        <p className="text-sm text-muted-foreground italic">
-                          Medailonek bude doplněn
+                        <p className="text-sm text-subtle leading-relaxed">
+                          {t(`team.members.${member.key}.bio`, { defaultValue: "" }) || (
+                            <span className="italic text-muted-foreground">Medailonek bude doplněn</span>
+                          )}
                         </p>
                       </div>
                     </div>

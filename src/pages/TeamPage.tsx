@@ -36,31 +36,35 @@ const TeamPage = () => {
               </AnimatedText>
             </div>
 
-            <div className="flex flex-col divide-y divide-divider max-w-2xl mx-auto">
+            <div className="space-y-24 max-w-3xl mx-auto">
               {teamMembers.map((member, index) => (
-                <AnimatedCard key={member.key} delay={index * 0.05}>
-                  <div className="py-10 first:pt-0 last:pb-0">
-                    <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-                      {/* Photo placeholder */}
-                      <div className="w-28 h-28 flex-shrink-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center border-2 border-dashed border-divider">
-                        <User className="w-10 h-10 text-muted-foreground" />
+                <AnimatedCard key={member.key} delay={index * 0.08}>
+                  <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}>
+                    {/* Photo placeholder */}
+                    <div className="relative group">
+                      <div className="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                        <User className="w-16 h-16 text-muted-foreground/50" />
                       </div>
+                      {/* Decorative accent */}
+                      <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary/10 rounded-lg -z-10" />
+                    </div>
 
-                      <div className="flex-1 text-center sm:text-left">
-                        <h2 className="font-display text-xl font-semibold mb-1">
+                    <div className="flex-1 text-center md:text-left space-y-4">
+                      <div>
+                        <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
                           {t(`team.members.${member.key}.name`)}
                         </h2>
-                        <p className="text-sm text-primary font-medium mb-3">
+                        <p className="text-primary font-medium tracking-wide uppercase text-sm">
                           {t(`team.members.${member.key}.role`)}
                         </p>
-                        
-                        {/* Bio */}
-                        <p className="text-subtle leading-relaxed">
-                          {t(`team.members.${member.key}.bio`, { defaultValue: "" }) || (
-                            <span className="italic text-muted-foreground">Medailonek bude doplněn</span>
-                          )}
-                        </p>
                       </div>
+                      
+                      {/* Bio */}
+                      <p className="text-subtle leading-relaxed text-base md:text-lg">
+                        {t(`team.members.${member.key}.bio`, { defaultValue: "" }) || (
+                          <span className="italic text-muted-foreground">Medailonek bude doplněn</span>
+                        )}
+                      </p>
                     </div>
                   </div>
                 </AnimatedCard>

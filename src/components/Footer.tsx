@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           
           <p className="text-sm text-subtle">
-            © {foundedYear}–{currentYear} HumanSoft.IT. {t("footer.rights")}
+            © {foundedYear} HumanSoft.IT. {t("footer.rights")}
           </p>
         </div>
       </div>

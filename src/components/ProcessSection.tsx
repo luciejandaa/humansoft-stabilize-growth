@@ -9,29 +9,29 @@ const ProcessSection = () => {
 
   const steps = [
     {
-      number: "01",
+      number: "1",
       title: t("process.steps.step1.title"),
       subtitle: t("process.steps.step1.subtitle"),
       description: t("process.steps.step1.description"),
     },
     {
-      number: "02",
+      number: "2",
       title: t("process.steps.step2.title"),
       subtitle: t("process.steps.step2.subtitle"),
       description: t("process.steps.step2.description"),
     },
     {
-      number: "03",
+      number: "3",
       title: t("process.steps.step3.title"),
       description: t("process.steps.step3.description"),
     },
     {
-      number: "04",
+      number: "4",
       title: t("process.steps.step4.title"),
       description: t("process.steps.step4.description"),
     },
     {
-      number: "05",
+      number: "5",
       title: t("process.steps.step5.title"),
       description: t("process.steps.step5.description"),
     },

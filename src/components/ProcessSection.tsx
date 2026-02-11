@@ -145,7 +145,7 @@ const ProcessSection = () => {
               style={{
                 left: `${stepPositions[index].x}px`,
                 top: `${stepPositions[index].y}px`,
-                transform: "translate(-50%, -50%)",
+                transform: "translate(-50%, -24px)",
               }}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}

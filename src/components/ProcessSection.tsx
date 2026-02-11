@@ -70,11 +70,11 @@ const ProcessSection = () => {
     }
     // Bottom-right (step 3, ~54°)
     if (norm >= 30 && norm < 100) {
-      return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "12px", textAlign: "left", width: "140px" };
+      return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "50px", marginTop: "38px", textAlign: "left", width: "140px" };
     }
     // Bottom-left (step 4, ~126°)
     if (norm >= 100 && norm < 170) {
-      return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };
+      return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "50px", marginTop: "38px", textAlign: "right", width: "140px" };
     }
     // Top-left (step 5, ~198°)
     return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };

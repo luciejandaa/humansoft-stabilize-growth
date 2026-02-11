@@ -141,11 +141,10 @@ const ProcessSection = () => {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="absolute w-40 text-center"
+              className="absolute"
               style={{
                 left: `${stepPositions[index].x}px`,
                 top: `${stepPositions[index].y}px`,
-                transform: "translate(-50%, -24px)",
               }}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -155,16 +154,23 @@ const ProcessSection = () => {
                 ease: "easeOut",
               }}
             >
-              <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm mx-auto mb-2 shadow-md">
+              {/* Number circle centered exactly on the circle path */}
+              <div
+                className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-md"
+                style={{ transform: "translate(-50%, -50%)" }}
+              >
                 {step.number}
               </div>
-              <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
-                {step.title}
-              </h3>
-              {step.subtitle && (
-                <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
-              )}
-              <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+              {/* Text label below the number */}
+              <div className="w-40 text-center" style={{ transform: "translateX(-50%)" }}>
+                <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
+                  {step.title}
+                </h3>
+                {step.subtitle && (
+                  <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
+                )}
+                <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+              </div>
             </motion.div>
           ))}
 

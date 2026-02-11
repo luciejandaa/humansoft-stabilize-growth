@@ -37,26 +37,21 @@ const ProcessSection = () => {
     },
   ];
 
-  // Pentagon positions as percentages for reliable CSS positioning
-  // Top, top-right, bottom-right, bottom-left, top-left
-  const positions = [
-    { left: "50%", top: "5%" },    // step 1 – top center
-    { left: "88%", top: "35%" },   // step 2 – top right
-    { left: "74%", top: "82%" },   // step 3 – bottom right
-    { left: "26%", top: "82%" },   // step 4 – bottom left
-    { left: "12%", top: "35%" },   // step 5 – top left
-  ];
+  // Circle layout: 5 steps evenly spaced on a circle
+  // Container is 600x600, center at 300,300, radius 220
+  const size = 600;
+  const cx = size / 2;
+  const cy = size / 2;
+  const radius = 220;
 
-  // SVG pentagon points (viewBox 0 0 100 100)
-  const svgPoints = [
-    { x: 50, y: 8 },
-    { x: 88, y: 38 },
-    { x: 74, y: 85 },
-    { x: 26, y: 85 },
-    { x: 12, y: 38 },
-  ];
-
-  const polygonString = svgPoints.map((p) => `${p.x},${p.y}`).join(" ");
+  // Start from top (-90°) and go clockwise
+  const stepPositions = steps.map((_, i) => {
+    const angle = (-90 + i * 72) * (Math.PI / 180);
+    return {
+      x: cx + radius * Math.cos(angle),
+      y: cy + radius * Math.sin(angle),
+    };
+  });
 
   return (
     <section id="jak-pracujeme" className="section-padding bg-secondary" ref={sectionRef}>
@@ -120,39 +115,40 @@ const ProcessSection = () => {
           </motion.div>
         </div>
 
-        {/* Desktop: pentagon layout */}
-        <div className="hidden md:block relative mx-auto" style={{ width: "600px", height: "550px" }}>
-          {/* SVG – pentagon outline */}
+        {/* Desktop: circle layout */}
+        <div className="hidden md:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
+          {/* SVG – circle outline */}
           <svg
             className="absolute inset-0 w-full h-full"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
+            viewBox={`0 0 ${size} ${size}`}
           >
-            <motion.polygon
-              points={polygonString}
+            <motion.circle
+              cx={cx}
+              cy={cy}
+              r={radius}
               fill="none"
               stroke="hsl(var(--primary))"
-              strokeWidth="0.4"
-              strokeOpacity="0.2"
-              strokeDasharray="2 1.5"
+              strokeWidth="1.5"
+              strokeOpacity="0.15"
+              strokeDasharray="8 6"
               initial={{ pathLength: 0, opacity: 0 }}
               animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
               transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
             />
           </svg>
 
-          {/* Step cards */}
+          {/* Step cards positioned on the circle */}
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="absolute w-36 text-center"
+              className="absolute w-40 text-center"
               style={{
-                left: positions[index].left,
-                top: positions[index].top,
+                left: `${stepPositions[index].x}px`,
+                top: `${stepPositions[index].y}px`,
                 transform: "translate(-50%, -50%)",
               }}
-              initial={{ opacity: 0, y: 15 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{
                 duration: 0.45,
                 delay: 0.4 + index * 0.2,
@@ -175,7 +171,7 @@ const ProcessSection = () => {
           {/* Center label */}
           <motion.div
             className="absolute text-center"
-            style={{ left: "50%", top: "52%", transform: "translate(-50%, -50%)" }}
+            style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 1.6 }}

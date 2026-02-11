@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 
 const ProcessSection = () => {
   const { t } = useTranslation();
@@ -38,61 +37,31 @@ const ProcessSection = () => {
     },
   ];
 
-  const radius = 42;
-  const centerX = 50;
-  const centerY = 50;
-  const angleOffsets = [-90, -18, 54, 126, 198];
+  // Pentagon geometry – all in pixel coords for a 700x700 container
+  const size = 700;
+  const cx = size / 2;
+  const cy = size / 2;
+  const r = 250; // radius in px
+  const angleOffsets = [-90, -18, 54, 126, 198]; // degrees, starting top
 
-  const getPosition = (angleDeg: number) => {
-    const rad = (angleDeg * Math.PI) / 180;
+  const pointsPx = angleOffsets.map((deg) => {
+    const rad = (deg * Math.PI) / 180;
+    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+  });
+
+  // Shorten line so it doesn't overlap the number circle (radius ~26px)
+  const shortenLine = (from: { x: number; y: number }, to: { x: number; y: number }, inset: number) => {
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    const len = Math.sqrt(dx * dx + dy * dy);
+    const ux = dx / len;
+    const uy = dy / len;
     return {
-      x: centerX + radius * Math.cos(rad),
-      y: centerY + radius * Math.sin(rad),
+      x1: from.x + ux * inset,
+      y1: from.y + uy * inset,
+      x2: to.x - ux * inset,
+      y2: to.y - uy * inset,
     };
-  };
-
-  const points = angleOffsets.map(getPosition);
-
-  const renderArrow = (from: { x: number; y: number }, to: { x: number; y: number }, key: number) => {
-    const midX = (from.x + to.x) / 2;
-    const midY = (from.y + to.y) / 2;
-    const angle = Math.atan2(to.y - from.y, to.x - from.x) * (180 / Math.PI);
-    const lineLen = Math.sqrt((to.x - from.x) ** 2 + (to.y - from.y) ** 2);
-
-    return (
-      <g key={key}>
-        <motion.line
-          x1={from.x}
-          y1={from.y}
-          x2={to.x}
-          y2={to.y}
-          stroke="hsl(var(--primary))"
-          strokeWidth="0.4"
-          strokeOpacity="0.25"
-          strokeDasharray="1.5 1"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 + key * 0.15, ease: "easeOut" }}
-          style={{ pathLength: 0, strokeDashoffset: 0, strokeDasharray: `${lineLen} ${lineLen}` }}
-        />
-        <motion.g
-          transform={`translate(${midX}, ${midY}) rotate(${angle})`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.3, delay: 1.1 + key * 0.15 }}
-        >
-          <path
-            d="M -1.8,-1.2 L 0,0 L -1.8,1.2"
-            stroke="hsl(var(--primary))"
-            strokeWidth="0.5"
-            strokeOpacity="0.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-          />
-        </motion.g>
-      </g>
-    );
   };
 
   return (
@@ -158,29 +127,67 @@ const ProcessSection = () => {
         </div>
 
         {/* Desktop: circular pentagon layout */}
-        <div className="hidden md:block relative mx-auto" style={{ width: "700px", height: "700px" }}>
-          {/* SVG for connecting lines & arrows */}
+        <div className="hidden md:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
+          {/* SVG overlay – same coordinate space as the container */}
           <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid meet"
+            className="absolute inset-0"
+            width={size}
+            height={size}
+            viewBox={`0 0 ${size} ${size}`}
           >
-            {points.map((point, i) => {
-              const next = points[(i + 1) % points.length];
-              return renderArrow(point, next, i);
+            {pointsPx.map((pt, i) => {
+              const next = pointsPx[(i + 1) % pointsPx.length];
+              const line = shortenLine(pt, next, 36);
+              const midX = (line.x1 + line.x2) / 2;
+              const midY = (line.y1 + line.y2) / 2;
+              const angle = Math.atan2(line.y2 - line.y1, line.x2 - line.x1) * (180 / Math.PI);
+
+              return (
+                <g key={i}>
+                  <motion.line
+                    x1={line.x1}
+                    y1={line.y1}
+                    x2={line.x2}
+                    y2={line.y2}
+                    stroke="hsl(var(--primary))"
+                    strokeWidth="1.5"
+                    strokeOpacity="0.2"
+                    strokeDasharray="6 4"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.8 + i * 0.15 }}
+                  />
+                  <motion.g
+                    transform={`translate(${midX}, ${midY}) rotate(${angle})`}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.3, delay: 1.0 + i * 0.15 }}
+                  >
+                    <path
+                      d="M -7,-5 L 0,0 L -7,5"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="2"
+                      strokeOpacity="0.35"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </motion.g>
+                </g>
+              );
             })}
           </svg>
 
-          {/* Step cards */}
+          {/* Step cards – positioned with px using top/left and translate to center */}
           {steps.map((step, index) => {
-            const pos = points[index];
+            const pt = pointsPx[index];
             return (
               <motion.div
                 key={index}
                 className="absolute w-40 text-center"
                 style={{
-                  left: `${pos.x}%`,
-                  top: `${pos.y}%`,
+                  left: pt.x,
+                  top: pt.y,
                   transform: "translate(-50%, -50%)",
                 }}
                 initial={{ opacity: 0, scale: 0.6 }}
@@ -210,7 +217,8 @@ const ProcessSection = () => {
 
           {/* Center icon */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
+            className="absolute text-center"
+            style={{ left: cx, top: cy, transform: "translate(-50%, -50%)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}

@@ -66,23 +66,30 @@
   },
   "process": {
     "title": "How We Work",
+    "subtitle": "A closed cycle of change that repeats and deepens.",
     "cta": "Start With Us",
     "steps": {
       "step1": {
-        "title": "Diagnostics and Interviews",
-        "description": "understanding people, relationships, and context"
+        "title": "Initial Probe",
+        "subtitle": "Breathing between changes",
+        "description": "We enter the company, map the terrain, and listen."
       },
       "step2": {
-        "title": "Solution Design and Roadmap",
-        "description": "concrete and actionable change plan"
+        "title": "Deep Analysis",
+        "subtitle": "Client meets reality",
+        "description": "We uncover the true state of affairs and name key challenges."
       },
       "step3": {
-        "title": "Implementation in Practice",
-        "description": "with team involvement, not top-down"
+        "title": "Pilot Project",
+        "description": "We verify the proposed solution in practice on a smaller scale."
       },
       "step4": {
-        "title": "Change Consolidation and Impact Measurement",
-        "description": "change becomes the standard"
+        "title": "Implementation of Changes",
+        "description": "We roll out changes fully with team involvement."
+      },
+      "step5": {
+        "title": "Evaluation",
+        "description": "We measure impact, learn, and prepare the next cycle."
       }
     }
   },

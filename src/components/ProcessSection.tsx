@@ -38,20 +38,47 @@ const ProcessSection = () => {
   ];
 
   // Circle layout: 5 steps evenly spaced on a circle
-  // Container is 600x600, center at 300,300, radius 220
-  const size = 600;
+  const size = 700;
   const cx = size / 2;
   const cy = size / 2;
-  const radius = 220;
+  const radius = 180;
 
   // Start from top (-90°) and go clockwise
-  const stepPositions = steps.map((_, i) => {
-    const angle = (-90 + i * 72) * (Math.PI / 180);
+  const angles = steps.map((_, i) => -90 + i * 72);
+  const stepPositions = angles.map((deg) => {
+    const rad = deg * (Math.PI / 180);
     return {
-      x: cx + radius * Math.cos(angle),
-      y: cy + radius * Math.sin(angle),
+      x: cx + radius * Math.cos(rad),
+      y: cy + radius * Math.sin(rad),
     };
   });
+
+  // Text placement: push text outward from circle center
+  // Returns style for the text container based on angle
+  const getTextStyle = (index: number): React.CSSProperties => {
+    const deg = angles[index];
+    // Normalize to 0-360
+    const norm = ((deg % 360) + 360) % 360;
+
+    // Top (step 1, ~270°)
+    if (norm > 240 && norm < 300) {
+      return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "8px", textAlign: "center", width: "160px" };
+    }
+    // Top-right (step 2, ~342°)
+    if (norm >= 300 || norm < 30) {
+      return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "12px", textAlign: "left", width: "140px" };
+    }
+    // Bottom-right (step 3, ~54°)
+    if (norm >= 30 && norm < 100) {
+      return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "12px", textAlign: "left", width: "140px" };
+    }
+    // Bottom-left (step 4, ~126°)
+    if (norm >= 100 && norm < 170) {
+      return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };
+    }
+    // Top-left (step 5, ~198°)
+    return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };
+  };
 
   return (
     <section id="jak-pracujeme" className="section-padding bg-secondary" ref={sectionRef}>
@@ -156,20 +183,20 @@ const ProcessSection = () => {
             >
               {/* Number circle centered exactly on the circle path */}
               <div
-                className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-md"
+                className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-md"
                 style={{ transform: "translate(-50%, -50%)" }}
               >
                 {step.number}
-              </div>
-              {/* Text label below the number */}
-              <div className="w-40 text-center" style={{ transform: "translateX(-50%)" }}>
-                <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
-                  {step.title}
-                </h3>
-                {step.subtitle && (
-                  <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
-                )}
-                <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+                {/* Text label positioned outside the circle */}
+                <div style={getTextStyle(index)}>
+                  <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
+                    {step.title}
+                  </h3>
+                  {step.subtitle && (
+                    <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
+                  )}
+                  <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+                </div>
               </div>
             </motion.div>
           ))}

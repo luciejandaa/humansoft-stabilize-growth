@@ -66,23 +66,30 @@
   },
   "process": {
     "title": "Jak pracujeme",
+    "subtitle": "Uzavřený cyklus změny, který se opakuje a prohlubuje.",
     "cta": "Začněte s námi",
     "steps": {
       "step1": {
-        "title": "Diagnostika a rozhovory",
-        "description": "poznáme lidi, vztahy a kontext"
+        "title": "Úvodní probe do firmy",
+        "subtitle": "Nadechnutí mezi změnami",
+        "description": "Vstoupíme do firmy, zmapujeme terén a nasloucháme."
       },
       "step2": {
-        "title": "Návrh řešení a roadmapa",
-        "description": "konkrétní a proveditelný plán změny"
+        "title": "Hloubková analýza",
+        "subtitle": "Setkání klienta s realitou",
+        "description": "Odhalíme skutečný stav věcí a pojmenujeme klíčové výzvy."
       },
       "step3": {
-        "title": "Implementace v praxi",
-        "description": "se zapojením týmu, ne shora"
+        "title": "Pilotní projekt",
+        "description": "Ověříme navržené řešení v praxi na menším vzorku."
       },
       "step4": {
-        "title": "Upevnění změny a měření dopadu",
-        "description": "změna se stává standardem"
+        "title": "Realizace změn",
+        "description": "Zavedeme změny v plném rozsahu se zapojením týmu."
+      },
+      "step5": {
+        "title": "Vyhodnocení realizace",
+        "description": "Měříme dopad, učíme se a připravujeme další cyklus."
       }
     }
   },

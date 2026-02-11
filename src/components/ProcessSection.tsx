@@ -37,32 +37,26 @@ const ProcessSection = () => {
     },
   ];
 
-  // Pentagon geometry – all in pixel coords for a 700x700 container
-  const size = 700;
-  const cx = size / 2;
-  const cy = size / 2;
-  const r = 250; // radius in px
-  const angleOffsets = [-90, -18, 54, 126, 198]; // degrees, starting top
+  // Pentagon positions as percentages for reliable CSS positioning
+  // Top, top-right, bottom-right, bottom-left, top-left
+  const positions = [
+    { left: "50%", top: "5%" },    // step 1 – top center
+    { left: "88%", top: "35%" },   // step 2 – top right
+    { left: "74%", top: "82%" },   // step 3 – bottom right
+    { left: "26%", top: "82%" },   // step 4 – bottom left
+    { left: "12%", top: "35%" },   // step 5 – top left
+  ];
 
-  const pointsPx = angleOffsets.map((deg) => {
-    const rad = (deg * Math.PI) / 180;
-    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
-  });
+  // SVG pentagon points (viewBox 0 0 100 100)
+  const svgPoints = [
+    { x: 50, y: 8 },
+    { x: 88, y: 38 },
+    { x: 74, y: 85 },
+    { x: 26, y: 85 },
+    { x: 12, y: 38 },
+  ];
 
-  // Shorten line so it doesn't overlap the number circle (radius ~26px)
-  const shortenLine = (from: { x: number; y: number }, to: { x: number; y: number }, inset: number) => {
-    const dx = to.x - from.x;
-    const dy = to.y - from.y;
-    const len = Math.sqrt(dx * dx + dy * dy);
-    const ux = dx / len;
-    const uy = dy / len;
-    return {
-      x1: from.x + ux * inset,
-      y1: from.y + uy * inset,
-      x2: to.x - ux * inset,
-      y2: to.y - uy * inset,
-    };
-  };
+  const polygonString = svgPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
     <section id="jak-pracujeme" className="section-padding bg-secondary" ref={sectionRef}>
@@ -84,7 +78,7 @@ const ProcessSection = () => {
           {t("process.subtitle")}
         </motion.p>
 
-        {/* Mobile: vertical cycle */}
+        {/* Mobile: vertical timeline */}
         <div className="md:hidden space-y-0">
           {steps.map((step, index) => (
             <motion.div
@@ -126,102 +120,65 @@ const ProcessSection = () => {
           </motion.div>
         </div>
 
-        {/* Desktop: circular pentagon layout */}
-        <div className="hidden md:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
-          {/* SVG overlay – same coordinate space as the container */}
+        {/* Desktop: pentagon layout */}
+        <div className="hidden md:block relative mx-auto" style={{ width: "600px", height: "550px" }}>
+          {/* SVG – pentagon outline */}
           <svg
-            className="absolute inset-0"
-            width={size}
-            height={size}
-            viewBox={`0 0 ${size} ${size}`}
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
           >
-            {pointsPx.map((pt, i) => {
-              const next = pointsPx[(i + 1) % pointsPx.length];
-              const line = shortenLine(pt, next, 36);
-              const midX = (line.x1 + line.x2) / 2;
-              const midY = (line.y1 + line.y2) / 2;
-              const angle = Math.atan2(line.y2 - line.y1, line.x2 - line.x1) * (180 / Math.PI);
-
-              return (
-                <g key={i}>
-                  <motion.line
-                    x1={line.x1}
-                    y1={line.y1}
-                    x2={line.x2}
-                    y2={line.y2}
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="1.5"
-                    strokeOpacity="0.2"
-                    strokeDasharray="6 4"
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.8 + i * 0.15 }}
-                  />
-                  <motion.g
-                    transform={`translate(${midX}, ${midY}) rotate(${angle})`}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.3, delay: 1.0 + i * 0.15 }}
-                  >
-                    <path
-                      d="M -7,-5 L 0,0 L -7,5"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="2"
-                      strokeOpacity="0.35"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                  </motion.g>
-                </g>
-              );
-            })}
+            <motion.polygon
+              points={polygonString}
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeWidth="0.4"
+              strokeOpacity="0.2"
+              strokeDasharray="2 1.5"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
+              transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
+            />
           </svg>
 
-          {/* Step cards – positioned with px using top/left and translate to center */}
-          {steps.map((step, index) => {
-            const pt = pointsPx[index];
-            return (
-              <motion.div
-                key={index}
-                className="absolute w-40 text-center"
-                style={{
-                  left: pt.x,
-                  top: pt.y,
-                  transform: "translate(-50%, -50%)",
-                }}
-                initial={{ opacity: 0, scale: 0.6 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{
-                  duration: 0.45,
-                  delay: 0.4 + index * 0.18,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                }}
-              >
-                <div
-                  className="rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm mx-auto mb-2.5 shadow-md"
-                  style={{ width: "3.25rem", height: "3.25rem" }}
-                >
-                  {step.number}
-                </div>
-                <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
-                  {step.title}
-                </h3>
-                {step.subtitle && (
-                  <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
-                )}
-                <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
-              </motion.div>
-            );
-          })}
+          {/* Step cards */}
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              className="absolute w-36 text-center"
+              style={{
+                left: positions[index].left,
+                top: positions[index].top,
+                transform: "translate(-50%, -50%)",
+              }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                duration: 0.45,
+                delay: 0.4 + index * 0.2,
+                ease: "easeOut",
+              }}
+            >
+              <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm mx-auto mb-2 shadow-md">
+                {step.number}
+              </div>
+              <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
+                {step.title}
+              </h3>
+              {step.subtitle && (
+                <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
+              )}
+              <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+            </motion.div>
+          ))}
 
-          {/* Center icon */}
+          {/* Center label */}
           <motion.div
             className="absolute text-center"
-            style={{ left: cx, top: cy, transform: "translate(-50%, -50%)" }}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
+            style={{ left: "50%", top: "52%", transform: "translate(-50%, -50%)" }}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: 1.6 }}
           >
             <div className="w-20 h-20 rounded-full border-2 border-dashed border-primary/15 flex items-center justify-center mx-auto">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary/30">

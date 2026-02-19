@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText } from "./ui/animated-section";
 import { ArrowRight, ClipboardCheck } from "lucide-react";
+import FunDecorations from "./FunDecorations";
 
 const EvaluationSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section-padding bg-gradient-to-b from-secondary/30 to-background">
+    <section className="section-padding bg-gradient-to-b from-secondary/30 to-background relative">
+      <FunDecorations />
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>

@@ -143,7 +143,13 @@
   },
   "evaluation": {
     "title": "Ohodnoťte svoji firmu",
-    "subtitle": "Zjistěte, jak na tom vaše firma je a kde jsou příležitosti ke zlepšení.",
+    "subtitle": "Krátký dotazník vám ukáže, jak na tom vaše firma skutečně je — v řízení, procesech i týmové spolupráci. Získáte jasný obraz toho, co funguje a kde se skrývají příležitosti ke zlepšení.",
+    "benefits": [
+      "Odhalíte slabá místa dřív, než se z nich stanou problémy",
+      "Získáte nezávislý pohled na fungování firmy",
+      "Dostanete konkrétní podněty, kde začít se změnou",
+      "Zabere to jen pár minut — a může to změnit směr celé firmy"
+    ],
     "comingSoon": "Interaktivní hodnocení bude brzy k dispozici.",
     "cta": "Chci vyplnit hodnocení"
   },

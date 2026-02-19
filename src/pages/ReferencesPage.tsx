@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FunDecorations from "@/components/FunDecorations";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];
 
@@ -10,7 +11,8 @@ const ReferencesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-20 relative">
+        <FunDecorations />
         <section className="section-padding">
           <div className="section-container">
             <h1 className="heading-xl mb-16 text-center">{t("references.title")}</h1>

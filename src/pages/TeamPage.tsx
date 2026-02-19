@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/animated-section";
 import { ArrowRight, User } from "lucide-react";
+import FunDecorations from "@/components/FunDecorations";
 
 const TeamPage = () => {
   const { t } = useTranslation();
@@ -22,7 +23,8 @@ const TeamPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-20 relative">
+        <FunDecorations />
         <section className="section-padding bg-gradient-to-b from-secondary/50 to-secondary">
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center mb-16">

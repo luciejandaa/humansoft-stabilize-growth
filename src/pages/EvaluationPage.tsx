@@ -1,14 +1,16 @@
  import Navigation from "@/components/Navigation";
  import Footer from "@/components/Footer";
  import { Button } from "@/components/ui/button";
- import { ArrowRight } from "lucide-react";
- 
- const EvaluationPage = () => {
+import { ArrowRight } from "lucide-react";
+import FunDecorations from "@/components/FunDecorations";
+
+const EvaluationPage = () => {
    return (
      <div className="min-h-screen bg-background">
        <Navigation />
-       <main className="pt-20">
-         <section className="section-padding">
+        <main className="pt-20 relative">
+          <FunDecorations />
+          <section className="section-padding">
            <div className="section-container">
              <div className="max-w-3xl mx-auto text-center">
                <h1 className="heading-xl mb-8">

@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Compass, Microscope, FlaskConical, Wrench, CheckCircle } from "lucide-react";
+
+const stepIcons = [Compass, Microscope, FlaskConical, Wrench, CheckCircle];
 
 const ProcessSection = () => {
   const { t } = useTranslation();
@@ -9,31 +12,25 @@ const ProcessSection = () => {
 
   const steps = [
     {
-      number: "1",
+      title: t("process.steps.step1.title"),
+      subtitle: t("process.steps.step1.subtitle"),
+      description: t("process.steps.step1.description"),
+    },
+    {
       title: t("process.steps.step2.title"),
-      subtitle: t("process.steps.step2.subtitle"),
       description: t("process.steps.step2.description"),
     },
     {
-      number: "2",
       title: t("process.steps.step3.title"),
       description: t("process.steps.step3.description"),
     },
     {
-      number: "3",
       title: t("process.steps.step4.title"),
       description: t("process.steps.step4.description"),
     },
     {
-      number: "4",
       title: t("process.steps.step5.title"),
       description: t("process.steps.step5.description"),
-    },
-    {
-      number: "5",
-      title: t("process.steps.step1.title"),
-      subtitle: t("process.steps.step1.subtitle"),
-      description: t("process.steps.step1.description"),
     },
   ];
 
@@ -54,29 +51,22 @@ const ProcessSection = () => {
   });
 
   // Text placement: push text outward from circle center
-  // Returns style for the text container based on angle
   const getTextStyle = (index: number): React.CSSProperties => {
     const deg = angles[index];
-    // Normalize to 0-360
     const norm = ((deg % 360) + 360) % 360;
 
-    // Top (step 1, ~270°)
     if (norm > 240 && norm < 300) {
       return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "8px", textAlign: "center", width: "160px" };
     }
-    // Top-right (step 2, ~342°)
     if (norm >= 300 || norm < 30) {
       return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "12px", textAlign: "left", width: "140px" };
     }
-    // Bottom-right (step 3, ~54°)
     if (norm >= 30 && norm < 100) {
       return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "31px", textAlign: "left", width: "140px" };
     }
-    // Bottom-left (step 4, ~126°)
     if (norm >= 100 && norm < 170) {
       return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "31px", textAlign: "right", width: "140px" };
     }
-    // Top-left (step 5, ~198°)
     return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };
   };
 
@@ -102,29 +92,32 @@ const ProcessSection = () => {
 
         {/* Mobile: vertical timeline */}
         <div className="md:hidden space-y-0">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className="relative flex gap-5"
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.3 + index * 0.12 }}
-            >
-              <div className="flex flex-col items-center">
-                <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
-                  {step.number}
+          {steps.map((step, index) => {
+            const Icon = stepIcons[index];
+            return (
+              <motion.div
+                key={index}
+                className="relative flex gap-5"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.12 }}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="w-11 h-11 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="w-px flex-1 bg-primary/20 min-h-[1.5rem]" />
                 </div>
-                <div className="w-px flex-1 bg-primary/20 min-h-[1.5rem]" />
-              </div>
-              <div className="pb-7 pt-1.5">
-                <h3 className="heading-sm text-base">{step.title}</h3>
-                {step.subtitle && (
-                  <p className="text-sm text-primary/60 italic">{step.subtitle}</p>
-                )}
-                <p className="body-sm text-subtle mt-1">{step.description}</p>
-              </div>
-            </motion.div>
-          ))}
+                <div className="pb-7 pt-1.5">
+                  <h3 className="heading-sm text-base">{step.title}</h3>
+                  {step.subtitle && (
+                    <p className="text-sm text-primary/60 italic">{step.subtitle}</p>
+                  )}
+                  <p className="body-sm text-subtle mt-1">{step.description}</p>
+                </div>
+              </motion.div>
+            );
+          })}
           <motion.div
             className="flex items-center gap-5"
             initial={{ opacity: 0 }}
@@ -165,57 +158,57 @@ const ProcessSection = () => {
           </svg>
 
           {/* Step cards positioned on the circle */}
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className="absolute"
-              style={{
-                left: `${stepPositions[index].x}px`,
-                top: `${stepPositions[index].y}px`,
-              }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{
-                duration: 0.45,
-                delay: 0.4 + index * 0.2,
-                ease: "easeOut",
-              }}
-            >
-              {/* Number circle centered exactly on the circle path */}
-              <div
-                className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-md"
-                style={{ transform: "translate(-50%, -50%)" }}
+          {steps.map((step, index) => {
+            const Icon = stepIcons[index];
+            return (
+              <motion.div
+                key={index}
+                className="absolute"
+                style={{
+                  left: `${stepPositions[index].x}px`,
+                  top: `${stepPositions[index].y}px`,
+                }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{
+                  duration: 0.45,
+                  delay: 0.4 + index * 0.2,
+                  ease: "easeOut",
+                }}
               >
-                {step.number}
-                {/* Text label positioned outside the circle */}
-                <div style={getTextStyle(index)}>
-                  <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
-                    {step.title}
-                  </h3>
-                  {step.subtitle && (
-                    <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
-                  )}
-                  <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+                <div
+                  className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-md"
+                  style={{ transform: "translate(-50%, -50%)" }}
+                >
+                  <Icon className="w-5 h-5" />
+                  <div style={getTextStyle(index)}>
+                    <h3 className="font-display font-semibold text-foreground text-sm leading-tight">
+                      {step.title}
+                    </h3>
+                    {step.subtitle && (
+                      <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>
+                    )}
+                    <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
 
           {/* Center label */}
           <motion.div
             className="absolute text-center"
-            style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}
+            style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "200px" }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 1.6 }}
           >
-            <div className="w-20 h-20 rounded-full border-2 border-dashed border-primary/15 flex items-center justify-center mx-auto">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary/30">
-                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="1.5"/>
-                <path d="M12 8v4l2.5 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <p className="text-[0.65rem] text-subtle mt-1.5 font-medium tracking-wider uppercase">Cyklus změny</p>
+            <p className="font-display font-semibold text-foreground text-sm leading-tight">
+              Řízení zákazníka
+            </p>
+            <p className="text-xs text-subtle mt-1 leading-relaxed">
+              Dynamický plán transformace firmy
+            </p>
           </motion.div>
         </div>
       </div>

@@ -143,7 +143,13 @@
   },
   "evaluation": {
     "title": "Evaluate Your Company",
-    "subtitle": "Find out how your company is doing and where opportunities for improvement lie.",
+    "subtitle": "A short questionnaire will show you how your company truly stands — in management, processes, and team collaboration. Get a clear picture of what works and where opportunities for improvement are hiding.",
+    "benefits": [
+      "Spot weak points before they become real problems",
+      "Get an independent view of how your company operates",
+      "Receive concrete ideas on where to start making changes",
+      "It only takes a few minutes — and it could change the direction of your entire company"
+    ],
     "comingSoon": "Interactive evaluation coming soon.",
     "cta": "Start Evaluation"
   },

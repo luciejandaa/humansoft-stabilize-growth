@@ -2,32 +2,10 @@ import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];
+
 const ReferencesPage = () => {
   const { t } = useTranslation();
-
-  const caseStudies = [
-    {
-      title: t("references.cases.case1.title"),
-      type: t("references.cases.case1.type"),
-      situation: t("references.cases.case1.situation"),
-      approach: t("references.cases.case1.approach"),
-      result: t("references.cases.case1.result"),
-    },
-    {
-      title: t("references.cases.case2.title"),
-      type: t("references.cases.case2.type"),
-      situation: t("references.cases.case2.situation"),
-      approach: t("references.cases.case2.approach"),
-      result: t("references.cases.case2.result"),
-    },
-    {
-      title: t("references.cases.case3.title"),
-      type: t("references.cases.case3.type"),
-      situation: t("references.cases.case3.situation"),
-      approach: t("references.cases.case3.approach"),
-      result: t("references.cases.case3.result"),
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,41 +15,84 @@ const ReferencesPage = () => {
           <div className="section-container">
             <h1 className="heading-xl mb-16 text-center">{t("references.title")}</h1>
 
-            <div className="space-y-12">
-              {caseStudies.map((study, index) => (
-                <div
-                  key={index}
-                  className="grid lg:grid-cols-12 gap-8 pb-12 border-b border-divider last:border-b-0"
-                >
-                  <div className="lg:col-span-4">
-                    <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground">
-                      {study.type}
-                    </span>
-                    <h2 className="heading-sm mt-2">{study.title}</h2>
-                  </div>
+            <div className="space-y-16">
+              {caseKeys.map((key, index) => {
+                const approach = t(`references.cases.${key}.approach`, { returnObjects: true }) as string[];
+                const result = t(`references.cases.${key}.result`, { returnObjects: true }) as string[];
+                const situation = t(`references.cases.${key}.situation`);
+                const metric = t(`references.cases.${key}.metric`);
+                const quote = t(`references.cases.${key}.quote`);
+                const title = t(`references.cases.${key}.title`);
 
-                  <div className="lg:col-span-8 grid sm:grid-cols-3 gap-6">
-                    <div>
-                      <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
-                        {t("references.labels.situation")}
-                      </span>
-                      <p className="body-sm text-subtle">{study.situation}</p>
+                return (
+                  <div
+                    key={key}
+                    className="pb-16 border-b border-divider last:border-b-0"
+                  >
+                    <h2 className="heading-sm mb-8">{title}</h2>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                      {/* Situace */}
+                      <div>
+                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                          {t("references.labels.situation")}
+                        </span>
+                        <p className="body-sm text-subtle">{situation}</p>
+                      </div>
+
+                      {/* Postup */}
+                      <div>
+                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                          {t("references.labels.approach")}
+                        </span>
+                        {Array.isArray(approach) ? (
+                          <ul className="body-sm text-subtle list-disc list-inside space-y-1">
+                            {approach.map((item, i) => (
+                              <li key={i}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="body-sm text-subtle">{approach}</p>
+                        )}
+                      </div>
+
+                      {/* Výsledek */}
+                      <div>
+                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                          {t("references.labels.result")}
+                        </span>
+                        {Array.isArray(result) ? (
+                          <ul className="body-sm text-subtle list-disc list-inside space-y-1">
+                            {result.map((item, i) => (
+                              <li key={i}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="body-sm text-subtle">{result}</p>
+                        )}
+                      </div>
+
+                      {/* Metrika */}
+                      <div>
+                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                          {t("references.labels.metric")}
+                        </span>
+                        <p className="body-sm text-subtle">{metric}</p>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
-                        {t("references.labels.approach")}
+
+                    {/* Citace */}
+                    <div className="bg-muted/50 rounded-lg p-6 border-l-4 border-primary">
+                      <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-3">
+                        {t("references.labels.quote")}
                       </span>
-                      <p className="body-sm text-subtle">{study.approach}</p>
-                    </div>
-                    <div>
-                      <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
-                        {t("references.labels.result")}
-                      </span>
-                      <p className="body-sm text-subtle">{study.result}</p>
+                      <blockquote className="body-sm text-foreground italic leading-relaxed">
+                        „{quote}"
+                      </blockquote>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

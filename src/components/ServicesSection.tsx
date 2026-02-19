@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./ui/animated-section";
+import FunDecorations from "./FunDecorations";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -20,7 +21,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="sluzby" className="section-padding">
+    <section id="sluzby" className="section-padding relative">
+      <FunDecorations />
       <div className="section-container">
         <AnimatedSection>
           <h2 className="heading-lg mb-16 text-center">{t("services.title")}</h2>

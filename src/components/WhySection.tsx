@@ -10,7 +10,7 @@ const WhySection = () => {
 
   return (
     <section id="proc" className="section-padding bg-gradient-to-b from-secondary/50 to-secondary relative">
-      <FunDecorations variant="cool" />
+      <FunDecorations />
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>

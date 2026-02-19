@@ -1,160 +1,134 @@
 import { motion } from "framer-motion";
 
-interface FunDecorationsProps {
-  variant?: "default" | "warm" | "cool" | "playful";
-}
-
-const FunDecorations = ({ variant = "default" }: FunDecorationsProps) => {
+const FunDecorations = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
-      {/* Big dashed circle - top right */}
+      {/* Large dashed circle - top right, elegant */}
       <motion.div
-        className="absolute w-32 h-32 md:w-48 md:h-48 rounded-full"
+        className="absolute w-36 h-36 md:w-52 md:h-52 rounded-full"
         style={{
-          border: "3px dashed hsl(var(--accent))",
-          right: "3%",
-          top: "5%",
-          opacity: 0.55,
+          border: "2px dashed hsl(var(--accent) / 0.3)",
+          right: "2%",
+          top: "4%",
         }}
         animate={{ rotate: [0, 360] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* Solid orange blob - left side */}
+      {/* Subtle solid circle - left */}
       <motion.div
-        className="absolute w-14 h-14 md:w-20 md:h-20 rounded-full"
+        className="absolute w-16 h-16 md:w-24 md:h-24 rounded-full"
         style={{
-          backgroundColor: "hsl(var(--accent))",
-          left: "4%",
-          top: "35%",
-          opacity: 0.2,
+          backgroundColor: "hsl(var(--accent) / 0.08)",
+          left: "5%",
+          top: "30%",
         }}
-        animate={{ scale: [1, 1.3, 1], y: [0, -15, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Blue ring - bottom left */}
+      {/* Thin ring - bottom left */}
       <motion.div
-        className="absolute w-24 h-24 md:w-36 md:h-36 rounded-full"
+        className="absolute w-28 h-28 md:w-40 md:h-40 rounded-full"
         style={{
-          border: "3px solid hsl(var(--primary))",
+          border: "1.5px solid hsl(var(--primary) / 0.15)",
           left: "8%",
           bottom: "10%",
-          opacity: 0.2,
         }}
-        animate={{ scale: [1, 1.12, 1] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
 
-      {/* Zigzag SVG - visible */}
+      {/* Diagonal line cluster - top left */}
       <svg
+        className="absolute hidden md:block"
+        style={{ left: "10%", top: "8%", width: "80px", height: "80px", opacity: 0.2 }}
+        viewBox="0 0 80 80"
+        fill="none"
+      >
+        <line x1="5" y1="75" x2="75" y2="5" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+        <line x1="15" y1="75" x2="75" y2="15" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+        <line x1="25" y1="75" x2="75" y2="25" stroke="hsl(var(--accent))" strokeWidth="1.5" />
+      </svg>
+
+      {/* Cross / plus - refined */}
+      <motion.svg
         className="absolute"
-        style={{ left: "12%", top: "8%", width: "160px", height: "50px", opacity: 0.4 }}
-        viewBox="0 0 160 50"
+        style={{ left: "32%", top: "6%", width: "20px", height: "20px", opacity: 0.25 }}
+        viewBox="0 0 20 20"
+        animate={{ rotate: [0, 90, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <line x1="10" y1="2" x2="10" y2="18" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" />
+        <line x1="2" y1="10" x2="18" y2="10" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" />
+      </motion.svg>
+
+      {/* Dotted arc - right side, elegant curve */}
+      <svg
+        className="absolute hidden md:block"
+        style={{ right: "5%", bottom: "20%", width: "120px", height: "80px", opacity: 0.2 }}
+        viewBox="0 0 120 80"
         fill="none"
       >
         <path
-          d="M5 40 L25 10 L45 40 L65 10 L85 40 L105 10 L125 40 L145 10"
-          stroke="hsl(var(--accent))"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-
-      {/* Star / sparkle */}
-      <motion.svg
-        className="absolute"
-        style={{ right: "12%", top: "40%", width: "50px", height: "50px" }}
-        viewBox="0 0 50 50"
-        animate={{ rotate: [0, 360], scale: [0.9, 1.1, 0.9] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-      >
-        <path
-          d="M25 2 L29 20 L47 17 L33 28 L42 46 L25 35 L8 46 L17 28 L3 17 L21 20 Z"
-          fill="hsl(var(--accent))"
-          opacity="0.35"
-          stroke="hsl(var(--accent))"
-          strokeWidth="1"
-        />
-      </motion.svg>
-
-      {/* Smiley face */}
-      <motion.svg
-        className="absolute"
-        style={{ left: "48%", bottom: "12%", width: "70px", height: "70px" }}
-        viewBox="0 0 70 70"
-        animate={{ rotate: [-5, 5, -5], y: [0, -8, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <circle cx="35" cy="35" r="30" stroke="hsl(var(--accent))" strokeWidth="2.5" fill="none" opacity="0.45" />
-        <circle cx="24" cy="28" r="3.5" fill="hsl(var(--primary))" opacity="0.5" />
-        <circle cx="46" cy="28" r="3.5" fill="hsl(var(--primary))" opacity="0.5" />
-        <path d="M20 42 Q35 56 50 42" stroke="hsl(var(--accent))" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.5" />
-      </motion.svg>
-
-      {/* Heart */}
-      <motion.svg
-        className="absolute"
-        style={{ right: "25%", top: "15%", width: "45px", height: "45px" }}
-        viewBox="0 0 24 24"
-        animate={{ scale: [0.9, 1.2, 0.9], y: [0, -8, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      >
-        <path
-          d="M12 21C12 21 4 13.5 4 8.5C4 5.46 6.46 3 9.5 3C11.06 3 12 4 12 4C12 4 12.94 3 14.5 3C17.54 3 20 5.46 20 8.5C20 13.5 12 21 12 21Z"
-          fill="hsl(var(--accent))"
-          opacity="0.35"
-          stroke="hsl(var(--accent))"
-          strokeWidth="1"
-        />
-      </motion.svg>
-
-      {/* Plus signs */}
-      <svg
-        className="absolute"
-        style={{ left: "30%", top: "4%", width: "30px", height: "30px", opacity: 0.4 }}
-        viewBox="0 0 24 24"
-      >
-        <line x1="12" y1="4" x2="12" y2="20" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" />
-        <line x1="4" y1="12" x2="20" y2="12" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" />
-      </svg>
-
-      {/* Another plus */}
-      <svg
-        className="absolute"
-        style={{ right: "35%", bottom: "30%", width: "22px", height: "22px", opacity: 0.3 }}
-        viewBox="0 0 24 24"
-      >
-        <line x1="12" y1="4" x2="12" y2="20" stroke="hsl(var(--accent))" strokeWidth="3" strokeLinecap="round" />
-        <line x1="4" y1="12" x2="20" y2="12" stroke="hsl(var(--accent))" strokeWidth="3" strokeLinecap="round" />
-      </svg>
-
-      {/* Dotted arc */}
-      <svg
-        className="absolute"
-        style={{ right: "6%", bottom: "18%", width: "130px", height: "90px", opacity: 0.35 }}
-        viewBox="0 0 130 90"
-        fill="none"
-      >
-        <path
-          d="M10 70 C35 10, 95 10, 120 70"
+          d="M10 65 C30 10, 90 10, 110 65"
           stroke="hsl(var(--primary))"
-          strokeWidth="2.5"
+          strokeWidth="1.5"
+          strokeDasharray="4 8"
           strokeLinecap="round"
-          strokeDasharray="6 10"
         />
       </svg>
 
-      {/* Confetti dots - static visible */}
+      {/* Small diamond shape - right */}
+      <motion.svg
+        className="absolute"
+        style={{ right: "15%", top: "35%", width: "24px", height: "24px" }}
+        viewBox="0 0 24 24"
+        animate={{ rotate: [0, 180, 360], scale: [0.9, 1.05, 0.9] }}
+        transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
+      >
+        <polygon
+          points="12,2 22,12 12,22 2,12"
+          stroke="hsl(var(--accent))"
+          strokeWidth="1.5"
+          fill="hsl(var(--accent) / 0.08)"
+        />
+      </motion.svg>
+
+      {/* Concentric dashed circles - decorative, right */}
+      <motion.svg
+        className="absolute hidden md:block"
+        style={{ right: "3%", top: "50%", width: "70px", height: "70px" }}
+        viewBox="0 0 70 70"
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      >
+        <circle cx="35" cy="35" r="28" stroke="hsl(var(--primary) / 0.12)" strokeWidth="1.5" strokeDasharray="3 6" fill="none" />
+        <circle cx="35" cy="35" r="17" stroke="hsl(var(--accent) / 0.15)" strokeWidth="1.5" strokeDasharray="2 5" fill="none" />
+      </motion.svg>
+
+      {/* Small triangle - geometric accent */}
+      <motion.svg
+        className="absolute"
+        style={{ left: "72%", top: "10%", width: "22px", height: "22px" }}
+        viewBox="0 0 22 22"
+        animate={{ rotate: [0, 120, 240, 360] }}
+        transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+      >
+        <polygon
+          points="11,2 20,19 2,19"
+          stroke="hsl(var(--accent) / 0.3)"
+          strokeWidth="1.5"
+          fill="none"
+        />
+      </motion.svg>
+
+      {/* Accent dots - intentionally placed, not random */}
       {[
-        { x: "18%", y: "60%", color: "--accent", size: 12 },
-        { x: "82%", y: "30%", color: "--primary", size: 10 },
-        { x: "68%", y: "72%", color: "--accent", size: 14 },
-        { x: "38%", y: "80%", color: "--primary", size: 9 },
-        { x: "7%", y: "52%", color: "--accent", size: 11 },
-        { x: "55%", y: "20%", color: "--primary", size: 8 },
-        { x: "92%", y: "60%", color: "--accent", size: 10 },
+        { x: "20%", y: "62%", size: 6 },
+        { x: "78%", y: "28%", size: 5 },
+        { x: "55%", y: "82%", size: 7 },
+        { x: "88%", y: "65%", size: 5 },
       ].map((dot, i) => (
         <motion.div
           key={i}
@@ -164,36 +138,24 @@ const FunDecorations = ({ variant = "default" }: FunDecorationsProps) => {
             top: dot.y,
             width: dot.size,
             height: dot.size,
-            backgroundColor: `hsl(var(${dot.color}))`,
-            opacity: 0.25,
+            backgroundColor: i % 2 === 0 ? "hsl(var(--accent) / 0.2)" : "hsl(var(--primary) / 0.15)",
           }}
-          animate={{ scale: [1, 1.5, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
+          animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 1.2 }}
         />
       ))}
 
-      {/* Rotating dashed circles */}
-      <motion.svg
-        className="absolute"
-        style={{ left: "62%", top: "55%", width: "70px", height: "70px" }}
-        viewBox="0 0 60 60"
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      {/* Horizontal line accent - bottom */}
+      <svg
+        className="absolute hidden md:block"
+        style={{ left: "25%", bottom: "8%", width: "100px", height: "10px", opacity: 0.15 }}
+        viewBox="0 0 100 10"
+        fill="none"
       >
-        <circle cx="30" cy="30" r="24" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 6" fill="none" opacity="0.25" />
-        <circle cx="30" cy="30" r="15" stroke="hsl(var(--accent))" strokeWidth="2" strokeDasharray="3 5" fill="none" opacity="0.3" />
-      </motion.svg>
-
-      {/* Small triangle */}
-      <motion.svg
-        className="absolute"
-        style={{ left: "75%", top: "8%", width: "35px", height: "35px" }}
-        viewBox="0 0 35 35"
-        animate={{ rotate: [0, 120, 240, 360] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      >
-        <polygon points="17.5,3 32,30 3,30" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" opacity="0.35" />
-      </motion.svg>
+        <line x1="0" y1="5" x2="40" y2="5" stroke="hsl(var(--accent))" strokeWidth="2" strokeLinecap="round" />
+        <line x1="50" y1="5" x2="70" y2="5" stroke="hsl(var(--accent))" strokeWidth="2" strokeLinecap="round" />
+        <line x1="80" y1="5" x2="100" y2="5" stroke="hsl(var(--accent))" strokeWidth="2" strokeLinecap="round" />
+      </svg>
     </div>
   );
 };

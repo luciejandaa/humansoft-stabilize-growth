@@ -22,7 +22,7 @@ const ServicesSection = () => {
 
   return (
     <section id="sluzby" className="section-padding relative">
-      <FunDecorations variant="warm" />
+      <FunDecorations />
       <div className="section-container">
         <AnimatedSection>
           <h2 className="heading-lg mb-16 text-center">{t("services.title")}</h2>

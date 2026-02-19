@@ -10,7 +10,7 @@ const EvaluationSection = () => {
 
   return (
     <section className="section-padding bg-gradient-to-b from-secondary/30 to-background relative">
-      <FunDecorations />
+      <FunDecorations variant="warm" />
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>

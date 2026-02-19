@@ -20,7 +20,7 @@ const TeamSection = () => {
 
   return (
     <section id="tym" className="section-padding bg-gradient-to-b from-secondary/50 to-secondary relative">
-      <FunDecorations />
+      <FunDecorations variant="playful" />
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <AnimatedSection>

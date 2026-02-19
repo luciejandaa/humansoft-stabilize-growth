@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText } from "./ui/animated-section";
+import { ArrowRight } from "lucide-react";
 import FunDecorations from "./FunDecorations";
 
 const WhySection = () => {
@@ -26,6 +29,17 @@ const WhySection = () => {
             <p className="body-lg text-foreground mt-6 font-medium">
               {t("why.conclusion")}
             </p>
+          </AnimatedText>
+
+          <AnimatedText delay={0.3}>
+            <div className="mt-8">
+              <Button size="lg" asChild>
+                <Link to="/reference" className="inline-flex items-center gap-2">
+                  {t("references.cta")}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </AnimatedText>
         </div>
       </div>

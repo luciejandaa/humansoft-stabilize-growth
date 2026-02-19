@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
+import FunDecorations from "./FunDecorations";
 
 const AboutSection = () => {
   const { t } = useTranslation();
   const values = t("about.values", { returnObjects: true }) as string[];
 
   return (
-    <section id="o-nas" className="section-padding bg-gradient-to-b from-background to-secondary/30">
+    <section id="o-nas" className="section-padding bg-gradient-to-b from-background to-secondary/30 relative">
+      <FunDecorations />
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>

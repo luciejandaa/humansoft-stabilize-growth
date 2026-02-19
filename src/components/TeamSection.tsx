@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight, User } from "lucide-react";
+import FunDecorations from "./FunDecorations";
 
 const TeamSection = () => {
   const { t } = useTranslation();
@@ -18,7 +19,8 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="tym" className="section-padding bg-gradient-to-b from-secondary/50 to-secondary">
+    <section id="tym" className="section-padding bg-gradient-to-b from-secondary/50 to-secondary relative">
+      <FunDecorations />
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <AnimatedSection>
@@ -33,21 +35,29 @@ const TeamSection = () => {
           </AnimatedText>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Row layout similar to TeamPage but more compact */}
+        <div className="space-y-12 max-w-3xl mx-auto">
           {teamMembers.map((member, index) => (
-            <AnimatedCard key={member.key} delay={index * 0.05}>
-              <div className="bg-background p-6 border border-divider rounded-xl shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
+            <AnimatedCard key={member.key} delay={index * 0.06}>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 items-center`}>
                 {/* Photo placeholder */}
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl mb-4 flex items-center justify-center border-2 border-dashed border-divider">
-                  <User className="w-10 h-10 text-muted-foreground" />
+                <div className="relative group">
+                  <div className="w-28 h-28 md:w-32 md:h-32 flex-shrink-0 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                    <User className="w-12 h-12 text-muted-foreground/50" />
+                  </div>
+                  <div className="absolute -bottom-1.5 -right-1.5 w-8 h-8 bg-accent/15 rounded-lg -z-10" />
                 </div>
 
-                <div className="text-center">
-                  <h3 className="font-display text-lg font-semibold mb-1">
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-display text-xl md:text-2xl font-semibold mb-1">
                     {t(`team.members.${member.key}.name`)}
                   </h3>
-                  <p className="text-sm text-primary font-medium">
+                  <p className="text-primary font-medium tracking-wide uppercase text-xs mb-2">
                     {t(`team.members.${member.key}.role`)}
+                  </p>
+                  {/* Short bio placeholder — full bio on /tym page */}
+                  <p className="text-sm text-subtle leading-relaxed">
+                    {/* Will be filled with short descriptions later */}
                   </p>
                 </div>
               </div>

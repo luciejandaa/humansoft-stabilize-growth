@@ -55,9 +55,8 @@ const TeamSection = () => {
                   <p className="text-primary font-medium tracking-wide uppercase text-xs mb-2">
                     {t(`team.members.${member.key}.role`)}
                   </p>
-                  {/* Short bio placeholder — full bio on /tym page */}
                   <p className="text-sm text-subtle leading-relaxed">
-                    {/* Will be filled with short descriptions later */}
+                    {t(`team.members.${member.key}.shortBio`, { defaultValue: "" })}
                   </p>
                 </div>
               </div>

@@ -26,8 +26,8 @@ const EvaluationSection = () => {
 
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {benefits.map((benefit, index) => (
-              <AnimatedCard key={index} delay={0.1 + index * 0.1}>
-                <div className="flex items-start gap-3 p-4 bg-background border border-divider rounded-xl">
+              <AnimatedCard key={index} delay={0.1 + index * 0.1} className="h-full">
+                <div className="flex items-start gap-3 p-4 bg-background border border-divider rounded-xl h-full">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   <p className="body-sm text-foreground">{benefit}</p>
                 </div>

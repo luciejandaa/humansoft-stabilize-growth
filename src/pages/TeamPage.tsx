@@ -8,6 +8,7 @@ import { ArrowRight, User } from "lucide-react";
 import FunDecorations from "@/components/FunDecorations";
 import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
+import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();

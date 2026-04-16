@@ -6,18 +6,19 @@ import { Link } from "react-router-dom";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/animated-section";
 import { ArrowRight, User } from "lucide-react";
 import FunDecorations from "@/components/FunDecorations";
+import lucieJanda from "@/assets/team/lucie-janda.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();
 
   const teamMembers = [
-    { key: "member1", initials: "DK" },
-    { key: "member2", initials: "PV" },
-    { key: "member3", initials: "LJ" },
-    { key: "member4", initials: "MK" },
-    { key: "member5", initials: "FF" },
-    { key: "member6", initials: "VH" },
-    { key: "member7", initials: "MK" },
+    { key: "member1", initials: "DK", photo: null },
+    { key: "member2", initials: "PV", photo: null },
+    { key: "member3", initials: "LJ", photo: lucieJanda },
+    { key: "member4", initials: "MK", photo: null },
+    { key: "member5", initials: "FF", photo: null },
+    { key: "member6", initials: "VH", photo: null },
+    { key: "member7", initials: "MK", photo: null },
   ];
 
   return (
@@ -44,8 +45,12 @@ const TeamPage = () => {
                   <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}>
                     {/* Photo placeholder */}
                     <div className="relative group">
-                      <div className="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm group-hover:shadow-md transition-shadow duration-300">
-                        <User className="w-16 h-16 text-muted-foreground/50" />
+                      <div className="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                        {member.photo ? (
+                          <img src={member.photo} alt={t(`team.members.${member.key}.name`)} className="w-full h-full object-cover" />
+                        ) : (
+                          <User className="w-16 h-16 text-muted-foreground/50" />
+                        )}
                       </div>
                       {/* Decorative accent */}
                       <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary/10 rounded-lg -z-10" />

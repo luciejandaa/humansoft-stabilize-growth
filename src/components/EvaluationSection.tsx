@@ -10,7 +10,7 @@ const EvaluationSection = () => {
   const benefits = t("evaluation.benefits", { returnObjects: true }) as string[];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-secondary/30 to-background relative">
+    <section className="section-padding bg-secondary/50 relative">
       <FunDecorations />
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -27,7 +27,7 @@ const EvaluationSection = () => {
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {benefits.map((benefit, index) => (
               <AnimatedCard key={index} delay={0.1 + index * 0.1} className="h-full">
-                <div className="flex items-start gap-3 p-4 bg-background border border-divider rounded-xl h-full">
+                <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-xl h-full hover:border-primary/30 transition-colors duration-300">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                   <p className="body-sm text-foreground">{benefit}</p>
                 </div>

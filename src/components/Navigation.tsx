@@ -43,7 +43,7 @@ const Navigation = () => {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm border-b border-divider shadow-sm"
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -58,7 +58,7 @@ const Navigation = () => {
               <img 
                 src={logoText} 
                 alt="HumanSoft.IT" 
-                className="h-12 md:h-16 w-auto"
+                className="h-12 md:h-16 w-auto brightness-110"
               />
             </Link>
           </motion.div>

@@ -10,7 +10,7 @@ const AboutSection = () => {
   const values = t("about.values", { returnObjects: true }) as string[];
 
   return (
-    <section id="o-nas" className="section-padding bg-gradient-to-b from-background to-secondary/30 relative">
+    <section id="o-nas" className="section-padding relative">
       <FunDecorations />
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
@@ -18,11 +18,10 @@ const AboutSection = () => {
             <h2 className="heading-lg mb-12 text-center">{t("about.title")}</h2>
           </AnimatedSection>
 
-          {/* Vision & Mission */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <AnimatedCard delay={0.1}>
-              <div className="bg-background p-8 border border-divider rounded-xl h-full">
-                <span className="text-xs font-medium tracking-wider uppercase text-primary mb-3 block">
+              <div className="bg-card p-8 border border-border rounded-xl h-full hover:border-primary/30 transition-colors duration-300">
+                <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block font-display">
                   {t("about.vision.label")}
                 </span>
                 <p className="body-lg text-foreground leading-relaxed">
@@ -32,8 +31,8 @@ const AboutSection = () => {
             </AnimatedCard>
 
             <AnimatedCard delay={0.2}>
-              <div className="bg-background p-8 border border-divider rounded-xl h-full">
-                <span className="text-xs font-medium tracking-wider uppercase text-primary mb-3 block">
+              <div className="bg-card p-8 border border-border rounded-xl h-full hover:border-primary/30 transition-colors duration-300">
+                <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block font-display">
                   {t("about.mission.label")}
                 </span>
                 <p className="body-lg text-foreground leading-relaxed">
@@ -43,17 +42,16 @@ const AboutSection = () => {
             </AnimatedCard>
           </div>
 
-          {/* Values */}
           <AnimatedSection delay={0.3}>
             <div className="text-center">
-              <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground mb-6 block">
+              <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-6 block font-display">
                 {t("about.valuesLabel")}
               </span>
               <div className="flex flex-wrap justify-center gap-4">
                 {values.map((value, index) => (
                   <span
                     key={index}
-                    className="px-6 py-3 bg-background border border-divider rounded-xl text-sm font-medium tracking-wide shadow-md hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+                    className="px-6 py-3 bg-card border border-border rounded-xl text-sm font-medium tracking-wide hover:border-primary/30 transition-all duration-200"
                   >
                     {value}
                   </span>
@@ -62,7 +60,6 @@ const AboutSection = () => {
             </div>
           </AnimatedSection>
 
-          {/* CTA */}
           <AnimatedText delay={0.4}>
             <div className="text-center mt-12">
               <Button size="lg" asChild>

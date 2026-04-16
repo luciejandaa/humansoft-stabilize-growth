@@ -8,6 +8,7 @@ import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 import pavelVresnak from "@/assets/team/pavel-vresnak.png";
 import frantisekFiala from "@/assets/team/frantisek-fiala.png";
+import milanKosdy from "@/assets/team/milan-kosdy.png";
 
 const TeamSection = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const TeamSection = () => {
     { key: "member1", initials: "DK", photo: danielaKolomaznikova },
     { key: "member2", initials: "PV", photo: pavelVresnak },
     { key: "member3", initials: "LJ", photo: lucieJanda },
-    { key: "member4", initials: "MK", photo: null },
+    { key: "member4", initials: "MK", photo: milanKosdy },
     { key: "member5", initials: "FF", photo: frantisekFiala },
     { key: "member6", initials: "VH", photo: veronikaHegrova },
     { key: "member7", initials: "MK", photo: null },

@@ -57,6 +57,16 @@ const ServicesPage = () => {
                 {t("servicesPage.intro2")}
               </p>
             </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <div className="text-center mt-10">
+                <Button size="lg" asChild>
+                  <Link to="/kontakt" className="inline-flex items-center gap-2">
+                    {t("servicesPage.ctaButton")}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
@@ -90,17 +100,6 @@ const ServicesPage = () => {
                 </div>
               </AnimatedSection>
             ))}
-          </div>
-        </section>
-        {/* CTA between services and process */}
-        <section className="pb-16 pt-4">
-          <div className="section-container text-center">
-            <Button size="lg" asChild>
-              <Link to="/kontakt" className="inline-flex items-center gap-2">
-                {t("servicesPage.ctaButton")}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </Button>
           </div>
         </section>
 

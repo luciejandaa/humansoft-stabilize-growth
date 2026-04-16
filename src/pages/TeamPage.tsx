@@ -10,6 +10,7 @@ import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 import pavelVresnak from "@/assets/team/pavel-vresnak.png";
+import frantisekFiala from "@/assets/team/frantisek-fiala.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();

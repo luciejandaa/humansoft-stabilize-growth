@@ -93,16 +93,14 @@ const ServicesPage = () => {
           </div>
         </section>
         {/* CTA between services and process */}
-        <section className="section-padding pt-0">
+        <section className="pb-16 pt-4">
           <div className="section-container text-center">
-            <AnimatedSection>
-              <Button size="lg" asChild>
-                <Link to="/kontakt" className="inline-flex items-center gap-2">
-                  {t("servicesPage.ctaButton")}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </AnimatedSection>
+            <Button size="lg" asChild>
+              <Link to="/kontakt" className="inline-flex items-center gap-2">
+                {t("servicesPage.ctaButton")}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </section>
 

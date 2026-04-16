@@ -64,6 +64,74 @@
       ]
     }
   },
+  "servicesPage": {
+    "title": "What We Do",
+    "intro1": "We help companies set up operations to be more stable, transparent, and ready for growth. We connect people, processes, roles, and systems, and turn changes into practice so they don't just stay on paper.",
+    "intro2": "We don't just address symptoms. We look at the real causes of inefficiency, overload, chaos, or unclear management and propose steps that bring real progress.",
+    "helpLabel": "We help you with:",
+    "resultLabel": "Result for the client:",
+    "restructuring": {
+      "title": "Organization & Team Restructuring",
+      "description": "When a company grows, changes, or hits internal limits, the original setup often stops working. We help straighten the company structure to match reality, support decision-making, and not slow down performance.",
+      "items": [
+        "mapping the current state, roles, and responsibilities",
+        "identifying weaknesses, overlaps, and duplicities",
+        "designing a new organizational structure",
+        "setting up decision lines and competencies",
+        "support during implementation of changes into daily practice"
+      ],
+      "result": "clearer operations, less dependency on individuals, faster decision-making, and better management of teams and the entire company"
+    },
+    "processes": {
+      "title": "Setting Up Processes & Company Operations",
+      "description": "Many companies don't grow because they lack capable people, but because their daily operations rely on improvisation. We help companies name, map, and set up processes to be clear, functional, and sustainable.",
+      "items": [
+        "mapping and analysis of existing processes",
+        "workflow and communication standardization",
+        "clear definition of competencies and responsibilities",
+        "process and operational stabilization",
+        "identifying inefficient steps, blind spots, and operational collisions",
+        "proposing adjustments to ease daily operations"
+      ],
+      "result": "less chaos, fewer errors, better continuity between teams, and greater confidence that the company works even without constant firefighting"
+    },
+    "leadership": {
+      "title": "Leadership Development & Team Collaboration",
+      "description": "Even the best processes don't work without people who can carry and develop them. That's why we also look at managers, key roles, and collaboration within the company. We help build an environment where people take responsibility, collaborate, and handle change without unnecessary resistance.",
+      "items": [
+        "working with managers and key people",
+        "leadership support during periods of change",
+        "strengthening autonomy and self-driven approach in teams",
+        "improving collaboration between roles and departments",
+        "supporting a culture of collaboration instead of firefighting",
+        "long-term anchoring of change into company practice"
+      ],
+      "result": "stronger leadership, more autonomous teams, better communication, and changes that last even after the collaboration ends"
+    },
+    "process": {
+      "title": "How Our Collaboration Works",
+      "subtitle": "Every company is different, but our approach always has a clear framework.",
+      "steps": [
+        { "title": "Understanding the Situation", "description": "First, we look at what the company is really dealing with, where the main barriers are, and what result the collaboration should bring." },
+        { "title": "Analysis & Reality Mapping", "description": "We work with interviews, process mapping, practice observation, and data. We're not interested in how things should work, but how they actually work." },
+        { "title": "Solution & Priority Design", "description": "We prepare specific recommendations, a structure of changes, and clear next steps." },
+        { "title": "Implementation Support", "description": "We help not only design the change, but also implement it, communicate it, and maintain it in real operations." }
+      ]
+    },
+    "why": {
+      "title": "Why Companies Work With Us",
+      "items": [
+        "we connect business, processes, people, and systems",
+        "we go after the real cause of problems, not just their symptoms",
+        "we can combine a strategic view with practical implementation",
+        "we don't stop at recommendations — we help turn change into reality",
+        "we build solutions tailored to each specific company, not from a universal template"
+      ]
+    },
+    "claim": "Our goal is not to deliver a document. Our goal is a company that truly works.",
+    "ctaText": "Want to find out where your company has the most room for improvement? Let's schedule an introductory consultation and look at it together.",
+    "ctaButton": "Schedule an introductory consultation"
+  },
   "process": {
     "title": "How We Work",
     "subtitle": "A closed cycle of change that repeats and deepens.",

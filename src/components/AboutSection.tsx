@@ -20,7 +20,7 @@ const AboutSection = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <AnimatedCard delay={0.1}>
-              <div className="bg-card p-8 border border-border rounded-xl h-full hover:border-primary/30 transition-colors duration-300">
+              <div className="bg-card p-8 border border-border rounded-xl h-full glow-gold-hover hover:border-primary/30 transition-colors duration-300">
                 <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block font-display">
                   {t("about.vision.label")}
                 </span>
@@ -31,7 +31,7 @@ const AboutSection = () => {
             </AnimatedCard>
 
             <AnimatedCard delay={0.2}>
-              <div className="bg-card p-8 border border-border rounded-xl h-full hover:border-primary/30 transition-colors duration-300">
+              <div className="bg-card p-8 border border-border rounded-xl h-full glow-gold-hover hover:border-primary/30 transition-colors duration-300">
                 <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-3 block font-display">
                   {t("about.mission.label")}
                 </span>
@@ -51,7 +51,7 @@ const AboutSection = () => {
                 {values.map((value, index) => (
                   <span
                     key={index}
-                    className="px-6 py-3 bg-card border border-border rounded-xl text-sm font-medium tracking-wide hover:border-primary/30 transition-all duration-200"
+                    className="px-6 py-3 bg-card border border-border rounded-xl text-sm font-medium tracking-wide glow-gold-hover hover:border-primary/30 transition-all duration-200"
                   >
                     {value}
                   </span>

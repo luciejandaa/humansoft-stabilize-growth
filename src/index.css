@@ -138,6 +138,28 @@
     box-shadow: 0 0 30px -5px hsl(40 75% 55% / 0.15);
   }
 
+  .glow-gold-hover {
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glow-gold-hover:hover {
+    box-shadow: 0 0 25px -5px hsl(40 75% 55% / 0.2), 0 0 60px -10px hsl(40 90% 65% / 0.1);
+    border-color: hsl(40 75% 55% / 0.3);
+  }
+
+  .glow-gold-btn {
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+  }
+
+  .glow-gold-btn:hover {
+    box-shadow: 0 0 20px -3px hsl(40 75% 55% / 0.35), 0 4px 15px -5px hsl(40 90% 65% / 0.25);
+    transform: translateY(-1px);
+  }
+
+  .glow-gold-btn:active {
+    transform: translateY(0);
+  }
+
   .text-gradient-gold {
     background: linear-gradient(135deg, hsl(40 90% 65%), hsl(40 75% 55%), hsl(20 60% 45%));
     -webkit-background-clip: text;

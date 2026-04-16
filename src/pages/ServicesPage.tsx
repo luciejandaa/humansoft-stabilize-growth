@@ -65,7 +65,7 @@ const ServicesPage = () => {
           <div className="section-container space-y-24">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={0.1}>
-                <div className="bg-card border border-border rounded-2xl p-8 md:p-12">
+                <div className="bg-card border border-border rounded-2xl p-8 md:p-12 glow-gold-hover">
                   <h2 className="heading-md mb-4">{service.title}</h2>
                   <p className="body-base text-subtle mb-8 max-w-3xl">{service.description}</p>
 

@@ -286,11 +286,11 @@ const FunDecorations = () => {
                 x2={c.points[b][0]}
                 y2={c.points[b][1]}
                 stroke={gold}
-                strokeWidth={isHovered ? 0.4 : 0.15}
-                strokeOpacity={isHovered ? 0.8 : 0.4}
+                strokeWidth={isHovered ? 0.6 : 0.25}
+                strokeOpacity={isHovered ? 0.9 : 0.6}
                 animate={{
-                  strokeWidth: isHovered ? 0.4 : 0.15,
-                  strokeOpacity: isHovered ? 0.8 : 0.4,
+                  strokeWidth: isHovered ? 0.6 : 0.25,
+                  strokeOpacity: isHovered ? 0.9 : 0.6,
                 }}
                 transition={{ duration: 0.4 }}
               />

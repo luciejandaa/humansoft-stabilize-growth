@@ -15,7 +15,7 @@ const TeamSection = () => {
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },
     { key: "member5", initials: "FF", photo: null },
-    { key: "member6", initials: "VH", photo: null },
+    { key: "member6", initials: "VH", photo: veronikaHegrova },
     { key: "member7", initials: "MK", photo: null },
   ];
 

@@ -16,7 +16,7 @@ const TeamPage = () => {
 
   const teamMembers = [
     { key: "member1", initials: "DK", photo: danielaKolomaznikova },
-    { key: "member2", initials: "PV", photo: null },
+    { key: "member2", initials: "PV", photo: pavelVresnak },
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },
     { key: "member5", initials: "FF", photo: null },

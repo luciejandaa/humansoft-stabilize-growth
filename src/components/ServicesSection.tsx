@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./ui/animated-section";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -51,9 +54,17 @@ const ServicesSection = () => {
 
         <AnimatedSection delay={0.3}>
           <div className="mt-20 pt-12 border-t border-border">
-            <p className="body-lg text-center max-w-2xl mx-auto italic text-subtle">
+            <p className="body-lg text-center max-w-2xl mx-auto italic text-subtle mb-8">
               "{t("services.quote")}"
             </p>
+            <div className="text-center">
+              <Button size="lg" asChild>
+                <Link to="/kontakt" className="inline-flex items-center gap-2">
+                  Domluvit úvodní konzultaci
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </AnimatedSection>
       </div>

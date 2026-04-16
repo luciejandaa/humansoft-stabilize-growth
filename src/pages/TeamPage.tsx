@@ -8,12 +8,13 @@ import { ArrowRight, User } from "lucide-react";
 import FunDecorations from "@/components/FunDecorations";
 import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
+import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();
 
   const teamMembers = [
-    { key: "member1", initials: "DK", photo: null },
+    { key: "member1", initials: "DK", photo: danielaKolomaznikova },
     { key: "member2", initials: "PV", photo: null },
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },

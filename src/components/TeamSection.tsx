@@ -39,14 +39,21 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <AnimatedCard key={member.key} delay={index * 0.06}>
               <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 items-center`}>
-                <div className="relative group">
-                  <div className="w-28 h-28 md:w-32 md:h-32 flex-shrink-0 bg-card rounded-2xl flex items-center justify-center border border-border glow-gold-hover group-hover:border-primary/30 transition-all duration-300 overflow-hidden">
-                    {member.photo ? (
-                      <img src={member.photo} alt={t(`team.members.${member.key}.name`)} className="w-full h-full object-cover" />
-                    ) : (
+                <div className="relative group flex-shrink-0">
+                  {member.photo ? (
+                    <div className="w-36 md:w-44">
+                      <img
+                        src={member.photo}
+                        alt={t(`team.members.${member.key}.name`)}
+                        className="w-full h-auto rounded-2xl mask-b-from-80"
+                        style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-28 h-28 md:w-32 md:h-32 bg-card rounded-2xl flex items-center justify-center border border-border">
                       <User className="w-12 h-12 text-muted-foreground/50" />
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="font-display text-xl md:text-2xl font-semibold mb-1">{t(`team.members.${member.key}.name`)}</h3>

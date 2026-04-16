@@ -48,17 +48,21 @@ const TeamPage = () => {
               {teamMembers.map((member, index) => (
                 <AnimatedCard key={member.key} delay={index * 0.08}>
                   <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}>
-                    {/* Photo placeholder */}
-                    <div className="relative group">
-                      <div className="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden">
-                        {member.photo ? (
-                          <img src={member.photo} alt={t(`team.members.${member.key}.name`)} className="w-full h-full object-cover" />
-                        ) : (
+                    <div className="relative group flex-shrink-0">
+                      {member.photo ? (
+                        <div className="w-52 md:w-64">
+                          <img
+                            src={member.photo}
+                            alt={t(`team.members.${member.key}.name`)}
+                            className="w-full h-auto rounded-2xl"
+                            style={{ maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' }}
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm">
                           <User className="w-16 h-16 text-muted-foreground/50" />
-                        )}
-                      </div>
-                      {/* Decorative accent */}
-                      <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary/10 rounded-lg -z-10" />
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex-1 text-center md:text-left space-y-4">

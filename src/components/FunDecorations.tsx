@@ -303,8 +303,8 @@ const FunDecorations = () => {
                 cy={y}
                 fill={goldLight}
                 animate={{
-                  r: isHovered ? 1.5 : 0.6,
-                  opacity: isHovered ? 1 : 0.6,
+                  r: isHovered ? 2 : 0.9,
+                  opacity: isHovered ? 1 : 0.75,
                 }}
                 transition={{ duration: 0.3, delay: pi * 0.03 }}
               />

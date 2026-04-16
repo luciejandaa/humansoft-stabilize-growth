@@ -7,6 +7,7 @@ import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/ani
 import { ArrowRight, User } from "lucide-react";
 import FunDecorations from "@/components/FunDecorations";
 import lucieJanda from "@/assets/team/lucie-janda.png";
+import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ const TeamPage = () => {
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },
     { key: "member5", initials: "FF", photo: null },
-    { key: "member6", initials: "VH", photo: null },
+    { key: "member6", initials: "VH", photo: veronikaHegrova },
     { key: "member7", initials: "MK", photo: null },
   ];
 

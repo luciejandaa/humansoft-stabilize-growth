@@ -9,13 +9,14 @@ import FunDecorations from "@/components/FunDecorations";
 import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
+import pavelVresnak from "@/assets/team/pavel-vresnak.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();
 
   const teamMembers = [
     { key: "member1", initials: "DK", photo: danielaKolomaznikova },
-    { key: "member2", initials: "PV", photo: null },
+    { key: "member2", initials: "PV", photo: pavelVresnak },
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },
     { key: "member5", initials: "FF", photo: null },

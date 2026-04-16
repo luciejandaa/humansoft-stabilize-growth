@@ -71,7 +71,6 @@
     "steps": {
       "step1": {
         "title": "Úvodní probe do firmy",
-        "subtitle": "Nadechnutí mezi změnami",
         "description": "Vstoupíme do firmy, zmapujeme terén a nasloucháme."
       },
       "step2": {
@@ -88,7 +87,7 @@
       },
       "step5": {
         "title": "Vyhodnocení realizace",
-        "description": "Měříme dopad, učíme se a připravujeme další cyklus."
+        "description": "Měříme dopad, zpracováváme feedback a připravujeme další cyklus."
       }
     }
   },

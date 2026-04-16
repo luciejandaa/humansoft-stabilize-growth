@@ -11,7 +11,7 @@ const ProcessSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   const steps = [
-    { title: t("process.steps.step1.title"), subtitle: t("process.steps.step1.subtitle"), description: t("process.steps.step1.description") },
+    { title: t("process.steps.step1.title"), description: t("process.steps.step1.description") },
     { title: t("process.steps.step2.title"), description: t("process.steps.step2.description") },
     { title: t("process.steps.step3.title"), description: t("process.steps.step3.description") },
     { title: t("process.steps.step4.title"), description: t("process.steps.step4.description") },

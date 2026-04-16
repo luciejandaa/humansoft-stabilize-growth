@@ -71,7 +71,6 @@
     "steps": {
       "step1": {
         "title": "Initial Probe",
-        "subtitle": "Breathing between changes",
         "description": "We enter the company, map the terrain, and listen."
       },
       "step2": {
@@ -88,7 +87,7 @@
       },
       "step5": {
         "title": "Evaluation",
-        "description": "We measure impact, learn, and prepare the next cycle."
+        "description": "We measure impact, process feedback, and prepare the next cycle."
       }
     }
   },

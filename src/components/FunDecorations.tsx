@@ -259,7 +259,7 @@ const FunDecorations = () => {
             viewBox="-5 -5 110 110"
             preserveAspectRatio="xMidYMid meet"
             animate={{
-              opacity: isHovered ? 0.7 : 0.12,
+              opacity: isHovered ? 0.85 : 0.25,
             }}
             transition={{ duration: 0.5 }}
             onMouseEnter={(e) => {

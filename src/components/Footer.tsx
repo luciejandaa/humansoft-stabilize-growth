@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
   const foundedYear = 2023;
 
   return (
     <motion.footer 
-      className="py-12 border-t border-divider bg-gradient-to-b from-background to-secondary/30"
+      className="py-12 border-t border-border"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -21,13 +20,12 @@ const Footer = () => {
             <img 
               src={logoIcon} 
               alt="HumanSoft.IT" 
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 brightness-110"
             />
             <span className="font-display text-xl font-bold tracking-tight">
               HumanSoft.IT
             </span>
           </div>
-          
           <p className="text-sm text-subtle">
             © {foundedYear} HumanSoft.IT. {t("footer.rights")}
           </p>

@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Nunito', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -57,6 +57,7 @@ export default {
         brand: {
           primary: "hsl(var(--brand-primary))",
           secondary: "hsl(var(--brand-secondary))",
+          glow: "hsl(var(--brand-glow))",
         },
       },
       borderRadius: {

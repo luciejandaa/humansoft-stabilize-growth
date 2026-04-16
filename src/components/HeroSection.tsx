@@ -16,39 +16,34 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/50 -z-10" />
+      {/* Dark gradient background with subtle gold */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary -z-10" />
       
-      {/* Decorative blobs */}
+      {/* Gold ambient glow */}
       <motion.div 
-        className="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3],
+        className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full -z-10"
+        style={{
+          background: "radial-gradient(circle, hsl(40 75% 55% / 0.06), transparent 70%)",
         }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl -z-10"
         animate={{ 
           scale: [1, 1.15, 1],
-          opacity: [0.2, 0.4, 0.2],
+          opacity: [0.5, 1, 0.5],
         }}
-        transition={{ 
-          duration: 10, 
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Grid pattern overlay */}
+      <div 
+        className="absolute inset-0 -z-10 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(40 75% 55%) 1px, transparent 1px), linear-gradient(90deg, hsl(40 75% 55%) 1px, transparent 1px)`,
+          backgroundSize: "80px 80px",
         }}
       />
 
       <div className="section-container section-padding">
         <div className="w-full text-center">
-          {/* Large centered logo - full width */}
+          {/* Logo */}
           <motion.div
             className="mb-16 flex justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -58,7 +53,7 @@ const HeroSection = () => {
             <img 
               src={logoText} 
               alt="HumanSoft.IT" 
-              className="w-full max-w-4xl h-auto"
+              className="w-full max-w-4xl h-auto brightness-110"
             />
           </motion.div>
 
@@ -68,7 +63,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <span className="bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text">
+            <span className="text-gradient-gold">
               {t("hero.title")}
             </span>
           </motion.h1>
@@ -95,7 +90,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Decorative scroll indicator */}
+        {/* Scroll indicator */}
         <motion.div 
           className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
           initial={{ opacity: 0 }}
@@ -103,7 +98,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <motion.div 
-            className="w-px h-16 bg-gradient-to-b from-divider to-transparent"
+            className="w-px h-16 bg-gradient-to-b from-primary/30 to-transparent"
             animate={{ scaleY: [1, 0.7, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />

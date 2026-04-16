@@ -34,7 +34,7 @@ const TeamSection = () => {
             <AnimatedCard key={member.key} delay={index * 0.06}>
               <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 items-center`}>
                 <div className="relative group">
-                  <div className="w-28 h-28 md:w-32 md:h-32 flex-shrink-0 bg-card rounded-2xl flex items-center justify-center border border-border group-hover:border-primary/30 transition-all duration-300">
+                  <div className="w-28 h-28 md:w-32 md:h-32 flex-shrink-0 bg-card rounded-2xl flex items-center justify-center border border-border glow-gold-hover group-hover:border-primary/30 transition-all duration-300">
                     <User className="w-12 h-12 text-muted-foreground/50" />
                   </div>
                 </div>

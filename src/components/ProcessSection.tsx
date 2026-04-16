@@ -11,7 +11,7 @@ const ProcessSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   const steps = [
-    { title: t("process.steps.step1.title"), subtitle: t("process.steps.step1.subtitle"), description: t("process.steps.step1.description") },
+    { title: t("process.steps.step1.title"), description: t("process.steps.step1.description") },
     { title: t("process.steps.step2.title"), description: t("process.steps.step2.description") },
     { title: t("process.steps.step3.title"), description: t("process.steps.step3.description") },
     { title: t("process.steps.step4.title"), description: t("process.steps.step4.description") },
@@ -62,7 +62,7 @@ const ProcessSection = () => {
                 </div>
                 <div className="pb-7 pt-1.5">
                   <h3 className="heading-sm text-base">{step.title}</h3>
-                  {step.subtitle && <p className="text-sm text-primary/60 italic">{step.subtitle}</p>}
+                  {(step as any).subtitle && <p className="text-sm text-primary/60 italic">{(step as any).subtitle}</p>}
                   <p className="body-sm text-subtle mt-1">{step.description}</p>
                 </div>
               </motion.div>
@@ -83,7 +83,7 @@ const ProcessSection = () => {
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
                     <h3 className="font-display font-semibold text-foreground text-sm leading-tight">{step.title}</h3>
-                    {step.subtitle && <p className="text-xs text-primary/60 italic mt-0.5">{step.subtitle}</p>}
+                    {(step as any).subtitle && <p className="text-xs text-primary/60 italic mt-0.5">{(step as any).subtitle}</p>}
                     <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
                   </div>
                 </div>

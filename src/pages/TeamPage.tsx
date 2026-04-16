@@ -20,7 +20,7 @@ const TeamPage = () => {
     { key: "member2", initials: "PV", photo: pavelVresnak },
     { key: "member3", initials: "LJ", photo: lucieJanda },
     { key: "member4", initials: "MK", photo: null },
-    { key: "member5", initials: "FF", photo: null },
+    { key: "member5", initials: "FF", photo: frantisekFiala },
     { key: "member6", initials: "VH", photo: veronikaHegrova },
     { key: "member7", initials: "MK", photo: null },
   ];

@@ -11,6 +11,7 @@ import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 import pavelVresnak from "@/assets/team/pavel-vresnak.png";
 import frantisekFiala from "@/assets/team/frantisek-fiala.png";
+import milanKosdy from "@/assets/team/milan-kosdy.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();

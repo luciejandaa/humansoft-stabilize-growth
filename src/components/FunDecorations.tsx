@@ -1,103 +1,94 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 
 const gold = "hsl(40 75% 55%)";
 const goldLight = "hsl(40 90% 65%)";
 const starWhite = "hsl(45 20% 85%)";
 
-/** Real constellation data — coordinates normalized to 0-100 range */
+/** Real constellation data — coordinates normalized to 0-100 range.
+ *  offsetY is now in "scroll space": 0 = top of page, 100 = one viewport height.
+ *  We spread constellations across a tall virtual sky so they scroll into view. */
 const realConstellations = [
   {
-    name: "Orion",
-    offset: { x: 5, y: 8 },
-    scale: 0.14,
-    points: [
-      [50, 0],   // Betelgeuse
-      [72, 8],   // Bellatrix
-      [60, 35],  // shoulder mid
-      [55, 50],  // belt left
-      [62, 50],  // belt center (Alnilam)
-      [69, 50],  // belt right
-      [48, 75],  // knee left (Saiph)
-      [78, 75],  // knee right (Rigel)
-      [60, 62],  // sword
-    ] as [number, number][],
-    lines: [[0,2],[1,2],[2,3],[3,4],[4,5],[2,5],[3,6],[5,7],[4,8]],
-  },
-  {
-    name: "Ursa Major",
-    offset: { x: 60, y: 5 },
-    scale: 0.18,
-    points: [
-      [0, 40],   // Alkaid
-      [18, 35],  // Mizar
-      [35, 28],  // Alioth
-      [50, 30],  // Megrez
-      [48, 50],  // Phecda
-      [65, 50],  // Merak
-      [65, 28],  // Dubhe
-    ] as [number, number][],
-    lines: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,3]],
-  },
-  {
     name: "Cassiopeia",
-    offset: { x: 35, y: 2 },
+    offset: { x: 35, y: -10 },
     scale: 0.12,
     points: [
-      [0, 30],
-      [22, 0],
-      [45, 25],
-      [68, 0],
-      [90, 20],
+      [0, 30], [22, 0], [45, 25], [68, 0], [90, 20],
     ] as [number, number][],
     lines: [[0,1],[1,2],[2,3],[3,4]],
   },
   {
+    name: "Ursa Major",
+    offset: { x: 62, y: 10 },
+    scale: 0.18,
+    points: [
+      [0, 40], [18, 35], [35, 28], [50, 30], [48, 50], [65, 50], [65, 28],
+    ] as [number, number][],
+    lines: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,3]],
+  },
+  {
+    name: "Orion",
+    offset: { x: 8, y: 40 },
+    scale: 0.14,
+    points: [
+      [50, 0], [72, 8], [60, 35], [55, 50], [62, 50], [69, 50], [48, 75], [78, 75], [60, 62],
+    ] as [number, number][],
+    lines: [[0,2],[1,2],[2,3],[3,4],[4,5],[2,5],[3,6],[5,7],[4,8]],
+  },
+  {
+    name: "Cygnus",
+    offset: { x: 45, y: 55 },
+    scale: 0.13,
+    points: [
+      [50, 0], [50, 35], [50, 75], [20, 35], [80, 35],
+    ] as [number, number][],
+    lines: [[0,1],[1,2],[3,1],[1,4]],
+  },
+  {
     name: "Leo",
-    offset: { x: 72, y: 55 },
+    offset: { x: 70, y: 80 },
     scale: 0.15,
     points: [
-      [0, 30],   // Denebola
-      [25, 40],  // Zosma
-      [38, 25],  // Chertan
-      [55, 15],  // Algieba
-      [65, 0],   // Adhafera
-      [70, 20],  // Rasalas
-      [80, 10],  // Ras Elased
-      [60, 35],  // Regulus area
+      [0, 30], [25, 40], [38, 25], [55, 15], [65, 0], [70, 20], [80, 10], [60, 35],
     ] as [number, number][],
     lines: [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[3,7],[7,1]],
   },
   {
     name: "Scorpius",
-    offset: { x: 2, y: 55 },
+    offset: { x: 5, y: 110 },
     scale: 0.16,
     points: [
-      [30, 0],   // Dschubba
-      [35, 10],  // Acrab
-      [25, 10],  // Fang
-      [30, 25],  // Alniyat
-      [28, 40],  // Antares
-      [25, 55],  // Tau Sco
-      [20, 68],  // curve
-      [12, 78],  // curve
-      [5, 85],   // Shaula
-      [10, 92],  // Lesath
+      [30, 0], [35, 10], [25, 10], [30, 25], [28, 40], [25, 55], [20, 68], [12, 78], [5, 85], [10, 92],
     ] as [number, number][],
     lines: [[0,1],[0,2],[0,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9]],
   },
   {
-    name: "Cygnus",
-    offset: { x: 40, y: 40 },
-    scale: 0.13,
+    name: "Lyra",
+    offset: { x: 55, y: 130 },
+    scale: 0.1,
     points: [
-      [50, 0],   // Deneb
-      [50, 35],  // Sadr
-      [50, 75],  // Albireo
-      [20, 35],  // wing left
-      [80, 35],  // wing right
+      [50, 0], [30, 40], [70, 40], [35, 70], [65, 70],
     ] as [number, number][],
-    lines: [[0,1],[1,2],[3,1],[1,4]],
+    lines: [[0,1],[0,2],[1,3],[2,4],[3,4]],
+  },
+  {
+    name: "Gemini",
+    offset: { x: 20, y: 160 },
+    scale: 0.14,
+    points: [
+      [20, 0], [50, 0], [15, 30], [45, 25], [10, 55], [40, 50], [25, 80], [50, 75],
+    ] as [number, number][],
+    lines: [[0,2],[2,4],[4,6],[1,3],[3,5],[5,7],[0,1],[2,3]],
+  },
+  {
+    name: "Aquila",
+    offset: { x: 72, y: 185 },
+    scale: 0.12,
+    points: [
+      [50, 0], [30, 30], [70, 30], [50, 60], [20, 70], [80, 70],
+    ] as [number, number][],
+    lines: [[0,1],[0,2],[1,3],[2,3],[3,4],[3,5]],
   },
 ];
 
@@ -106,23 +97,32 @@ const seededRandom = (seed: number) => {
   return x - Math.floor(x);
 };
 
-const bgStars = Array.from({ length: 100 }, (_, i) => ({
+/** More stars spread across a taller virtual sky */
+const bgStars = Array.from({ length: 180 }, (_, i) => ({
   left: `${seededRandom(i * 3 + 1) * 100}%`,
-  top: `${seededRandom(i * 3 + 2) * 100}%`,
+  topPercent: seededRandom(i * 3 + 2) * 250, // 0-250% of viewport
   size: 0.5 + seededRandom(i * 3 + 3) * 1.5,
   opacity: 0.1 + seededRandom(i * 3 + 4) * 0.3,
   delay: seededRandom(i * 3 + 5) * 6,
   color: seededRandom(i) > 0.75 ? gold : starWhite,
+  depth: 0.3 + seededRandom(i * 7) * 0.7,
 }));
+
+/** Scroll speed multiplier — how fast the sky "rotates" relative to page scroll */
+const SKY_SCROLL_SPEED = 0.35;
 
 const FunDecorations = () => {
   const [hoveredConstellation, setHoveredConstellation] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number; name: string } | null>(null);
+  const [scrollY, setScrollY] = useState(0);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const smoothX = useSpring(mouseX, { stiffness: 30, damping: 20 });
   const smoothY = useSpring(mouseY, { stiffness: 30, damping: 20 });
+
+  const scrollMotion = useMotionValue(0);
+  const smoothScroll = useSpring(scrollMotion, { stiffness: 50, damping: 25 });
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     const cx = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -131,30 +131,46 @@ const FunDecorations = () => {
     mouseY.set(cy);
   }, [mouseX, mouseY]);
 
+  const handleScroll = useCallback(() => {
+    const y = window.scrollY;
+    setScrollY(y);
+    scrollMotion.set(y);
+  }, [scrollMotion]);
+
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [handleMouseMove]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleMouseMove, handleScroll]);
+
+  const skyOffset = scrollY * SKY_SCROLL_SPEED;
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
 
-      {/* === BACKGROUND STARS with parallax === */}
+      {/* === BACKGROUND STARS — scroll with the sky === */}
       {bgStars.map((star, i) => {
-        const depth = 0.3 + seededRandom(i * 7) * 0.7; // parallax depth
+        const baseTop = (star.topPercent / 100) * window.innerHeight;
+        const scrolledTop = baseTop - skyOffset * (0.6 + star.depth * 0.4);
+        // Wrap around for infinite sky feel
+        const viewH = window.innerHeight;
+        const wrappedTop = ((scrolledTop % (viewH * 2.5)) + viewH * 2.5) % (viewH * 2.5) - viewH * 0.25;
+
         return (
           <motion.div
             key={`star-${i}`}
             className="absolute rounded-full"
             style={{
               left: star.left,
-              top: star.top,
+              top: wrappedTop,
               width: star.size,
               height: star.size,
               background: star.color,
               boxShadow: star.size > 1.8 ? `0 0 ${star.size * 2}px ${star.color}` : undefined,
-              x: smoothX.get() * depth * -8,
-              y: smoothY.get() * depth * -8,
             }}
             animate={{
               opacity: [star.opacity * 0.5, star.opacity, star.opacity * 0.5],
@@ -169,11 +185,21 @@ const FunDecorations = () => {
         );
       })}
 
-      {/* === REAL CONSTELLATIONS — interactive === */}
+      {/* === CONSTELLATIONS — scroll through the sky === */}
       {realConstellations.map((c) => {
         const isHovered = hoveredConstellation === c.name;
-        const w = c.scale * 100; // vw
-        const h = c.scale * 80;  // vh approx
+        const w = c.scale * 100;
+        const h = c.scale * 80;
+
+        // Calculate scrolled position
+        const baseTop = (c.offset.y / 100) * window.innerHeight;
+        const scrolledTop = baseTop - skyOffset;
+        // Check if visible (with some margin)
+        const viewH = window.innerHeight;
+        const topPx = scrolledTop;
+        const isVisible = topPx > -viewH * 0.3 && topPx < viewH * 1.3;
+
+        if (!isVisible) return null;
 
         return (
           <motion.svg
@@ -181,7 +207,7 @@ const FunDecorations = () => {
             className="absolute pointer-events-auto cursor-pointer"
             style={{
               left: `${c.offset.x}%`,
-              top: `${c.offset.y}%`,
+              top: topPx,
               width: `${w}vw`,
               height: `${h}vh`,
             }}
@@ -205,10 +231,8 @@ const FunDecorations = () => {
               setTooltip(null);
             }}
           >
-            {/* Invisible hit area */}
             <rect x="-5" y="-5" width="110" height="110" fill="transparent" />
 
-            {/* Constellation lines */}
             {c.lines.map(([a, b], li) => (
               <motion.line
                 key={`${c.name}-line-${li}`}
@@ -227,7 +251,6 @@ const FunDecorations = () => {
               />
             ))}
 
-            {/* Constellation stars */}
             {c.points.map(([x, y], pi) => (
               <motion.circle
                 key={`${c.name}-star-${pi}`}
@@ -242,7 +265,6 @@ const FunDecorations = () => {
               />
             ))}
 
-            {/* Glow on hover */}
             {isHovered && c.points.map(([x, y], pi) => (
               <motion.circle
                 key={`${c.name}-glow-${pi}`}

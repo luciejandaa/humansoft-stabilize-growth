@@ -7,6 +7,7 @@ import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/ani
 import { ArrowRight, User } from "lucide-react";
 import FunDecorations from "@/components/FunDecorations";
 import lucieJanda from "@/assets/team/lucie-janda.png";
+import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 
 const TeamPage = () => {
   const { t } = useTranslation();

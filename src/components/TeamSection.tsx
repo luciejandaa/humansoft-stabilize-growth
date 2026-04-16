@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight, User } from "lucide-react";
 import lucieJanda from "@/assets/team/lucie-janda.png";
+import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 
 const TeamSection = () => {
   const { t } = useTranslation();

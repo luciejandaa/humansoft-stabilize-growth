@@ -8,30 +8,31 @@ const WhySection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="proc" className="section-padding bg-secondary/50 relative">
+    <section id="proc" className="section-padding bg-secondary/40 relative">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="heading-lg mb-8">
-              {t("why.title")}
+            <span className="eyebrow mb-6 block">— Proč my</span>
+            <h2 className="heading-xl mb-12 text-balance">
+              <span className="italic-serif text-gradient">{t("why.title")}</span>
             </h2>
           </AnimatedSection>
           
           <AnimatedText delay={0.1}>
-            <p className="body-lg text-subtle">
+            <p className="body-lg text-subtle text-balance">
               {t("why.description")}
             </p>
           </AnimatedText>
           
           <AnimatedText delay={0.2}>
-            <p className="body-lg text-foreground mt-6 font-medium">
+            <p className="body-lg text-foreground mt-8 font-medium text-balance">
               {t("why.conclusion")}
             </p>
           </AnimatedText>
 
           <AnimatedText delay={0.3}>
-            <div className="mt-8">
-              <Button size="lg" asChild>
+            <div className="mt-12">
+              <Button variant="gradient" size="lg" asChild>
                 <Link to="/reference" className="inline-flex items-center gap-2">
                   {t("references.cta")}
                   <ArrowRight className="w-4 h-4" />

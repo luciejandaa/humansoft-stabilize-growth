@@ -41,14 +41,14 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/60"
           : "bg-transparent"
       }`}
     >
       <div className="section-container">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -58,7 +58,7 @@ const Navigation = () => {
               <img 
                 src={logoText} 
                 alt="HumanSoft.IT" 
-                className="h-12 md:h-16 w-auto brightness-110"
+                className="h-10 md:h-12 w-auto"
               />
             </Link>
           </motion.div>

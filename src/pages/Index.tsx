@@ -11,10 +11,10 @@ import FunDecorations from "@/components/FunDecorations";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <FunDecorations />
       <Navigation />
-      <main className="relative">
-        <FunDecorations />
+      <main className="relative z-10">
         <HeroSection />
         <EvaluationSection />
         <AboutSection />

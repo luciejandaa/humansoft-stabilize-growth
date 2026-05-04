@@ -89,7 +89,7 @@ const Navigation = () => {
                 >
                   <Link
                     to={link.href}
-                    className={`text-sm font-medium transition-colors duration-200 py-2 ${
+                    className={`link-underline text-sm font-medium transition-colors duration-200 py-2 ${
                       location.pathname === link.href
                         ? "text-foreground"
                         : "text-subtle hover:text-foreground"

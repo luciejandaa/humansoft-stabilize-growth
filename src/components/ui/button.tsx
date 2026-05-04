@@ -5,24 +5,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium font-body transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-md",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium font-body transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-full",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground glow-gold-btn hover:bg-primary/90",
+        default: "bg-foreground text-background hover:bg-primary hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.5)] hover:-translate-y-0.5",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-foreground underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground glow-gold-btn hover:bg-primary/90 text-base px-8 py-4 h-auto",
-        "hero-outline": "border-2 border-foreground bg-transparent text-foreground glow-gold-btn hover:bg-foreground hover:text-background text-base px-8 py-4 h-auto",
+        outline: "border border-foreground/20 bg-transparent text-foreground hover:bg-foreground hover:text-background hover:border-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-muted",
+        ghost: "hover:bg-accent/10 hover:text-primary",
+        link: "text-primary underline-offset-4 hover:underline rounded-none",
+        hero: "bg-foreground text-background text-base px-8 py-4 h-auto hover:bg-primary hover:shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.6)] hover:-translate-y-1",
+        "hero-outline": "border-2 border-foreground bg-transparent text-foreground text-base px-8 py-4 h-auto hover:bg-foreground hover:text-background",
+        gradient: "text-primary-foreground hover:shadow-[0_20px_50px_-15px_hsl(var(--primary)/0.6)] hover:-translate-y-1 bg-[linear-gradient(135deg,hsl(var(--primary)),hsl(var(--primary-glow)))]",
       },
       size: {
-        default: "h-10 px-6 py-2",
+        default: "h-11 px-6 py-2",
         sm: "h-9 px-4",
-        lg: "h-12 px-8 text-base",
-        xl: "h-14 px-10 text-lg",
+        lg: "h-13 px-8 text-base py-3",
+        xl: "h-16 px-10 text-lg",
         icon: "h-10 w-10",
       },
     },

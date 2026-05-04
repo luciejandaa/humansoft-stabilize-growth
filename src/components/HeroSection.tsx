@@ -87,7 +87,7 @@ const HeroSection = () => {
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="text-center md:text-left"
+              className="text-center md:text-left stat-tick cursor-default"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}

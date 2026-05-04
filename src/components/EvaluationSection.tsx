@@ -10,26 +10,34 @@ const EvaluationSection = () => {
   const benefits = t("evaluation.benefits", { returnObjects: true }) as string[];
 
   return (
-    <section className="section-padding bg-secondary/50 relative">
-      <FunDecorations />
+    <section className="section-padding bg-foreground text-background relative overflow-hidden">
+      {/* Mesh accent */}
+      <div className="absolute inset-0 opacity-30 mesh-bg" />
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, hsl(var(--primary-glow) / 0.4), transparent 70%)", filter: "blur(80px)" }} />
+      
       <div className="section-container relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <AnimatedSection>
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6">
-                <ClipboardCheck className="w-7 h-7" />
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-8" style={{ background: "var(--gradient-primary)" }}>
+                <ClipboardCheck className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h2 className="heading-lg mb-4">{t("evaluation.title")}</h2>
-              <p className="body-md text-subtle max-w-2xl mx-auto">{t("evaluation.subtitle")}</p>
+              <h2 className="heading-xl mb-6 text-balance">
+                {t("evaluation.title").split(" ").slice(0, -1).join(" ")}{" "}
+                <span className="italic-serif" style={{ color: "hsl(var(--primary-glow))" }}>
+                  {t("evaluation.title").split(" ").slice(-1)}
+                </span>
+              </h2>
+              <p className="body-lg opacity-70 max-w-2xl mx-auto text-balance">{t("evaluation.subtitle")}</p>
             </div>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 gap-3 mb-12">
             {benefits.map((benefit, index) => (
-              <AnimatedCard key={index} delay={0.1 + index * 0.1} className="h-full">
-                <div className="flex items-start gap-3 p-4 bg-card border border-border rounded-xl h-full glow-gold-hover hover:border-primary/30 transition-colors duration-300">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                  <p className="body-sm text-foreground">{benefit}</p>
+              <AnimatedCard key={index} delay={0.1 + index * 0.08} className="h-full">
+                <div className="flex items-start gap-3 p-5 bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl h-full hover:bg-background/10 hover:border-primary/40 transition-all duration-300">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "hsl(var(--primary-glow))" }} />
+                  <p className="body-sm">{benefit}</p>
                 </div>
               </AnimatedCard>
             ))}
@@ -37,10 +45,10 @@ const EvaluationSection = () => {
 
           <AnimatedText delay={0.5}>
             <div className="text-center">
-              <Button size="lg" asChild>
+              <Button variant="gradient" size="xl" asChild>
                 <Link to="/hodnoceni" className="inline-flex items-center gap-2">
                   {t("evaluation.cta")}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
             </div>

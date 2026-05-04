@@ -9,14 +9,17 @@ const ServicesSection = () => {
 
   const services = [
     {
+      number: "01",
       title: t("services.restructuring.title"),
       items: t("services.restructuring.items", { returnObjects: true }) as string[],
     },
     {
+      number: "02",
       title: t("services.processes.title"),
       items: t("services.processes.items", { returnObjects: true }) as string[],
     },
     {
+      number: "03",
       title: t("services.leadership.title"),
       items: t("services.leadership.items", { returnObjects: true }) as string[],
     },
@@ -26,23 +29,37 @@ const ServicesSection = () => {
     <section id="sluzby" className="section-padding relative">
       <div className="section-container">
         <AnimatedSection>
-          <h2 className="heading-lg mb-16 text-center">{t("services.title")}</h2>
+          <div className="text-center mb-20">
+            <span className="eyebrow mb-6 block">— Služby</span>
+            <h2 className="heading-xl text-balance">
+              {t("services.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="italic-serif text-gradient">
+                {t("services.title").split(" ").slice(-1)}
+              </span>
+            </h2>
+          </div>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-3 gap-12 lg:gap-16">
+        <StaggerContainer className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <StaggerItem key={index}>
-              <div className="group h-full">
-                <h3 className="heading-sm mb-6 pb-4 border-b border-border group-hover:border-primary/40 transition-colors duration-300">
+              <div className="editorial-card group h-full flex flex-col">
+                <div className="flex items-baseline justify-between mb-6">
+                  <span className="font-mono text-xs tracking-widest text-primary">
+                    {service.number}
+                  </span>
+                  <div className="w-12 h-px bg-primary/30 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
+                </div>
+                <h3 className="heading-sm mb-6 text-balance">
                   {service.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-1">
                   {service.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="body-sm text-subtle flex items-start group/item"
+                      className="body-sm text-subtle flex items-start"
                     >
-                      <span className="w-1.5 h-1.5 bg-primary/50 rounded-full mt-2 mr-3 shrink-0 group-hover/item:bg-primary transition-colors duration-200" />
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -53,12 +70,12 @@ const ServicesSection = () => {
         </StaggerContainer>
 
         <AnimatedSection delay={0.3}>
-          <div className="mt-20 pt-12 border-t border-border">
-            <p className="body-lg text-center max-w-2xl mx-auto italic text-subtle mb-8">
+          <div className="mt-24 pt-16 border-t border-border">
+            <p className="heading-md text-center max-w-3xl mx-auto italic-serif text-balance text-foreground/80 mb-10">
               "{t("services.quote")}"
             </p>
             <div className="text-center">
-              <Button size="lg" asChild>
+              <Button variant="gradient" size="lg" asChild>
                 <Link to="/kontakt" className="inline-flex items-center gap-2">
                   Domluvit úvodní konzultaci
                   <ArrowRight className="w-4 h-4" />

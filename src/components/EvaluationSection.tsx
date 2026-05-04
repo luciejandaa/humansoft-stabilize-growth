@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight, ClipboardCheck, CheckCircle2 } from "lucide-react";
-import FunDecorations from "./FunDecorations";
 
 const EvaluationSection = () => {
   const { t } = useTranslation();

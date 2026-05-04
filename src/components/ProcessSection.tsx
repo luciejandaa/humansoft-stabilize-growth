@@ -39,14 +39,16 @@ const ProcessSection = () => {
   };
 
   return (
-    <section id="jak-pracujeme" className="section-padding bg-secondary/50" ref={sectionRef}>
+    <section id="jak-pracujeme" className="section-padding bg-background" ref={sectionRef}>
       <div className="section-container">
-        <motion.h2 className="heading-lg mb-4 text-center" initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
-          {t("process.title")}
-        </motion.h2>
-        <motion.p className="body-base text-subtle text-center mb-16 max-w-2xl mx-auto" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }}>
-          {t("process.subtitle")}
-        </motion.p>
+        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
+          <span className="eyebrow mb-6 block">— Jak pracujeme</span>
+          <h2 className="heading-xl mb-6 text-balance">
+            {t("process.title").split(" ").slice(0, -1).join(" ")}{" "}
+            <span className="italic-serif text-gradient">{t("process.title").split(" ").slice(-1)}</span>
+          </h2>
+          <p className="body-md text-subtle max-w-2xl mx-auto">{t("process.subtitle")}</p>
+        </motion.div>
 
         {/* Mobile */}
         <div className="md:hidden space-y-0">

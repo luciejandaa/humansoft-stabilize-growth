@@ -20,7 +20,7 @@ const Footer = () => {
             <img 
               src={logoIcon} 
               alt="HumanSoft.IT" 
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 invert"
             />
             <span className="font-display text-xl font-bold tracking-tight">
               HumanSoft.IT

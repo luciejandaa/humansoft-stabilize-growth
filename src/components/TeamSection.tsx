@@ -24,11 +24,17 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="tym" className="section-padding bg-secondary/50 relative">
+    <section id="tym" className="section-padding bg-secondary/40 relative">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-20">
           <AnimatedSection>
-            <h2 className="heading-lg mb-6">{t("team.title")}</h2>
+            <span className="eyebrow mb-6 block">— Tým</span>
+            <h2 className="heading-xl mb-6 text-balance">
+              {t("team.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="italic-serif text-gradient">
+                {t("team.title").split(" ").slice(-1)}
+              </span>
+            </h2>
           </AnimatedSection>
           <AnimatedText delay={0.1}>
             <p className="body-lg text-subtle">{t("team.subtitle")}</p>

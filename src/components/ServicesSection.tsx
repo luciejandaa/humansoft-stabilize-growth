@@ -43,7 +43,7 @@ const ServicesSection = () => {
         <StaggerContainer className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <StaggerItem key={index}>
-              <div className="editorial-card group h-full flex flex-col">
+              <div className="editorial-card reveal-arrow group h-full flex flex-col">
                 <div className="flex items-baseline justify-between mb-6">
                   <span className="font-mono text-xs tracking-widest text-primary">
                     {service.number}
@@ -57,13 +57,16 @@ const ServicesSection = () => {
                   {service.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="body-sm text-subtle flex items-start"
+                      className="body-sm text-subtle flex items-start group/item"
                     >
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 shrink-0" />
+                      <span className="w-1.5 h-1.5 bg-primary/40 rounded-full mt-2 mr-3 shrink-0 group-hover/item:bg-primary group-hover/item:scale-125 transition-all duration-300" />
                       {item}
                     </li>
                   ))}
                 </ul>
+                <div className="arrow mt-6 pt-6 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                  Zjistit více <ArrowRight className="w-3.5 h-3.5" />
+                </div>
               </div>
             </StaggerItem>
           ))}

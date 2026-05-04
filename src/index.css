@@ -192,6 +192,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Prevent last-glyph clipping with negative letter-spacing */
+    padding-right: 0.12em;
+    margin-right: -0.12em;
+    display: inline-block;
   }
 
   .text-gradient-vivid {
@@ -199,12 +203,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    padding-right: 0.12em;
+    margin-right: -0.12em;
+    display: inline-block;
   }
 
   .italic-serif {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 400;
+    /* Italic glyphs lean right; reserve space so descender/serif doesn't clip */
+    padding-right: 0.08em;
+    margin-right: -0.04em;
+    display: inline-block;
   }
 
   .glow-emerald {

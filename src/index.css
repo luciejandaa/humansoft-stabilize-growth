@@ -395,6 +395,31 @@
   .stat-tick:hover {
     transform: translateY(-3px);
   }
+
+  /* === TOUCH-FIRST FALLBACKS ===
+     On devices without true hover (phones, most tablets), hover-only states
+     never fire. Keep visible affordances always-on so users still see arrows,
+     underlines and accents. Subtle lift / scale stays disabled to avoid jank
+     during scroll-triggered :hover flashes on iOS. */
+  @media (hover: none) {
+    .reveal-arrow .arrow {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+    }
+    .link-underline::after {
+      transform: scaleX(1);
+      transform-origin: left center;
+      opacity: 0.35;
+    }
+    /* Suppress hover-only elevation on touch — it can trigger after taps. */
+    .lift:hover,
+    .stat-tick:hover,
+    .editorial-card:hover,
+    .glow-emerald-hover:hover {
+      transform: none;
+      box-shadow: var(--shadow-soft);
+    }
+  }
 }
 
 @layer utilities {

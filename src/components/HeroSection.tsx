@@ -110,7 +110,7 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.4 }}
       >
-        <span className="text-xs uppercase tracking-widest text-subtle font-mono">scroll</span>
+        <span className="text-xs uppercase tracking-widest text-subtle font-mono">​</span>
         <motion.div
           className="w-px h-12 bg-gradient-to-b from-primary/60 to-transparent"
           animate={{ scaleY: [1, 0.4, 1] }}

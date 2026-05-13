@@ -200,36 +200,50 @@
 
   .text-subtle { color: hsl(var(--text-subtle)); }
 
+  /* === HAIRLINE TOKENS ===
+     Single source of truth: --border (hsl 150 15% 90%).
+     --divider is kept as alias for legacy classes; resolves to the same value.
+     Use border-border/60 for component-level hairlines (cards, dividers).
+  */
   .divider {
     @apply w-full h-px;
-    background: hsl(var(--divider));
+    background: hsl(var(--border));
   }
 
-  /* Editorial divider with gradient fade — for section transitions */
+  /* Section-transition divider — gradient fade contained to readable column.
+     Wrap in .section-container (or use full-bleed inside a section that already has it). */
   .divider-fade {
     height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent);
+    width: 100%;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      hsl(var(--border)) 18%,
+      hsl(var(--border)) 82%,
+      transparent 100%);
   }
 
-  /* Ornament divider — small dot in middle, lines on sides */
+  /* Ornament divider — emerald dot/wordmark centred between two fading hairlines.
+     Sized identically across breakpoints so rhythm stays consistent. */
   .divider-ornament {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    color: hsl(var(--primary) / 0.4);
+    gap: 1.25rem;
+    color: hsl(var(--primary) / 0.5);
+    width: 100%;
   }
   .divider-ornament::before,
   .divider-ornament::after {
     content: "";
     flex: 1;
     height: 1px;
+    max-width: 6rem;
     background: linear-gradient(90deg, transparent, hsl(var(--border)));
-    max-width: 4rem;
   }
   .divider-ornament::after {
     background: linear-gradient(90deg, hsl(var(--border)), transparent);
   }
+
 
   /* === EFFECTS === */
   .text-gradient {

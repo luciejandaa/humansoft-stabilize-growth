@@ -10,40 +10,72 @@
   },
   "hero": {
     "title": "We rewrite the internal code of companies.",
-    "subtitle": "We help tech companies connect technical excellence with human maturity so they can grow healthily, efficiently, and sustainably.",
+    "subtitle": "We help tech companies connect technical excellence with human maturity so they can grow faster, healthier, and with less chaos.",
     "description": "We find bottlenecks, fine-tune strategy, processes, and team collaboration, and create an environment where people take responsibility, work has meaning, and change continues even without our constant intervention.",
-    "outcome": "The result is a company with direction, performance, and the energy to grow.",
-    "cta": "Find out where we lose performance"
+    "outcome": "The result is a company with clear direction, higher performance, and the energy to grow.",
+    "cta": "Find out where we lose performance",
+    "stats": {
+      "transformations": "successful transformations",
+      "founded": "HumanSoft.IT founded",
+      "steps": "steps of the transformation method",
+      "human": "human approach with business impact"
+    }
   },
   "about": {
     "title": "About Us",
+    "intro": [
+      "HumanSoft.IT was founded for companies that want more than to fix isolated problems.",
+      "We believe the future of tech companies is not built on technical expertise alone. It is built by people who can collaborate, think in context, take responsibility, and turn vision into concrete results.",
+      "That is why we connect strategic consulting, work with teams, process design, and leadership development into one coherent whole.",
+      "We don't come to deliver a document for the drawer. We help companies kickstart a self-driven process of change with real impact on performance, culture, and long-term sustainability."
+    ],
     "vision": {
       "label": "Our Vision",
-      "text": "We hold a vision of the world where the fusion of technical mastery and essential soft skills shapes the core of premier tech companies."
+      "text": "We believe in a world where the fusion of technical mastery and key human skills forms the foundation of leading tech companies. The future will not belong to companies with the best technology alone. It will belong to those who can combine expertise, responsibility, meaning, collaboration, and the ability to learn faster than their problems."
     },
     "mission": {
       "label": "Our Mission",
-      "text": "We provide tailored solutions and tools that enhance efficiency, empower individuals, and foster team growth, kickstarting a self-driven process for resolving company challenges with sustainable effect."
+      "text": "We craft solutions, tools, and transformation processes tailored to companies that want to operate more efficiently, more consciously, and with sustainable impact. We help raise performance, empower individuals, develop teams, and design systems of work so a company can solve its challenges ever more independently. Our goal is not to make companies dependent on consultants. Our goal is to awaken in them the ability to see, name, and solve their own challenges."
     },
-    "valuesLabel": "Our Values",
-    "values": ["Work", "Sense", "Personal Growth", "Freedom", "Fun & Joy"],
-    "cta": "Let's Talk"
+    "valuesLabel": "The values we build change on",
+    "values": [
+      { "name": "Freedom", "description": "We believe people can take responsibility only where they have space to think, decide, and grow." },
+      { "name": "Meaning", "description": "Every change must make sense to people and to the business. Otherwise it stays only on paper." },
+      { "name": "Personal Growth", "description": "A company grows as far as its people are willing to grow." },
+      { "name": "Work", "description": "Real change doesn't happen in a presentation. It happens in everyday work, decisions, and habits." },
+      { "name": "Fun & Joy", "description": "We believe performance doesn't have to come from pressure. It can come from energy, trust, and joy in working together." }
+    ],
+    "cta": "Let's find meaning in the system"
   },
   "why": {
     "title": "Why Companies Choose HumanSoft.IT",
-    "description": "When a company grows, pressure on people, processes, and leadership multiplies. What used to work is no longer enough - chaos grows, competencies become unclear, and teams get exhausted.",
-    "conclusion": "We help turn these situations into opportunities for change and stabilization."
+    "description": "When a tech company grows, better tools, more people, or a new process are not enough.",
+    "paragraphs": [
+      "Pressure on leadership rises. Decisions multiply. Communication gets complicated. Owners hold too many things in their heads. Teams lose clarity, competencies overlap, and energy meant for growth is consumed putting out operational fires.",
+      "We help companies turn this moment into an opportunity.",
+      "We step in where strategy, people, and daily operations need to be connected. We look for real causes, not just visible symptoms. We propose solutions that make sense in practice, and we guide the company so the change doesn't stay dependent on us."
+    ],
+    "conclusion": "HumanSoft.IT helps companies move from improvisation to conscious performance."
   },
   "services": {
     "title": "What We Do",
-    "quote": "Our goal is not to deliver a document. Our goal is a company that actually works.",
+    "intro": [
+      "We help companies find where performance, responsibility, meaning, or energy is being lost — and turn it into a working system.",
+      "We don't just solve processes. We don't just solve people. We don't just solve strategy.",
+      "We connect every layer of the company so technical expertise, leadership, communication, accountability, and daily execution start pulling in the same direction."
+    ],
+    "closing": [
+      "Our goal is not to deliver a document.",
+      "Our goal is a company that can operate, grow, and solve its challenges from within.",
+      "We help companies build an environment where technical expertise meets meaning, responsibility, freedom, and joy in work."
+    ],
     "cta": "Learn More About Our Services",
     "button": "Discover Your Company's Potential",
     "sections": [
       {
         "number": "01",
         "title": "We find where the company loses momentum",
-        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice.",
+        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
         "approach": "We look for these places, name them, and turn them into concrete solutions.",
         "items": [
           "finding bottlenecks in the company",
@@ -52,31 +84,31 @@
           "naming the real causes, not just visible problems",
           "creating a clear picture of what the company needs to change"
         ],
-        "result": "The owner and team finally see what's holding the company back — and where to start so the change has real impact."
+        "result": "The owner and team finally see what's holding the company back, where losses occur, and where to start so the change has real business impact."
       },
       {
         "number": "02",
         "title": "We translate vision into a manageable strategy",
-        "description": "Many owners feel exactly where they want to move the company. But the idea alone isn't enough. It needs structure, priorities, decision-making logic, and concrete steps.",
-        "approach": "We help translate the vision from the owner's head into a strategy that can be managed, communicated, and implemented.",
+        "description": "Many owners feel exactly where they want to take the company. But the idea alone isn't enough. It needs structure, priorities, decision-making logic, and concrete steps. Otherwise it stays in the founder's head, in a presentation, or in endless discussions.",
+        "approach": "We help translate vision into a strategy that can be managed, communicated, and implemented.",
         "items": [
           "designing the entire company strategy",
           "translating ideas into clear priorities and steps",
           "setting up decision-making lines",
-          "aligning the owner, management, and key people",
+          "aligning the owner, leadership, and key people",
           "creating an executive plan that is actually used"
         ],
-        "result": "The strategy won't stay in a presentation. It becomes a daily compass for decision-making, leading people, and further company growth."
+        "result": "Strategy doesn't stay on the wall. It becomes a daily compass for decision-making, leading people, developing teams, and further growth."
       },
       {
         "number": "03",
-        "title": "We change how the company communicates and operates",
-        "description": "In companies, performance often doesn't suffer because people can't work. It suffers because it's unclear who decides what, who is responsible for what, how information is passed, and how tension is handled.",
-        "approach": "We set up communication, responsibilities, and collaboration so the company doesn't have to keep fighting the same situations over and over.",
+        "title": "We set communication that saves time and energy",
+        "description": "In companies, performance often doesn't suffer because people can't work. It suffers because it's unclear who decides what, who is responsible for what, how information flows, and how tension is handled. Then assumptions, duplication, unnecessary meetings, and fatigue from constant explaining arise.",
+        "approach": "We set communication, responsibilities, and collaboration so the company doesn't have to keep fighting the same situations over and over.",
         "items": [
           "setting up effective communication between people and teams",
           "clarifying roles, responsibilities, and competencies",
-          "removing duplicities, noise, and operational collisions",
+          "removing duplication, noise, and operational collisions",
           "establishing a rhythm of meetings, reflections, and decision-making",
           "strengthening collaboration instead of internal pulling"
         ],
@@ -95,22 +127,36 @@
           "long-term development through guided reflection"
         ],
         "result": "Change isn't just a new structure. It's a new way of thinking, deciding, and collaborating across the company."
+      },
+      {
+        "number": "05",
+        "title": "We build self-driven teams",
+        "description": "The greatest value of change emerges when the company stops being dependent on individuals, the owner, or external leadership.",
+        "approach": "We help teams grow toward greater independence, accountability, and the ability to solve problems on time — without endlessly waiting for instructions from above.",
+        "items": [
+          "developing team independence",
+          "supporting accountable decision-making",
+          "establishing regular guided reflection",
+          "strengthening the ability to learn from practice",
+          "creating an environment where people know why their work makes sense"
+        ],
+        "result": "The company gains teams that don't just wait for assignments — they think, decide, collaborate, and move things forward."
       }
     ]
   },
   "servicesPage": {
     "title": "What We Do",
-    "intro1": "We help companies find where they lose energy, money, people, or direction — and turn it into a system that makes sense to the owner, management, and team.",
-    "intro2": "We don't stop at recommendations. We go from the first idea through strategic design to executive implementation in the company's daily operations.",
+    "intro1": "We help companies find where performance, responsibility, meaning, or energy is being lost — and turn it into a working system.",
+    "intro2": "We don't just solve processes. We don't just solve people. We don't just solve strategy. We connect every layer of the company so technical expertise, leadership, communication, accountability, and daily execution start pulling in the same direction.",
     "itemsLabel": "We help with:",
     "resultLabel": "Result:",
-    "closing": "We don't deliver documents. We help companies change the way they think, decide, and operate.",
+    "closing": "Our goal is not to deliver a document. Our goal is a company that can operate, grow, and solve its challenges from within. We help companies build an environment where technical expertise meets meaning, responsibility, freedom, and joy in work.",
     "ctaButton": "Discover Your Company's Potential",
     "sections": [
       {
         "number": "01",
         "title": "We find where the company loses momentum",
-        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice.",
+        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
         "approach": "We look for these places, name them, and turn them into concrete solutions.",
         "items": [
           "finding bottlenecks in the company",
@@ -119,31 +165,31 @@
           "naming the real causes, not just visible problems",
           "creating a clear picture of what the company needs to change"
         ],
-        "result": "The owner and team finally see what's holding the company back — and where to start so the change has real impact."
+        "result": "The owner and team finally see what's holding the company back, where losses occur, and where to start so the change has real business impact."
       },
       {
         "number": "02",
         "title": "We translate vision into a manageable strategy",
-        "description": "Many owners feel exactly where they want to move the company. But the idea alone isn't enough. It needs structure, priorities, decision-making logic, and concrete steps.",
-        "approach": "We help translate the vision from the owner's head into a strategy that can be managed, communicated, and implemented.",
+        "description": "Many owners feel exactly where they want to take the company. But the idea alone isn't enough. It needs structure, priorities, decision-making logic, and concrete steps. Otherwise it stays in the founder's head, in a presentation, or in endless discussions.",
+        "approach": "We help translate vision into a strategy that can be managed, communicated, and implemented.",
         "items": [
           "designing the entire company strategy",
           "translating ideas into clear priorities and steps",
           "setting up decision-making lines",
-          "aligning the owner, management, and key people",
+          "aligning the owner, leadership, and key people",
           "creating an executive plan that is actually used"
         ],
-        "result": "The strategy won't stay in a presentation. It becomes a daily compass for decision-making, leading people, and further company growth."
+        "result": "Strategy doesn't stay on the wall. It becomes a daily compass for decision-making, leading people, developing teams, and further growth."
       },
       {
         "number": "03",
-        "title": "We change how the company communicates and operates",
-        "description": "In companies, performance often doesn't suffer because people can't work. It suffers because it's unclear who decides what, who is responsible for what, how information is passed, and how tension is handled.",
-        "approach": "We set up communication, responsibilities, and collaboration so the company doesn't have to keep fighting the same situations over and over.",
+        "title": "We set communication that saves time and energy",
+        "description": "In companies, performance often doesn't suffer because people can't work. It suffers because it's unclear who decides what, who is responsible for what, how information flows, and how tension is handled. Then assumptions, duplication, unnecessary meetings, and fatigue from constant explaining arise.",
+        "approach": "We set communication, responsibilities, and collaboration so the company doesn't have to keep fighting the same situations over and over.",
         "items": [
           "setting up effective communication between people and teams",
           "clarifying roles, responsibilities, and competencies",
-          "removing duplicities, noise, and operational collisions",
+          "removing duplication, noise, and operational collisions",
           "establishing a rhythm of meetings, reflections, and decision-making",
           "strengthening collaboration instead of internal pulling"
         ],
@@ -162,39 +208,55 @@
           "long-term development through guided reflection"
         ],
         "result": "Change isn't just a new structure. It's a new way of thinking, deciding, and collaborating across the company."
+      },
+      {
+        "number": "05",
+        "title": "We build self-driven teams",
+        "description": "The greatest value of change emerges when the company stops being dependent on individuals, the owner, or external leadership.",
+        "approach": "We help teams grow toward greater independence, accountability, and the ability to solve problems on time — without endlessly waiting for instructions from above.",
+        "items": [
+          "developing team independence",
+          "supporting accountable decision-making",
+          "establishing regular guided reflection",
+          "strengthening the ability to learn from practice",
+          "creating an environment where people know why their work makes sense"
+        ],
+        "result": "The company gains teams that don't just wait for assignments — they think, decide, collaborate, and move things forward."
       }
     ]
   },
   "process": {
     "title": "How We Work",
-    "subtitle": "A closed cycle of change that repeats and deepens.",
+    "subtitle": "Change is not a one-off intervention. It's a guided cycle. We always read each company in its real context — no universal templates.",
+    "centerTitle": "Dynamic transformation plan",
+    "centerSubtitle": "Every collaboration has a clear direction, but stays alive.",
     "cta": "Start With Us",
     "steps": {
       "step1": {
-        "title": "Initial Probe",
-        "description": "We enter the company, map the terrain, and listen."
+        "title": "Probe into the company",
+        "description": "We enter the company, map the terrain, and listen to people across the structure."
       },
       "step2": {
-        "title": "Deep Analysis",
-        "description": "We uncover the true state of affairs and name key challenges."
+        "title": "Deep analysis",
+        "description": "We name the real causes, not just visible problems."
       },
       "step3": {
-        "title": "Pilot Project",
-        "description": "We verify the proposed solution in practice on a smaller scale."
+        "title": "Pilot project",
+        "description": "We first verify the proposed solution in practice."
       },
       "step4": {
-        "title": "Implementation of Changes",
-        "description": "We roll out changes fully with team involvement."
+        "title": "Implementing change",
+        "description": "We embed changes into the company's everyday operations."
       },
       "step5": {
-        "title": "Evaluation",
-        "description": "We measure impact, process feedback, and prepare the next cycle."
+        "title": "Reflection and next cycle",
+        "description": "We evaluate impact and define the next steps."
       }
     }
   },
   "team": {
     "title": "Our Team",
-    "subtitle": "We are change partners - not external auditors. We do not come to companies from above. We work with people, listen to context, and together with teams find solutions that make sense in practice.",
+    "subtitle": "We are partners of change — not external auditors. We don't come into companies from above. We work with people, listen to context, and together with teams find solutions that make sense in practice. Our strength lies in connecting business thinking, technical context, psychology, leadership, process management, and work with people.",
     "cta": "Get to Know Us",
     "members": {
       "member1": {
@@ -251,19 +313,22 @@
     "location": "Brno, Czech Republic"
   },
   "footer": {
+    "tagline": "We rewrite the internal code of tech companies.",
+    "subtagline": "Strategy. Processes. People. Teams. Meaning. Performance.",
     "rights": "All rights reserved."
   },
   "evaluation": {
     "title": "Evaluate Your Company",
-    "subtitle": "A short questionnaire will show you how your company truly stands — in management, processes, and team collaboration. Get a clear picture of what works and where opportunities for improvement are hiding.",
+    "subtitle": "The biggest losses in companies often aren't visible in spreadsheets. They hide in unclear decisions, overloaded people, repeating mistakes, weak communication, or strategy that never made it into daily reality. A short evaluation will help you find out where your company is losing momentum — and where new room for growth can open up.",
     "benefits": [
-      "Spot weak points before they become real problems",
-      "Get an independent view of how your company operates",
-      "Receive concrete ideas on where to start making changes",
-      "It only takes a few minutes — and it could change the direction of your entire company"
+      "Spot weak points before they start slowing the company down",
+      "Get an independent view of management, processes, and collaboration",
+      "See where time, energy, and responsibility are being lost",
+      "Receive concrete prompts on where to start the change",
+      "Get a first map of what can move your company forward"
     ],
     "comingSoon": "Interactive evaluation coming soon.",
-    "cta": "Start Evaluation"
+    "cta": "I want to see where we have reserves"
   },
   "blog": {
     "title": "Blog",

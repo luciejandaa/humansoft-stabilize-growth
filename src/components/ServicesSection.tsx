@@ -64,7 +64,7 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="arrow mt-6 pt-6 border-t border-border/60/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="arrow mt-6 pt-6 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
                   Zjistit více <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>

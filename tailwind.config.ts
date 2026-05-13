@@ -62,6 +62,7 @@ export default {
           glow: "hsl(var(--brand-glow))",
           lime: "hsl(var(--brand-lime))",
           cream: "hsl(var(--brand-cream))",
+          petrol: "hsl(var(--brand-petrol))",
         },
       },
       borderRadius: {

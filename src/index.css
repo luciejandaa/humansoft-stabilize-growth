@@ -44,7 +44,7 @@
     /* Custom tokens */
     --text-subtle: 160 10% 40%;
     --surface-elevated: 0 0% 100%;
-    --divider: 150 15% 88%;
+    --divider: 150 15% 90%; /* alias of --border for legacy classes; keep in sync */
 
     /* Brand */
     --brand-primary: 158 75% 32%;

@@ -20,6 +20,8 @@
     --primary: 158 75% 32%;
     --primary-foreground: 60 20% 99%;
     --primary-glow: 152 80% 45%;
+    /* Darker emerald reserved for primary-coloured text on light bg (WCAG AA on small text) */
+    --primary-deep: 160 78% 22%;
 
     --secondary: 150 30% 96%;
     --secondary-foreground: 160 25% 8%;

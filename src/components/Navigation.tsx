@@ -58,7 +58,7 @@ const Navigation = () => {
               <img 
                 src={logoText} 
                 alt="HumanSoft.IT" 
-                className="h-10 md:h-12 w-auto invert"
+                className="h-12 md:h-12 w-auto max-w-[180px] invert"
               />
             </Link>
           </motion.div>

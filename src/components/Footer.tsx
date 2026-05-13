@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-7">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logoIcon} alt="HumanSoft.IT" className="h-9 w-auto" />
+              <img src={logoIcon} alt="HumanSoft.IT" className="h-9 w-auto invert" />
               <span className="font-display text-2xl font-semibold tracking-tight">
                 HumanSoft.IT
               </span>

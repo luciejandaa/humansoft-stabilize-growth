@@ -26,6 +26,20 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // Close on Escape, lock body scroll while open
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMobileMenuOpen(false);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { href: "/", label: t("nav.home"), highlight: false },
     { href: "/sluzby", label: t("nav.services"), highlight: false },
@@ -119,12 +133,14 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="lg:hidden p-2 relative"
+            className="lg:hidden inline-flex items-center justify-center min-h-11 min-w-11 -mr-2 rounded-lg text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.9 }}
+            aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            whileTap={{ scale: 0.92 }}
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
               {isMobileMenuOpen ? (
                 <motion.div
                   key="close"
@@ -151,17 +167,21 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {isMobileMenuOpen && (
             <motion.div
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Hlavní menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="lg:hidden overflow-hidden"
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:hidden overflow-hidden bg-background/95 backdrop-blur-xl -mx-6 px-6 lg:-mx-10 lg:px-10"
             >
-              <div className="py-6 border-t border-border/60">
-                <div className="flex flex-col gap-2">
+              <div className="py-4 border-t border-border/60">
+                <div className="flex flex-col gap-1">
                   {navLinks.map((link, index) => (
                     link.highlight ? (
                       <motion.div
@@ -185,7 +205,8 @@ const Navigation = () => {
                       >
                         <Link
                           to={link.href}
-                          className={`block text-left text-base font-medium transition-all duration-200 py-3 px-4 rounded-lg active:scale-[0.98] active:bg-secondary ${
+                          aria-current={location.pathname === link.href ? "page" : undefined}
+                          className={`block text-left text-base font-medium transition-colors duration-200 py-3 px-4 rounded-lg active:scale-[0.98] active:bg-secondary min-h-11 flex items-center ${
                             location.pathname === link.href
                               ? "text-foreground bg-secondary"
                               : "text-subtle hover:text-foreground hover:bg-secondary/50"
@@ -200,7 +221,7 @@ const Navigation = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: navLinks.length * 0.05 }}
-                    className="flex items-center gap-4 mt-4 px-4"
+                    className="flex items-center gap-4 mt-4 pt-4 px-4 border-t border-border/60"
                   >
                     <LanguageSwitcher />
                   </motion.div>

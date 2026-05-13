@@ -294,34 +294,37 @@
 
 
   /* === EFFECTS === */
+  /* Lime accent on highlighted words. Was emerald gradient — now solid electric lime
+     wrapped in a deep-petrol underline so it stays legible on white. */
   .text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    /* Prevent last-glyph clipping with negative letter-spacing */
-    padding-right: 0.12em;
-    margin-right: -0.12em;
+    color: hsl(var(--primary-deep));
+    position: relative;
     display: inline-block;
+    padding: 0 0.06em;
+  }
+  .text-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0.05em;
+    height: 0.35em;
+    background: hsl(var(--primary));
+    z-index: -1;
+    border-radius: 2px;
   }
 
   .text-gradient-vivid {
-    background: var(--gradient-vivid);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding-right: 0.12em;
-    margin-right: -0.12em;
-    display: inline-block;
+    color: hsl(var(--primary-deep));
   }
 
+  /* Was "italic-serif" — re-styled as the lime/petrol accent word.
+     Keeps the italic gesture but uses the display grotesk so it blends with
+     the new technical voice. */
   .italic-serif {
     font-family: var(--font-display);
     font-style: italic;
-    font-weight: 400;
-    /* Italic glyphs lean right; reserve space so descender/serif doesn't clip */
-    padding-right: 0.08em;
-    margin-right: -0.04em;
+    font-weight: 500;
+    color: hsl(var(--primary-deep));
+    padding-right: 0.04em;
     display: inline-block;
   }
 

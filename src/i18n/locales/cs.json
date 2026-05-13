@@ -11,7 +11,7 @@
   "hero": {
     "title": "Pomáháme firmám stabilizovat fungování dřív, než se z problému stane krize.",
     "subtitle": "Vstupujeme do organizací pět minut před dvanáctou - restrukturalizujeme týmy, nastavujeme procesy a obnovujeme funkční spolupráci. S respektem k lidem i byznysu.",
-    "cta": "Domluvte si úvodní konzultaci"
+    "cta": "Objevte potenciál vaší firmy"
   },
   "about": {
     "title": "O nás",
@@ -36,6 +36,7 @@
     "title": "Co děláme",
     "quote": "Naším cílem není dodat dokument. Naším cílem je firma, která skutečně funguje.",
     "cta": "Zjistěte více o našich službách",
+    "button": "Objevte potenciál vaší firmy",
     "restructuring": {
       "title": "Restrukturalizace organizace a týmu",
       "items": [
@@ -71,7 +72,7 @@
     "itemsLabel": "Pomáháme například s:",
     "resultLabel": "Výsledek:",
     "closing": "Nedodáváme dokumenty. Pomáháme firmám změnit způsob, jak přemýšlí, rozhodují a fungují.",
-    "ctaButton": "Domluvit úvodní konzultaci",
+    "ctaButton": "Objevte potenciál vaší firmy",
     "sections": [
       {
         "number": "01",
@@ -210,7 +211,7 @@
   "contact": {
     "title": "Chcete změnu dřív, než bude pozdě?",
     "subtitle": "Ozvěte se nám - projdeme vaší situací a navrhneme další krok.",
-    "cta": "Domluvit úvodní konzultaci",
+    "cta": "Objevte potenciál vaší firmy",
     "writeUs": "Napsat nám",
     "email": "info@humansoft.it",
     "phone": "+420 737 909 483",

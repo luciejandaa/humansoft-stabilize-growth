@@ -180,12 +180,16 @@
   /* Display sizes scale fluidly. Lower bound is intentionally small enough
      that 9-12 char Czech words ("operations", "konzultace") fit at 320px. */
   .display-hero {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: clamp(2.25rem, 7.5vw, 6.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+  .display-hero .italic-serif {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(2.5rem, 9vw, 9rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    font-variation-settings: "opsz" 144, "SOFT" 50;
+    letter-spacing: -0.03em;
   }
 
   .heading-xl {

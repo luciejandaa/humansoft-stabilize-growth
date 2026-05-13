@@ -416,3 +416,45 @@
     to { transform: rotate(360deg); }
   }
 }
+
+/* === Prefers reduced motion ===
+   Respect users with vestibular sensitivity. We do NOT remove all motion
+   (would break framer-motion layout transitions); we soften it heavily:
+   - Disable infinite/decorative animations (blobs, marquee, spin)
+   - Cap any animation/transition to ~0.01s so state changes still apply
+   - Neutralise hover lift/scale transforms
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html { scroll-behavior: auto !important; }
+
+  /* Kill purely decorative looping animations entirely */
+  .animate-blob,
+  .animate-spin-slow,
+  .animate-marquee {
+    animation: none !important;
+  }
+
+  /* Neutralise hover/lift transforms so nothing jumps on pointer move */
+  .lift:hover,
+  .stat-tick:hover,
+  .editorial-card:hover,
+  .glow-emerald-hover:hover,
+  .reveal-arrow:hover .arrow {
+    transform: none !important;
+  }
+
+  /* Underline reveal — show statically instead of animating */
+  .link-underline::after {
+    transition: none !important;
+  }
+}
+

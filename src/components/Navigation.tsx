@@ -178,7 +178,7 @@ const Navigation = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:hidden overflow-hidden"
+              className="lg:hidden overflow-hidden bg-background/95 backdrop-blur-xl -mx-6 px-6 lg:-mx-10 lg:px-10"
             >
               <div className="py-4 border-t border-border/60">
                 <div className="flex flex-col gap-1">

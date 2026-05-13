@@ -1,140 +1,129 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import CircuitDiagram from "./CircuitDiagram";
 
 const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
     <section className="min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
-      {/* Soft top-fade gradient backdrop */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 100% 60% at 50% 0%, hsl(152 80% 92% / 0.6), transparent 70%)",
-        }}
-      />
-
       <div className="section-container relative w-full">
-        {/* Eyebrow */}
-        <motion.div
-          className="flex items-center justify-center gap-3 mb-10"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="h-px w-12 bg-foreground/20" />
-          <span className="eyebrow flex items-center gap-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            HumanSoft.IT — Consulting Studio
-          </span>
-          <span className="h-px w-12 bg-foreground/20" />
-        </motion.div>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* LEFT — claim + CTA */}
+          <div className="lg:col-span-7">
+            <motion.div
+              className="flex items-center gap-3 mb-8"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="lime-node" />
+              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground">
+                HumanSoft.IT — Consulting Studio
+              </span>
+            </motion.div>
 
-        {/* Massive editorial headline */}
-        <div className="text-center max-w-5xl mx-auto">
-          <motion.h1
-            className="display-hero mb-10"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className="block text-foreground">{t("hero.title")}</span>
-          </motion.h1>
+            <motion.h1
+              className="display-hero mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="block">Přepisujeme</span>
+              <span className="block">vnitřní <span className="text-gradient">kód</span></span>
+              <span className="block">firem.</span>
+            </motion.h1>
 
-          <motion.p
-            className="body-lg text-subtle max-w-3xl mx-auto mb-6 text-balance"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            {t("hero.subtitle")}
-          </motion.p>
+            <motion.p
+              className="body-lg text-subtle max-w-xl mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              {t("hero.subtitle")}
+            </motion.p>
 
-          <motion.p
-            className="body-base text-subtle max-w-3xl mx-auto mb-6 text-balance"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {t("hero.description")}
-          </motion.p>
+            <motion.p
+              className="body-md text-subtle max-w-xl mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              {t("hero.description")}
+            </motion.p>
 
-          <motion.p
-            className="body-lg text-foreground/80 max-w-3xl mx-auto mb-12 text-balance font-medium"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            {t("hero.outcome")}
-          </motion.p>
+            <motion.p
+              className="body-md text-foreground max-w-xl mb-10 font-medium"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              {t("hero.outcome")}
+            </motion.p>
 
+            <motion.div
+              className="flex flex-wrap gap-4 items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Button variant="gradient" size="xl" asChild className="group">
+                <Link to="/hodnoceni">
+                  {t("hero.cta")}
+                  <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={20} />
+                </Link>
+              </Button>
+              <Button variant="outline" size="xl" asChild>
+                <Link to="/sluzby">{t("nav.services")}</Link>
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* RIGHT — living circuit of the company */}
           <motion.div
-            className="flex flex-wrap justify-center gap-4 items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            className="lg:col-span-5"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Button variant="gradient" size="xl" asChild className="group">
-              <Link to="/hodnoceni">
-                {t("hero.cta")}
-                <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={20} />
-              </Link>
-            </Button>
-            <Button variant="outline" size="xl" asChild>
-              <Link to="/sluzby">{t("nav.services")}</Link>
-            </Button>
+            <CircuitDiagram />
           </motion.div>
         </div>
 
-        {/* Stats / proof bar */}
+        {/* Stats strip */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-border/60 max-w-5xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-border max-w-5xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
           {[
             { num: "10+", label: t("hero.stats.transformations") },
             { num: "2023", label: t("hero.stats.founded") },
-            { num: "5", label: t("hero.stats.steps") },
+            { num: "5",   label: t("hero.stats.steps") },
             { num: "100%", label: t("hero.stats.human") },
           ].map((stat, i) => (
             <motion.div
               key={i}
-              className="text-center md:text-left stat-tick cursor-default"
+              className="stat-tick cursor-default"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.9 + i * 0.1 }}
             >
-              <div className="font-display text-4xl md:text-5xl font-medium text-gradient leading-none mb-2">
-                {stat.num}
+              <div className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-none mb-2 tracking-tight">
+                {stat.num.replace(/(\d+)/, m => m)}
+                <span className="inline-block w-2 h-2 align-baseline ml-1 rounded-full bg-primary" />
               </div>
-              <div className="text-xs uppercase tracking-widest text-subtle font-mono">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-subtle font-mono">
                 {stat.label}
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.4 }}
-      >
-        <span className="text-xs uppercase tracking-widest text-subtle font-mono">​</span>
-        <motion.div
-          className="w-px h-12 bg-gradient-to-b from-primary/60 to-transparent"
-          animate={{ scaleY: [1, 0.4, 1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
     </section>
   );
 };

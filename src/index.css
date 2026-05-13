@@ -88,12 +88,32 @@
 
   html {
     scroll-behavior: smooth;
+    /* Prevent any decorative element from triggering horizontal scroll */
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
     font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
+    /* Avoid awkward word-break on long Czech compounds at very narrow widths */
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  /* Display headings should NOT auto-hyphenate (looks bad in editorial type) */
+  h1, h2, .display-hero, .heading-xl, .heading-lg, .heading-md {
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: break-word;
+  }
+
+  /* Media never overflows its container */
+  img, svg, video, canvas {
+    max-width: 100%;
+    height: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {

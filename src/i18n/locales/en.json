@@ -11,7 +11,7 @@
   "hero": {
     "title": "We help companies stabilize operations before problems become crises.",
     "subtitle": "We step into organizations five minutes before midnight - restructuring teams, setting up processes, and restoring functional collaboration. With respect for people and business.",
-    "cta": "Schedule an Initial Consultation"
+    "cta": "Discover Your Company's Potential"
   },
   "about": {
     "title": "About Us",
@@ -36,6 +36,7 @@
     "title": "What We Do",
     "quote": "Our goal is not to deliver a document. Our goal is a company that actually works.",
     "cta": "Learn More About Our Services",
+    "button": "Discover Your Company's Potential",
     "restructuring": {
       "title": "Organization and Team Restructuring",
       "items": [
@@ -71,7 +72,7 @@
     "itemsLabel": "We help with:",
     "resultLabel": "Result:",
     "closing": "We don't deliver documents. We help companies change the way they think, decide, and operate.",
-    "ctaButton": "Schedule an introductory consultation",
+    "ctaButton": "Discover Your Company's Potential",
     "sections": [
       {
         "number": "01",
@@ -210,7 +211,7 @@
   "contact": {
     "title": "Want Change Before It Is Too Late?",
     "subtitle": "Get in touch - we will review your situation and suggest next steps.",
-    "cta": "Schedule Initial Consultation",
+    "cta": "Discover Your Company's Potential",
     "writeUs": "Write to Us",
     "email": "info@humansoft.it",
     "phone": "+420 737 909 483",

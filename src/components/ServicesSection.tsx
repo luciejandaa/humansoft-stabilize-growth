@@ -80,7 +80,7 @@ const ServicesSection = () => {
             <div className="text-center">
               <Button variant="gradient" size="lg" asChild>
                 <Link to="/kontakt" className="inline-flex items-center gap-2">
-                  Domluvit úvodní konzultaci
+                  {t("services.button")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>

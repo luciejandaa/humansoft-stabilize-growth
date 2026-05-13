@@ -10,40 +10,72 @@
   },
   "hero": {
     "title": "Přepisujeme vnitřní kód firem.",
-    "subtitle": "Pomáháme technologickým firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst zdravě, efektivně a udržitelně.",
-    "description": "Hledáme úzká hrdla, ladíme strategii, procesy i týmovou spolupráci a vytváříme prostředí, kde lidé přebírají odpovědnost, práce má smysl a změna pokračuje i bez našeho neustálého zásahu.",
-    "outcome": "Výsledkem je firma, která má směr, výkon a energii růst.",
-    "cta": "Zjistit, kde ztrácíme výkon"
+    "subtitle": "Pomáháme technologickým firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst rychleji, zdravěji a s menším množstvím chaosu.",
+    "description": "Hledáme úzká hrdla, ladíme strategii, procesy i týmovou spolupráci a vytváříme prostředí, ve kterém lidé přebírají odpovědnost, práce má smysl a změna pokračuje i bez našeho neustálého zásahu.",
+    "outcome": "Výsledkem je firma, která má jasný směr, vyšší výkon a energii růst.",
+    "cta": "Zjistit, kde ztrácíme výkon",
+    "stats": {
+      "transformations": "úspěšných transformací",
+      "founded": "vznik HumanSoft.IT",
+      "steps": "kroků transformační metodiky",
+      "human": "lidský přístup s business dopadem"
+    }
   },
   "about": {
     "title": "O nás",
+    "intro": [
+      "HumanSoft.IT vznikl pro firmy, které chtějí víc než jen opravit jednotlivé problémy.",
+      "Věříme, že budoucnost technologických firem nevytváří pouze technická odbornost. Vytváří ji lidé, kteří umí spolupracovat, přemýšlet v souvislostech, převzít odpovědnost a proměnit vizi v konkrétní výsledky.",
+      "Proto propojujeme strategické poradenství, práci s týmy, procesní nastavení a rozvoj leadershipu do jednoho funkčního celku.",
+      "Nepřicházíme dodat dokument do šuplíku. Pomáháme firmám nastartovat samostatně řízený proces změny, který má skutečný dopad na výkon, kulturu i dlouhodobou udržitelnost."
+    ],
     "vision": {
       "label": "Naše vize",
-      "text": "Věříme ve svět, kde propojení technické odbornosti a klíčových soft skills tvoří jádro špičkových technologických firem."
+      "text": "Věříme ve svět, kde propojení technické mistrovskosti a klíčových lidských dovedností tvoří základ špičkových technologických firem. Budoucnost nebude patřit firmám, které mají jen nejlepší technologie. Bude patřit těm, které dokážou spojit odbornost, odpovědnost, smysl, spolupráci a schopnost učit se rychleji než jejich problémy."
     },
     "mission": {
       "label": "Naše mise",
-      "text": "Poskytujeme řešení a nástroje šité na míru, které zvyšují efektivitu, posilují jednotlivce a podporují růst týmů. Startujeme samostatně řízený proces řešení firemních výzev s udržitelným efektem."
+      "text": "Vytváříme řešení, nástroje a transformační procesy šité na míru firmám, které chtějí fungovat efektivněji, vědoměji a s udržitelným dopadem. Pomáháme zvyšovat výkonnost, posilovat jednotlivce, rozvíjet týmy a nastavovat systém práce tak, aby firma dokázala své výzvy řešit stále samostatněji. Naším cílem není, aby byla firma závislá na konzultantech. Naším cílem je probudit v ní schopnost vidět, pojmenovat a řešit vlastní výzvy."
     },
-    "valuesLabel": "— Naše hodnoty — ",
-    "values": ["Práce", "Smysl", "Osobní růst", "Svoboda", "Zábava & radost"],
-    "cta": "Pojďme to probrat"
+    "valuesLabel": "Hodnoty, podle kterých stavíme změnu",
+    "values": [
+      { "name": "Svoboda", "description": "Věříme, že lidé mohou převzít odpovědnost jen tam, kde mají prostor přemýšlet, rozhodovat a růst." },
+      { "name": "Smysl", "description": "Každá změna musí dávat smysl lidem i byznysu. Jinak zůstane jen na papíře." },
+      { "name": "Osobní růst", "description": "Firma roste tak daleko, kam jsou ochotni růst její lidé." },
+      { "name": "Práce", "description": "Skutečná změna se neděje v prezentaci. Děje se v každodenní práci, rozhodnutích a návycích." },
+      { "name": "Zábava & radost", "description": "Věříme, že výkon nemusí vznikat z tlaku. Může vznikat i z energie, důvěry a radosti ze společné práce." }
+    ],
+    "cta": "Pojďme najít smysl v systému"
   },
   "why": {
     "title": "Proč firmy volí HumanSoft.IT",
-    "description": "Když firma roste, tlak na lidi, procesy a vedení se násobí. Co dříve fungovalo, přestává stačit - roste chaos, zmatek v kompetencích a únava týmu.",
-    "conclusion": "My pomáháme tyto situace otočit v příležitost ke změně a stabilizaci."
+    "description": "Když technologická firma roste, nestačí jí jen lepší nástroje, více lidí nebo nový proces.",
+    "paragraphs": [
+      "Roste tlak na vedení. Přibývá rozhodnutí. Komunikace se komplikuje. Majitelé drží příliš mnoho věcí v hlavě. Týmy ztrácí jasnost, kompetence se překrývají a energie se místo růstu spotřebovává na hašení provozních problémů.",
+      "My pomáháme firmám tento moment využít jako příležitost.",
+      "Vstupujeme tam, kde je potřeba propojit strategii, lidi a každodenní fungování. Hledáme skutečné příčiny, ne jen viditelné symptomy. Navrhujeme řešení, která dávají smysl v praxi, a provázíme firmu tak, aby změna nezůstala závislá na nás."
+    ],
+    "conclusion": "HumanSoft.IT pomáhá firmám přejít od improvizace k vědomému výkonu."
   },
   "services": {
     "title": "Co děláme",
-    "quote": "Naším cílem není dodat dokument. Naším cílem je firma, která skutečně funguje.",
+    "intro": [
+      "Pomáháme firmám najít místa, kde se ztrácí výkon, odpovědnost, smysl nebo energie — a proměnit je ve funkční systém.",
+      "Neřešíme jen procesy. Neřešíme jen lidi. Neřešíme jen strategii.",
+      "Propojujeme všechny vrstvy firmy tak, aby technická odbornost, leadership, komunikace, odpovědnost a každodenní exekuce začaly táhnout jedním směrem."
+    ],
+    "closing": [
+      "Naším cílem není dodat dokument.",
+      "Naším cílem je firma, která umí fungovat, růst a řešit své výzvy zevnitř.",
+      "Pomáháme firmám vytvořit prostředí, kde se technická odbornost potkává se smyslem, odpovědností, svobodou a radostí z práce."
+    ],
     "cta": "Zjistěte více o našich službách",
     "button": "Objevte potenciál vaší firmy",
     "sections": [
       {
         "number": "01",
         "title": "Najdeme, kde firma ztrácí tah",
-        "description": "Každá firma má místa, kde se něco opakuje. Rozhodnutí se vrací zpět. Lidé si nerozumí. Majitel drží příliš mnoho věcí v hlavě. Strategie existuje, ale nežije v praxi.",
+        "description": "Každá firma má místa, kde se něco opakuje. Rozhodnutí se vrací zpět. Lidé si nerozumí. Majitel drží příliš mnoho věcí v hlavě. Strategie existuje, ale nežije v praxi. Týmy pracují naplno, ale výkon se ztrácí v šumu.",
         "approach": "My tato místa hledáme, pojmenováváme a převádíme do konkrétního řešení.",
         "items": [
           "hledáním úzkých hrdel ve firmě",
@@ -52,13 +84,13 @@
           "pojmenováním skutečných příčin, ne jen viditelných problémů",
           "vytvořením jasného obrazu toho, co firma potřebuje změnit"
         ],
-        "result": "Majitel i tým konečně vidí, co firmu brzdí — a kde začít, aby změna měla skutečný dopad."
+        "result": "Majitel i tým konečně vidí, co firmu brzdí, kde vznikají ztráty a kde začít, aby změna měla skutečný business dopad."
       },
       {
         "number": "02",
         "title": "Překládáme vizi do strategie, která se dá řídit",
-        "description": "Mnoho majitelů přesně cítí, kam chtějí firmu posunout. Jenže myšlenka sama o sobě nestačí. Potřebuje strukturu, priority, rozhodovací logiku a konkrétní kroky.",
-        "approach": "Pomáháme převést vizi z hlavy majitele do strategie, kterou lze řídit, komunikovat a realizovat.",
+        "description": "Mnoho majitelů přesně cítí, kam chtějí firmu posunout. Jenže myšlenka sama o sobě nestačí. Potřebuje strukturu, priority, rozhodovací logiku a konkrétní kroky. Jinak zůstane jen v hlavě zakladatele, v prezentaci nebo v nekonečných diskuzích.",
+        "approach": "Pomáháme převést vizi do strategie, kterou lze řídit, komunikovat a realizovat.",
         "items": [
           "designem celé firemní strategie",
           "překladem myšlenek do jasných priorit a kroků",
@@ -66,12 +98,12 @@
           "sladěním majitele, vedení a klíčových lidí",
           "vytvořením exekutivního plánu, který se skutečně používá"
         ],
-        "result": "Strategie nezůstane v prezentaci. Stane se každodenním kompasem pro rozhodování, vedení lidí i další růst firmy."
+        "result": "Strategie nezůstane na zdi. Stane se každodenním kompasem pro rozhodování, vedení lidí, rozvoj týmů i další růst firmy."
       },
       {
         "number": "03",
-        "title": "Měníme způsob, jak firma komunikuje a funguje",
-        "description": "Ve firmách často nevázne výkon proto, že by lidé neuměli pracovat. Vázne proto, že není jasné, kdo co rozhoduje, kdo za co odpovídá, jak se předávají informace a jak se pracuje s napětím.",
+        "title": "Nastavujeme komunikaci, která šetří čas i energii",
+        "description": "Ve firmách často nevázne výkon proto, že by lidé neuměli pracovat. Vázne proto, že není jasné, kdo co rozhoduje, kdo za co odpovídá, jak se předávají informace a jak se pracuje s napětím. Pak vznikají domněnky, duplicity, zbytečné schůzky a únava z neustálého vysvětlování.",
         "approach": "Nastavujeme komunikaci, odpovědnosti a spolupráci tak, aby firma nemusela pořád hasit stejné situace dokola.",
         "items": [
           "nastavením efektivní komunikace mezi lidmi a týmy",
@@ -95,22 +127,36 @@
           "dlouhodobým rozvojem skrze řízenou reflexi"
         ],
         "result": "Změna není jen nová struktura. Je to nový způsob přemýšlení, rozhodování a spolupráce napříč firmou."
+      },
+      {
+        "number": "05",
+        "title": "Stavíme self-driven týmy",
+        "description": "Nejvyšší hodnota změny vzniká ve chvíli, kdy firma přestane být závislá na jednotlivcích, majiteli nebo externím vedení.",
+        "approach": "Pomáháme týmům růst směrem k větší samostatnosti, odpovědnosti a schopnosti řešit problémy včas — bez nekonečného čekání na pokyn shora.",
+        "items": [
+          "rozvojem samostatnosti týmů",
+          "podporou odpovědného rozhodování",
+          "zavedením pravidelné řízené reflexe",
+          "posílením schopnosti učit se z praxe",
+          "nastavením prostředí, kde lidé vědí, proč jejich práce dává smysl"
+        ],
+        "result": "Firma získává týmy, které nečekají jen na zadání, ale dokážou přemýšlet, rozhodovat, spolupracovat a posouvat věci dopředu."
       }
     ]
   },
   "servicesPage": {
     "title": "Co děláme",
-    "intro1": "Pomáháme firmám najít místa, kde ztrácí energii, peníze, lidi nebo směr — a proměnit je v systém, který dává smysl majiteli, managementu i týmu.",
-    "intro2": "Nezůstáváme u doporučení. Jdeme od první myšlenky přes strategický design až po exekutivní uchopení v každodenním fungování firmy.",
+    "intro1": "Pomáháme firmám najít místa, kde se ztrácí výkon, odpovědnost, smysl nebo energie — a proměnit je ve funkční systém.",
+    "intro2": "Neřešíme jen procesy. Neřešíme jen lidi. Neřešíme jen strategii. Propojujeme všechny vrstvy firmy tak, aby technická odbornost, leadership, komunikace, odpovědnost a každodenní exekuce začaly táhnout jedním směrem.",
     "itemsLabel": "Pomáháme například s:",
     "resultLabel": "Výsledek:",
-    "closing": "Nedodáváme dokumenty. Pomáháme firmám změnit způsob, jak přemýšlí, rozhodují a fungují.",
+    "closing": "Naším cílem není dodat dokument. Naším cílem je firma, která umí fungovat, růst a řešit své výzvy zevnitř. Pomáháme firmám vytvořit prostředí, kde se technická odbornost potkává se smyslem, odpovědností, svobodou a radostí z práce.",
     "ctaButton": "Objevte potenciál vaší firmy",
     "sections": [
       {
         "number": "01",
         "title": "Najdeme, kde firma ztrácí tah",
-        "description": "Každá firma má místa, kde se něco opakuje. Rozhodnutí se vrací zpět. Lidé si nerozumí. Majitel drží příliš mnoho věcí v hlavě. Strategie existuje, ale nežije v praxi.",
+        "description": "Každá firma má místa, kde se něco opakuje. Rozhodnutí se vrací zpět. Lidé si nerozumí. Majitel drží příliš mnoho věcí v hlavě. Strategie existuje, ale nežije v praxi. Týmy pracují naplno, ale výkon se ztrácí v šumu.",
         "approach": "My tato místa hledáme, pojmenováváme a převádíme do konkrétního řešení.",
         "items": [
           "hledáním úzkých hrdel ve firmě",
@@ -119,13 +165,13 @@
           "pojmenováním skutečných příčin, ne jen viditelných problémů",
           "vytvořením jasného obrazu toho, co firma potřebuje změnit"
         ],
-        "result": "Majitel i tým konečně vidí, co firmu brzdí — a kde začít, aby změna měla skutečný dopad."
+        "result": "Majitel i tým konečně vidí, co firmu brzdí, kde vznikají ztráty a kde začít, aby změna měla skutečný business dopad."
       },
       {
         "number": "02",
         "title": "Překládáme vizi do strategie, která se dá řídit",
-        "description": "Mnoho majitelů přesně cítí, kam chtějí firmu posunout. Jenže myšlenka sama o sobě nestačí. Potřebuje strukturu, priority, rozhodovací logiku a konkrétní kroky.",
-        "approach": "Pomáháme převést vizi z hlavy majitele do strategie, kterou lze řídit, komunikovat a realizovat.",
+        "description": "Mnoho majitelů přesně cítí, kam chtějí firmu posunout. Jenže myšlenka sama o sobě nestačí. Potřebuje strukturu, priority, rozhodovací logiku a konkrétní kroky. Jinak zůstane jen v hlavě zakladatele, v prezentaci nebo v nekonečných diskuzích.",
+        "approach": "Pomáháme převést vizi do strategie, kterou lze řídit, komunikovat a realizovat.",
         "items": [
           "designem celé firemní strategie",
           "překladem myšlenek do jasných priorit a kroků",
@@ -133,12 +179,12 @@
           "sladěním majitele, vedení a klíčových lidí",
           "vytvořením exekutivního plánu, který se skutečně používá"
         ],
-        "result": "Strategie nezůstane v prezentaci. Stane se každodenním kompasem pro rozhodování, vedení lidí i další růst firmy."
+        "result": "Strategie nezůstane na zdi. Stane se každodenním kompasem pro rozhodování, vedení lidí, rozvoj týmů i další růst firmy."
       },
       {
         "number": "03",
-        "title": "Měníme způsob, jak firma komunikuje a funguje",
-        "description": "Ve firmách často nevázne výkon proto, že by lidé neuměli pracovat. Vázne proto, že není jasné, kdo co rozhoduje, kdo za co odpovídá, jak se předávají informace a jak se pracuje s napětím.",
+        "title": "Nastavujeme komunikaci, která šetří čas i energii",
+        "description": "Ve firmách často nevázne výkon proto, že by lidé neuměli pracovat. Vázne proto, že není jasné, kdo co rozhoduje, kdo za co odpovídá, jak se předávají informace a jak se pracuje s napětím. Pak vznikají domněnky, duplicity, zbytečné schůzky a únava z neustálého vysvětlování.",
         "approach": "Nastavujeme komunikaci, odpovědnosti a spolupráci tak, aby firma nemusela pořád hasit stejné situace dokola.",
         "items": [
           "nastavením efektivní komunikace mezi lidmi a týmy",
@@ -162,39 +208,55 @@
           "dlouhodobým rozvojem skrze řízenou reflexi"
         ],
         "result": "Změna není jen nová struktura. Je to nový způsob přemýšlení, rozhodování a spolupráce napříč firmou."
+      },
+      {
+        "number": "05",
+        "title": "Stavíme self-driven týmy",
+        "description": "Nejvyšší hodnota změny vzniká ve chvíli, kdy firma přestane být závislá na jednotlivcích, majiteli nebo externím vedení.",
+        "approach": "Pomáháme týmům růst směrem k větší samostatnosti, odpovědnosti a schopnosti řešit problémy včas — bez nekonečného čekání na pokyn shora.",
+        "items": [
+          "rozvojem samostatnosti týmů",
+          "podporou odpovědného rozhodování",
+          "zavedením pravidelné řízené reflexe",
+          "posílením schopnosti učit se z praxe",
+          "nastavením prostředí, kde lidé vědí, proč jejich práce dává smysl"
+        ],
+        "result": "Firma získává týmy, které nečekají jen na zadání, ale dokážou přemýšlet, rozhodovat, spolupracovat a posouvat věci dopředu."
       }
     ]
   },
   "process": {
     "title": "Jak pracujeme",
-    "subtitle": "Uzavřený cyklus změny, který se opakuje a prohlubuje.",
+    "subtitle": "Změna není jednorázový zásah. Je to řízený cyklus. Každou firmu nejdřív čteme v jejím skutečném kontextu — neaplikujeme univerzální šablony.",
+    "centerTitle": "Dynamický plán transformace firmy",
+    "centerSubtitle": "Každá spolupráce má jasný směr, ale zůstává živá.",
     "cta": "Začněte s námi",
     "steps": {
       "step1": {
-        "title": "Úvodní probe do firmy",
-        "description": "Vstoupíme do firmy, zmapujeme terén a nasloucháme."
+        "title": "Probe do firmy",
+        "description": "Vstupujeme do firmy, mapujeme terén a nasloucháme lidem napříč strukturou."
       },
       "step2": {
         "title": "Hloubková analýza",
-        "description": "Odhalíme skutečný stav věcí a pojmenujeme klíčové výzvy."
+        "description": "Pojmenujeme skutečné příčiny, ne jen viditelné problémy."
       },
       "step3": {
         "title": "Pilotní projekt",
-        "description": "Ověříme navržené řešení v praxi na menším vzorku."
+        "description": "Navržené řešení nejdřív ověřujeme v praxi."
       },
       "step4": {
         "title": "Realizace změn",
-        "description": "Zavedeme změny v plném rozsahu se zapojením týmu."
+        "description": "Zavádíme změny do každodenního fungování firmy."
       },
       "step5": {
-        "title": "Vyhodnocení realizace",
-        "description": "Měříme dopad, zpracováváme feedback a připravujeme další cyklus."
+        "title": "Reflexe a další cyklus",
+        "description": "Vyhodnocujeme dopad a nastavujeme další kroky."
       }
     }
   },
   "team": {
     "title": "Náš tým",
-    "subtitle": "Jsme partneři změny - ne externí auditori. Do firem nepřicházíme shora. Pracujeme s lidmi, nasloucháme kontextu a společně s týmy hledáme řešení, která dávají smysl v praxi.",
+    "subtitle": "Jsme partneři změny — ne externí auditoři. Do firem nepřicházíme shora. Pracujeme s lidmi, nasloucháme kontextu a společně s týmy hledáme řešení, která dávají smysl v praxi. Naše síla je v propojení byznysového uvažování, technického kontextu, psychologie, leadershipu, procesního řízení a práce s lidmi.",
     "cta": "Poznejte nás blíže",
     "members": {
       "member1": {
@@ -251,19 +313,22 @@
     "location": "Brno, Česká republika"
   },
   "footer": {
+    "tagline": "Přepisujeme vnitřní kód technologických firem.",
+    "subtagline": "Strategie. Procesy. Lidé. Týmy. Smysl. Výkon.",
     "rights": "Všechna práva vyhrazena."
   },
   "evaluation": {
     "title": "Ohodnoťte svoji firmu",
-    "subtitle": "Krátký dotazník vám ukáže, jak na tom vaše firma skutečně je — v řízení, procesech i týmové spolupráci. Získáte jasný obraz toho, co funguje a kde se skrývají příležitosti ke zlepšení.",
+    "subtitle": "Největší ztráty ve firmách často nejsou vidět v tabulkách. Skrývají se v nejasném rozhodování, přetížených lidech, opakujících se chybách, slabé komunikaci nebo strategii, která se nikdy nepřeklopila do každodenní reality. Krátké hodnocení vám pomůže zjistit, kde vaše firma ztrácí tah — a kde může získat nový prostor pro růst.",
     "benefits": [
-      "Odhalíte slabá místa dřív, než se z nich stanou problémy",
-      "Získáte nezávislý pohled na fungování firmy",
+      "Odhalíte slabá místa dřív, než začnou brzdit výkon firmy",
+      "Získáte nezávislý pohled na řízení, procesy a spolupráci",
+      "Uvidíte, kde se ztrácí čas, energie a odpovědnost",
       "Dostanete konkrétní podněty, kde začít se změnou",
-      "Zabere to jen pár minut — a může to změnit směr celé firmy"
+      "Získáte první mapu toho, co může vaši firmu posunout dál"
     ],
     "comingSoon": "Interaktivní hodnocení bude brzy k dispozici.",
-    "cta": "Chci vyplnit hodnocení"
+    "cta": "Chci zjistit, kde máme rezervy"
   },
   "blog": {
     "title": "Blog",

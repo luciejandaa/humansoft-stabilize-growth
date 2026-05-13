@@ -221,7 +221,7 @@ const Navigation = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: navLinks.length * 0.05 }}
-                    className="flex items-center gap-4 mt-4 px-4"
+                    className="flex items-center gap-4 mt-4 pt-4 px-4 border-t border-border/60"
                   >
                     <LanguageSwitcher />
                   </motion.div>

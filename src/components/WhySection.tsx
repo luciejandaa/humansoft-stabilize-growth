@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 const WhySection = () => {
   const { t } = useTranslation();
+  const paragraphs = t("why.paragraphs", { returnObjects: true }) as string[];
 
   return (
     <section id="proc" className="section-padding bg-secondary/40 relative">
@@ -17,20 +18,26 @@ const WhySection = () => {
               <span className="italic-serif text-gradient">{t("why.title")}</span>
             </h2>
           </AnimatedSection>
-          
+
           <AnimatedText delay={0.1}>
-            <p className="body-lg text-subtle text-balance">
+            <p className="body-lg text-foreground font-medium text-balance mb-6">
               {t("why.description")}
             </p>
           </AnimatedText>
-          
-          <AnimatedText delay={0.2}>
-            <p className="body-lg text-foreground mt-8 font-medium text-balance">
+
+          {paragraphs.map((p, i) => (
+            <AnimatedText key={i} delay={0.15 + i * 0.05}>
+              <p className="body-lg text-subtle text-balance mt-5">{p}</p>
+            </AnimatedText>
+          ))}
+
+          <AnimatedText delay={0.4}>
+            <p className="body-lg text-foreground mt-10 font-medium text-balance italic-serif">
               {t("why.conclusion")}
             </p>
           </AnimatedText>
 
-          <AnimatedText delay={0.3}>
+          <AnimatedText delay={0.5}>
             <div className="mt-12">
               <Button variant="gradient" size="lg" asChild>
                 <Link to="/reference" className="inline-flex items-center gap-2">

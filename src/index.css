@@ -143,6 +143,25 @@
     border-radius: 4px;
     transition: outline-offset 0.15s ease;
   }
+
+  /* === Tap feedback ===
+     Disable the ugly grey iOS/Android tap highlight and replace with a unified
+     :active state we control. Every interactive surface gets the same tactile
+     "press" — short scale-down + emerald-tinted background flash. */
+  a, button, [role="button"], summary, [tabindex] {
+    -webkit-tap-highlight-color: transparent;
+  }
+  a:active,
+  button:active,
+  [role="button"]:active,
+  summary:active {
+    transition: transform 0.08s ease, background-color 0.08s ease, box-shadow 0.08s ease;
+  }
+  /* Press scale for any element opting in via the .press helper or a button. */
+  button:active:not(:disabled),
+  [role="button"]:active {
+    transform: scale(0.97);
+  }
 }
 
 @layer components {
@@ -371,9 +390,14 @@
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .link-underline:hover::after,
-  .link-underline:focus-visible::after {
+  .link-underline:focus-visible::after,
+  .link-underline:active::after {
     transform: scaleX(1);
     transform-origin: left center;
+  }
+  /* Tap flash for nav links — quick emerald tint so users see the route change "fired". */
+  .link-underline:active {
+    color: hsl(var(--primary));
   }
 
   /* Subtle lift on interactive elements */

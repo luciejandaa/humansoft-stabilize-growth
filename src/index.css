@@ -344,7 +344,7 @@
   }
 
   .editorial-card {
-    @apply bg-card rounded-2xl border border-border/60 p-8;
+    @apply bg-card rounded-2xl border border-border p-8;
     box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
   }
@@ -352,7 +352,29 @@
   .editorial-card:hover {
     box-shadow: var(--shadow-elevated);
     transform: translateY(-4px);
-    border-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--foreground) / 0.4);
+  }
+
+  /* Lime "active node" — pulsing dot used in diagrams */
+  .lime-node {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.6);
+    animation: nodePulse 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  }
+
+  @keyframes nodePulse {
+    0%   { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.55); }
+    70%  { box-shadow: 0 0 0 14px hsl(var(--primary) / 0); }
+    100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
+  }
+
+  /* Animated draw for SVG strokes */
+  @keyframes drawLine {
+    from { stroke-dashoffset: var(--dash, 400); }
+    to   { stroke-dashoffset: 0; }
   }
 
   .marquee-mask {

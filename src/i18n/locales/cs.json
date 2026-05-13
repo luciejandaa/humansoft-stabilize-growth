@@ -348,7 +348,7 @@
     },
     "cases": {
       "caseA": {
-        "title": "Reference A (anonymní)",
+        "title": "Reference A",
         "situation": "—",
         "approach": ["Detailní pohled na situaci + konkrétní kroky s dopadem", "Úvodní analýza jako podklad", "Zlepšení vedení porad vedení"],
         "result": ["Jasnější směr, pojmenování brzd", "Otevřenější diskuse na poradách vedení, praktičtější výsledky", "Analýza jako dokument, ke kterému se budou vracet dlouhodobě"],
@@ -356,7 +356,7 @@
         "quote": "Spolupráce s HumanSoft.it nám velmi pomohla. Dokázali propojit detailní pohled na naši situaci s konkrétními kroky, které mají dopad. Díky jejich práci jsme si uvědomili, kde nás něco brzdilo, a nastavili jsme jasnější směr, kam jít dál. Velký přínos pro nás mělo i to, že nás naučili lépe vést porady vedení – diskuse byly otevřenější a výsledky mnohem praktičtější. Úvodní analýzu, kterou připravili, bereme jako dokument, ke kterému se budeme dlouhodobě vracet."
       },
       "caseB": {
-        "title": "Reference B (anonymní)",
+        "title": "Reference B",
         "situation": "—",
         "approach": ["Nastavení delivery procesu", "Revize organizační struktury", "Jasnější vymezení rolí"],
         "result": ["Posun fungování týmu", "Větší samostatnost a zralost klíčových manažerů", "Přesnější plánování, měřitelnost, méně konfliktů", "Efektivita a odpovědnost manažerů (včetně businessového vnímání přes výsledky)"],
@@ -364,7 +364,7 @@
         "quote": "Spolupráce s HumanSoft.it nám pomohla zásadně posunout fungování týmu. Klíčoví manažeři se rozvinuli směrem k větší samostatnosti a zralosti. Nově nastavený delivery proces přinesl přesnější plánování, měřitelnost a méně konfliktů při dodávkách. Revize organizační struktury a jasnější vymezení rolí zlepšily efektivitu a posílily odpovědnost manažerů, především v oblasti ekonomického (businessového) vnímání firmy přes výsledky."
       },
       "caseC": {
-        "title": "Reference C (anonymní)",
+        "title": "Reference C",
         "situation": "Mezery ve fungování a řízení firmy",
         "approach": ["Identifikace mezer", "Návrh drobných změn s rychlým dopadem", "Osobní mentoring vybraných klíčových lidí"],
         "result": ["Viditelný dopad na každodenní chod týmu", "Zlepšení komunikace a spolupráce uvnitř firmy", "Lepší přehled o ekonomice projektů"],
@@ -372,7 +372,7 @@
         "quote": "HumanSoft.it nám pomohl jasně identifikovat, kde máme mezery ve fungování a řízení naší firmy, a navrhl drobné změny, které měly rychlý a viditelný dopad na každodenní chod týmu. Výrazně se zlepšila komunikace a spolupráce uvnitř firmy. Současně jsme díky jejich přístupu získali lepší přehled o ekonomice našich projektů. A to vše při velmi osobní a lidské spolupráci včetně osobního mentoringu vybraných klíčových lidí ve firmě."
       },
       "caseD": {
-        "title": "Reference D (anonymní)",
+        "title": "Reference D",
         "situation": "Potřeba zavést přehlednější, rychlejší a modernější způsob komunikace",
         "approach": ["Zavedení MS Teams", "Jednoduchá pravidla pro používání e-mailu, chatu a kalendářů", "Rozšíření využití funkcí firemních kalendářů"],
         "result": ["Hladký přechod na nový nástroj bez zmatků a nejistoty", "Posílení týmové dynamiky", "Efektivnější práce s kalendáři"],
@@ -380,7 +380,7 @@
         "quote": "Potřebovali jsme do týmu zavést přehlednější, rychlejší a modernější způsob komunikace. Díky profesionálnímu vedení Franty při zaváděn MS Teams do firmy se nám podařilo nejen posílit týmovou dynamiku, ale také hladce zvládnout přechod na nový nástroj – bez zmatků a nejistoty. Velkou roli v tom sehrála i jasně nastavená, ale jednoduchá pravidla pro používání e-mailu, chatu a kalendářů. Kalendáře jsme ve firmě už dříve využívali, ale díky Frantovým podnětům jsme začali objevovat a naplno využívat širší škálu funkcí, které nabízejí."
       },
       "caseE": {
-        "title": "Reference E (anonymní)",
+        "title": "Reference E",
         "situation": "Timesheety byly dlouhodobě \u201Enepřijatelné téma\u201C",
         "approach": ["Změna přístupu k timesheetům a zavedení do praxe"],
         "result": ["Vykazování každodenní práce se stalo standardem", "Odpor téměř zmizel (formulace klienta: \u201Enikdo s tím nemá minimální problém\u201C)"],
@@ -388,7 +388,7 @@
         "quote": "Timesheety byly v naší firmě odjakživa sprosté slovo. Nikdo neměl chuť je řešit. A potom se objevil Franta. Během několika měsíců se celé téma obrátilo o 180 stupňů. Nyní je v naší firmě úplně normální vykazovat svou každodenní práci a nikdo s tím nemá minimální problém."
       },
       "caseF": {
-        "title": "Reference F (anonymní)",
+        "title": "Reference F",
         "situation": "Potřeba většího řádu ve fungování firmy, osobní spory brzdily tým, \u201Egarážový styl\u201C",
         "approach": ["Upřesnění systému práce pro klíčové lidi", "Postavení procesu dodávky"],
         "result": ["Uklidnění sporů", "Posun na profesionální úroveň", "Připravenost na větší projekty"],
@@ -396,7 +396,7 @@
         "quote": "Spolupráce s HumanSoft.it nám pomohla dát větší řád do fungování firmy. Díky jejich vedení jsme upřesnili systém práce pro klíčové lidi, což uklidnilo i osobní spory, které nás brzdily. Tým se naučil postavit celý proces dodávky a firma se posunula z garážového stylu na profesionální úroveň, připravenou na větší projekty."
       },
       "caseG": {
-        "title": "Reference G (anonymní)",
+        "title": "Reference G",
         "situation": "—",
         "approach": ["Workshopy", "Dlouhodobý coaching a mentoring klíčových lidí", "Zlepšení řízení vývoje"],
         "result": ["Posun týmu v praxi (nejen teorie)", "Znatelné zlepšení leadershipu klíčových lidí", "Dopad do každodenní práce i výsledků"],
@@ -404,7 +404,7 @@
         "quote": "Spolupráce s HumanSoft.it nebyla jen o teorii, ale o praktických změnách. Workshopy nám pomohly posunout tým, naučili jsme se lépe řídit vývoj a naši klíčoví lidé se v leadershipu díky dlouhodobého coachingu a mentoringu znatelně zvedli. Dnes je vidět, že se to promítá do každodenní práce i výsledků."
       },
       "caseH": {
-        "title": "Reference H (anonymní, SK)",
+        "title": "Reference H (SK)",
         "situation": "Dôležité obdobie, potreba stabilizácie a spriehľadnenia projektov",
         "approach": ["Spriehľadnenie a stabilizácia projektov", "Nastavenie projektov na reálne ekonomické výsledky", "Posilnenie interných procesov a komunikácie s klientmi", "Rozvoj manažmentu a potenciálu ľudí"],
         "result": ["Vyššia spokojnosť na oboch stranách (firma i klienti)", "Prehĺbenie partnerských vzťahov", "Stabilnejšia firma pripravená na rast a víziu"],
@@ -412,7 +412,7 @@
         "quote": "HumanSoft.it pre nás zohral kľúčovú úlohu v dôležitom období. Spoločne sme spriehľadnili a stabilizovali projekty, nastavili ich tak, aby prinášali reálne ekonomické výsledky, a zároveň sme posilnili interné procesy a komunikáciu s klientmi. Tým sa zvýšila spokojnosť na oboch stranách a prehĺbili sa partnerské vzťahy. Súčasne sa nám podarilo naštartovať ďalší rozvoj manažmentu po osobnej aj profesnej stránke, odhaliť skryté možnosti a potenciál ľudí. Výsledkom je stabilnejšia firma pripravená na ďalší rast a realizáciu našej vízie."
       },
       "caseI": {
-        "title": "Reference I (anonymní)",
+        "title": "Reference I",
         "situation": "Nejasné role a časté konflikty, tření mezi obchodem a delivery, chyběl funkční HR a operations tým",
         "approach": ["Nastavení jasných rolí", "Zlepšení vztahů obchod × delivery", "Vybudování HR i operations týmu", "Následně přijetí klíčových lidí"],
         "result": ["Zásadní pořádek v řízení", "Méně konfliktů", "Schopnost nabrat klíčové lidi, kteří posunuli firmu dál"],
@@ -420,7 +420,7 @@
         "quote": "HumanSoft.it nám pomohl udělat zásadní pořádek v řízení firmy. Tam, kde byla dříve nejasnost a časté konflikty, jsme nastavili jasné role. Podařilo se zlepšit vztahy mezi obchodem a delivery a vybudovat funkční HR i operations tým. Díky tomu jsme mohli přijmout klíčové lidi, kteří firmu posunuli dál."
       },
       "caseJ": {
-        "title": "Reference J (anonymní)",
+        "title": "Reference J",
         "situation": "Potřeba zefektivnit interní procesy a systémové řízení projektů a servisu",
         "approach": ["Odborné vedení, rychlá orientace v problematice", "Praktické návrhy s okamžitým dopadem", "Konstruktivní spolupráce s důrazem na výsledky"],
         "result": ["Zefektivnění komunikace a procesů", "Jasnější systém řízení projektů a úkolů", "Doporučení služby dalším firmám"],

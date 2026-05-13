@@ -7,23 +7,14 @@ import { ArrowRight } from "lucide-react";
 const ServicesSection = () => {
   const { t } = useTranslation();
 
-  const services = [
-    {
-      number: "01",
-      title: t("services.restructuring.title"),
-      items: t("services.restructuring.items", { returnObjects: true }) as string[],
-    },
-    {
-      number: "02",
-      title: t("services.processes.title"),
-      items: t("services.processes.items", { returnObjects: true }) as string[],
-    },
-    {
-      number: "03",
-      title: t("services.leadership.title"),
-      items: t("services.leadership.items", { returnObjects: true }) as string[],
-    },
-  ];
+  const sections = t("services.sections", { returnObjects: true }) as {
+    number: string;
+    title: string;
+    description: string;
+    approach: string;
+    items: string[];
+    result: string;
+  }[];
 
   return (
     <section id="sluzby" className="section-padding relative">
@@ -40,21 +31,28 @@ const ServicesSection = () => {
           </div>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+        <StaggerContainer className="grid md:grid-cols-2 gap-6">
+          {sections.map((section, index) => (
             <StaggerItem key={index}>
               <div className="editorial-card reveal-arrow group h-full flex flex-col">
-                <div className="flex items-baseline justify-between mb-6">
+                <div className="flex items-baseline justify-between mb-4">
                   <span className="font-mono text-xs tracking-widest text-primary">
-                    {service.number}
+                    {section.number}
                   </span>
                   <div className="w-12 h-px bg-primary/30 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
                 </div>
-                <h3 className="heading-sm mb-6 text-balance">
-                  {service.title}
+                <h3 className="heading-sm mb-4 text-balance">
+                  {section.title}
                 </h3>
-                <ul className="space-y-3 flex-1">
-                  {service.items.map((item, itemIndex) => (
+                <p className="body-sm text-subtle mb-3">
+                  {section.description}
+                </p>
+                <p className="body-sm text-subtle mb-5">
+                  {section.approach}
+                </p>
+
+                <ul className="space-y-2 flex-1 mb-5">
+                  {section.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
                       className="body-sm text-subtle flex items-start group/item"
@@ -64,8 +62,16 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="arrow mt-6 pt-6 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
-                  Zjistit více <ArrowRight className="w-3.5 h-3.5" />
+
+                <div className="mt-auto pt-5 border-t border-border/60">
+                  <p className="body-sm">
+                    <span className="font-semibold text-primary">{t("servicesPage.resultLabel")}</span>{" "}
+                    <span className="text-subtle">{section.result}</span>
+                  </p>
+                </div>
+
+                <div className="arrow mt-5 pt-4 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                  {t("services.cta")} <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
             </StaggerItem>

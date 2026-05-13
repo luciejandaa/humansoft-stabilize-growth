@@ -37,33 +37,64 @@
     "quote": "Our goal is not to deliver a document. Our goal is a company that actually works.",
     "cta": "Learn More About Our Services",
     "button": "Discover Your Company's Potential",
-    "restructuring": {
-      "title": "Organization and Team Restructuring",
-      "items": [
-        "mapping current state, roles, and responsibilities",
-        "identifying weak points and duplicities",
-        "designing new structure and decision lines",
-        "accompanying implementation of changes"
-      ]
-    },
-    "processes": {
-      "title": "Process and Operations Setup",
-      "items": [
-        "workflow and communication standardization",
-        "clearly defined competencies and responsibilities",
-        "process and operational stabilization",
-        "preventing errors and operational conflicts"
-      ]
-    },
-    "leadership": {
-      "title": "Leadership and Team Development",
-      "items": [
-        "working with managers and key people",
-        "strengthening self-driven approach in teams",
-        "collaboration culture instead of firefighting",
-        "long-term sustainability of change"
-      ]
-    }
+    "sections": [
+      {
+        "number": "01",
+        "title": "We find where the company loses momentum",
+        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice.",
+        "approach": "We look for these places, name them, and turn them into concrete solutions.",
+        "items": [
+          "finding bottlenecks in the company",
+          "mapping where time, energy, and responsibility are lost",
+          "recognizing dysfunctional patterns in management and communication",
+          "naming the real causes, not just visible problems",
+          "creating a clear picture of what the company needs to change"
+        ],
+        "result": "The owner and team finally see what's holding the company back — and where to start so the change has real impact."
+      },
+      {
+        "number": "02",
+        "title": "We translate vision into a manageable strategy",
+        "description": "Many owners feel exactly where they want to move the company. But the idea alone isn't enough. It needs structure, priorities, decision-making logic, and concrete steps.",
+        "approach": "We help translate the vision from the owner's head into a strategy that can be managed, communicated, and implemented.",
+        "items": [
+          "designing the entire company strategy",
+          "translating ideas into clear priorities and steps",
+          "setting up decision-making lines",
+          "aligning the owner, management, and key people",
+          "creating an executive plan that is actually used"
+        ],
+        "result": "The strategy won't stay in a presentation. It becomes a daily compass for decision-making, leading people, and further company growth."
+      },
+      {
+        "number": "03",
+        "title": "We change how the company communicates and operates",
+        "description": "In companies, performance often doesn't suffer because people can't work. It suffers because it's unclear who decides what, who is responsible for what, how information is passed, and how tension is handled.",
+        "approach": "We set up communication, responsibilities, and collaboration so the company doesn't have to keep fighting the same situations over and over.",
+        "items": [
+          "setting up effective communication between people and teams",
+          "clarifying roles, responsibilities, and competencies",
+          "removing duplicities, noise, and operational collisions",
+          "establishing a rhythm of meetings, reflections, and decision-making",
+          "strengthening collaboration instead of internal pulling"
+        ],
+        "result": "People know what is expected of them, how to talk to each other, and how to move things forward without unnecessary friction."
+      },
+      {
+        "number": "04",
+        "title": "We rewrite company patterns that hinder growth",
+        "description": "Every company has its habits. Some hold it together. Others invisibly slow it down. The way decisions are made, communication happens, responsibility is passed, or mistakes are handled creates the company's reality.",
+        "approach": "We help companies consciously change behavioral patterns that no longer serve their next stage.",
+        "items": [
+          "changing entrenched reactions in teams and leadership",
+          "strengthening a self-driven approach",
+          "developing leadership in key people",
+          "working with responsibility, trust, and feedback",
+          "long-term development through guided reflection"
+        ],
+        "result": "Change isn't just a new structure. It's a new way of thinking, deciding, and collaborating across the company."
+      }
+    ]
   },
   "servicesPage": {
     "title": "What We Do",

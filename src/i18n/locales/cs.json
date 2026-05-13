@@ -37,33 +37,64 @@
     "quote": "Naším cílem není dodat dokument. Naším cílem je firma, která skutečně funguje.",
     "cta": "Zjistěte více o našich službách",
     "button": "Objevte potenciál vaší firmy",
-    "restructuring": {
-      "title": "Restrukturalizace organizace a týmu",
-      "items": [
-        "mapování současného stavu, rolí a odpovědnosti",
-        "identifikace slabých míst a duplicit",
-        "návrh nové struktury a rozhodovacích linií",
-        "doprovod při zavádění změn do praxe"
-      ]
-    },
-    "processes": {
-      "title": "Nastavení procesů a fungování firmy",
-      "items": [
-        "standardizace workflow a komunikace",
-        "jasně definované kompetence a zodpovědnosti",
-        "procesní a provozní stabilizace",
-        "předcházení chybám a provozním kolizím"
-      ]
-    },
-    "leadership": {
-      "title": "Rozvoj leadershipu a týmové spolupráce",
-      "items": [
-        "práce s manažery a klíčovými lidmi",
-        "posílení self-driven přístupu v týmech",
-        "kultura spolupráce místo hašení požárů",
-        "dlouhodobá udržitelnost změny"
-      ]
-    }
+    "sections": [
+      {
+        "number": "01",
+        "title": "Najdeme, kde firma ztrácí tah",
+        "description": "Každá firma má místa, kde se něco opakuje. Rozhodnutí se vrací zpět. Lidé si nerozumí. Majitel drží příliš mnoho věcí v hlavě. Strategie existuje, ale nežije v praxi.",
+        "approach": "My tato místa hledáme, pojmenováváme a převádíme do konkrétního řešení.",
+        "items": [
+          "hledáním úzkých hrdel ve firmě",
+          "mapováním toho, kde se ztrácí čas, energie a odpovědnost",
+          "rozpoznáním nefunkčních vzorců v řízení a komunikaci",
+          "pojmenováním skutečných příčin, ne jen viditelných problémů",
+          "vytvořením jasného obrazu toho, co firma potřebuje změnit"
+        ],
+        "result": "Majitel i tým konečně vidí, co firmu brzdí — a kde začít, aby změna měla skutečný dopad."
+      },
+      {
+        "number": "02",
+        "title": "Překládáme vizi do strategie, která se dá řídit",
+        "description": "Mnoho majitelů přesně cítí, kam chtějí firmu posunout. Jenže myšlenka sama o sobě nestačí. Potřebuje strukturu, priority, rozhodovací logiku a konkrétní kroky.",
+        "approach": "Pomáháme převést vizi z hlavy majitele do strategie, kterou lze řídit, komunikovat a realizovat.",
+        "items": [
+          "designem celé firemní strategie",
+          "překladem myšlenek do jasných priorit a kroků",
+          "nastavením rozhodovacích linií",
+          "sladěním majitele, vedení a klíčových lidí",
+          "vytvořením exekutivního plánu, který se skutečně používá"
+        ],
+        "result": "Strategie nezůstane v prezentaci. Stane se každodenním kompasem pro rozhodování, vedení lidí i další růst firmy."
+      },
+      {
+        "number": "03",
+        "title": "Měníme způsob, jak firma komunikuje a funguje",
+        "description": "Ve firmách často nevázne výkon proto, že by lidé neuměli pracovat. Vázne proto, že není jasné, kdo co rozhoduje, kdo za co odpovídá, jak se předávají informace a jak se pracuje s napětím.",
+        "approach": "Nastavujeme komunikaci, odpovědnosti a spolupráci tak, aby firma nemusela pořád hasit stejné situace dokola.",
+        "items": [
+          "nastavením efektivní komunikace mezi lidmi a týmy",
+          "vyjasněním rolí, odpovědností a kompetencí",
+          "odstraněním duplicit, šumů a provozních kolizí",
+          "zavedením rytmu porad, reflexí a rozhodování",
+          "posílením spolupráce místo vnitřního přetahování"
+        ],
+        "result": "Lidé vědí, co se od nich čeká, jak spolu mají mluvit a jak posouvat věci dopředu bez zbytečných třecích ploch."
+      },
+      {
+        "number": "04",
+        "title": "Přepisujeme firemní vzorce, které brzdí růst",
+        "description": "Každá firma má své zvyky. Některé ji drží pohromadě. Jiné ji neviditelně brzdí. Způsob, jakým se rozhoduje, komunikuje, předává odpovědnost nebo pracuje s chybou, vytváří firemní realitu.",
+        "approach": "Pomáháme firmám vědomě měnit behaviorální vzorce, které už neslouží jejich další etapě.",
+        "items": [
+          "změnou zaběhlých reakcí v týmech a vedení",
+          "posílením self-driven přístupu",
+          "rozvojem leadershipu u klíčových lidí",
+          "prací s odpovědností, důvěrou a zpětnou vazbou",
+          "dlouhodobým rozvojem skrze řízenou reflexi"
+        ],
+        "result": "Změna není jen nová struktura. Je to nový způsob přemýšlení, rozhodování a spolupráce napříč firmou."
+      }
+    ]
   },
   "servicesPage": {
     "title": "Co děláme",

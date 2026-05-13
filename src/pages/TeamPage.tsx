@@ -59,7 +59,7 @@ const TeamPage = () => {
                           />
                         </div>
                       ) : (
-                        <div className="w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-divider shadow-sm">
+                        <div className="w-40 h-40 md:w-48 md:h-48 bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl flex items-center justify-center border border-border/60/60 shadow-sm">
                           <User className="w-16 h-16 text-muted-foreground/50" />
                         </div>
                       )}

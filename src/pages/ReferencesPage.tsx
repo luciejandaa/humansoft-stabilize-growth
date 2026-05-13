@@ -29,7 +29,7 @@ const ReferencesPage = () => {
                 return (
                   <div
                     key={key}
-                    className="pb-16 border-b border-divider last:border-b-0"
+                    className="pb-16 border-b border-border/60/60 last:border-b-0"
                   >
                     <h2 className="heading-sm mb-8">{title}</h2>
 

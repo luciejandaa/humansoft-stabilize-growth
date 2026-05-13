@@ -22,7 +22,7 @@ const BlogPage = () => {
                 <p className="body-lg text-subtle mb-8">{t("blog.subtitle")}</p>
               </AnimatedText>
               <AnimatedText delay={0.2}>
-                <div className="inline-flex items-center justify-center px-6 py-4 bg-secondary/50 border border-divider rounded-xl">
+                <div className="inline-flex items-center justify-center px-6 py-4 bg-secondary/50 border border-border/60/60 rounded-xl">
                   <p className="text-muted-foreground font-medium">
                     {t("blog.comingSoon")}
                   </p>

@@ -37,19 +37,19 @@ const ContactPage = () => {
 
               <div className="grid sm:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60/60 rounded-lg">
                     <Mail className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <p className="body-sm text-subtle">{t("contact.email")}</p>
                 </div>
                 <div>
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60/60 rounded-lg">
                     <Phone className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <p className="body-sm text-subtle">{t("contact.phone")}</p>
                 </div>
                 <div>
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-divider rounded-lg">
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60/60 rounded-lg">
                     <MapPin className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <p className="body-sm text-subtle">{t("contact.location")}</p>

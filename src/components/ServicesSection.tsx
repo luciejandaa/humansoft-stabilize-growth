@@ -64,7 +64,7 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="arrow mt-6 pt-6 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="arrow mt-6 pt-6 border-t border-border/60/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
                   Zjistit více <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
@@ -73,7 +73,7 @@ const ServicesSection = () => {
         </StaggerContainer>
 
         <AnimatedSection delay={0.3}>
-          <div className="mt-24 pt-16 border-t border-border">
+          <div className="mt-24 pt-16 border-t border-border/60">
             <p className="heading-md text-center max-w-3xl mx-auto italic-serif text-balance text-foreground/80 mb-10">
               "{t("services.quote")}"
             </p>

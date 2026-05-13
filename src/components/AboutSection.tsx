@@ -59,7 +59,7 @@ const AboutSection = () => {
                 {values.map((value, index) => (
                   <span
                     key={index}
-                    className="px-6 py-3 bg-background border border-border rounded-full text-sm font-medium tracking-wide hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-300"
+                    className="px-6 py-3 bg-background border border-border/60 rounded-full text-sm font-medium tracking-wide hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-300"
                   >
                     {value}
                   </span>

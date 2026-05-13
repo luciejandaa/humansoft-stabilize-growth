@@ -12,7 +12,7 @@ const ReferencesSection = () => {
         <h2 className="heading-lg mb-16 text-center">{t("references.title")}</h2>
         <div className="space-y-8">
           {caseKeys.slice(0, 4).map((key) => (
-            <div key={key} className="pb-8 border-b border-border last:border-b-0 hover:border-primary/30 transition-colors duration-300">
+            <div key={key} className="pb-8 border-b border-border/60 last:border-b-0 hover:border-primary/30 transition-colors duration-300">
               <h3 className="heading-sm mb-3">{t(`references.cases.${key}.title`)}</h3>
               <blockquote className="body-sm text-subtle italic leading-relaxed">
                 „{t(`references.cases.${key}.quote`)}"

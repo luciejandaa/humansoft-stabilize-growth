@@ -30,7 +30,7 @@ const ServicesSection = () => {
       <div className="section-container">
         <AnimatedSection>
           <div className="text-center mb-20">
-            <span className="eyebrow mb-6 block">— Služby</span>
+            <span className="eyebrow mb-6 block">— Služby — </span>
             <h2 className="heading-xl text-balance">
               {t("services.title").split(" ").slice(0, -1).join(" ")}{" "}
               <span className="italic-serif text-gradient">
@@ -74,7 +74,7 @@ const ServicesSection = () => {
 
         <AnimatedSection delay={0.3}>
           <div className="mt-24 pt-16 border-t border-border/60">
-            <p className="heading-md text-center max-w-3xl mx-auto italic-serif text-balance text-foreground/80 mb-10">
+            <p className="heading-md text-center max-w-3xl italic-serif text-balance text-foreground/80 mb-10 mx-[220px]">
               "{t("services.quote")}"
             </p>
             <div className="text-center">

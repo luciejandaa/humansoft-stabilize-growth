@@ -15,7 +15,8 @@ const LanguageSwitcher = () => {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="text-sm font-medium uppercase tracking-wider"
+      className="text-sm font-medium uppercase tracking-wider min-h-11 min-w-11"
+      aria-label={i18n.language === 'cs' ? 'Switch to English' : 'Přepnout do češtiny'}
     >
       {i18n.language === 'cs' ? 'EN' : 'CZ'}
     </Button>

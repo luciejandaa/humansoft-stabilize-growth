@@ -114,7 +114,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.9 + i * 0.1 }}
             >
               <div className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-none mb-2 tracking-tight">
-                {stat.num.replace(/(\d+)/, m => m)}
+                {stat.num}
                 <span className="inline-block w-2 h-2 align-baseline ml-1 rounded-full bg-primary" />
               </div>
               <div className="text-[11px] uppercase tracking-[0.22em] text-subtle font-mono">

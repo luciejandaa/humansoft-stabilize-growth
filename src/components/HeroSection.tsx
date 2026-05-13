@@ -35,7 +35,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Massive editorial headline */}
-        <div className="text-center max-w-6xl mx-auto">
+        <div className="text-center max-w-5xl mx-auto">
           <motion.h1
             className="display-hero mb-10"
             initial={{ opacity: 0, y: 50 }}
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.p
-            className="body-lg text-subtle max-w-2xl mx-auto mb-12 text-balance"
+            className="body-lg text-subtle max-w-3xl mx-auto mb-6 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -54,11 +54,29 @@ const HeroSection = () => {
             {t("hero.subtitle")}
           </motion.p>
 
+          <motion.p
+            className="body-base text-subtle max-w-3xl mx-auto mb-6 text-balance"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {t("hero.description")}
+          </motion.p>
+
+          <motion.p
+            className="body-lg text-foreground/80 max-w-3xl mx-auto mb-12 text-balance font-medium"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            {t("hero.outcome")}
+          </motion.p>
+
           <motion.div
             className="flex flex-wrap justify-center gap-4 items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Button variant="gradient" size="xl" asChild className="group">
               <Link to="/hodnoceni">

@@ -205,7 +205,8 @@ const Navigation = () => {
                       >
                         <Link
                           to={link.href}
-                          className={`block text-left text-base font-medium transition-all duration-200 py-3 px-4 rounded-lg active:scale-[0.98] active:bg-secondary ${
+                          aria-current={location.pathname === link.href ? "page" : undefined}
+                          className={`block text-left text-base font-medium transition-colors duration-200 py-3 px-4 rounded-lg active:scale-[0.98] active:bg-secondary min-h-11 flex items-center ${
                             location.pathname === link.href
                               ? "text-foreground bg-secondary"
                               : "text-subtle hover:text-foreground hover:bg-secondary/50"

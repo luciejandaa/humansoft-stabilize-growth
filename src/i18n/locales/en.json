@@ -9,9 +9,11 @@
     "contact": "Contact Us"
   },
   "hero": {
-    "title": "We help companies stabilize operations before problems become crises.",
-    "subtitle": "We step into organizations five minutes before midnight - restructuring teams, setting up processes, and restoring functional collaboration. With respect for people and business.",
-    "cta": "Discover Your Company's Potential"
+    "title": "We rewrite the internal code of companies.",
+    "subtitle": "We help tech companies connect technical excellence with human maturity so they can grow healthily, efficiently, and sustainably.",
+    "description": "We find bottlenecks, fine-tune strategy, processes, and team collaboration, and create an environment where people take responsibility, work has meaning, and change continues even without our constant intervention.",
+    "outcome": "The result is a company with direction, performance, and the energy to grow.",
+    "cta": "Find out where we lose performance"
   },
   "about": {
     "title": "About Us",

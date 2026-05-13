@@ -9,9 +9,11 @@
     "contact": "Kontaktujte nás"
   },
   "hero": {
-    "title": "Pomáháme firmám stabilizovat fungování dřív, než se z problému stane krize.",
-    "subtitle": "Vstupujeme do organizací pět minut před dvanáctou - restrukturalizujeme týmy, nastavujeme procesy a obnovujeme funkční spolupráci. S respektem k lidem i byznysu.",
-    "cta": "Objevte potenciál vaší firmy"
+    "title": "Přepisujeme vnitřní kód firem.",
+    "subtitle": "Pomáháme technologickým firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst zdravě, efektivně a udržitelně.",
+    "description": "Hledáme úzká hrdla, ladíme strategii, procesy i týmovou spolupráci a vytváříme prostředí, kde lidé přebírají odpovědnost, práce má smysl a změna pokračuje i bez našeho neustálého zásahu.",
+    "outcome": "Výsledkem je firma, která má směr, výkon a energii růst.",
+    "cta": "Zjistit, kde ztrácíme výkon"
   },
   "about": {
     "title": "O nás",

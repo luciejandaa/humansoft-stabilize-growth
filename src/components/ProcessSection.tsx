@@ -42,7 +42,7 @@ const ProcessSection = () => {
     <section id="jak-pracujeme" className="section-padding bg-background" ref={sectionRef}>
       <div className="section-container">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
-          <span className="eyebrow mb-6 block">— Jak pracujeme</span>
+          <span className="eyebrow mb-6 block">​</span>
           <h2 className="heading-xl mb-6 text-balance">
             {t("process.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="italic-serif text-gradient">{t("process.title").split(" ").slice(-1)}</span>

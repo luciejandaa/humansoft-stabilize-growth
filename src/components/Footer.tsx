@@ -7,44 +7,42 @@ const Footer = () => {
   const foundedYear = 2023;
 
   return (
-    <motion.footer 
-      className="pt-20 pb-10"
+    <motion.footer
+      className="mt-20 relative"
+      style={{ background: "hsl(var(--primary-deep))", color: "hsl(var(--background))" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="section-container">
-        {/* Ornament divider */}
-        <div className="divider-ornament mb-12">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase">
-            HumanSoft.IT
-          </span>
-        </div>
+      {/* Hairline accent at top */}
+      <div className="h-px w-full" style={{ background: "linear-gradient(90deg, transparent, hsl(var(--primary)/0.5), transparent)" }} />
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3 group">
-            <img 
-              src={logoIcon} 
-              alt="HumanSoft.IT" 
-              className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 invert"
-            />
-            <div className="flex flex-col">
-              <span className="font-display text-xl font-semibold tracking-tight">
+      <div className="section-container py-20">
+        <div className="grid md:grid-cols-12 gap-10 items-start">
+          <div className="md:col-span-7">
+            <div className="flex items-center gap-3 mb-6">
+              <img src={logoIcon} alt="HumanSoft.IT" className="h-9 w-auto invert" />
+              <span className="font-display text-2xl font-semibold tracking-tight">
                 HumanSoft.IT
               </span>
-              <span className="text-xs text-subtle italic-serif">
-                {t("footer.tagline")}
-              </span>
+              <span className="lime-node" />
             </div>
-          </div>
-          <div className="text-center md:text-right">
-            <p className="text-xs text-subtle font-mono uppercase tracking-widest mb-1">
+            <p className="text-2xl md:text-3xl font-display font-semibold leading-tight max-w-xl mb-4">
+              {t("footer.tagline")}
+            </p>
+            <p className="font-mono text-xs tracking-[0.22em] uppercase opacity-70">
               {t("footer.subtagline")}
             </p>
-            <p className="text-sm text-subtle font-mono">
-              © {foundedYear} HumanSoft.IT · {t("footer.rights")}
-            </p>
+          </div>
+
+          <div className="md:col-span-5 md:text-right">
+            <div className="font-mono text-[11px] tracking-[0.28em] uppercase opacity-60 mb-2">
+              © {foundedYear} HumanSoft.IT
+            </div>
+            <div className="font-mono text-[11px] tracking-[0.28em] uppercase opacity-60">
+              {t("footer.rights")}
+            </div>
           </div>
         </div>
       </div>

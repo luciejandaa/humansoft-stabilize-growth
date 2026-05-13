@@ -185,7 +185,7 @@ const Navigation = () => {
                       >
                         <Link
                           to={link.href}
-                          className={`block text-left text-base font-medium transition-all duration-200 py-3 px-4 rounded-lg ${
+                          className={`block text-left text-base font-medium transition-all duration-200 py-3 px-4 rounded-lg active:scale-[0.98] active:bg-secondary ${
                             location.pathname === link.href
                               ? "text-foreground bg-secondary"
                               : "text-subtle hover:text-foreground hover:bg-secondary/50"

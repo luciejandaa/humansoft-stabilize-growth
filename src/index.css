@@ -334,7 +334,8 @@
     transform-origin: right center;
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .link-underline:hover::after {
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
     transform: scaleX(1);
     transform-origin: left center;
   }

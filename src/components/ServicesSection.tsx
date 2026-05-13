@@ -73,7 +73,7 @@ const ServicesSection = () => {
         </StaggerContainer>
 
         <AnimatedSection delay={0.3}>
-          <div className="mt-24 pt-16 border-t border-border">
+          <div className="mt-24 pt-16 border-t border-border/60">
             <p className="heading-md text-center max-w-3xl mx-auto italic-serif text-balance text-foreground/80 mb-10">
               "{t("services.quote")}"
             </p>

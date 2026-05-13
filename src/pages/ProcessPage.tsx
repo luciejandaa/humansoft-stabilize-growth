@@ -46,7 +46,7 @@ const ProcessPage = () => {
 
                   {/* Connector line for desktop - positioned below the number */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-[4.5rem] left-[4rem] w-[calc(100%+3rem-4rem)] h-px bg-divider" />
+                    <div className="hidden lg:block absolute top-[4.5rem] left-[4rem] w-[calc(100%+3rem-4rem)] h-px bg-border" />
                   )}
                 </div>
               ))}

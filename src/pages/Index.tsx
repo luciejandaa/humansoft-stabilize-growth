@@ -8,6 +8,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 import FunDecorations from "@/components/FunDecorations";
+import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
   return (
@@ -16,11 +17,17 @@ const Index = () => {
       <Navigation />
       <main className="relative z-10">
         <HeroSection />
+        <SectionDivider variant="ornament" label="HumanSoft.IT" />
         <EvaluationSection />
+        <SectionDivider />
         <AboutSection />
+        <SectionDivider />
         <WhySection />
+        <SectionDivider variant="ornament" label="Proces" />
         <ProcessSection />
+        <SectionDivider />
         <TeamSection />
+        <SectionDivider />
         <ServicesSection />
       </main>
       <Footer />
@@ -29,3 +36,4 @@ const Index = () => {
 };
 
 export default Index;
+

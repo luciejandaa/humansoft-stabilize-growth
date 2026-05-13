@@ -160,7 +160,7 @@ const Navigation = () => {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-6 border-t border-divider">
+              <div className="py-6 border-t border-border/60">
                 <div className="flex flex-col gap-2">
                   {navLinks.map((link, index) => (
                     link.highlight ? (

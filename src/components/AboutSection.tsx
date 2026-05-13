@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-20">
-              <span className="eyebrow mb-4 block">— O nás</span>
+              <span className="eyebrow mb-4 block">— O nás — </span>
               <h2 className="heading-xl text-balance">
                 {t("about.title").split(" ").slice(0, -1).join(" ")}{" "}
                 <span className="italic-serif text-gradient">

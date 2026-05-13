@@ -29,13 +29,23 @@ const Footer = () => {
               alt="HumanSoft.IT" 
               className="h-10 w-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 invert"
             />
-            <span className="font-display text-xl font-semibold tracking-tight">
-              HumanSoft.IT
-            </span>
+            <div className="flex flex-col">
+              <span className="font-display text-xl font-semibold tracking-tight">
+                HumanSoft.IT
+              </span>
+              <span className="text-xs text-subtle italic-serif">
+                {t("footer.tagline")}
+              </span>
+            </div>
           </div>
-          <p className="text-sm text-subtle font-mono">
-            © {foundedYear} HumanSoft.IT · {t("footer.rights")}
-          </p>
+          <div className="text-center md:text-right">
+            <p className="text-xs text-subtle font-mono uppercase tracking-widest mb-1">
+              {t("footer.subtagline")}
+            </p>
+            <p className="text-sm text-subtle font-mono">
+              © {foundedYear} HumanSoft.IT · {t("footer.rights")}
+            </p>
+          </div>
         </div>
       </div>
     </motion.footer>

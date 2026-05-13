@@ -6,14 +6,15 @@ import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   const { t } = useTranslation();
-  const values = t("about.values", { returnObjects: true }) as string[];
+  const intro = t("about.intro", { returnObjects: true }) as string[];
+  const values = t("about.values", { returnObjects: true }) as { name: string; description: string }[];
 
   return (
     <section id="o-nas" className="section-padding relative overflow-hidden">
       <div className="section-container relative">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
-            <div className="text-center mb-20">
+            <div className="text-center mb-12">
               <span className="eyebrow mb-4 block">— O nás — </span>
               <h2 className="heading-xl text-balance">
                 {t("about.title").split(" ").slice(0, -1).join(" ")}{" "}
@@ -21,6 +22,16 @@ const AboutSection = () => {
                   {t("about.title").split(" ").slice(-1)}
                 </span>
               </h2>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.1}>
+            <div className="max-w-3xl mx-auto mb-20 space-y-5 text-center">
+              {intro.map((p, i) => (
+                <p key={i} className="body-lg text-subtle text-balance">
+                  {p}
+                </p>
+              ))}
             </div>
           </AnimatedSection>
 
@@ -51,20 +62,24 @@ const AboutSection = () => {
           </div>
 
           <AnimatedSection delay={0.3}>
-            <div className="text-center">
-              <span className="eyebrow mb-8 block text-subtle">
-                {t("about.valuesLabel")}
-              </span>
-              <div className="flex flex-wrap justify-center gap-3">
-                {values.map((value, index) => (
-                  <span
-                    key={index}
-                    className="px-6 py-3 bg-background border border-border/60 rounded-full text-sm font-medium tracking-wide hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-300"
-                  >
-                    {value}
-                  </span>
-                ))}
-              </div>
+            <div className="text-center mb-10">
+              <span className="eyebrow block text-subtle">— Naše hodnoty — </span>
+              <h3 className="heading-md mt-4 text-balance">{t("about.valuesLabel")}</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {values.map((value, index) => (
+                <div
+                  key={index}
+                  className="editorial-card h-full text-center hover:-translate-y-1 transition-transform duration-300"
+                >
+                  <h4 className="font-display text-lg font-semibold mb-3 text-primary">
+                    {value.name}
+                  </h4>
+                  <p className="text-sm text-subtle leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </AnimatedSection>
 

@@ -16,11 +16,14 @@ const ServicesSection = () => {
     result: string;
   }[];
 
+  const intro = t("services.intro", { returnObjects: true }) as string[];
+  const closing = t("services.closing", { returnObjects: true }) as string[];
+
   return (
     <section id="sluzby" className="section-padding relative">
       <div className="section-container">
         <AnimatedSection>
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <span className="eyebrow mb-6 block">— Služby — </span>
             <h2 className="heading-xl text-balance">
               {t("services.title").split(" ").slice(0, -1).join(" ")}{" "}
@@ -28,6 +31,16 @@ const ServicesSection = () => {
                 {t("services.title").split(" ").slice(-1)}
               </span>
             </h2>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.1}>
+          <div className="max-w-3xl mx-auto mb-16 space-y-4 text-center">
+            {intro.map((p, i) => (
+              <p key={i} className="body-lg text-subtle text-balance">
+                {p}
+              </p>
+            ))}
           </div>
         </AnimatedSection>
 
@@ -80,9 +93,20 @@ const ServicesSection = () => {
 
         <AnimatedSection delay={0.3}>
           <div className="mt-24 pt-16 border-t border-border/60">
-            <p className="heading-md text-center max-w-3xl italic-serif text-balance text-foreground/80 mb-10 mx-[220px]">
-              "{t("services.quote")}"
-            </p>
+            <div className="max-w-3xl mx-auto text-center mb-10 space-y-4">
+              {closing.map((line, i) => (
+                <p
+                  key={i}
+                  className={
+                    i === closing.length - 1
+                      ? "body-lg text-subtle text-balance"
+                      : "heading-md italic-serif text-balance text-foreground/90"
+                  }
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
             <div className="text-center">
               <Button variant="gradient" size="lg" asChild>
                 <Link to="/kontakt" className="inline-flex items-center gap-2">

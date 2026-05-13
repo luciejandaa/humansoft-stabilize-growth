@@ -98,10 +98,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           {[
-            { num: "10+", label: "úspěšných transformací" },
-            { num: "2023", label: "studio založeno" },
-            { num: "5", label: "kroků metodiky" },
-            { num: "100%", label: "lidský přístup" },
+            { num: "10+", label: t("hero.stats.transformations") },
+            { num: "2023", label: t("hero.stats.founded") },
+            { num: "5", label: t("hero.stats.steps") },
+            { num: "100%", label: t("hero.stats.human") },
           ].map((stat, i) => (
             <motion.div
               key={i}

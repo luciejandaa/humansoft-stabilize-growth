@@ -2,78 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap');
 
 @layer base {
   :root {
-    /* === EDITORIAL EMERALD LIGHT THEME === */
-    --background: 60 20% 99%;          /* near-white, warm */
-    --foreground: 160 25% 8%;          /* deep emerald-black */
+    /* === HUMANSOFT.IT — INNER CIRCUIT THEME ===
+       White canvas · Almost-black ink · Electric Lime energy · Deep Petrol depth */
+    --background: 0 0% 100%;             /* #FFFFFF */
+    --foreground: 0 0% 4%;               /* #0B0B0B almost-black */
 
     --card: 0 0% 100%;
-    --card-foreground: 160 25% 8%;
+    --card-foreground: 0 0% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 25% 8%;
+    --popover-foreground: 0 0% 4%;
 
-    /* Vivid emerald primary */
-    --primary: 158 75% 32%;
-    --primary-foreground: 60 20% 99%;
-    --primary-glow: 152 80% 45%;
-    /* Darker emerald reserved for primary-coloured text on light bg (WCAG AA on small text) */
-    --primary-deep: 160 78% 22%;
+    /* Electric Lime — primary energy / activation point */
+    --primary: 73 100% 47%;              /* #C7F000 */
+    --primary-foreground: 0 0% 4%;       /* black text on lime */
+    --primary-glow: 73 100% 60%;
+    /* Deep Petrol — used for accessible primary-coloured TEXT on light bg
+       (lime fails contrast for small text). */
+    --primary-deep: 182 82% 13%;         /* #063B3D */
 
-    --secondary: 150 30% 96%;
-    --secondary-foreground: 160 25% 8%;
+    --secondary: 60 11% 96%;             /* #F5F5F0 soft warm grey */
+    --secondary-foreground: 0 0% 4%;
 
-    --muted: 150 15% 95%;
-    --muted-foreground: 160 10% 35%;
+    --muted: 60 11% 96%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 152 80% 45%;
-    --accent-foreground: 160 25% 8%;
+    --accent: 73 100% 47%;
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 90%;
-    --input: 150 15% 90%;
-    --ring: 158 75% 32%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 73 100% 47%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     /* Custom tokens */
-    --text-subtle: 160 10% 40%;
+    --text-subtle: 0 0% 35%;
     --surface-elevated: 0 0% 100%;
-    --divider: 150 15% 90%; /* alias of --border for legacy classes; keep in sync */
+    --divider: 0 0% 88%;
 
     /* Brand */
-    --brand-primary: 158 75% 32%;
-    --brand-secondary: 168 60% 25%;
-    --brand-glow: 152 80% 55%;
-    --brand-lime: 80 70% 55%;
-    --brand-cream: 45 50% 96%;
+    --brand-primary: 73 100% 47%;        /* lime */
+    --brand-secondary: 182 82% 13%;      /* petrol */
+    --brand-glow: 73 100% 60%;
+    --brand-lime: 73 100% 47%;
+    --brand-cream: 60 11% 96%;
+    --brand-petrol: 182 82% 13%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(158 75% 32%), hsl(152 80% 45%));
-    --gradient-vivid: linear-gradient(135deg, hsl(158 75% 32%) 0%, hsl(152 80% 45%) 50%, hsl(80 70% 55%) 100%);
-    --gradient-soft: radial-gradient(ellipse at top, hsl(150 60% 90% / 0.6), transparent 60%);
-    --gradient-mesh: radial-gradient(at 20% 20%, hsl(152 80% 65% / 0.25) 0px, transparent 50%),
-                     radial-gradient(at 80% 30%, hsl(80 70% 70% / 0.2) 0px, transparent 50%),
-                     radial-gradient(at 50% 90%, hsl(158 75% 50% / 0.18) 0px, transparent 50%);
+    /* Gradients — restrained, no soft pastel washes */
+    --gradient-primary: linear-gradient(135deg, hsl(73 100% 47%), hsl(73 100% 60%));
+    --gradient-vivid: linear-gradient(135deg, hsl(182 82% 13%) 0%, hsl(0 0% 4%) 100%);
+    --gradient-soft: radial-gradient(ellipse at top, hsl(73 100% 80% / 0.18), transparent 60%);
+    --gradient-mesh: radial-gradient(at 20% 20%, hsl(73 100% 60% / 0.10) 0px, transparent 50%),
+                     radial-gradient(at 80% 80%, hsl(182 82% 30% / 0.08) 0px, transparent 50%);
 
     /* Typography */
-    --font-display: 'Fraunces', ui-serif, Georgia, serif;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-serif: 'Fraunces', ui-serif, Georgia, serif;
 
     /* Spacing */
     --section-padding: clamp(5rem, 12vw, 10rem);
 
     /* Shadows */
-    --shadow-soft: 0 1px 2px hsl(160 25% 8% / 0.04), 0 2px 8px hsl(160 25% 8% / 0.04);
-    --shadow-elevated: 0 10px 40px -10px hsl(158 75% 32% / 0.15), 0 4px 12px hsl(160 25% 8% / 0.06);
-    --shadow-glow: 0 20px 60px -15px hsl(152 80% 45% / 0.4);
-    --shadow-editorial: 0 30px 80px -20px hsl(158 75% 32% / 0.25);
+    --shadow-soft: 0 1px 2px hsl(0 0% 4% / 0.04), 0 2px 8px hsl(0 0% 4% / 0.04);
+    --shadow-elevated: 0 10px 40px -10px hsl(0 0% 4% / 0.12), 0 4px 12px hsl(0 0% 4% / 0.05);
+    --shadow-glow: 0 12px 40px -10px hsl(73 100% 47% / 0.45);
+    --shadow-editorial: 0 30px 80px -20px hsl(0 0% 4% / 0.18);
 
     /* Transitions */
     --transition-smooth: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);

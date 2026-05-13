@@ -390,9 +390,14 @@
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .link-underline:hover::after,
-  .link-underline:focus-visible::after {
+  .link-underline:focus-visible::after,
+  .link-underline:active::after {
     transform: scaleX(1);
     transform-origin: left center;
+  }
+  /* Tap flash for nav links — quick emerald tint so users see the route change "fired". */
+  .link-underline:active {
+    color: hsl(var(--primary));
   }
 
   /* Subtle lift on interactive elements */

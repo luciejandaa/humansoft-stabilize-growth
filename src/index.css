@@ -182,7 +182,7 @@
   .display-hero {
     font-family: var(--font-sans);
     font-weight: 600;
-    font-size: clamp(2.25rem, 7.5vw, 6.5rem);
+    font-size: clamp(2rem, 5.5vw, 5rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
   }

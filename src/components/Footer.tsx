@@ -26,21 +26,20 @@ const Footer = () => {
               <span className="font-display text-2xl font-semibold tracking-tight">
                 HumanSoft.IT
               </span>
-              <span className="lime-node" />
             </div>
             <p className="text-2xl md:text-3xl font-display font-semibold leading-tight max-w-xl mb-4">
               {t("footer.tagline")}
             </p>
-            <p className="font-mono text-xs tracking-[0.22em] uppercase opacity-70">
+            <p className="text-xs tracking-[0.16em] uppercase opacity-70">
               {t("footer.subtagline")}
             </p>
           </div>
 
           <div className="md:col-span-5 md:text-right">
-            <div className="font-mono text-[11px] tracking-[0.28em] uppercase opacity-60 mb-2">
+            <div className="text-[11px] tracking-[0.18em] uppercase opacity-60 mb-2">
               © {foundedYear} HumanSoft.IT
             </div>
-            <div className="font-mono text-[11px] tracking-[0.28em] uppercase opacity-60">
+            <div className="text-[11px] tracking-[0.18em] uppercase opacity-60">
               {t("footer.rights")}
             </div>
           </div>

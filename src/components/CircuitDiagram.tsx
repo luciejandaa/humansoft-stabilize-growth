@@ -9,15 +9,15 @@ import { motion } from "framer-motion";
 const HumanComposition = () => {
   const cx = 260;
   const cy = 260;
-  const r = 175;
+  const r = 165;
 
   const words = [
     "Lidé",
     "Strategie",
     "Procesy",
     "Růst",
-    "Spolupráce",
-    "Odpovědnost",
+    "Týmy",
+    "Vedení",
   ];
 
   // Position each word evenly around the circle, starting at top.

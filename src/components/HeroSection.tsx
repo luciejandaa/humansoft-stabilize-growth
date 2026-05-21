@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import CircuitDiagram from "./CircuitDiagram";
+import HumanComposition from "./CircuitDiagram";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -20,9 +20,9 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="lime-node" />
-              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground">
-                HumanSoft.IT — Consulting Studio
+              <span className="inline-block w-6 h-px bg-foreground/40" />
+              <span className="text-[12px] tracking-[0.18em] uppercase text-subtle font-medium">
+                HumanSoft.IT &middot; Consulting Studio
               </span>
             </motion.div>
 
@@ -89,7 +89,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <CircuitDiagram />
+            <HumanComposition />
           </motion.div>
         </div>
 
@@ -115,9 +115,8 @@ const HeroSection = () => {
             >
               <div className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-none mb-2 tracking-tight">
                 {stat.num}
-                <span className="inline-block w-2 h-2 align-baseline ml-1 rounded-full bg-primary" />
               </div>
-              <div className="text-[11px] uppercase tracking-[0.22em] text-subtle font-mono">
+              <div className="text-[12px] uppercase tracking-[0.16em] text-subtle font-medium">
                 {stat.label}
               </div>
             </motion.div>

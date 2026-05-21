@@ -83,7 +83,7 @@ const ServicesSection = () => {
                   </p>
                 </div>
 
-                <div className="arrow mt-5 pt-4 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="arrow mt-5 pt-4 border-t border-border/60 flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[hsl(var(--primary-deep))] opacity-60 group-hover:opacity-100 transition-opacity">
                   {t("services.cta")} <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>

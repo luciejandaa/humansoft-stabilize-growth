@@ -36,7 +36,7 @@ const HumanComposition = () => {
 
   return (
     <div className="relative w-full max-w-[520px] mx-auto aspect-square">
-      <svg viewBox="0 0 520 520" className="w-full h-full">
+      <svg viewBox="0 0 520 520" className="w-full h-full overflow-visible">
         <defs>
           <radialGradient id="creamWash" cx="50%" cy="50%" r="50%">
             <stop offset="0%"  stopColor="hsl(60 11% 90%)" stopOpacity="1" />

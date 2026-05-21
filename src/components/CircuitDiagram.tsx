@@ -1,89 +1,98 @@
 import { motion } from "framer-motion";
 
 /**
- * Editorial "human composition" for the hero — replaces the old technical
- * circuit diagram. A calm stacked typographic composition: keywords from
- * the consulting language sit on a warm disc, one word highlighted in lime.
- * No nodes, no mono labels, no grid — reads as a studio, not an IT system.
- *
- * NOTE: framer-motion treats `y` on motion.* as a CSS transform, which
- * conflicts with SVG's `y` attribute. We animate ONLY opacity on text
- * elements to avoid them flying off-canvas.
+ * Editorial circular composition for the hero. Keywords from the consulting
+ * language are placed around a circle and connected by thin arcs — visually
+ * communicating that none of them works without the others. One word ("Smysl")
+ * sits in the centre as the binding idea, with a lime highlighter.
  */
 const HumanComposition = () => {
+  const cx = 260;
+  const cy = 260;
+  const r = 175;
+
   const words = [
-    { label: "Lidé",     y: 150, size: 44, weight: 500, italic: false, opacity: 0.85, delay: 0.5 },
-    { label: "Strategie", y: 205, size: 36, weight: 500, italic: false, opacity: 0.8,  delay: 0.62 },
-    // Smysl rendered separately (with highlighter) at y ≈ 280
-    { label: "Procesy",   y: 340, size: 32, weight: 500, italic: false, opacity: 0.8,  delay: 0.86 },
-    { label: "Růst",      y: 395, size: 40, weight: 500, italic: true,  opacity: 0.85, delay: 0.98 },
+    "Lidé",
+    "Strategie",
+    "Procesy",
+    "Růst",
+    "Spolupráce",
+    "Odpovědnost",
   ];
+
+  // Position each word evenly around the circle, starting at top.
+  const points = words.map((label, i) => {
+    const angle = (i / words.length) * Math.PI * 2 - Math.PI / 2;
+    return {
+      label,
+      x: cx + Math.cos(angle) * r,
+      y: cy + Math.sin(angle) * r,
+      angle,
+    };
+  });
+
+  // For text alignment, push labels slightly outward from the dot.
+  const textOffset = 22;
 
   return (
     <div className="relative w-full max-w-[520px] mx-auto aspect-square">
       <svg viewBox="0 0 520 520" className="w-full h-full">
         <defs>
           <radialGradient id="creamWash" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"  stopColor="hsl(60 11% 88%)" stopOpacity="1" />
+            <stop offset="0%"  stopColor="hsl(60 11% 90%)" stopOpacity="1" />
             <stop offset="100%" stopColor="hsl(60 11% 96%)" stopOpacity="0" />
-          </radialGradient>
-          <radialGradient id="petrolWash" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"  stopColor="hsl(182 82% 18%)" stopOpacity="0.20" />
-            <stop offset="100%" stopColor="hsl(182 82% 18%)" stopOpacity="0" />
           </radialGradient>
         </defs>
 
-        {/* Warm canvas disc */}
+        {/* Warm canvas */}
         <motion.circle
-          cx="260" cy="260" r="230"
+          cx={cx} cy={cy} r="240"
           fill="url(#creamWash)"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         />
 
-        {/* Petrol depth disc — offset for asymmetry */}
+        {/* Outer ring — the system */}
         <motion.circle
-          cx="200" cy="220" r="170"
-          fill="url(#petrolWash)"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          cx={cx} cy={cy} r={r}
+          fill="none"
+          stroke="hsl(var(--foreground))"
+          strokeOpacity="0.18"
+          strokeWidth="1"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 1.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         />
 
-        {/* Stacked keyword composition */}
-        {words.map((w) => (
-          <motion.text
-            key={w.label}
-            x="260"
-            y={w.y}
-            textAnchor="middle"
-            className="fill-foreground"
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: `${w.size}px`,
-              fontWeight: w.weight,
-              fontStyle: w.italic ? "italic" : "normal",
-              letterSpacing: "-0.025em",
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: w.opacity }}
-            transition={{ duration: 0.7, delay: w.delay, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {w.label}
-          </motion.text>
-        ))}
+        {/* Interconnecting chords — every node to every node, very faint.
+            This is the "one without the other doesn't work" gesture. */}
+        <g stroke="hsl(var(--primary-deep))" strokeWidth="1" fill="none">
+          {points.flatMap((a, i) =>
+            points.slice(i + 1).map((b, j) => (
+              <motion.line
+                key={`${i}-${j}`}
+                x1={a.x} y1={a.y} x2={b.x} y2={b.y}
+                strokeOpacity="0.22"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1.2, delay: 0.5 + (i * 0.06 + j * 0.04), ease: "easeOut" }}
+              />
+            ))
+          )}
+        </g>
 
-        {/* Smysl — accented word with lime highlighter behind it */}
+        {/* Centre — Smysl, the binding idea, on a lime highlighter */}
         <motion.rect
-          x="178" y="252" width="164" height="30" rx="3"
+          x={cx - 78} y={cy - 22} width="156" height="44" rx="4"
           fill="hsl(var(--primary))"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
+          style={{ transformOrigin: `${cx}px ${cy}px` }}
         />
         <motion.text
-          x="260" y="280"
+          x={cx} y={cy + 16}
           textAnchor="middle"
           className="fill-foreground"
           style={{
@@ -94,30 +103,58 @@ const HumanComposition = () => {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.74 }}
+          transition={{ duration: 0.6, delay: 1.7 }}
         >
           Smysl
         </motion.text>
 
-        {/* Thin editorial underline */}
-        <motion.line
-          x1="210" y1="435" x2="310" y2="435"
-          stroke="hsl(var(--foreground))"
-          strokeOpacity="0.35"
-          strokeWidth="1"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-        />
+        {/* Nodes + labels around the circle */}
+        {points.map((p, i) => {
+          // Push label outward from centre
+          const lx = cx + Math.cos(p.angle) * (r + textOffset);
+          const ly = cy + Math.sin(p.angle) * (r + textOffset);
 
-        {/* Signature dot */}
-        <motion.circle
-          cx="260" cy="455" r="4"
-          fill="hsl(var(--primary))"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.4 }}
-        />
+          // Choose anchor based on horizontal position
+          let anchor: "start" | "middle" | "end" = "middle";
+          if (lx < cx - 20) anchor = "end";
+          else if (lx > cx + 20) anchor = "start";
+
+          // Slight vertical baseline correction for top/bottom labels
+          const dy = p.y < cy - 20 ? -6 : p.y > cy + 20 ? 16 : 5;
+
+          return (
+            <g key={p.label}>
+              {/* Node dot */}
+              <motion.circle
+                cx={p.x} cy={p.y} r="6"
+                fill="hsl(var(--background))"
+                stroke="hsl(var(--foreground))"
+                strokeWidth="1.5"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.2 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                style={{ transformOrigin: `${p.x}px ${p.y}px` }}
+              />
+              {/* Label */}
+              <motion.text
+                x={lx} y={ly + dy}
+                textAnchor={anchor}
+                className="fill-foreground"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "22px",
+                  fontWeight: 500,
+                  letterSpacing: "-0.02em",
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.9 }}
+                transition={{ duration: 0.6, delay: 1.3 + i * 0.08 }}
+              >
+                {p.label}
+              </motion.text>
+            </g>
+          );
+        })}
       </svg>
     </div>
   );

@@ -51,7 +51,7 @@ const ServicesPage = () => {
               <AnimatedSection key={index} delay={0.1}>
                 <div className="bg-card border border-border/60 rounded-2xl p-8 md:p-12 glow-gold-hover">
                   <div className="flex items-baseline gap-4 mb-4">
-                    <span className="font-mono text-sm tracking-widest text-primary">
+                    <span className="font-display text-sm font-semibold text-[hsl(var(--primary-deep))]">
                       {section.number}
                     </span>
                     <h2 className="heading-md">{section.title}</h2>

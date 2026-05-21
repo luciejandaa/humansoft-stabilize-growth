@@ -17,7 +17,7 @@ const SectionDivider = ({ variant = "fade", label = "·", className = "" }: Prop
     <div className={`section-container ${className}`} aria-hidden="true">
       {variant === "ornament" ? (
         <div className="divider-ornament py-2">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase">
+          <span className="text-[10px] tracking-[0.22em] uppercase font-medium">
             {label}
           </span>
         </div>

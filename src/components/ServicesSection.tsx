@@ -49,7 +49,7 @@ const ServicesSection = () => {
             <StaggerItem key={index}>
               <div className="editorial-card reveal-arrow group h-full flex flex-col">
                 <div className="flex items-baseline justify-between mb-4">
-                  <span className="font-mono text-xs tracking-widest text-primary">
+                  <span className="font-display text-sm font-semibold text-[hsl(var(--primary-deep))]">
                     {section.number}
                   </span>
                   <div className="w-12 h-px bg-primary/30 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
@@ -83,7 +83,7 @@ const ServicesSection = () => {
                   </p>
                 </div>
 
-                <div className="arrow mt-5 pt-4 border-t border-border/60 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary opacity-60 group-hover:opacity-100 transition-opacity">
+                <div className="arrow mt-5 pt-4 border-t border-border/60 flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[hsl(var(--primary-deep))] opacity-60 group-hover:opacity-100 transition-opacity">
                   {t("services.cta")} <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>

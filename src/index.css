@@ -240,7 +240,8 @@
   }
 
   .eyebrow {
-    @apply text-xs font-mono font-medium tracking-[0.2em] uppercase;
+    @apply text-xs font-medium tracking-[0.14em] uppercase;
+    font-family: var(--font-body);
     color: hsl(var(--primary-deep));
   }
 

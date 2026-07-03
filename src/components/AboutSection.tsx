@@ -63,7 +63,7 @@ const AboutSection = () => {
 
           <AnimatedSection delay={0.3}>
             <div className="text-center mb-10">
-              <span className="eyebrow block text-subtle">— Naše hodnoty — </span>
+              <span className="eyebrow block text-subtle">— {t("about.valuesEyebrow")} — </span>
               <h3 className="heading-md mt-4 text-balance">{t("about.valuesLabel")}</h3>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">

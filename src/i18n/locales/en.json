@@ -10,15 +10,24 @@
   },
   "hero": {
     "title": "We rewrite the internal code of companies.",
+    "titlePre": "We rewrite",
+    "titleMid": "the internal",
+    "titleHighlight": "code",
+    "titlePost": "of companies.",
     "subtitle": "We help tech companies connect technical excellence with human maturity so they can grow faster, healthier, and with less chaos.",
     "description": "We find bottlenecks, fine-tune strategy, processes, and team collaboration, and create an environment where people take responsibility, work has meaning, and change continues even without our constant intervention.",
     "outcome": "The result is a company with clear direction, higher performance, and the energy to grow.",
     "cta": "Find out where we lose performance",
+    "eyebrow": "Consulting Studio",
     "stats": {
       "transformations": "successful transformations",
       "founded": "HumanSoft.IT founded",
       "steps": "steps of the transformation method",
       "human": "human approach with business impact"
+    },
+    "circuit": {
+      "center": "Meaning",
+      "nodes": ["People", "Strategy", "Processes", "Growth", "Teams", "Leadership"]
     }
   },
   "about": {

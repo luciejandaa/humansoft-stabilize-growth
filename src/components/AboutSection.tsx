@@ -15,7 +15,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <div className="text-center mb-12">
-              <span className="eyebrow mb-4 block">— O nás — </span>
+              <span className="eyebrow mb-4 block">— {t("about.eyebrow")} — </span>
               <h2 className="heading-xl text-balance">
                 {t("about.title").split(" ").slice(0, -1).join(" ")}{" "}
                 <span className="italic-serif text-gradient">
@@ -63,7 +63,7 @@ const AboutSection = () => {
 
           <AnimatedSection delay={0.3}>
             <div className="text-center mb-10">
-              <span className="eyebrow block text-subtle">— Naše hodnoty — </span>
+              <span className="eyebrow block text-subtle">— {t("about.valuesEyebrow")} — </span>
               <h3 className="heading-md mt-4 text-balance">{t("about.valuesLabel")}</h3>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">

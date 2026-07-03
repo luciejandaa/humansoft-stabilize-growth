@@ -1,24 +1,20 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 /**
  * Editorial circular composition for the hero. Keywords from the consulting
  * language are placed around a circle and connected by thin arcs — visually
- * communicating that none of them works without the others. One word ("Smysl")
- * sits in the centre as the binding idea, with a lime highlighter.
+ * communicating that none of them works without the others. One word (center)
+ * sits in the middle as the binding idea, with a lime highlighter.
  */
 const HumanComposition = () => {
+  const { t } = useTranslation();
   const cx = 260;
   const cy = 260;
   const r = 165;
 
-  const words = [
-    "Lidé",
-    "Strategie",
-    "Procesy",
-    "Růst",
-    "Týmy",
-    "Vedení",
-  ];
+  const words = t("hero.circuit.nodes", { returnObjects: true }) as string[];
+  const centerWord = t("hero.circuit.center");
 
   // Position each word evenly around the circle, starting at top.
   const points = words.map((label, i) => {
@@ -105,7 +101,7 @@ const HumanComposition = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.7 }}
         >
-          Smysl
+          {centerWord}
         </motion.text>
 
         {/* Nodes + labels around the circle */}

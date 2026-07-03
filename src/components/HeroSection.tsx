@@ -22,7 +22,7 @@ const HeroSection = () => {
             >
               <span className="inline-block w-6 h-px bg-foreground/40" />
               <span className="text-[12px] tracking-[0.18em] uppercase text-subtle font-medium">
-                HumanSoft.IT &middot; Consulting Studio
+                HumanSoft.IT &middot; {t("hero.eyebrow")}
               </span>
             </motion.div>
 
@@ -32,9 +32,9 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="block">Přepisujeme</span>
-              <span className="block">vnitřní <span className="text-gradient">kód</span></span>
-              <span className="block">firem.</span>
+              <span className="block">{t("hero.titlePre")}</span>
+              <span className="block">{t("hero.titleMid")} <span className="text-gradient">{t("hero.titleHighlight")}</span></span>
+              <span className="block">{t("hero.titlePost")}</span>
             </motion.h1>
 
             <motion.p

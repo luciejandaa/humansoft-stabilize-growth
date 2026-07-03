@@ -28,7 +28,7 @@ const TeamSection = () => {
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <AnimatedSection>
-            <span className="eyebrow mb-6 block">— Tým — </span>
+            <span className="eyebrow mb-6 block">— {t("team.eyebrow")} — </span>
             <h2 className="heading-xl mb-6 text-balance">
               {t("team.title").split(" ").slice(0, -1).join(" ")}{" "}
               <span className="italic-serif text-gradient">

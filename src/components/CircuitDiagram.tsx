@@ -101,23 +101,8 @@ const HumanComposition = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.7 }}
         >
-          Smysl
-        </motion.text>*/}
-        <motion.text
-          x={cx} y={cy + 16}
-          textAnchor="middle"
-          className="fill-foreground"
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "44px",
-            fontWeight: 600,
-            letterSpacing: "-0.03em",
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.7 }}
-        >
           {centerWord}
+        </motion.text>
 
         {/* Nodes + labels around the circle */}
         {points.map((p, i) => {

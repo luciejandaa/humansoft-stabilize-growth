@@ -13,7 +13,7 @@ const WhySection = () => {
       <div className="section-container">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <span className="eyebrow mb-6 block">— Proč my — </span>
+            <span className="eyebrow mb-6 block">— {t("why.eyebrow")} — </span>
             <h2 className="heading-xl mb-12 text-balance">
               <span className="italic-serif text-gradient">{t("why.title")}</span>
             </h2>

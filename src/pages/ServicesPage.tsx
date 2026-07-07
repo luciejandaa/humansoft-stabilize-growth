@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { ArrowRight } from "lucide-react";
-import FunDecorations from "@/components/FunDecorations";
 
 const ServicesPage = () => {
   const { t } = useTranslation();
@@ -23,8 +22,6 @@ const ServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <FunDecorations />
-
         {/* Hero / Intro */}
         <section className="section-padding">
           <div className="section-container">

@@ -93,35 +93,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats strip */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-border max-w-5xl"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          {[
-            { num: "10+", label: t("hero.stats.transformations") },
-            { num: "2023", label: t("hero.stats.founded") },
-            { num: "5",   label: t("hero.stats.steps") },
-            { num: "100%", label: t("hero.stats.human") },
-          ].map((stat, i) => (
-            <motion.div
-              key={i}
-              className="stat-tick cursor-default"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 + i * 0.1 }}
-            >
-              <div className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-none mb-2 tracking-tight">
-                {stat.num}
-              </div>
-              <div className="text-[12px] uppercase tracking-[0.16em] text-subtle font-medium">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

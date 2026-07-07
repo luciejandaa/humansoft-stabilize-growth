@@ -50,10 +50,7 @@ const ServicesPage = () => {
             {sections.map((section, index) => (
               <AnimatedSection key={index} delay={0.1}>
                 <div className="bg-card border border-border/60 rounded-2xl p-8 md:p-12 glow-gold-hover">
-                  <div className="flex items-baseline gap-4 mb-4">
-                    <span className="font-display text-sm font-semibold text-[hsl(var(--primary-deep))]">
-                      {section.number}
-                    </span>
+                  <div className="mb-4">
                     <h2 className="heading-md">{section.title}</h2>
                   </div>
                   <p className="body-base text-subtle mb-4 max-w-3xl">{section.description}</p>

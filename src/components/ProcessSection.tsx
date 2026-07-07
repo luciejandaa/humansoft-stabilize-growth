@@ -41,18 +41,6 @@ const ProcessSection = () => {
 
   return (
     <section id="jak-pracujeme" className="section-padding bg-background relative" ref={sectionRef}>
-      {/* Decorative abstract accent */}
-      <div className="absolute inset-x-0 top-0 h-[380px] pointer-events-none overflow-hidden opacity-[0.18]" aria-hidden="true">
-        <img
-          src={processImage.url}
-          alt=""
-          width={1408}
-          height={1008}
-          loading="lazy"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(var(--background)/0.3), hsl(var(--background)))" }} />
-      </div>
       <div className="section-container relative">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
           <span className="eyebrow mb-6 block">​</span>

@@ -112,8 +112,26 @@ const ReferencesPage = () => {
                 );
               })}
             </div>
+
+            {/* CTA bottom */}
+            <div className="mt-24 pt-16 border-t border-border/60 text-center max-w-3xl mx-auto">
+              <h2 className="heading-md mb-6 text-balance">{t("references.ctaTitle")}</h2>
+              <p className="body-lg text-subtle mb-8 text-balance">{t("references.ctaSubtitle")}</p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button variant="gradient" size="xl" asChild>
+                  <Link to="/hodnoceni" className="inline-flex items-center gap-2">
+                    {t("references.ctaPrimary")}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
+                  <Link to="/kontakt">{t("references.ctaSecondary")}</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Compass, Microscope, FlaskConical, Wrench, CheckCircle } from "lucide-react";
+import processImage from "@/assets/process-abstract.jpg.asset.json";
 
 const stepIcons = [Compass, Microscope, FlaskConical, Wrench, CheckCircle];
 

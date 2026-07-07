@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
+import aboutImage from "@/assets/about-consulting.jpg.asset.json";
 
 const AboutSection = () => {
   const { t } = useTranslation();

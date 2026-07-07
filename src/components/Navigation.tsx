@@ -46,7 +46,6 @@ const Navigation = () => {
     { href: "/hodnoceni", label: t("nav.evaluation"), highlight: true },
     { href: "/reference", label: t("nav.references"), highlight: false },
     { href: "/tym", label: t("nav.team"), highlight: false },
-    { href: "/blog", label: t("nav.blog"), highlight: false },
     { href: "/kontakt", label: t("nav.contact"), highlight: false },
   ];
 

@@ -48,11 +48,8 @@ const ServicesSection = () => {
           {sections.map((section, index) => (
             <StaggerItem key={index}>
               <div className="editorial-card reveal-arrow group h-full flex flex-col">
-                <div className="flex items-baseline justify-between mb-4">
-                  <span className="font-display text-sm font-semibold text-[hsl(var(--primary-deep))]">
-                    {section.number}
-                  </span>
-                  <div className="w-12 h-px bg-primary/30 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
+                <div className="mb-4">
+                  <div className="w-12 h-px bg-primary/40 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
                 </div>
                 <h3 className="heading-sm mb-4 text-balance">
                   {section.title}
@@ -78,7 +75,7 @@ const ServicesSection = () => {
 
                 <div className="mt-auto pt-5 border-t border-border/60">
                   <p className="body-sm">
-                    <span className="font-semibold text-primary">{t("servicesPage.resultLabel")}</span>{" "}
+                    <span className="font-semibold text-[hsl(var(--primary-deep))]">{t("servicesPage.resultLabel")}</span>{" "}
                     <span className="text-subtle">{section.result}</span>
                   </p>
                 </div>

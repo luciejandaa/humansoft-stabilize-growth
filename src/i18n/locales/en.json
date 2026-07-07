@@ -350,7 +350,7 @@
     "location": "Brno, Czech Republic"
   },
   "footer": {
-    "tagline": "We rewrite the internal code of tech companies.",
+    "tagline": "We rewrite the internal code of companies.",
     "subtagline": "Strategy. Processes. People. Teams. Meaning. Performance.",
     "rights": "All rights reserved."
   },
@@ -385,7 +385,7 @@
     },
     "cases": {
       "caseA": {
-        "title": "Reference A",
+        "title": "Software company",
         "situation": "—",
         "approach": [
           "Detailed view of the situation + specific steps with impact",
@@ -401,7 +401,7 @@
         "quote": "Working with HumanSoft.it helped us a lot. They managed to connect a detailed view of our situation with concrete steps that have impact. Thanks to their work, we realized where something was holding us back, and we set a clearer direction for the future. A big benefit for us was also that they taught us how to lead management meetings better – discussions became more open and outcomes much more practical. The initial analysis they prepared is a document we will return to for the long term."
       },
       "caseB": {
-        "title": "Reference B",
+        "title": "Software house",
         "situation": "—",
         "approach": [
           "Setting up delivery process",
@@ -418,7 +418,7 @@
         "quote": "Working with HumanSoft.it helped us fundamentally shift how our team operates. Key managers grew toward greater independence and maturity. The newly established delivery process brought more precise planning, measurability, and fewer conflicts during delivery. The revision of the organizational structure and clearer role definitions improved efficiency and strengthened managers' accountability, especially in their economic (business) perception of the company through results."
       },
       "caseC": {
-        "title": "Reference C",
+        "title": "Digital agency",
         "situation": "Gaps in company operations and management",
         "approach": [
           "Gap identification",
@@ -434,7 +434,7 @@
         "quote": "HumanSoft.it helped us clearly identify where we had gaps in the operation and management of our company, and proposed small changes that had quick and visible impact on the team's daily work. Communication and collaboration inside the company improved significantly. At the same time, thanks to their approach, we gained a better overview of our project economics. And all of it with very personal and human collaboration, including personal mentoring of selected key people in the company."
       },
       "caseD": {
-        "title": "Reference D",
+        "title": "Consulting firm",
         "situation": "Need for clearer, faster and more modern communication",
         "approach": [
           "MS Teams implementation",
@@ -450,7 +450,7 @@
         "quote": "We needed to introduce a clearer, faster, and more modern way of communication in our team. Thanks to František's professional guidance while rolling out MS Teams in the company, we managed not only to strengthen team dynamics but also to smoothly handle the transition to the new tool – without confusion or uncertainty. Clearly set but simple rules for using email, chat, and calendars played a big role. We had been using calendars before, but thanks to František's prompts we started discovering and fully leveraging the wider range of features they offer."
       },
       "caseE": {
-        "title": "Reference E",
+        "title": "Technology company",
         "situation": "Timesheets were a long-standing 'unacceptable topic'",
         "approach": [
           "Changing the approach to timesheets and implementing them in practice"
@@ -463,7 +463,7 @@
         "quote": "Timesheets used to be a dirty word in our company. Nobody wanted to deal with them. And then František came along. Within a few months, the whole topic turned 180 degrees. Now it's completely normal in our company to report daily work, and nobody has the slightest problem with it."
       },
       "caseF": {
-        "title": "Reference F",
+        "title": "Tech startup",
         "situation": "Need for more order, personal disputes slowing the team, 'garage style'",
         "approach": [
           "Refining work system for key people",
@@ -478,7 +478,7 @@
         "quote": "Working with HumanSoft.it helped us bring greater order to how the company operates. Thanks to their guidance, we refined the work system for key people, which also calmed the personal disputes that had been slowing us down. The team learned to build the entire delivery process and the company moved from a garage style to a professional level, ready for larger projects."
       },
       "caseG": {
-        "title": "Reference G",
+        "title": "Development team",
         "situation": "—",
         "approach": [
           "Workshops",
@@ -494,7 +494,7 @@
         "quote": "Working with HumanSoft.it wasn't just about theory, but about practical changes. The workshops helped us move the team forward, we learned to manage development better, and thanks to long-term coaching and mentoring, our key people noticeably grew in leadership. Today it's visible in daily work and results."
       },
       "caseH": {
-        "title": "Reference H (SK)",
+        "title": "Technology company (SK)",
         "situation": "Important period, need for project stabilization and transparency",
         "approach": [
           "Project transparency and stabilization",
@@ -511,7 +511,7 @@
         "quote": "HumanSoft.it played a key role for us during an important period. Together we brought transparency and stability to our projects, set them up to deliver real economic results, and at the same time strengthened internal processes and communication with clients. This increased satisfaction on both sides and deepened partner relationships. We also managed to kickstart further development of management on both a personal and professional level, uncover hidden opportunities and the potential of people. The result is a more stable company ready for further growth and the realization of our vision."
       },
       "caseI": {
-        "title": "Reference I",
+        "title": "IT services firm",
         "situation": "Unclear roles and frequent conflicts, friction between sales and delivery, missing HR and operations team",
         "approach": [
           "Setting clear roles",
@@ -528,7 +528,7 @@
         "quote": "HumanSoft.it helped us bring fundamental order to how we manage the company. Where there had previously been ambiguity and frequent conflicts, we set clear roles. We managed to improve the relationship between sales and delivery and to build a functioning HR and operations team. Thanks to that, we could hire key people who moved the company further forward."
       },
       "caseJ": {
-        "title": "Reference J",
+        "title": "Service company",
         "situation": "Need to streamline internal processes and systematic project and service management",
         "approach": [
           "Expert guidance, quick orientation in the issue",
@@ -544,6 +544,10 @@
         "quote": "At the start, we were addressing the need to streamline internal processes and improve systematic management of projects and service. What we expected most from the collaboration was expert guidance, practical proposals, and real results. What we appreciate most about working with the Humansoft.it team is their professional approach, ability to quickly orient themselves in the issue, and practical proposals with immediate impact. The collaboration was always constructive and focused on concrete results. The benefit for us was not only more efficient communication and processes, but also a clearer system for managing projects and tasks. We would definitely recommend the service to other companies looking for a reliable partner for developing and optimizing corporate processes."
       }
     },
-    "eyebrow": "References"
+    "eyebrow": "References",
+    "ctaTitle": "Do you recognise your company in these stories?",
+    "ctaSubtitle": "Let's look together at where you're losing momentum — and how to get out of it.",
+    "ctaPrimary": "Find where we lose performance",
+    "ctaSecondary": "Get in touch"
   }
 }

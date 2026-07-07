@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
+import aboutImage from "@/assets/about-consulting.jpg.asset.json";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ const AboutSection = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={0.1}>
-            <div className="max-w-3xl mx-auto mb-20 space-y-5 text-center">
+            <div className="max-w-3xl mx-auto mb-14 space-y-5 text-center">
               {intro.map((p, i) => (
                 <p key={i} className="body-lg text-subtle text-balance">
                   {p}
@@ -34,6 +35,20 @@ const AboutSection = () => {
               ))}
             </div>
           </AnimatedSection>
+
+          <AnimatedSection delay={0.15}>
+            <div className="mb-20 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={aboutImage.url}
+                alt=""
+                width={1600}
+                height={1104}
+                loading="lazy"
+                className="w-full h-[280px] md:h-[420px] object-cover"
+              />
+            </div>
+          </AnimatedSection>
+
 
           <div className="grid md:grid-cols-2 gap-6 mb-20">
             <AnimatedCard delay={0.1}>
@@ -72,7 +87,7 @@ const AboutSection = () => {
                   key={index}
                   className="editorial-card h-full text-center hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <h4 className="font-display text-lg font-semibold mb-3 text-primary">
+                  <h4 className="font-display text-lg font-semibold mb-3 text-[hsl(var(--primary-deep))]">
                     {value.name}
                   </h4>
                   <p className="text-sm text-subtle leading-relaxed">

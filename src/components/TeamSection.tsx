@@ -63,7 +63,7 @@ const TeamSection = () => {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="font-display text-xl md:text-2xl font-semibold mb-1">{t(`team.members.${member.key}.name`)}</h3>
-                  <p className="text-primary font-medium tracking-widest uppercase text-xs mb-2 font-display">{t(`team.members.${member.key}.role`)}</p>
+                  <p className="text-[hsl(var(--primary-deep))] font-semibold tracking-widest uppercase text-xs mb-2 font-display">{t(`team.members.${member.key}.role`)}</p>
                   <p className="text-sm text-subtle leading-relaxed">{t(`team.members.${member.key}.shortBio`, { defaultValue: "" })}</p>
                 </div>
               </div>

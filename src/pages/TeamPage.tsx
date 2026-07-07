@@ -70,7 +70,7 @@ const TeamPage = () => {
                         <h2 className="font-display text-2xl md:text-3xl font-semibold mb-2">
                           {t(`team.members.${member.key}.name`)}
                         </h2>
-                        <p className="text-primary font-medium tracking-wide uppercase text-sm">
+                        <p className="text-[hsl(var(--primary-deep))] font-semibold tracking-wide uppercase text-sm">
                           {t(`team.members.${member.key}.role`)}
                         </p>
                       </div>

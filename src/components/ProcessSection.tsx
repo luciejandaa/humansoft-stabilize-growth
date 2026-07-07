@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Compass, Microscope, FlaskConical, Wrench, CheckCircle } from "lucide-react";
+import processImage from "@/assets/process-abstract.jpg.asset.json";
 
 const stepIcons = [Compass, Microscope, FlaskConical, Wrench, CheckCircle];
 
@@ -39,8 +40,20 @@ const ProcessSection = () => {
   };
 
   return (
-    <section id="jak-pracujeme" className="section-padding bg-background" ref={sectionRef}>
-      <div className="section-container">
+    <section id="jak-pracujeme" className="section-padding bg-background relative" ref={sectionRef}>
+      {/* Decorative abstract accent */}
+      <div className="absolute inset-x-0 top-0 h-[380px] pointer-events-none overflow-hidden opacity-[0.18]" aria-hidden="true">
+        <img
+          src={processImage.url}
+          alt=""
+          width={1408}
+          height={1008}
+          loading="lazy"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsl(var(--background)/0.3), hsl(var(--background)))" }} />
+      </div>
+      <div className="section-container relative">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
           <span className="eyebrow mb-6 block">​</span>
           <h2 className="heading-xl mb-6 text-balance">
@@ -64,7 +77,7 @@ const ProcessSection = () => {
                 </div>
                 <div className="pb-7 pt-1.5">
                   <h3 className="heading-sm text-base">{step.title}</h3>
-                  {(step as any).subtitle && <p className="text-sm text-primary/60 italic">{(step as any).subtitle}</p>}
+                  {(step as any).subtitle && <p className="text-sm text-[hsl(var(--primary-deep))]/70 italic">{(step as any).subtitle}</p>}
                   <p className="body-sm text-subtle mt-1">{step.description}</p>
                 </div>
               </motion.div>
@@ -85,7 +98,7 @@ const ProcessSection = () => {
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
                     <h3 className="font-display font-semibold text-foreground text-sm leading-tight">{step.title}</h3>
-                    {(step as any).subtitle && <p className="text-xs text-primary/60 italic mt-0.5">{(step as any).subtitle}</p>}
+                    {(step as any).subtitle && <p className="text-xs text-[hsl(var(--primary-deep))]/70 italic mt-0.5">{(step as any).subtitle}</p>}
                     <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
                   </div>
                 </div>

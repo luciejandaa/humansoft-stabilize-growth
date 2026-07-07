@@ -19,7 +19,19 @@ const ReferencesPage = () => {
         <FunDecorations />
         <section className="section-padding">
           <div className="section-container">
-            <h1 className="heading-xl mb-16 text-center">{t("references.title")}</h1>
+            <h1 className="heading-xl mb-10 text-center">{t("references.title")}</h1>
+
+            <div className="mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={referencesImage.url}
+                alt=""
+                width={1600}
+                height={912}
+                loading="lazy"
+                className="w-full h-[240px] md:h-[380px] object-cover"
+              />
+            </div>
+
 
             <div className="space-y-16">
               {caseKeys.map((key, index) => {

@@ -72,7 +72,7 @@ const AboutSection = () => {
                   key={index}
                   className="editorial-card h-full text-center hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <h4 className="font-display text-lg font-semibold mb-3 text-primary">
+                  <h4 className="font-display text-lg font-semibold mb-3 text-[hsl(var(--primary-deep))]">
                     {value.name}
                   </h4>
                   <p className="text-sm text-subtle leading-relaxed">

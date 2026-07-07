@@ -78,7 +78,7 @@ const ServicesSection = () => {
 
                 <div className="mt-auto pt-5 border-t border-border/60">
                   <p className="body-sm">
-                    <span className="font-semibold text-primary">{t("servicesPage.resultLabel")}</span>{" "}
+                    <span className="font-semibold text-[hsl(var(--primary-deep))]">{t("servicesPage.resultLabel")}</span>{" "}
                     <span className="text-subtle">{section.result}</span>
                   </p>
                 </div>

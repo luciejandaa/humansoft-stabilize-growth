@@ -64,7 +64,7 @@ const ProcessSection = () => {
                 </div>
                 <div className="pb-7 pt-1.5">
                   <h3 className="heading-sm text-base">{step.title}</h3>
-                  {(step as any).subtitle && <p className="text-sm text-primary/60 italic">{(step as any).subtitle}</p>}
+                  {(step as any).subtitle && <p className="text-sm text-[hsl(var(--primary-deep))]/70 italic">{(step as any).subtitle}</p>}
                   <p className="body-sm text-subtle mt-1">{step.description}</p>
                 </div>
               </motion.div>
@@ -85,7 +85,7 @@ const ProcessSection = () => {
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
                     <h3 className="font-display font-semibold text-foreground text-sm leading-tight">{step.title}</h3>
-                    {(step as any).subtitle && <p className="text-xs text-primary/60 italic mt-0.5">{(step as any).subtitle}</p>}
+                    {(step as any).subtitle && <p className="text-xs text-[hsl(var(--primary-deep))]/70 italic mt-0.5">{(step as any).subtitle}</p>}
                     <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
                   </div>
                 </div>

@@ -24,7 +24,7 @@ const ServicesPage = () => {
       <Navigation />
       <main className="pt-20 relative">
         {/* Hero / Intro */}
-        <section className="section-padding pb-12">
+        <section className="section-padding">
           <div className="section-container">
             <AnimatedSection>
               <h1 className="heading-xl mb-6 text-center">{t("servicesPage.title")}</h1>
@@ -57,7 +57,7 @@ const ServicesPage = () => {
 
 
         {/* Service Sections */}
-        <section className="section-padding pt-12 pb-12">
+        <section className="section-padding">
           <div className="section-container space-y-24">
             {sections.map((section, index) => (
               <Fragment key={index}>
@@ -116,7 +116,7 @@ const ServicesPage = () => {
 
 
         {/* Closing */}
-        <section className="section-padding pt-12 pb-0">
+        <section className="section-padding">
           <div className="section-container">
             <AnimatedSection>
               <div className="text-center max-w-2xl mx-auto">

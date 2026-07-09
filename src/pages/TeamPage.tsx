@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import CTABanner from "@/components/CTABanner";
+import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/animated-section";
-import { ArrowRight, User } from "lucide-react";
+import { User } from "lucide-react";
 import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";

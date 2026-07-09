@@ -32,7 +32,19 @@ const ProcessPage = () => {
       <main className="pt-20">
         <section className="section-padding bg-secondary">
           <div className="section-container">
-            <h1 className="heading-xl mb-16 text-center">Jak pracujeme</h1>
+            <h1 className="heading-xl mb-10 text-center">Jak pracujeme</h1>
+
+            <div className="mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={processImage.url}
+                alt=""
+                width={1600}
+                height={1008}
+                loading="lazy"
+                className="w-full h-[260px] md:h-[400px] object-cover"
+              />
+            </div>
+
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {steps.map((step, index) => (

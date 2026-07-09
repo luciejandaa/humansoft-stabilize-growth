@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { Fragment } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import InlineCTA from "@/components/InlineCTA";
 import referencesImage from "@/assets/references-handshake.jpg.asset.json";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];

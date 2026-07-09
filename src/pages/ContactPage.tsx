@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
-import FunDecorations from "@/components/FunDecorations";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -12,7 +11,6 @@ const ContactPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <FunDecorations />
         <section className="section-padding">
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center mb-16">

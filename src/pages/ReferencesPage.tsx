@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FunDecorations from "@/components/FunDecorations";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import referencesImage from "@/assets/references-handshake.jpg.asset.json";
@@ -16,7 +15,6 @@ const ReferencesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <FunDecorations />
         <section className="section-padding">
           <div className="section-container">
             <h1 className="heading-xl mb-10 text-center">{t("references.title")}</h1>

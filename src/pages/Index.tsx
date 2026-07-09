@@ -7,13 +7,11 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
-import FunDecorations from "@/components/FunDecorations";
 import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
-      <FunDecorations />
       <Navigation />
       <main className="relative z-10">
         <HeroSection />

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
+import contactImage from "@/assets/contact-coffee.jpg.asset.json";
 
 const ContactPage = () => {
   const { t } = useTranslation();

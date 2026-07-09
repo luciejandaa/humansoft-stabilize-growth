@@ -47,7 +47,7 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.p
-              className="body-md text-subtle max-w-xl mb-6"
+              className="body-lg text-subtle max-w-xl mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -56,7 +56,7 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.p
-              className="body-md text-foreground max-w-xl mb-10 font-medium"
+              className="body-lg text-foreground max-w-xl mb-10 font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}

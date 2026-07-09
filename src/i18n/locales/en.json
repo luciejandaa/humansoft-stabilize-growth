@@ -35,7 +35,7 @@
     "subtitle": "We help tech companies connect technical excellence with human maturity so they can grow faster, healthier, and with less chaos.",
     "description": "We find bottlenecks, fine-tune strategy, processes, and team collaboration, and create an environment where people take responsibility, work has meaning, and change continues even without our constant intervention.",
     "outcome": "The result is a company with clear direction, higher performance, and the energy to grow.",
-    "cta": "Find out where we lose performance",
+    "cta": "Find out where we're losing performance",
     "eyebrow": "Consulting Studio",
     "stats": {
       "transformations": "successful transformations",
@@ -71,7 +71,7 @@
       "label": "Our Mission",
       "text": "We craft solutions, tools, and transformation processes tailored to companies that want to operate more efficiently, more consciously, and with sustainable impact. We help raise performance, empower individuals, develop teams, and design systems of work so a company can solve its challenges ever more independently. Our goal is not to make companies dependent on consultants. Our goal is to awaken in them the ability to see, name, and solve their own challenges."
     },
-    "valuesLabel": "The values we build change on",
+    "valuesLabel": "The values our change is built on",
     "values": [
       {
         "name": "Freedom",
@@ -127,7 +127,7 @@
       {
         "number": "01",
         "title": "We find where the company loses momentum",
-        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
+        "description": "Every company has places where something repeats. Decisions get revisited. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
         "approach": "We look for these places, name them, and turn them into concrete solutions.",
         "items": [
           "finding bottlenecks in the company",
@@ -162,7 +162,7 @@
           "clarifying roles, responsibilities, and competencies",
           "removing duplication, noise, and operational collisions",
           "establishing a rhythm of meetings, reflections, and decision-making",
-          "strengthening collaboration instead of internal pulling"
+          "strengthening collaboration instead of internal tug-of-war"
         ],
         "result": "People know what is expected of them, how to talk to each other, and how to move things forward without unnecessary friction."
       },
@@ -216,7 +216,7 @@
       {
         "number": "01",
         "title": "We find where the company loses momentum",
-        "description": "Every company has places where something repeats. Decisions come back. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
+        "description": "Every company has places where something repeats. Decisions get revisited. People don't understand each other. The owner holds too many things in their head. Strategy exists but doesn't live in practice. Teams work hard, but performance is lost in the noise.",
         "approach": "We look for these places, name them, and turn them into concrete solutions.",
         "items": [
           "finding bottlenecks in the company",
@@ -251,7 +251,7 @@
           "clarifying roles, responsibilities, and competencies",
           "removing duplication, noise, and operational collisions",
           "establishing a rhythm of meetings, reflections, and decision-making",
-          "strengthening collaboration instead of internal pulling"
+          "strengthening collaboration instead of internal tug-of-war"
         ],
         "result": "People know what is expected of them, how to talk to each other, and how to move things forward without unnecessary friction."
       },
@@ -366,8 +366,8 @@
     "eyebrow": "Team"
   },
   "contact": {
-    "title": "Want Change Before It Is Too Late?",
-    "subtitle": "Get in touch - we will review your situation and suggest next steps.",
+    "title": "Want Change Before It's Too Late?",
+    "subtitle": "Get in touch — we'll review your situation and suggest the next steps.",
     "cta": "Discover Your Company's Potential",
     "writeUs": "Write to Us",
     "email": "info@humansoft.it",
@@ -390,7 +390,7 @@
       "Get a first map of what can move your company forward"
     ],
     "comingSoon": "Interactive evaluation coming soon.",
-    "cta": "I want to see where we have reserves",
+    "cta": "I want to see where we can improve",
     "banner": {
       "eyebrow": "You're not alone",
       "title": "Want to discuss the results with someone who gets it?",
@@ -577,9 +577,9 @@
       }
     },
     "eyebrow": "References",
-    "ctaTitle": "Do you recognise your company in these stories?",
+    "ctaTitle": "Do you recognize your company in these stories?",
     "ctaSubtitle": "Let's look together at where you're losing momentum — and how to get out of it.",
-    "ctaPrimary": "Find where we lose performance",
+    "ctaPrimary": "Find where we're losing performance",
     "ctaSecondary": "Get in touch"
   }
 }

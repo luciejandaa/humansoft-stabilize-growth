@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { Fragment } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import InlineCTA from "@/components/InlineCTA";
 import referencesImage from "@/assets/references-handshake.jpg.asset.json";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];
@@ -29,6 +31,15 @@ const ReferencesPage = () => {
             </div>
 
 
+            <div className="mb-16">
+              <InlineCTA
+                variant="lime"
+                text={t("inlineCta.evaluate.text")}
+                buttonLabel={t("inlineCta.evaluate.button")}
+                to="/hodnoceni"
+              />
+            </div>
+
             <div className="space-y-16">
               {caseKeys.map((key, index) => {
                 const approach = t(`references.cases.${key}.approach`, { returnObjects: true }) as string[];
@@ -39,8 +50,8 @@ const ReferencesPage = () => {
                 const title = t(`references.cases.${key}.title`);
 
                 return (
+                  <Fragment key={key}>
                   <div
-                    key={key}
                     className="pb-16 border-b border-border/60 last:border-b-0"
                   >
                     <h2 className="heading-sm mb-8">{title}</h2>
@@ -105,6 +116,22 @@ const ReferencesPage = () => {
                       </blockquote>
                     </div>
                   </div>
+                  {index === 3 && (
+                    <InlineCTA
+                      text={t("inlineCta.contact.text")}
+                      buttonLabel={t("inlineCta.contact.button")}
+                      to="/kontakt"
+                    />
+                  )}
+                  {index === 6 && (
+                    <InlineCTA
+                      variant="lime"
+                      text={t("inlineCta.services.text")}
+                      buttonLabel={t("inlineCta.services.button")}
+                      to="/sluzby"
+                    />
+                  )}
+                  </Fragment>
                 );
               })}
             </div>

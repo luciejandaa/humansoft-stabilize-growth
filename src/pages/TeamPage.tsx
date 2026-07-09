@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import CTABanner from "@/components/CTABanner";
+import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "@/components/ui/animated-section";
-import { ArrowRight, User } from "lucide-react";
+import { User } from "lucide-react";
 import lucieJanda from "@/assets/team/lucie-janda.png";
 import veronikaHegrova from "@/assets/team/veronika-hegrova.png";
 import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
@@ -85,19 +85,29 @@ const TeamPage = () => {
               ))}
             </div>
 
-            {/* CTA */}
-            <AnimatedText delay={0.5}>
-              <div className="text-center mt-16">
-                <Button size="lg" asChild>
-                  <Link to="/kontakt" className="inline-flex items-center gap-2">
-                    {t("contact.cta")}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
+            {/* Inline CTA */}
+            <AnimatedText delay={0.4}>
+              <div className="mt-16 max-w-3xl mx-auto">
+                <InlineCTA
+                  variant="lime"
+                  text={t("inlineCta.contact.text")}
+                  buttonLabel={t("inlineCta.contact.button")}
+                  to="/kontakt"
+                />
               </div>
             </AnimatedText>
           </div>
         </section>
+
+        <CTABanner
+          title={t("references.ctaTitle")}
+          subtitle={t("references.ctaSubtitle")}
+          primaryLabel={t("references.ctaPrimary")}
+          primaryTo="/hodnoceni"
+          secondaryLabel={t("references.ctaSecondary")}
+          secondaryTo="/kontakt"
+        />
+
       </main>
       <Footer />
     </div>

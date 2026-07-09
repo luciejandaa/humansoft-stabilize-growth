@@ -1,4 +1,22 @@
 {
+  "inlineCta": {
+    "evaluate": {
+      "text": "Nevíte, kde přesně vaše firma ztrácí tah? Krátké hodnocení vám ukáže první směr.",
+      "button": "Ohodnotit firmu"
+    },
+    "contact": {
+      "text": "Chcete probrat konkrétní situaci ve vaší firmě? Ozvěte se, ozveme se do 24 hodin.",
+      "button": "Napište nám"
+    },
+    "services": {
+      "text": "Podívejte se, jak konkrétně pomáháme firmám měnit vnitřní kód zevnitř.",
+      "button": "Co děláme"
+    },
+    "references": {
+      "text": "Zajímá vás, jak to vypadá v praxi? Podívejte se na příběhy firem, kterým jsme pomohli.",
+      "button": "Reference"
+    }
+  },
   "nav": {
     "home": "HumanSoft",
     "services": "Služby",

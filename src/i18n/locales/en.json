@@ -372,7 +372,14 @@
       "Get a first map of what can move your company forward"
     ],
     "comingSoon": "Interactive evaluation coming soon.",
-    "cta": "I want to see where we have reserves"
+    "cta": "I want to see where we have reserves",
+    "banner": {
+      "eyebrow": "You're not alone",
+      "title": "Want to discuss the results with someone who gets it?",
+      "subtitle": "Reach out — we'll look together at what the evaluation revealed and propose a first step.",
+      "primary": "Get in touch",
+      "secondary": "What we do"
+    }
   },
   "blog": {
     "title": "Blog",

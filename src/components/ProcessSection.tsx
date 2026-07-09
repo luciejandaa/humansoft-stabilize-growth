@@ -49,7 +49,7 @@ const ProcessSection = () => {
             {t("process.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="italic-serif text-gradient">{t("process.title").split(" ").slice(-1)}</span>
           </h2>
-          <p className="body-md text-subtle max-w-2xl mx-auto">{t("process.subtitle")}</p>
+          <p className="body-lg text-subtle max-w-2xl mx-auto">{t("process.subtitle")}</p>
         </motion.div>
 
         {/* Mobile */}

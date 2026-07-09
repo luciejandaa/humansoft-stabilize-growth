@@ -18,9 +18,9 @@
     --popover-foreground: 0 0% 4%;
 
     /* Electric coral — CTA, highlight, accent */
-    --primary: 18 100% 59%;              /* #FF6A2C */
+    --primary: 17.6 100% 58.6%;              /* #FF6A2C */
     --primary-foreground: 0 0% 100%;     /* white text on coral */
-    --primary-glow: 18 100% 69%;
+    --primary-glow: 17.6 100% 69%;
     --primary-deep: 0 0% 4%;             /* accessible text = black */
 
     --secondary: 0 0% 100%;              /* white */
@@ -29,7 +29,7 @@
     --muted: 0 0% 100%;                    /* white */
     --muted-foreground: 0 0% 4% / 0.6;   /* black 60% */
 
-    --accent: 18 100% 59%;               /* coral */
+    --accent: 17.6 100% 58.6%;               /* coral */
     --accent-foreground: 0 0% 100%;      /* white */
 
     --destructive: 0 0% 4%;              /* black */
@@ -37,7 +37,7 @@
 
     --border: 0 0% 4% / 0.12;            /* black 12% */
     --input: 0 0% 4% / 0.12;             /* black 12% */
-    --ring: 18 100% 59%;                  /* coral */
+    --ring: 17.6 100% 58.6%;                  /* coral */
 
     --radius: 0.75rem;
 
@@ -47,18 +47,18 @@
     --divider: 0 0% 4% / 0.12;             /* black 12% */
 
     /* Brand — petrol/cream removed, only black + coral */
-    --brand-primary: 18 100% 59%;        /* coral */
+    --brand-primary: 17.6 100% 58.6%;        /* coral */
     --brand-secondary: 0 0% 4%;          /* black */
-    --brand-glow: 18 100% 69%;           /* lighter coral */
-    --brand-lime: 18 100% 59%;           /* coral */
+    --brand-glow: 17.6 100% 69%;           /* lighter coral */
+    --brand-lime: 17.6 100% 58.6%;           /* coral */
     --brand-cream: 0 0% 100%;            /* white */
     --brand-petrol: 0 0% 4%;             /* black */
 
     /* Gradients — only black and coral */
-    --gradient-primary: linear-gradient(135deg, hsl(18 100% 59%), hsl(18 100% 69%));
+    --gradient-primary: linear-gradient(135deg, hsl(17.6 100% 58.6%), hsl(17.6 100% 69%));
     --gradient-vivid: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 4% / 0.85) 100%);
-    --gradient-soft: radial-gradient(ellipse at top, hsl(18 100% 75% / 0.18), transparent 60%);
-    --gradient-mesh: radial-gradient(at 20% 20%, hsl(18 100% 65% / 0.10) 0px, transparent 50%),
+    --gradient-soft: radial-gradient(ellipse at top, hsl(17.6 100% 75% / 0.18), transparent 60%);
+    --gradient-mesh: radial-gradient(at 20% 20%, hsl(17.6 100% 65% / 0.10) 0px, transparent 50%),
                      radial-gradient(at 80% 80%, hsl(0 0% 4% / 0.06) 0px, transparent 50%);
 
     /* Typography */
@@ -73,7 +73,7 @@
     /* Shadows */
     --shadow-soft: 0 1px 2px hsl(0 0% 4% / 0.04), 0 2px 8px hsl(0 0% 4% / 0.04);
     --shadow-elevated: 0 10px 40px -10px hsl(0 0% 4% / 0.12), 0 4px 12px hsl(0 0% 4% / 0.05);
-    --shadow-glow: 0 12px 40px -10px hsl(18 100% 59% / 0.45);
+    --shadow-glow: 0 12px 40px -10px hsl(17.6 100% 58.6% / 0.45);
     --shadow-editorial: 0 30px 80px -20px hsl(0 0% 4% / 0.18);
 
     /* Transitions */

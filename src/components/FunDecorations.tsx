@@ -20,7 +20,7 @@ const FunDecorations = () => {
         className="absolute top-[18%] -left-40 w-[600px] h-[600px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, hsl(18 100% 59% / 0.08), transparent 65%)",
+            "radial-gradient(circle, hsl(17.6 100% 58.6% / 0.08), transparent 65%)",
           filter: "blur(50px)",
         }}
       />
@@ -30,7 +30,7 @@ const FunDecorations = () => {
         className="absolute bottom-[10%] -right-40 w-[700px] h-[700px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, hsl(18 100% 59% / 0.05), transparent 65%)",
+            "radial-gradient(circle, hsl(17.6 100% 58.6% / 0.05), transparent 65%)",
           filter: "blur(60px)",
         }}
       />

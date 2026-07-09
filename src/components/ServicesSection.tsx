@@ -98,7 +98,7 @@ const ServicesSection = () => {
                   className={
                     i === closing.length - 1
                       ? "body-lg text-subtle text-balance"
-                      : "heading-md italic-serif text-balance text-foreground/90"
+                      : "body-lg italic-serif text-balance text-foreground"
                   }
                 >
                   {line}

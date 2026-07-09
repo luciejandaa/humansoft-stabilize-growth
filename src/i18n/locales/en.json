@@ -187,6 +187,13 @@
     "resultLabel": "Result:",
     "closing": "Our goal is not to deliver a document. Our goal is a company that can operate, grow, and solve its challenges from within. We help companies build an environment where technical expertise meets meaning, responsibility, freedom, and joy in work.",
     "ctaButton": "Discover Your Company's Potential",
+    "cta": {
+      "eyebrow": "Let's begin",
+      "title": "Want to see where your company is losing momentum?",
+      "subtitle": "A short evaluation reveals where performance, energy and ownership slip through. No commitment, under 10 minutes.",
+      "primary": "Evaluate your company",
+      "secondary": "Get in touch"
+    },
     "sections": [
       {
         "number": "01",
@@ -365,7 +372,14 @@
       "Get a first map of what can move your company forward"
     ],
     "comingSoon": "Interactive evaluation coming soon.",
-    "cta": "I want to see where we have reserves"
+    "cta": "I want to see where we have reserves",
+    "banner": {
+      "eyebrow": "You're not alone",
+      "title": "Want to discuss the results with someone who gets it?",
+      "subtitle": "Reach out — we'll look together at what the evaluation revealed and propose a first step.",
+      "primary": "Get in touch",
+      "secondary": "What we do"
+    }
   },
   "blog": {
     "title": "Blog",

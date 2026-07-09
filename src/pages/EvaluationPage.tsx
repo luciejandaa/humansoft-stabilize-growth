@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CTABanner from "@/components/CTABanner";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -22,6 +23,16 @@ const EvaluationPage = () => {
             </div>
           </div>
         </section>
+
+        <CTABanner
+          eyebrow={t("evaluation.banner.eyebrow")}
+          title={t("evaluation.banner.title")}
+          subtitle={t("evaluation.banner.subtitle")}
+          primaryLabel={t("evaluation.banner.primary")}
+          primaryTo="/kontakt"
+          secondaryLabel={t("evaluation.banner.secondary")}
+          secondaryTo="/sluzby"
+        />
       </main>
       <Footer />
     </div>

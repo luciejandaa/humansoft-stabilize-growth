@@ -70,7 +70,8 @@
     --font-serif: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Spacing */
-    --section-padding: clamp(3.5rem, 8vw, 6rem);
+    /* Mobile default; overridden per-breakpoint below. */
+    --section-padding: 2.75rem;
 
     /* Shadows */
     --shadow-soft: 0 1px 2px hsl(0 0% 4% / 0.04), 0 2px 8px hsl(0 0% 4% / 0.04);
@@ -175,6 +176,15 @@
   .section-padding {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+  }
+  @media (min-width: 640px) {
+    .section-padding { --section-padding: 4rem; }
+  }
+  @media (min-width: 1024px) {
+    .section-padding { --section-padding: 5.5rem; }
+  }
+  @media (min-width: 1440px) {
+    .section-padding { --section-padding: 6.5rem; }
   }
 
   .text-balance { text-wrap: balance; }

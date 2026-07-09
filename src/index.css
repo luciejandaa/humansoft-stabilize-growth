@@ -18,9 +18,9 @@
     --popover-foreground: 0 0% 4%;
 
     /* Electric Lime — primary energy / activation point */
-    --primary: 73 100% 47%;              /* #C7F000 */
-    --primary-foreground: 0 0% 4%;       /* black text on lime */
-    --primary-glow: 73 100% 60%;
+    --primary: 16 100% 55%;              /* #FF6A2C electric coral */
+    --primary-foreground: 0 0% 100%;     /* white text on coral */
+    --primary-glow: 16 100% 65%;
     /* Deep Petrol — used for accessible primary-coloured TEXT on light bg
        (lime fails contrast for small text). */
     --primary-deep: 182 82% 13%;         /* #063B3D */

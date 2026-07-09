@@ -22,7 +22,7 @@ const EvaluationSection = () => {
               </div>
               <h2 className="heading-lg mb-6 text-balance">
                 {t("evaluation.title").split(" ").slice(0, -1).join(" ")}{" "}
-                <span className="italic-serif" style={{ color: "hsl(var(--primary-glow))" }}>
+                <span className="italic-serif text-gradient">
                   {t("evaluation.title").split(" ").slice(-1)}
                 </span>
               </h2>

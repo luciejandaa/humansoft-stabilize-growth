@@ -30,7 +30,7 @@ const TeamSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-20">
           <AnimatedSection>
             <span className="eyebrow mb-6 block">— {t("team.eyebrow")} — </span>
-            <h2 className="heading-xl mb-6 text-balance">
+            <h2 className="heading-lg mb-6 text-balance">
               {t("team.title").split(" ").slice(0, -1).join(" ")}{" "}
               <span className="italic-serif text-gradient">
                 {t("team.title").split(" ").slice(-1)}
@@ -63,7 +63,7 @@ const TeamSection = () => {
                   )}
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="font-display text-xl md:text-2xl font-semibold mb-1">{t(`team.members.${member.key}.name`)}</h3>
+                  <h3 className="heading-sm mb-1">{t(`team.members.${member.key}.name`)}</h3>
                   <p className="text-[hsl(var(--primary-deep))] font-semibold tracking-widest uppercase text-xs mb-2 font-display">{t(`team.members.${member.key}.role`)}</p>
                   <p className="text-sm text-subtle leading-relaxed">{t(`team.members.${member.key}.shortBio`, { defaultValue: "" })}</p>
                 </div>

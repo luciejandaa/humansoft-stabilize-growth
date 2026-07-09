@@ -26,7 +26,7 @@ const ServicesSection = () => {
         <AnimatedSection>
           <div className="text-center mb-12">
             <span className="eyebrow mb-6 block">— {t("services.eyebrow")} — </span>
-            <h2 className="heading-xl text-balance">
+            <h2 className="heading-lg text-balance">
               {t("services.title").split(" ").slice(0, -1).join(" ")}{" "}
               <span className="italic-serif text-gradient">
                 {t("services.title").split(" ").slice(-1)}

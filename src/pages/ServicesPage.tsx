@@ -75,7 +75,7 @@ const ServicesPage = () => {
                     <ul className="grid sm:grid-cols-2 gap-3 mb-8">
                       {section.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 bg-primary/60 rounded-full mt-2 shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-brand-petrol rounded-full mt-2 shrink-0" />
                           <span className="body-sm text-subtle">{item}</span>
                         </li>
                       ))}

@@ -18,13 +18,13 @@ const InlineCTA = ({ text, buttonLabel, to, variant = "light" }: InlineCTAProps)
   if (variant === "lime") {
     return (
       <div
-        className="rounded-2xl px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+        className="rounded-2xl px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-background"
         style={{
-          background: "hsl(var(--primary) / 0.12)",
-          border: "1px solid hsl(var(--primary) / 0.35)",
+          background: "hsl(var(--brand-petrol))",
+          border: "1px solid hsl(var(--background) / 0.3)",
         }}
       >
-        <p className="body-md font-medium text-[hsl(var(--primary-deep))] max-w-2xl">
+        <p className="body-md font-medium max-w-2xl">
           {text}
         </p>
         <Button variant="gradient" size="lg" asChild className="shrink-0">

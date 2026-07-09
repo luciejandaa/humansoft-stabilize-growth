@@ -4,13 +4,14 @@ import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
 import whyImage from "@/assets/why-conversation.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const WhySection = () => {
   const { t } = useTranslation();
   const paragraphs = t("why.paragraphs", { returnObjects: true }) as string[];
 
   return (
-    <section id="proc" className="section-padding bg-secondary/40 relative">
+    <Section id="proc" className="bg-secondary/40 relative">
       <div className="section-container">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
@@ -63,7 +64,7 @@ const WhySection = () => {
           </div>
         </AnimatedSection>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Compass, Microscope, FlaskConical, Wrench, CheckCircle } from "lucide-react";
 import processImage from "@/assets/process-abstract.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const stepIcons = [Compass, Microscope, FlaskConical, Wrench, CheckCircle];
 
@@ -40,7 +41,7 @@ const ProcessSection = () => {
   };
 
   return (
-    <section id="jak-pracujeme" className="section-padding bg-background relative" ref={sectionRef}>
+    <Section id="jak-pracujeme" className="bg-background relative" ref={sectionRef}>
       <div className="section-container relative">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
           <span className="eyebrow mb-6 block">​</span>
@@ -99,7 +100,7 @@ const ProcessSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

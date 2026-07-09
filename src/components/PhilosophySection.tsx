@@ -1,8 +1,9 @@
 const values = ["Svoboda", "Smysl", "Osobní růst", "Práce", "Zábava & radost"];
+import { Section } from "@/components/ui/section";
 
 const PhilosophySection = () => {
   return (
-    <section className="section-padding">
+    <Section>
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="heading-lg mb-8">Naše filozofie</h2>
@@ -24,7 +25,7 @@ const PhilosophySection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

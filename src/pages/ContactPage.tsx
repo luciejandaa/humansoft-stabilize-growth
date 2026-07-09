@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import contactImage from "@/assets/contact-coffee.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <section className="section-padding">
+        <Section>
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="heading-xl mb-6">
@@ -68,7 +69,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Section>
       </main>
       <Footer />
     </div>

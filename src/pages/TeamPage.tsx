@@ -11,6 +11,7 @@ import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 import pavelVresnak from "@/assets/team/pavel-vresnak.png";
 import frantisekFiala from "@/assets/team/frantisek-fiala.png";
 import milanKosdy from "@/assets/team/milan-kosdy.png";
+import { Section } from "@/components/ui/section";
 
 const TeamPage = () => {
   const { t } = useTranslation();
@@ -29,7 +30,7 @@ const TeamPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <section className="section-padding bg-gradient-to-b from-secondary/50 to-secondary">
+        <Section className="bg-gradient-to-b from-secondary/50 to-secondary">
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <AnimatedSection>
@@ -97,7 +98,7 @@ const TeamPage = () => {
               </div>
             </AnimatedText>
           </div>
-        </section>
+        </Section>
 
         <CTABanner
           title={t("references.ctaTitle")}

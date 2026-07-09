@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./ui/animated-section";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { Section } from "@/components/ui/section";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const ServicesSection = () => {
   const closing = t("services.closing", { returnObjects: true }) as string[];
 
   return (
-    <section id="sluzby" className="section-padding relative">
+    <Section id="sluzby" className="relative">
       <div className="section-container">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -115,7 +116,7 @@ const ServicesSection = () => {
           </div>
         </AnimatedSection>
       </div>
-    </section>
+    </Section>
   );
 };
 

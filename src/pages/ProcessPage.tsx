@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import processImage from "@/assets/process-office.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const steps = [
   {
@@ -30,7 +31,7 @@ const ProcessPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20">
-        <section className="section-padding bg-secondary">
+        <Section className="bg-secondary">
           <div className="section-container">
             <h1 className="heading-xl mb-10 text-center">Jak pracujeme</h1>
 
@@ -65,7 +66,7 @@ const ProcessPage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </Section>
       </main>
       <Footer />
     </div>

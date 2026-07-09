@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Section } from "@/components/ui/section";
 
 interface CTABannerProps {
   eyebrow?: string;
@@ -27,7 +28,7 @@ const CTABanner = ({
   secondaryTo,
 }: CTABannerProps) => {
   return (
-    <section className="section-padding">
+    <Section>
       <div className="section-container">
         <div
           className="relative overflow-hidden rounded-3xl px-8 py-16 md:px-16 md:py-24 text-center"
@@ -75,7 +76,7 @@ const CTABanner = ({
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

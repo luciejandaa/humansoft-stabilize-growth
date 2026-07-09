@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import FunDecorations from "@/components/FunDecorations";
 
 const EvaluationPage = () => {
   const { t } = useTranslation();
@@ -11,7 +10,6 @@ const EvaluationPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <FunDecorations />
         <section className="section-padding">
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center">

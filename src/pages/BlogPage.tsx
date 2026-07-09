@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedSection, AnimatedText } from "@/components/ui/animated-section";
-import FunDecorations from "@/components/FunDecorations";
 
 const BlogPage = () => {
   const { t } = useTranslation();
@@ -11,7 +10,6 @@ const BlogPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <FunDecorations />
         <section className="section-padding min-h-[60vh] flex items-center">
           <div className="section-container">
             <div className="max-w-2xl mx-auto text-center">

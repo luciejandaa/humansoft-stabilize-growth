@@ -17,7 +17,10 @@ const WhySection = () => {
           <AnimatedSection>
             <span className="eyebrow mb-6 block">— {t("why.eyebrow")} — </span>
             <h2 className="heading-lg mb-12 text-balance">
-              <span className="italic-serif text-gradient">{t("why.title")}</span>
+              {t("why.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="italic-serif text-gradient">
+                {t("why.title").split(" ").slice(-1)}
+              </span>
             </h2>
           </AnimatedSection>
 

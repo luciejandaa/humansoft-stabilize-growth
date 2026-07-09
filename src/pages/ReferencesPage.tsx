@@ -50,8 +50,8 @@ const ReferencesPage = () => {
                 const title = t(`references.cases.${key}.title`);
 
                 return (
+                  <Fragment key={key}>
                   <div
-                    key={key}
                     className="pb-16 border-b border-border/60 last:border-b-0"
                   >
                     <h2 className="heading-sm mb-8">{title}</h2>

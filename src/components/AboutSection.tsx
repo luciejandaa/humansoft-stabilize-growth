@@ -18,7 +18,7 @@ const AboutSection = () => {
           <AnimatedSection>
             <div className="text-center mb-12">
               <span className="eyebrow mb-4 block">— {t("about.eyebrow")} — </span>
-              <h2 className="heading-xl text-balance">
+              <h2 className="heading-lg text-balance">
                 {t("about.title").split(" ").slice(0, -1).join(" ")}{" "}
                 <span className="italic-serif text-gradient">
                   {t("about.title").split(" ").slice(-1)}
@@ -80,7 +80,7 @@ const AboutSection = () => {
           <AnimatedSection delay={0.3}>
             <div className="text-center mb-10">
               <span className="eyebrow block text-subtle">— {t("about.valuesEyebrow")} — </span>
-              <h3 className="heading-md mt-4 text-balance">{t("about.valuesLabel")}</h3>
+              <h3 className="heading-sm mt-4 text-balance">{t("about.valuesLabel")}</h3>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {values.map((value, index) => (
@@ -88,7 +88,7 @@ const AboutSection = () => {
                   key={index}
                   className="editorial-card h-full text-center hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <h4 className="font-display text-lg font-semibold mb-3 text-[hsl(var(--primary-deep))]">
+                  <h4 className="heading-sm mb-3 text-[hsl(var(--primary-deep))]">
                     {value.name}
                   </h4>
                   <p className="text-sm text-subtle leading-relaxed">

@@ -45,7 +45,7 @@ const ProcessSection = () => {
       <div className="section-container relative">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 15 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}>
           <span className="eyebrow mb-6 block">​</span>
-          <h2 className="heading-xl mb-6 text-balance">
+          <h2 className="heading-lg mb-6 text-balance">
             {t("process.title").split(" ").slice(0, -1).join(" ")}{" "}
             <span className="italic-serif text-gradient">{t("process.title").split(" ").slice(-1)}</span>
           </h2>
@@ -65,7 +65,7 @@ const ProcessSection = () => {
                   <div className="w-px flex-1 bg-primary/20 min-h-[1.5rem]" />
                 </div>
                 <div className="pb-7 pt-1.5">
-                  <h3 className="heading-sm text-base">{step.title}</h3>
+                  <h3 className="heading-sm">{step.title}</h3>
                   {(step as any).subtitle && <p className="text-sm text-[hsl(var(--primary-deep))]/70 italic">{(step as any).subtitle}</p>}
                   <p className="body-sm text-subtle mt-1">{step.description}</p>
                 </div>

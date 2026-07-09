@@ -20,7 +20,7 @@ const EvaluationSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-8" style={{ background: "var(--gradient-primary)" }}>
                 <ClipboardCheck className="w-7 h-7 text-primary-foreground" />
               </div>
-              <h2 className="heading-xl mb-6 text-balance">
+              <h2 className="heading-lg mb-6 text-balance">
                 {t("evaluation.title").split(" ").slice(0, -1).join(" ")}{" "}
                 <span className="italic-serif" style={{ color: "hsl(var(--primary-glow))" }}>
                   {t("evaluation.title").split(" ").slice(-1)}

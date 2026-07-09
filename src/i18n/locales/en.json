@@ -1,4 +1,22 @@
 {
+  "inlineCta": {
+    "evaluate": {
+      "text": "Not sure exactly where your company is losing momentum? A short evaluation points you in the right direction.",
+      "button": "Evaluate company"
+    },
+    "contact": {
+      "text": "Want to discuss a specific situation in your company? Reach out — we reply within 24 hours.",
+      "button": "Get in touch"
+    },
+    "services": {
+      "text": "See how we help companies rewrite their inner code from within.",
+      "button": "What we do"
+    },
+    "references": {
+      "text": "Curious what this looks like in practice? Read the stories of companies we've helped.",
+      "button": "References"
+    }
+  },
   "nav": {
     "home": "HumanSoft",
     "services": "Services",

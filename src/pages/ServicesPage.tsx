@@ -75,24 +75,30 @@ const ServicesPage = () => {
           </div>
         </section>
 
-        {/* Closing + CTA */}
-        <section className="section-padding">
+        {/* Closing */}
+        <section className="section-padding pb-0">
           <div className="section-container">
             <AnimatedSection>
               <div className="text-center max-w-2xl mx-auto">
-                <p className="body-lg italic text-subtle mb-8">
+                <p className="body-lg italic text-subtle">
                   {t("servicesPage.closing")}
                 </p>
-                <Button size="lg" asChild>
-                  <Link to="/kontakt" className="inline-flex items-center gap-2">
-                    {t("servicesPage.ctaButton")}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
               </div>
             </AnimatedSection>
           </div>
         </section>
+
+        {/* CTA banner */}
+        <CTABanner
+          eyebrow={t("servicesPage.cta.eyebrow")}
+          title={t("servicesPage.cta.title")}
+          subtitle={t("servicesPage.cta.subtitle")}
+          primaryLabel={t("servicesPage.cta.primary")}
+          primaryTo="/hodnoceni"
+          secondaryLabel={t("servicesPage.cta.secondary")}
+          secondaryTo="/kontakt"
+        />
+
       </main>
       <Footer />
     </div>

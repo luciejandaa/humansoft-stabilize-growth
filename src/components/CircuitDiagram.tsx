@@ -34,16 +34,16 @@ const HumanComposition = () => {
     <div className="relative w-full max-w-[520px] mx-auto aspect-square">
       <svg viewBox="0 0 520 520" className="w-full h-full overflow-visible">
         <defs>
-          <radialGradient id="creamWash" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"  stopColor="hsl(60 11% 90%)" stopOpacity="1" />
-            <stop offset="100%" stopColor="hsl(60 11% 96%)" stopOpacity="0" />
+          <radialGradient id="canvasWash" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"  stopColor="hsl(0 0% 4% / 0.04)" stopOpacity="1" />
+            <stop offset="100%" stopColor="hsl(0 0% 100% / 0)" stopOpacity="0" />
           </radialGradient>
         </defs>
 
-        {/* Warm canvas */}
+        {/* Subtle canvas wash */}
         <motion.circle
           cx={cx} cy={cy} r="240"
-          fill="url(#creamWash)"
+          fill="url(#canvasWash)"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}

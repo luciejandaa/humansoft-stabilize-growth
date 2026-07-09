@@ -21,7 +21,7 @@ const FunDecorations = () => {
         className="absolute top-[18%] -left-40 w-[600px] h-[600px] rounded-full"
         style={{
           background:
-            "radial-gradient(circle, hsl(73 100% 70% / 0.10), transparent 65%)",
+            "radial-gradient(circle, hsl(16 100% 70% / 0.10), transparent 65%)",
           filter: "blur(50px)",
         }}
       />

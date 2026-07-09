@@ -10,9 +10,7 @@ const EvaluationSection = () => {
 
   return (
     <section className="section-padding bg-foreground text-background relative overflow-hidden">
-      {/* Mesh accent */}
-      <div className="absolute inset-0 opacity-30 mesh-bg" />
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, hsl(var(--primary-glow) / 0.4), transparent 70%)", filter: "blur(80px)" }} />
+      
       
       <div className="section-container relative z-10">
         <div className="max-w-5xl mx-auto">

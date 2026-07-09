@@ -31,6 +31,15 @@ const ReferencesPage = () => {
             </div>
 
 
+            <div className="mb-16">
+              <InlineCTA
+                variant="lime"
+                text={t("inlineCta.evaluate.text")}
+                buttonLabel={t("inlineCta.evaluate.button")}
+                to="/hodnoceni"
+              />
+            </div>
+
             <div className="space-y-16">
               {caseKeys.map((key, index) => {
                 const approach = t(`references.cases.${key}.approach`, { returnObjects: true }) as string[];

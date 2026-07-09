@@ -177,6 +177,15 @@
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
   }
+  @media (min-width: 640px) {
+    .section-padding { --section-padding: 4rem; }
+  }
+  @media (min-width: 1024px) {
+    .section-padding { --section-padding: 5.5rem; }
+  }
+  @media (min-width: 1440px) {
+    .section-padding { --section-padding: 6.5rem; }
+  }
 
   .text-balance { text-wrap: balance; }
 

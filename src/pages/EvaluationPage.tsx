@@ -5,6 +5,7 @@ import CTABanner from "@/components/CTABanner";
 import InlineCTA from "@/components/InlineCTA";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import evaluationImage from "@/assets/evaluation-notebook.jpg.asset.json";
 
 const EvaluationPage = () => {
   const { t } = useTranslation();

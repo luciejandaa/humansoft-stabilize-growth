@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
+import whyImage from "@/assets/why-conversation.jpg.asset.json";
 
 const WhySection = () => {
   const { t } = useTranslation();

@@ -45,37 +45,60 @@ const ServicesPage = () => {
         <section className="section-padding">
           <div className="section-container space-y-24">
             {sections.map((section, index) => (
-              <AnimatedSection key={index} delay={0.1}>
-                <div className="bg-card border border-border/60 rounded-2xl p-8 md:p-12 glow-gold-hover">
-                  <div className="mb-4">
-                    <h2 className="heading-md">{section.title}</h2>
-                  </div>
-                  <p className="body-base text-subtle mb-4 max-w-3xl">{section.description}</p>
-                  <p className="body-base text-subtle mb-8 max-w-3xl">{section.approach}</p>
+              <Fragment key={index}>
+                <AnimatedSection delay={0.1}>
+                  <div className="bg-card border border-border/60 rounded-2xl p-8 md:p-12 glow-gold-hover">
+                    <div className="mb-4">
+                      <h2 className="heading-md">{section.title}</h2>
+                    </div>
+                    <p className="body-base text-subtle mb-4 max-w-3xl">{section.description}</p>
+                    <p className="body-base text-subtle mb-8 max-w-3xl">{section.approach}</p>
 
-                  <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-5">
-                    {t("servicesPage.itemsLabel")}
-                  </h3>
-                  <ul className="grid sm:grid-cols-2 gap-3 mb-8">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 bg-primary/60 rounded-full mt-2 shrink-0" />
-                        <span className="body-sm text-subtle">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-5">
+                      {t("servicesPage.itemsLabel")}
+                    </h3>
+                    <ul className="grid sm:grid-cols-2 gap-3 mb-8">
+                      {section.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 bg-primary/60 rounded-full mt-2 shrink-0" />
+                          <span className="body-sm text-subtle">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  <div className="pt-6 border-t border-border/60">
-                    <p className="body-sm">
-                      <span className="font-semibold text-[hsl(var(--primary-deep))]">{t("servicesPage.resultLabel")}</span>{" "}
-                      <span className="text-subtle">{section.result}</span>
-                    </p>
+                    <div className="pt-6 border-t border-border/60">
+                      <p className="body-sm">
+                        <span className="font-semibold text-[hsl(var(--primary-deep))]">{t("servicesPage.resultLabel")}</span>{" "}
+                        <span className="text-subtle">{section.result}</span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
+                </AnimatedSection>
+
+                {index === 1 && (
+                  <AnimatedSection delay={0.1}>
+                    <InlineCTA
+                      variant="lime"
+                      text={t("inlineCta.evaluate.text")}
+                      buttonLabel={t("inlineCta.evaluate.button")}
+                      to="/hodnoceni"
+                    />
+                  </AnimatedSection>
+                )}
+                {index === 3 && (
+                  <AnimatedSection delay={0.1}>
+                    <InlineCTA
+                      text={t("inlineCta.references.text")}
+                      buttonLabel={t("inlineCta.references.button")}
+                      to="/reference"
+                    />
+                  </AnimatedSection>
+                )}
+              </Fragment>
             ))}
           </div>
         </section>
+
 
         {/* Closing */}
         <section className="section-padding pb-0">

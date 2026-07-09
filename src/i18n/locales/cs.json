@@ -187,6 +187,13 @@
     "resultLabel": "Výsledek:",
     "closing": "Naším cílem není dodat dokument. Naším cílem je firma, která umí fungovat, růst a řešit své výzvy zevnitř. Pomáháme firmám vytvořit prostředí, kde se technická odbornost potkává se smyslem, odpovědností, svobodou a radostí z práce.",
     "ctaButton": "Objevte potenciál vaší firmy",
+    "cta": {
+      "eyebrow": "Pojďme začít",
+      "title": "Chcete zjistit, kde vaše firma ztrácí tah?",
+      "subtitle": "Krátké hodnocení odhalí místa, kde vám uniká výkon, energie a odpovědnost. Bez závazku, do 10 minut.",
+      "primary": "Ohodnotit svoji firmu",
+      "secondary": "Napište nám"
+    },
     "sections": [
       {
         "number": "01",

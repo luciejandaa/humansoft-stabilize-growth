@@ -5,6 +5,7 @@ import CTABanner from "@/components/CTABanner";
 import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Fragment } from "react";
+import servicesHero from "@/assets/services-hero.jpg.asset.json";
 
 const ServicesPage = () => {
   const { t } = useTranslation();

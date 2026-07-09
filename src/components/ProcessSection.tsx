@@ -86,17 +86,17 @@ const ProcessSection = () => {
                 <div className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-md glow-gold" style={{ transform: "translate(-50%, -50%)" }}>
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
-                    <h3 className="font-display font-semibold text-foreground text-sm leading-tight">{step.title}</h3>
-                    {(step as any).subtitle && <p className="text-xs text-[hsl(var(--primary-deep))]/70 italic mt-0.5">{(step as any).subtitle}</p>}
-                    <p className="text-xs text-subtle mt-1 leading-relaxed">{step.description}</p>
+                    <h3 className="heading-sm text-foreground">{step.title}</h3>
+                    {(step as any).subtitle && <p className="body-sm text-[hsl(var(--primary-deep))]/70 italic mt-0.5">{(step as any).subtitle}</p>}
+                    <p className="body-sm text-subtle mt-1">{step.description}</p>
                   </div>
                 </div>
               </motion.div>
             );
           })}
           <motion.div className="absolute text-center" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "220px" }} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }}>
-            <p className="font-display font-semibold text-foreground text-sm leading-tight">{t("process.centerTitle")}</p>
-            <p className="text-xs text-subtle mt-1 leading-relaxed">{t("process.centerSubtitle")}</p>
+            <p className="heading-sm text-foreground">{t("process.centerTitle")}</p>
+            <p className="body-sm text-subtle mt-1">{t("process.centerSubtitle")}</p>
           </motion.div>
         </div>
       </div>

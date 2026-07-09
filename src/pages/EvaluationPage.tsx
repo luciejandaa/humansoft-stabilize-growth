@@ -26,6 +26,17 @@ const EvaluationPage = () => {
               </Button>
             </div>
 
+            <div className="mt-16 mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={evaluationImage.url}
+                alt=""
+                width={1600}
+                height={1008}
+                loading="lazy"
+                className="w-full h-[260px] md:h-[420px] object-cover"
+              />
+            </div>
+
             {Array.isArray(benefits) && benefits.length > 0 && (
               <div className="mt-20 max-w-4xl mx-auto">
                 <ul className="grid sm:grid-cols-2 gap-4 mb-12">

@@ -116,6 +116,22 @@ const ReferencesPage = () => {
                       </blockquote>
                     </div>
                   </div>
+                  {index === 3 && (
+                    <InlineCTA
+                      text={t("inlineCta.contact.text")}
+                      buttonLabel={t("inlineCta.contact.button")}
+                      to="/kontakt"
+                    />
+                  )}
+                  {index === 6 && (
+                    <InlineCTA
+                      variant="lime"
+                      text={t("inlineCta.services.text")}
+                      buttonLabel={t("inlineCta.services.button")}
+                      to="/sluzby"
+                    />
+                  )}
+                </Fragment>
                 );
               })}
             </div>

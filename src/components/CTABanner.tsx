@@ -14,9 +14,8 @@ interface CTABannerProps {
 }
 
 /**
- * Deep petrol call-to-action banner used at the bottom of key subpages
- * (Services, Evaluation, References). Keeps CTAs visually anchored in the
- * brand's petrol/lime palette so they read as decisive, not decorative.
+ * Black call-to-action banner used at the bottom of key subpages.
+ * White text + coral accents keeps the CTA visually anchored and decisive.
  */
 const CTABanner = ({
   eyebrow,
@@ -34,7 +33,7 @@ const CTABanner = ({
           className="relative overflow-hidden rounded-3xl px-8 py-16 md:px-16 md:py-24 text-center"
           style={{
             background:
-              "linear-gradient(135deg, hsl(var(--brand-petrol)) 0%, hsl(0 0% 4%) 100%)",
+              "linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--foreground) / 0.92) 100%)",
             color: "hsl(var(--background))",
           }}
         >

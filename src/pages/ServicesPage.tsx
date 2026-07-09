@@ -75,19 +75,19 @@ const ServicesPage = () => {
                     </h3>
                     <ul className="grid sm:grid-cols-2 gap-3 mb-8">
                       {section.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 bg-brand-petrol rounded-full mt-2 shrink-0" />
-                          <span className="body-sm text-subtle">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        <span className="body-sm text-subtle">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                    <div className="pt-6 border-t border-border/60">
-                      <p className="body-sm">
-                        <span className="font-semibold text-[hsl(var(--primary-deep))]">{t("servicesPage.resultLabel")}</span>{" "}
-                        <span className="text-subtle">{section.result}</span>
-                      </p>
-                    </div>
+                  <div className="pt-6 border-t border-border/60">
+                    <p className="body-sm">
+                      <span className="font-semibold text-foreground">{t("servicesPage.resultLabel")}</span>{" "}
+                      <span className="text-subtle">{section.result}</span>
+                    </p>
+                  </div>
                   </div>
                 </AnimatedSection>
 

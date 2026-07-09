@@ -11,8 +11,8 @@ interface InlineCTAProps {
 
 /**
  * Lighter, in-flow CTA — a hairline card with one line of copy and a single
- * button. Used mid-page to keep momentum without breaking the reading rhythm
- * the way the full-width petrol banner does.
+ * button. The "dark" variant uses a black background with white text and a
+ * coral button, keeping the palette strictly white / black / coral.
  */
 const InlineCTA = ({ text, buttonLabel, to, variant = "light" }: InlineCTAProps) => {
   if (variant === "lime") {
@@ -20,7 +20,7 @@ const InlineCTA = ({ text, buttonLabel, to, variant = "light" }: InlineCTAProps)
       <div
         className="rounded-2xl px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-background"
         style={{
-          background: "hsl(var(--brand-petrol))",
+          background: "hsl(var(--foreground))",
           border: "1px solid hsl(var(--background) / 0.3)",
         }}
       >

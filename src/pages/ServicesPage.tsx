@@ -2,7 +2,9 @@ import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { Fragment } from "react";
 
 const ServicesPage = () => {
   const { t } = useTranslation();

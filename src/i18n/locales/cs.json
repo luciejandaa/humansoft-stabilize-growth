@@ -372,7 +372,14 @@
       "Získáte první mapu toho, co může vaši firmu posunout dál"
     ],
     "comingSoon": "Interaktivní hodnocení bude brzy k dispozici.",
-    "cta": "Chci zjistit, kde máme rezervy"
+    "cta": "Chci zjistit, kde máme rezervy",
+    "banner": {
+      "eyebrow": "Nejste v tom sami",
+      "title": "Chcete probrat výsledky s někým, kdo tomu rozumí?",
+      "subtitle": "Ozvěte se — společně se podíváme na to, co hodnocení odhalilo, a navrhneme první krok.",
+      "primary": "Napište nám",
+      "secondary": "Co děláme"
+    }
   },
   "blog": {
     "title": "Blog",

@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import CTABanner from "@/components/CTABanner";
 import referencesImage from "@/assets/references-handshake.jpg.asset.json";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];

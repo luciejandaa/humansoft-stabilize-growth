@@ -9,6 +9,7 @@ import danielaKolomaznikova from "@/assets/team/daniela-kolomaznikova.png";
 import pavelVresnak from "@/assets/team/pavel-vresnak.png";
 import frantisekFiala from "@/assets/team/frantisek-fiala.png";
 import milanKosdy from "@/assets/team/milan-kosdy.png";
+import { Section } from "@/components/ui/section";
 
 const TeamSection = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="tym" className="section-padding bg-secondary/40 relative">
+    <Section id="tym" className="bg-secondary/40 relative">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <AnimatedSection>
@@ -82,7 +83,7 @@ const TeamSection = () => {
           </div>
         </AnimatedText>
       </div>
-    </section>
+    </Section>
   );
 };
 

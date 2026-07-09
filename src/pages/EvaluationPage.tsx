@@ -6,6 +6,7 @@ import InlineCTA from "@/components/InlineCTA";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import evaluationImage from "@/assets/evaluation-notebook.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const EvaluationPage = () => {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ const EvaluationPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <section className="section-padding">
+        <Section>
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="heading-xl mb-8">{t("evaluation.title")}</h1>
@@ -60,7 +61,7 @@ const EvaluationPage = () => {
               </div>
             )}
           </div>
-        </section>
+        </Section>
 
         <CTABanner
           eyebrow={t("evaluation.banner.eyebrow")}

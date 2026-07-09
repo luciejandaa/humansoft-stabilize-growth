@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight, ClipboardCheck, CheckCircle2 } from "lucide-react";
+import { Section } from "@/components/ui/section";
 
 const EvaluationSection = () => {
   const { t } = useTranslation();
   const benefits = t("evaluation.benefits", { returnObjects: true }) as string[];
 
   return (
-    <section className="section-padding bg-foreground text-background relative overflow-hidden">
+    <Section className="bg-foreground text-background relative overflow-hidden">
       
       
       <div className="section-container relative z-10">
@@ -52,7 +53,7 @@ const EvaluationSection = () => {
           </AnimatedText>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
 import InlineCTA from "@/components/InlineCTA";
 import referencesImage from "@/assets/references-handshake.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];
 
@@ -15,7 +16,7 @@ const ReferencesPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-20 relative">
-        <section className="section-padding">
+        <Section>
           <div className="section-container">
             <h1 className="heading-xl mb-10 text-center">{t("references.title")}</h1>
 
@@ -137,7 +138,7 @@ const ReferencesPage = () => {
             </div>
 
           </div>
-        </section>
+        </Section>
 
         <CTABanner
           title={t("references.ctaTitle")}

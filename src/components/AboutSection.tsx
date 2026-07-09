@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
 import aboutImage from "@/assets/about-consulting.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const AboutSection = () => {
   const values = t("about.values", { returnObjects: true }) as { name: string; description: string }[];
 
   return (
-    <section id="o-nas" className="section-padding relative overflow-hidden">
+    <Section id="o-nas" className="relative overflow-hidden">
       <div className="section-container relative">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
@@ -110,7 +111,7 @@ const AboutSection = () => {
           </AnimatedText>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

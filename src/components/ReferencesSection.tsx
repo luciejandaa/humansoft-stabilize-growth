@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { Section } from "@/components/ui/section";
 
 const caseKeys = ["caseA", "caseB", "caseC", "caseD", "caseE", "caseF", "caseG", "caseH", "caseI", "caseJ"];
 
@@ -7,7 +8,7 @@ const ReferencesSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="reference" className="section-padding">
+    <Section id="reference">
       <div className="section-container">
         <h2 className="heading-lg mb-16 text-center">{t("references.title")}</h2>
         <div className="space-y-8">
@@ -26,7 +27,7 @@ const ReferencesSection = () => {
           </Link>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

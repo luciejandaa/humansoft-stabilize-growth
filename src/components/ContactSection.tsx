@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { Section } from "@/components/ui/section";
 
 const ContactSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="kontakt" className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
+    <Section id="kontakt" className="bg-primary text-primary-foreground relative overflow-hidden">
       {/* Subtle pattern */}
       <div 
         className="absolute inset-0 opacity-[0.05]"
@@ -39,7 +40,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

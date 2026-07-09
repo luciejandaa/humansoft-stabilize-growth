@@ -6,6 +6,7 @@ import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Fragment } from "react";
 import servicesHero from "@/assets/services-hero.jpg.asset.json";
+import { Section } from "@/components/ui/section";
 
 const ServicesPage = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const ServicesPage = () => {
       <Navigation />
       <main className="pt-20 relative">
         {/* Hero / Intro */}
-        <section className="section-padding">
+        <Section>
           <div className="section-container">
             <AnimatedSection>
               <h1 className="heading-xl mb-6 text-center">{t("servicesPage.title")}</h1>
@@ -53,11 +54,11 @@ const ServicesPage = () => {
               </div>
             </AnimatedSection>
           </div>
-        </section>
+        </Section>
 
 
         {/* Service Sections */}
-        <section className="section-padding">
+        <Section>
           <div className="section-container space-y-24">
             {sections.map((section, index) => (
               <Fragment key={index}>
@@ -112,11 +113,11 @@ const ServicesPage = () => {
               </Fragment>
             ))}
           </div>
-        </section>
+        </Section>
 
 
         {/* Closing */}
-        <section className="section-padding">
+        <Section>
           <div className="section-container">
             <AnimatedSection>
               <div className="text-center max-w-2xl mx-auto">
@@ -126,7 +127,7 @@ const ServicesPage = () => {
               </div>
             </AnimatedSection>
           </div>
-        </section>
+        </Section>
 
         {/* CTA banner */}
         <CTABanner

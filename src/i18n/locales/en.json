@@ -419,7 +419,19 @@
       "caseA": {
         "title": "IT company, cybersecurity - CEO",
         "situation": "—",
-...
+        "approach": [
+          "Detailed view of the situation + specific steps with impact",
+          "Initial analysis as a foundation",
+          "Improvement of management meetings"
+        ],
+        "result": [
+          "Clearer direction, naming of blockers",
+          "More open discussions at management meetings, more practical outcomes",
+          "Analysis as a document they will return to long-term"
+        ],
+        "metric": "—",
+        "quote": "Working with HumanSoft.it helped us a lot. They managed to connect a detailed view of our situation with concrete steps that have impact. Thanks to their work, we realized where something was holding us back, and we set a clearer direction for the future. A big benefit for us was also that they taught us how to lead management meetings better – discussions became more open and outcomes much more practical. The initial analysis they prepared is a document we will return to for the long term."
+      },
       "caseB": {
         "title": "IT company, audits, IT infrastructure - Delivery director",
         "situation": "—",
@@ -485,11 +497,34 @@
       "caseF": {
         "title": "Technology company - owner",
         "situation": "Need for more order, personal disputes slowing the team, 'garage style'",
-...
+        "approach": [
+          "Refining work system for key people",
+          "Building the delivery process"
+        ],
+        "result": [
+          "Disputes calmed down",
+          "Shift to professional level",
+          "Readiness for larger projects"
+        ],
+        "metric": "—",
+        "quote": "Working with HumanSoft.it helped us bring greater order to how the company operates. Thanks to their guidance, we refined the work system for key people, which also calmed the personal disputes that had been slowing us down. The team learned to build the entire delivery process and the company moved from a garage style to a professional level, ready for larger projects."
+      },
       "caseG": {
         "title": "Technology company - CEO",
         "situation": "—",
-...
+        "approach": [
+          "Workshops",
+          "Long-term coaching and mentoring of key people",
+          "Development management improvement"
+        ],
+        "result": [
+          "Team progress in practice (not just theory)",
+          "Notable leadership improvement of key people",
+          "Impact on daily work and results"
+        ],
+        "metric": "—",
+        "quote": "Working with HumanSoft.it wasn't just about theory, but about practical changes. The workshops helped us move the team forward, we learned to manage development better, and thanks to long-term coaching and mentoring, our key people noticeably grew in leadership. Today it's visible in daily work and results."
+      },
       "caseH": {
         "title": "Technology company (digitalization of processes) - owner",
         "situation": "Important period, need for project stabilization and transparency",
@@ -510,7 +545,20 @@
       "caseI": {
         "title": "Technology company (digitalization of processes) - HR",
         "situation": "Unclear roles and frequent conflicts, friction between sales and delivery, missing HR and operations team",
-...
+        "approach": [
+          "Setting clear roles",
+          "Improving sales × delivery relationships",
+          "Building HR and operations team",
+          "Hiring key people"
+        ],
+        "result": [
+          "Fundamental order in management",
+          "Fewer conflicts",
+          "Ability to hire key people who moved the company forward"
+        ],
+        "metric": "—",
+        "quote": "HumanSoft.it helped us bring fundamental order to how we manage the company. Where there had previously been ambiguity and frequent conflicts, we set clear roles. We managed to improve the relationship between sales and delivery and to build a functioning HR and operations team. Thanks to that, we could hire key people who moved the company further forward."
+      },
       "caseJ": {
         "title": "Technology service company - technical director",
         "situation": "Need to streamline internal processes and systematic project and service management",

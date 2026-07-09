@@ -5,6 +5,7 @@ import CTABanner from "@/components/CTABanner";
 import InlineCTA from "@/components/InlineCTA";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import evaluationImage from "@/assets/evaluation-notebook.jpg.asset.json";
 
 const EvaluationPage = () => {
   const { t } = useTranslation();
@@ -23,6 +24,17 @@ const EvaluationPage = () => {
                 {t("evaluation.cta")}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
+            </div>
+
+            <div className="mt-16 mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={evaluationImage.url}
+                alt=""
+                width={1600}
+                height={1008}
+                loading="lazy"
+                className="w-full h-[260px] md:h-[420px] object-cover"
+              />
             </div>
 
             {Array.isArray(benefits) && benefits.length > 0 && (

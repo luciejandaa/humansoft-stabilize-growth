@@ -5,6 +5,7 @@ import CTABanner from "@/components/CTABanner";
 import InlineCTA from "@/components/InlineCTA";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { Fragment } from "react";
+import servicesHero from "@/assets/services-hero.jpg.asset.json";
 
 const ServicesPage = () => {
   const { t } = useTranslation();
@@ -38,8 +39,22 @@ const ServicesPage = () => {
                 {t("servicesPage.intro2")}
               </p>
             </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <div className="mt-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+                <img
+                  src={servicesHero.url}
+                  alt=""
+                  width={1600}
+                  height={1008}
+                  loading="lazy"
+                  className="w-full h-[260px] md:h-[420px] object-cover"
+                />
+              </div>
+            </AnimatedSection>
           </div>
         </section>
+
 
         {/* Service Sections */}
         <section className="section-padding">

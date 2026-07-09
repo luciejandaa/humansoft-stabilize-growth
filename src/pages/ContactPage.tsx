@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
+import contactImage from "@/assets/contact-coffee.jpg.asset.json";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -21,6 +22,18 @@ const ContactPage = () => {
                 {t("contact.subtitle")}
               </p>
             </div>
+
+            <div className="max-w-5xl mx-auto mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+              <img
+                src={contactImage.url}
+                alt=""
+                width={1600}
+                height={1008}
+                loading="lazy"
+                className="w-full h-[260px] md:h-[380px] object-cover"
+              />
+            </div>
+
 
             <div className="max-w-xl mx-auto">
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

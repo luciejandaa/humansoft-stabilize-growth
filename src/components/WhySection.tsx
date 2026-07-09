@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText } from "./ui/animated-section";
 import { ArrowRight } from "lucide-react";
+import whyImage from "@/assets/why-conversation.jpg.asset.json";
 
 const WhySection = () => {
   const { t } = useTranslation();
@@ -48,6 +49,19 @@ const WhySection = () => {
             </div>
           </AnimatedText>
         </div>
+
+        <AnimatedSection delay={0.2}>
+          <div className="mt-20 max-w-5xl mx-auto rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
+            <img
+              src={whyImage.url}
+              alt=""
+              width={1600}
+              height={1008}
+              loading="lazy"
+              className="w-full h-[280px] md:h-[420px] object-cover"
+            />
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

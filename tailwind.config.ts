@@ -14,10 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'Inter', '-apple-system', 'sans-serif'],
-        body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
-        serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+        display: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        serif: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -303,23 +303,27 @@
 
 
   /* === EFFECTS === */
-  /* Lime accent on highlighted words. Was emerald gradient — now solid electric lime
-     wrapped in a deep-petrol underline so it stays legible on white. */
+  /* Solid electric-coral highlighter behind key words.
+     Uses a background-image on the text itself so it stays fully saturated
+     regardless of ancestor transforms / stacking contexts (e.g. Framer Motion). */
   .text-gradient {
     color: hsl(var(--primary-deep));
-    position: relative;
-    display: inline-block;
+    display: inline;
     padding: 0 0.06em;
-  }
-  .text-gradient::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: 0.05em;
-    height: 0.35em;
-    background: hsl(var(--primary));
-    z-index: -1;
+    background-image: linear-gradient(
+      to top,
+      transparent 0.05em,
+      hsl(var(--primary)) 0.05em,
+      hsl(var(--primary)) 0.4em,
+      transparent 0.4em
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     border-radius: 2px;
   }
+
 
   .text-gradient-vivid {
     color: hsl(var(--primary-deep));

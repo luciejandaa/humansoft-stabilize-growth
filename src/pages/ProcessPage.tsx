@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import processImage from "@/assets/process-office.jpg.asset.json";
 
 const steps = [
   {

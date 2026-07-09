@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import CTABanner from "@/components/CTABanner";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { ArrowRight } from "lucide-react";
 
 const ServicesPage = () => {
   const { t } = useTranslation();

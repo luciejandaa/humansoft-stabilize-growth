@@ -33,7 +33,7 @@ const HeroSection = () => {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <span className="block">{t("hero.titlePre")}</span>
-              <span className="block">{t("hero.titleMid")} <span className="text-gradient">{t("hero.titleHighlight")}</span></span>
+              <span className="block">{t("hero.titleMid")}{t("hero.titleMid") ? " " : ""}<span className="text-gradient">{t("hero.titleHighlight")}</span></span>
               <span className="block">{t("hero.titlePost")}</span>
             </motion.h1>
 

@@ -94,9 +94,9 @@ const ProcessSection = () => {
               </motion.div>
             );
           })}
-          <motion.div className="absolute text-center" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "220px" }} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }}>
-            <p className="heading-sm text-foreground">{t("process.centerTitle")}</p>
-            <p className="body-sm text-subtle mt-1">{t("process.centerSubtitle")}</p>
+          <motion.div className="absolute text-center" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "260px" }} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }}>
+            <p className="heading-sm text-foreground text-balance leading-tight">{t("process.centerTitle")}</p>
+            <p className="body-sm text-subtle mt-1.5 text-balance">{t("process.centerSubtitle")}</p>
           </motion.div>
         </div>
       </div>

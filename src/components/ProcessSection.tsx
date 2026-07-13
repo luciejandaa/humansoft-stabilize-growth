@@ -86,7 +86,7 @@ const ProcessSection = () => {
                 <div className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-md glow-gold" style={{ transform: "translate(-50%, -50%)" }}>
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
-                    <h3 className="heading-sm text-foreground text-balance leading-tight">{step.title}</h3>
+                    <h3 className="heading-sm text-foreground leading-tight">{step.title}</h3>
                     {(step as any).subtitle && <p className="body-sm text-[hsl(var(--primary-deep))]/70 italic mt-0.5 text-balance">{(step as any).subtitle}</p>}
                     <p className="body-sm text-subtle mt-1.5 text-balance">{step.description}</p>
                   </div>

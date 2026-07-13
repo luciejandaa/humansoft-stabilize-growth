@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* === HUMANSOFT.IT — RESTRICTED PALETTE ===
-       White canvas · Almost-black ink · Electric coral accent */
+    /* === HUMANSOFT.IT — WARM PALETTE ===
+       White/cream canvas · Almost-black ink · Coral, petrol & mustard accents */
     --background: 0 0% 100%;             /* #FFFFFF */
     --foreground: 0 0% 4%;               /* #0B0B0B almost-black */
 
@@ -46,20 +46,30 @@
     --surface-elevated: 0 0% 100%;         /* white */
     --divider: 0 0% 4% / 0.12;             /* black 12% */
 
-    /* Brand — petrol/cream removed, only black + coral */
+    /* Brand — warm trio: coral stays the hero CTA color, petrol + mustard
+       are used sparingly as secondary accents so the site doesn't read as
+       a mono coral-on-white tech product. */
     --brand-primary: 17.6 100% 58.6%;        /* coral */
     --brand-secondary: 0 0% 4%;          /* black */
     --brand-glow: 17.6 100% 69%;           /* lighter coral */
-    --brand-lime: 17.6 100% 58.6%;           /* coral */
-    --brand-cream: 0 0% 100%;            /* white */
-    --brand-petrol: 0 0% 4%;             /* black */
+    --brand-lime: 42 88% 58%;              /* warm mustard/gold */
+    --brand-cream: 38 45% 95%;             /* warm paper cream */
+    --brand-petrol: 192 45% 20%;           /* deep petrol teal */
 
-    /* Gradients — only black and coral */
+    /* Warm section surface — use for alternating section backgrounds
+       instead of stark white, so the page breathes instead of feeling
+       like a flat SaaS landing page. */
+    --surface-warm: 38 45% 95%;
+
+    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(17.6 100% 58.6%), hsl(17.6 100% 69%));
     --gradient-vivid: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 4% / 0.85) 100%);
     --gradient-soft: radial-gradient(ellipse at top, hsl(17.6 100% 75% / 0.18), transparent 60%);
     --gradient-mesh: radial-gradient(at 20% 20%, hsl(17.6 100% 65% / 0.10) 0px, transparent 50%),
-                     radial-gradient(at 80% 80%, hsl(0 0% 4% / 0.06) 0px, transparent 50%);
+                     radial-gradient(at 80% 80%, hsl(192 45% 20% / 0.06) 0px, transparent 50%);
+    --gradient-warm: radial-gradient(at 30% 30%, hsl(17.6 100% 65% / 0.14) 0px, transparent 55%),
+                     radial-gradient(at 75% 70%, hsl(42 88% 58% / 0.12) 0px, transparent 55%),
+                     radial-gradient(at 15% 80%, hsl(192 45% 20% / 0.06) 0px, transparent 50%);
 
     /* Typography */
     --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -353,6 +363,10 @@
 
   .mesh-bg {
     background: var(--gradient-mesh);
+  }
+
+  .mesh-bg-warm {
+    background: var(--gradient-warm);
   }
 
   .editorial-card {

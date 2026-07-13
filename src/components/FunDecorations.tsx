@@ -1,6 +1,7 @@
 /**
- * Background canvas — quiet, editorial, human.
- * Only white and coral tones. No grey, no petrol.
+ * Background canvas — warm, organic, human. Slow-drifting blobs in the
+ * three-accent palette (coral, petrol, mustard) instead of a flat single-hue
+ * wash, so the page has some quiet life to it even before content loads.
  */
 const FunDecorations = () => {
   return (
@@ -17,21 +18,33 @@ const FunDecorations = () => {
 
       {/* Soft coral glow — high left */}
       <div
-        className="absolute top-[18%] -left-40 w-[600px] h-[600px] rounded-full"
+        className="absolute top-[18%] -left-40 w-[600px] h-[600px] rounded-full animate-blob"
         style={{
           background:
-            "radial-gradient(circle, hsl(17.6 100% 58.6% / 0.08), transparent 65%)",
+            "radial-gradient(circle, hsl(17.6 100% 58.6% / 0.09), transparent 65%)",
           filter: "blur(50px)",
         }}
       />
 
-      {/* Subtle coral depth — bottom right */}
+      {/* Petrol depth — bottom right */}
       <div
-        className="absolute bottom-[10%] -right-40 w-[700px] h-[700px] rounded-full"
+        className="absolute bottom-[10%] -right-40 w-[700px] h-[700px] rounded-full animate-blob"
         style={{
           background:
-            "radial-gradient(circle, hsl(17.6 100% 58.6% / 0.05), transparent 65%)",
+            "radial-gradient(circle, hsl(192 45% 20% / 0.06), transparent 65%)",
           filter: "blur(60px)",
+          animationDelay: "-8s",
+        }}
+      />
+
+      {/* Mustard warmth — mid centre, very subtle */}
+      <div
+        className="absolute top-[52%] left-[45%] w-[500px] h-[500px] rounded-full animate-blob"
+        style={{
+          background:
+            "radial-gradient(circle, hsl(42 88% 58% / 0.06), transparent 65%)",
+          filter: "blur(55px)",
+          animationDelay: "-14s",
         }}
       />
     </div>

@@ -8,7 +8,7 @@ const BlogPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
       <Navigation />
       <main className="pt-20 relative">
         <Section className="min-h-[60vh] flex items-center">

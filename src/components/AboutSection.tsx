@@ -2,9 +2,17 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { AnimatedSection, AnimatedText, AnimatedCard } from "./ui/animated-section";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Wind, Target, Sprout, Hammer, Sparkles } from "lucide-react";
 import aboutImage from "@/assets/about-consulting.jpg.asset.json";
 import { Section } from "@/components/ui/section";
+
+const valueVisuals = [
+  { icon: Wind, rotate: -2, className: "bg-brand-petrol/[0.06] border-brand-petrol/20" },
+  { icon: Target, rotate: 1.5, className: "bg-primary/[0.07] border-primary/25" },
+  { icon: Sprout, rotate: -1.5, className: "bg-brand-lime/10 border-brand-lime/30" },
+  { icon: Hammer, rotate: 2, className: "bg-brand-petrol/[0.06] border-brand-petrol/20" },
+  { icon: Sparkles, rotate: -2.5, className: "bg-primary/[0.07] border-primary/25" },
+];
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -83,19 +91,27 @@ const AboutSection = () => {
               <h3 className="heading-sm mt-4 text-balance">{t("about.valuesLabel")}</h3>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {values.map((value, index) => (
-                <div
-                  key={index}
-                  className="editorial-card h-full text-center hover:-translate-y-1 transition-transform duration-300"
-                >
-                  <h4 className="heading-sm mb-3 text-[hsl(var(--primary-deep))]">
-                    {value.name}
-                  </h4>
-                  <p className="text-sm text-subtle leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
+              {values.map((value, index) => {
+                const visual = valueVisuals[index % valueVisuals.length];
+                const Icon = visual.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`editorial-card h-full text-center border-2 hover:-translate-y-1 hover:rotate-0 transition-all duration-300 ${visual.className}`}
+                    style={{ transform: `rotate(${visual.rotate}deg)` }}
+                  >
+                    <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-background/70 flex items-center justify-center border border-border/50">
+                      <Icon className="w-4 h-4 text-foreground/70" />
+                    </div>
+                    <h4 className="heading-sm mb-3 text-foreground">
+                      {value.name}
+                    </h4>
+                    <p className="text-sm text-subtle leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </AnimatedSection>
 

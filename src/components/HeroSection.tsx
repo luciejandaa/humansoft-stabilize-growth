@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import HumanComposition from "./CircuitDiagram";
+import HumanComposition from "./HeroComposition";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -82,7 +82,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT — living circuit of the company */}
+          {/* RIGHT — the people & ideas that hold the company together */}
           <motion.div
             className="lg:col-span-5"
             initial={{ opacity: 0, scale: 0.96 }}

@@ -12,7 +12,7 @@ import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen relative">
       <Navigation />
       <main className="relative z-10">
         <HeroSection />

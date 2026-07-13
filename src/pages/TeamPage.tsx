@@ -27,7 +27,7 @@ const TeamPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
       <Navigation />
       <main className="pt-20 relative">
         <Section className="bg-gradient-to-b from-secondary/50 to-secondary">

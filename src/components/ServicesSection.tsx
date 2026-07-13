@@ -2,8 +2,16 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "./ui/animated-section";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search, Compass, MessageCircle, RefreshCw, Users } from "lucide-react";
 import { Section } from "@/components/ui/section";
+
+const cardAccents = [
+  { icon: Search, dot: "bg-primary", chip: "bg-primary/10 text-foreground", card: "" },
+  { icon: Compass, dot: "bg-brand-petrol", chip: "bg-brand-petrol/10 text-brand-petrol", card: "bg-surface-warm/60" },
+  { icon: MessageCircle, dot: "bg-brand-lime", chip: "bg-brand-lime/20 text-[hsl(30_60%_28%)]", card: "" },
+  { icon: RefreshCw, dot: "bg-brand-petrol", chip: "bg-brand-petrol/10 text-brand-petrol", card: "bg-surface-warm/60" },
+  { icon: Users, dot: "bg-primary", chip: "bg-primary/10 text-foreground", card: "" },
+];
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -46,11 +54,16 @@ const ServicesSection = () => {
         </AnimatedSection>
 
         <StaggerContainer className="grid md:grid-cols-2 gap-6">
-          {sections.map((section, index) => (
+          {sections.map((section, index) => {
+            const accent = cardAccents[index % cardAccents.length];
+            const Icon = accent.icon;
+            return (
             <StaggerItem key={index}>
-              <div className="editorial-card reveal-arrow group h-full flex flex-col">
-                <div className="mb-4">
-                  <div className="w-12 h-px bg-primary/30 group-hover:w-20 group-hover:bg-primary transition-all duration-500" />
+              <div className={`editorial-card reveal-arrow group h-full flex flex-col ${accent.card}`}>
+                <div className="mb-5">
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${accent.chip}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
                 </div>
                 <h3 className="heading-sm mb-4 text-balance">
                   {section.title}
@@ -68,7 +81,7 @@ const ServicesSection = () => {
                       key={itemIndex}
                       className="body-sm text-subtle flex items-start group/item"
                     >
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 shrink-0 group-hover/item:scale-125 transition-all duration-300" />
+                      <span className={`w-1.5 h-1.5 ${accent.dot} rounded-full mt-2 mr-3 shrink-0 group-hover/item:scale-125 transition-all duration-300`} />
                       {item}
                     </li>
                   ))}
@@ -86,7 +99,8 @@ const ServicesSection = () => {
                 </div>
               </div>
             </StaggerItem>
-          ))}
+            );
+          })}
         </StaggerContainer>
 
         <AnimatedSection delay={0.3}>

@@ -21,7 +21,7 @@ const ServicesPage = () => {
   }[];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
       <Navigation />
       <main className="pt-20 relative">
         {/* Hero / Intro */}

@@ -20,10 +20,10 @@ const ProcessSection = () => {
     { title: t("process.steps.step5.title"), description: t("process.steps.step5.description") },
   ];
 
-  const size = 800;
+  const size = 850;
   const cx = size / 2;
   const cy = size / 2;
-  const radius = 200;
+  const radius = 190;
   const angles = steps.map((_, i) => -90 + i * 72);
   const stepPositions = angles.map((deg) => {
     const rad = deg * (Math.PI / 180);
@@ -33,11 +33,11 @@ const ProcessSection = () => {
   const getTextStyle = (index: number): React.CSSProperties => {
     const deg = angles[index];
     const norm = ((deg % 360) + 360) % 360;
-    if (norm > 240 && norm < 300) return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "16px", textAlign: "center", width: "260px" };
-    if (norm >= 300 || norm < 30) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "16px", textAlign: "left", width: "170px" };
-    if (norm >= 30 && norm < 100) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "28px", textAlign: "left", width: "220px" };
-    if (norm >= 100 && norm < 170) return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "28px", textAlign: "right", width: "220px" };
-    return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "16px", textAlign: "right", width: "170px" };
+    if (norm > 240 && norm < 300) return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "16px", textAlign: "center", width: "300px" };
+    if (norm >= 300 || norm < 30) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "16px", textAlign: "left", width: "200px" };
+    if (norm >= 30 && norm < 100) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "28px", textAlign: "left", width: "240px" };
+    if (norm >= 100 && norm < 170) return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "28px", textAlign: "right", width: "240px" };
+    return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "16px", textAlign: "right", width: "200px" };
   };
 
   return (

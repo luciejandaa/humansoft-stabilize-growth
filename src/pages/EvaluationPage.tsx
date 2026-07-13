@@ -20,14 +20,7 @@ const EvaluationPage = () => {
           <div className="section-container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="heading-xl mb-8">{t("evaluation.title")}</h1>
-              <p className="body-lg text-subtle mb-12">{t("evaluation.subtitle")}</p>
-              <Button variant="gradient" size="lg" asChild>
-                <a href={`mailto:${t("contact.email")}?subject=${encodeURIComponent(t("evaluation.mailSubject"))}`}>
-                  {t("evaluation.cta")}
-                  <ArrowRight className="ml-2" size={18} />
-                </a>
-              </Button>
-              <p className="body-sm text-subtle mt-6 max-w-xl mx-auto">{t("evaluation.comingSoon")}</p>
+              <p className="body-lg text-subtle">{t("evaluation.subtitle")}</p>
             </div>
 
             <div className="mt-16 mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">
@@ -42,7 +35,7 @@ const EvaluationPage = () => {
             </div>
 
             {Array.isArray(benefits) && benefits.length > 0 && (
-              <div className="mt-20 max-w-4xl mx-auto">
+              <div className="max-w-4xl mx-auto">
                 <ul className="grid sm:grid-cols-2 gap-4 mb-12">
                   {benefits.map((b, i) => (
                     <li
@@ -54,15 +47,26 @@ const EvaluationPage = () => {
                     </li>
                   ))}
                 </ul>
-
-                <InlineCTA
-                  variant="lime"
-                  text={t("inlineCta.contact.text")}
-                  buttonLabel={t("inlineCta.contact.button")}
-                  to="/kontakt"
-                />
               </div>
             )}
+
+            <div className="text-center mb-20">
+              <Button variant="gradient" size="lg" asChild>
+                <a href={`mailto:${t("contact.email")}?subject=${encodeURIComponent(t("evaluation.mailSubject"))}`}>
+                  {t("evaluation.cta")}
+                  <ArrowRight className="ml-2" size={18} />
+                </a>
+              </Button>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <InlineCTA
+                variant="lime"
+                text={t("inlineCta.contact.text")}
+                buttonLabel={t("inlineCta.contact.button")}
+                to="/kontakt"
+              />
+            </div>
           </div>
         </Section>
 

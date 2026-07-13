@@ -19,15 +19,15 @@ const Index = () => {
         <SectionDivider variant="ornament" label="HumanSoft.IT" />
         <EvaluationSection />
         <SectionDivider />
-        <AboutSection />
-        <SectionDivider />
-        <WhySection />
+        <ServicesSection />
         <SectionDivider variant="ornament" label="Proces" />
         <ProcessSection />
         <SectionDivider />
-        <TeamSection />
+        <WhySection />
         <SectionDivider />
-        <ServicesSection />
+        <AboutSection />
+        <SectionDivider />
+        <TeamSection />
         <SectionDivider />
         <ContactSection />
       </main>

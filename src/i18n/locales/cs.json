@@ -29,13 +29,13 @@
   "hero": {
     "title": "Přepisujeme vnitřní kód firem.",
     "titlePre": "Přepisujeme",
-    "titleMid": "vnitřní",
-    "titleHighlight": "kód",
+    "titleMid": "",
+    "titleHighlight": "fungování",
     "titlePost": "firem.",
     "subtitle": "Pomáháme firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst rychleji, zdravěji a s menším množstvím chaosu.",
     "description": "Hledáme úzká hrdla, ladíme strategii, procesy i týmovou spolupráci a vytváříme prostředí, ve kterém lidé přebírají odpovědnost, práce má smysl a změna pokračuje i bez našeho neustálého zásahu.",
     "outcome": "Výsledkem je firma, která má jasný směr, vyšší výkon a energii růst.",
-    "cta": "Zjistit, kde ztrácíme výkon",
+    "cta": "Chci zjistit, kde ztrácíme výkon",
     "eyebrow": "Konzultační studio",
     "stats": {
       "transformations": "úspěšných transformací",

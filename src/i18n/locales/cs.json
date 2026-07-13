@@ -32,7 +32,7 @@
     "titleMid": "vnitřní",
     "titleHighlight": "kód",
     "titlePost": "firem.",
-    "subtitle": "Pomáháme technologickým firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst rychleji, zdravěji a s menším množstvím chaosu.",
+    "subtitle": "Pomáháme firmám propojit technickou excelenci s lidskou zralostí, aby dokázaly růst rychleji, zdravěji a s menším množstvím chaosu.",
     "description": "Hledáme úzká hrdla, ladíme strategii, procesy i týmovou spolupráci a vytváříme prostředí, ve kterém lidé přebírají odpovědnost, práce má smysl a změna pokračuje i bez našeho neustálého zásahu.",
     "outcome": "Výsledkem je firma, která má jasný směr, vyšší výkon a energii růst.",
     "cta": "Zjistit, kde ztrácíme výkon",
@@ -60,13 +60,13 @@
     "title": "O nás",
     "intro": [
       "HumanSoft.IT vznikl pro firmy, které chtějí víc než jen opravit jednotlivé problémy.",
-      "Věříme, že budoucnost technologických firem nevytváří pouze technická odbornost. Vytváří ji lidé, kteří umí spolupracovat, přemýšlet v souvislostech, převzít odpovědnost a proměnit vizi v konkrétní výsledky.",
+      "Věříme, že budoucnost firem nevytváří pouze technická odbornost. Vytváří ji lidé, kteří umí spolupracovat, přemýšlet v souvislostech, převzít odpovědnost a proměnit vizi v konkrétní výsledky.",
       "Proto propojujeme strategické poradenství, práci s týmy, procesní nastavení a rozvoj leadershipu do jednoho funkčního celku.",
       "Nepřicházíme dodat dokument do šuplíku. Pomáháme firmám nastartovat samostatně řízený proces změny, který má skutečný dopad na výkon, kulturu i dlouhodobou udržitelnost."
     ],
     "vision": {
       "label": "Naše vize",
-      "text": "Věříme ve svět, kde propojení technického mistrovství a klíčových lidských dovedností tvoří základ špičkových technologických firem. Budoucnost nebude patřit firmám, které mají jen nejlepší technologie. Bude patřit těm, které dokážou spojit odbornost, odpovědnost, smysl, spolupráci a schopnost učit se rychleji než jejich problémy."
+      "text": "Věříme ve svět, kde propojení technického mistrovství a klíčových lidských dovedností tvoří základ špičkových firem. Budoucnost nebude patřit firmám, které mají jen nejlepší technologie. Bude patřit těm, které dokážou spojit odbornost, odpovědnost, smysl, spolupráci a schopnost učit se rychleji než jejich problémy."
     },
     "mission": {
       "label": "Naše mise",
@@ -101,7 +101,7 @@
   },
   "why": {
     "title": "Proč firmy volí HumanSoft.IT",
-    "description": "Když technologická firma roste, nestačí jí jen lepší nástroje, více lidí nebo nový proces.",
+    "description": "Když firma roste, nestačí jí jen lepší nástroje, více lidí nebo nový proces.",
     "paragraphs": [
       "Roste tlak na vedení. Přibývá rozhodnutí. Komunikace se komplikuje. Majitelé drží příliš mnoho věcí v hlavě. Týmy ztrácí jasnost, kompetence se překrývají a energie se místo růstu spotřebovává na hašení provozních problémů.",
       "My pomáháme firmám tento moment využít jako příležitost.",

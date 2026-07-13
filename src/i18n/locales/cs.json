@@ -40,6 +40,7 @@
     "stats": {
       "transformations": "úspěšných transformací",
       "founded": "vznik HumanSoft.IT",
+      "hours": "hodin konzultací a koučinku",
       "steps": "kroků transformační metodiky",
       "human": "lidský přístup s business dopadem"
     },
@@ -372,12 +373,16 @@
     "writeUs": "Napsat nám",
     "email": "info@humansoft.it",
     "phone": "+420 737 909 483",
-    "location": "Brno, Česká republika"
+    "location": "Brno, Česká republika",
+    "mailSubject": "Poptávka z webu HumanSoft.IT",
+    "responseNote": "Ozveme se vám do 24 hodin."
   },
   "footer": {
     "tagline": "Přepisujeme vnitřní kód firem.",
     "subtagline": "Strategie. Procesy. Lidé. Týmy. Smysl. Výkon.",
-    "rights": "Všechna práva vyhrazena."
+    "rights": "Všechna práva vyhrazena.",
+    "navHeading": "Navigace",
+    "contactHeading": "Kontakt"
   },
   "evaluation": {
     "title": "Ohodnoťte svoji firmu",
@@ -389,8 +394,9 @@
       "Dostanete konkrétní podněty, kde začít se změnou",
       "Získáte první mapu toho, co může vaši firmu posunout dál"
     ],
-    "comingSoon": "Interaktivní hodnocení bude brzy k dispozici.",
+    "comingSoon": "Interaktivní hodnocení právě připravujeme. Do té doby ho s vámi rádi projdeme osobně — napište nám.",
     "cta": "Chci zjistit, kde máme rezervy",
+    "mailSubject": "Hodnocení firmy — mám zájem",
     "banner": {
       "eyebrow": "Nejste v tom sami",
       "title": "Chcete probrat výsledky s někým, kdo tomu rozumí?",

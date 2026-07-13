@@ -40,6 +40,7 @@
     "stats": {
       "transformations": "successful transformations",
       "founded": "HumanSoft.IT founded",
+      "hours": "hours of consulting and coaching",
       "steps": "steps of the transformation method",
       "human": "human approach with business impact"
     },
@@ -372,12 +373,16 @@
     "writeUs": "Write to Us",
     "email": "info@humansoft.it",
     "phone": "+420 737 909 483",
-    "location": "Brno, Czech Republic"
+    "location": "Brno, Czech Republic",
+    "mailSubject": "Inquiry from the HumanSoft.IT website",
+    "responseNote": "We will get back to you within 24 hours."
   },
   "footer": {
     "tagline": "We rewrite the internal code of companies.",
     "subtagline": "Strategy. Processes. People. Teams. Meaning. Performance.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "navHeading": "Navigation",
+    "contactHeading": "Contact"
   },
   "evaluation": {
     "title": "Evaluate Your Company",
@@ -389,8 +394,9 @@
       "Receive concrete prompts on where to start the change",
       "Get a first map of what can move your company forward"
     ],
-    "comingSoon": "Interactive evaluation coming soon.",
+    "comingSoon": "We're building the interactive evaluation right now. Until then, we'll gladly walk through it with you personally — drop us a line.",
     "cta": "I want to see where we can improve",
+    "mailSubject": "Company evaluation — I'm interested",
     "banner": {
       "eyebrow": "You're not alone",
       "title": "Want to discuss the results with someone who gets it?",

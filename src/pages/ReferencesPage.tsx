@@ -49,6 +49,8 @@ const ReferencesPage = () => {
                 const metric = t(`references.cases.${key}.metric`);
                 const quote = t(`references.cases.${key}.quote`);
                 const title = t(`references.cases.${key}.title`);
+                const hasSituation = situation && situation.trim() !== "—";
+                const hasMetric = metric && metric.trim() !== "—";
 
                 return (
                   <Fragment key={key}>
@@ -59,12 +61,14 @@ const ReferencesPage = () => {
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                       {/* Situace */}
-                      <div>
-                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
-                          {t("references.labels.situation")}
-                        </span>
-                        <p className="body-sm text-subtle">{situation}</p>
-                      </div>
+                      {hasSituation && (
+                        <div>
+                          <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                            {t("references.labels.situation")}
+                          </span>
+                          <p className="body-sm text-subtle">{situation}</p>
+                        </div>
+                      )}
 
                       {/* Postup */}
                       <div>
@@ -99,12 +103,14 @@ const ReferencesPage = () => {
                       </div>
 
                       {/* Metrika */}
-                      <div>
-                        <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
-                          {t("references.labels.metric")}
-                        </span>
-                        <p className="body-sm text-subtle">{metric}</p>
-                      </div>
+                      {hasMetric && (
+                        <div>
+                          <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground block mb-2">
+                            {t("references.labels.metric")}
+                          </span>
+                          <p className="body-sm text-subtle">{metric}</p>
+                        </div>
+                      )}
                     </div>
 
                     {/* Citace */}

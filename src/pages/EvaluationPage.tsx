@@ -21,10 +21,13 @@ const EvaluationPage = () => {
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="heading-xl mb-8">{t("evaluation.title")}</h1>
               <p className="body-lg text-subtle mb-12">{t("evaluation.subtitle")}</p>
-              <Button variant="gradient" size="lg">
-                {t("evaluation.cta")}
-                <ArrowRight className="ml-2" size={18} />
+              <Button variant="gradient" size="lg" asChild>
+                <a href={`mailto:${t("contact.email")}?subject=${encodeURIComponent(t("evaluation.mailSubject"))}`}>
+                  {t("evaluation.cta")}
+                  <ArrowRight className="ml-2" size={18} />
+                </a>
               </Button>
+              <p className="body-sm text-subtle mt-6 max-w-xl mx-auto">{t("evaluation.comingSoon")}</p>
             </div>
 
             <div className="mt-16 mb-16 rounded-2xl overflow-hidden border border-border/60 shadow-[0_30px_80px_-30px_hsl(0_0%_4%/0.25)]">

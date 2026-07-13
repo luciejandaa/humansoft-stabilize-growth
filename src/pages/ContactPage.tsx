@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,10 @@ import { Section } from "@/components/ui/section";
 
 const ContactPage = () => {
   const { t } = useTranslation();
+  const email = t("contact.email");
+  const phone = t("contact.phone");
+  const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(t("contact.mailSubject"))}`;
+  const telHref = `tel:${phone.replace(/\s/g, "")}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,29 +42,42 @@ const ContactPage = () => {
 
 
             <div className="max-w-xl mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <Button variant="default" size="lg">
-                  {t("contact.cta")}
-                </Button>
-                <Button variant="outline" size="lg">
-                  <Mail className="mr-2 h-4 w-4" />
-                  {t("contact.writeUs")}
-                </Button>
+              <div className="flex flex-col items-center mb-16">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+                  <Button variant="default" size="lg" asChild>
+                    <a href={mailtoHref}>
+                      <Mail className="mr-2 h-4 w-4" />
+                      {t("contact.writeUs")}
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link to="/hodnoceni">{t("contact.cta")}</Link>
+                  </Button>
+                </div>
+                <p className="body-sm text-subtle">{t("contact.responseNote")}</p>
               </div>
 
               <div className="grid sm:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60 rounded-lg">
-                    <Mail className="w-5 h-5 text-muted-foreground" />
+                <a
+                  href={mailtoHref}
+                  className="block group"
+                  aria-label={t("contact.writeUs")}
+                >
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60 rounded-lg transition-colors group-hover:border-primary">
+                    <Mail className="w-5 h-5 text-muted-foreground transition-colors group-hover:text-primary" />
                   </div>
-                  <p className="body-sm text-subtle">{t("contact.email")}</p>
-                </div>
-                <div>
-                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60 rounded-lg">
-                    <Phone className="w-5 h-5 text-muted-foreground" />
+                  <p className="body-sm text-subtle group-hover:text-foreground transition-colors">{email}</p>
+                </a>
+                <a
+                  href={telHref}
+                  className="block group"
+                  aria-label={phone}
+                >
+                  <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60 rounded-lg transition-colors group-hover:border-primary">
+                    <Phone className="w-5 h-5 text-muted-foreground transition-colors group-hover:text-primary" />
                   </div>
-                  <p className="body-sm text-subtle">{t("contact.phone")}</p>
-                </div>
+                  <p className="body-sm text-subtle group-hover:text-foreground transition-colors">{phone}</p>
+                </a>
                 <div>
                   <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border border-border/60 rounded-lg">
                     <MapPin className="w-5 h-5 text-muted-foreground" />

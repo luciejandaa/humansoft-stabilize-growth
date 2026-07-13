@@ -20,10 +20,10 @@ const ProcessSection = () => {
     { title: t("process.steps.step5.title"), description: t("process.steps.step5.description") },
   ];
 
-  const size = 700;
+  const size = 850;
   const cx = size / 2;
   const cy = size / 2;
-  const radius = 180;
+  const radius = 190;
   const angles = steps.map((_, i) => -90 + i * 72);
   const stepPositions = angles.map((deg) => {
     const rad = deg * (Math.PI / 180);
@@ -33,11 +33,11 @@ const ProcessSection = () => {
   const getTextStyle = (index: number): React.CSSProperties => {
     const deg = angles[index];
     const norm = ((deg % 360) + 360) % 360;
-    if (norm > 240 && norm < 300) return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "8px", textAlign: "center", width: "160px" };
-    if (norm >= 300 || norm < 30) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "12px", textAlign: "left", width: "140px" };
-    if (norm >= 30 && norm < 100) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "31px", textAlign: "left", width: "140px" };
-    if (norm >= 100 && norm < 170) return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "31px", textAlign: "right", width: "140px" };
-    return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "12px", textAlign: "right", width: "140px" };
+    if (norm > 240 && norm < 300) return { position: "absolute", bottom: "100%", left: "50%", transform: "translateX(-50%)", marginBottom: "16px", textAlign: "center", width: "340px" };
+    if (norm >= 300 || norm < 30) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "16px", textAlign: "left", width: "200px" };
+    if (norm >= 30 && norm < 100) return { position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: "28px", textAlign: "left", width: "260px" };
+    if (norm >= 100 && norm < 170) return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "28px", textAlign: "right", width: "260px" };
+    return { position: "absolute", right: "100%", top: "50%", transform: "translateY(-50%)", marginRight: "16px", textAlign: "right", width: "200px" };
   };
 
   return (
@@ -53,7 +53,7 @@ const ProcessSection = () => {
         </motion.div>
 
         {/* Mobile */}
-        <div className="md:hidden space-y-0">
+        <div className="lg:hidden space-y-0">
           {steps.map((step, index) => {
             const Icon = stepIcons[index];
             return (
@@ -75,7 +75,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
+        <div className="hidden lg:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
           <svg className="absolute inset-0 w-full h-full" viewBox={`0 0 ${size} ${size}`}>
             <motion.circle cx={cx} cy={cy} r={radius} fill="none" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeOpacity="0.2" strokeDasharray="8 6" initial={{ pathLength: 0, opacity: 0 }} animate={isInView ? { pathLength: 1, opacity: 1 } : {}} transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }} />
           </svg>
@@ -86,17 +86,17 @@ const ProcessSection = () => {
                 <div className="relative w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-md glow-gold" style={{ transform: "translate(-50%, -50%)" }}>
                   <Icon className="w-5 h-5" />
                   <div style={getTextStyle(index)}>
-                    <h3 className="heading-sm text-foreground">{step.title}</h3>
-                    {(step as any).subtitle && <p className="body-sm text-[hsl(var(--primary-deep))]/70 italic mt-0.5">{(step as any).subtitle}</p>}
-                    <p className="body-sm text-subtle mt-1">{step.description}</p>
+                    <h3 className="heading-sm text-foreground leading-tight">{step.title}</h3>
+                    {(step as any).subtitle && <p className="body-sm text-[hsl(var(--primary-deep))]/70 italic mt-0.5 text-balance">{(step as any).subtitle}</p>}
+                    <p className="body-sm text-subtle mt-1.5 text-balance">{step.description}</p>
                   </div>
                 </div>
               </motion.div>
             );
           })}
-          <motion.div className="absolute text-center" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "220px" }} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }}>
-            <p className="heading-sm text-foreground">{t("process.centerTitle")}</p>
-            <p className="body-sm text-subtle mt-1">{t("process.centerSubtitle")}</p>
+          <motion.div className="absolute text-center" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "260px" }} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : {}} transition={{ duration: 0.5, delay: 1.6 }}>
+            <p className="heading-sm text-foreground leading-tight">{t("process.centerTitle")}</p>
+            <p className="body-sm text-subtle mt-1.5 text-balance">{t("process.centerSubtitle")}</p>
           </motion.div>
         </div>
       </div>

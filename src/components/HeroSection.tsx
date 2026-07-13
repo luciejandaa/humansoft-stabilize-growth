@@ -93,35 +93,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Trust stats band */}
-        <motion.div
-          className="mt-16 lg:mt-24 pt-10 border-t border-border/60"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <dl className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-            {[
-              { value: "200+", key: "transformations" },
-              { value: "20 000+", key: "hours" },
-              { value: "5", key: "steps" },
-              { value: "100 %", key: "human" },
-            ].map((stat) => (
-              <div key={stat.key}>
-                <dt className="sr-only">{t(`hero.stats.${stat.key}`)}</dt>
-                <dd>
-                  <span className="block font-display text-3xl md:text-4xl font-semibold text-foreground mb-1">
-                    {stat.value}
-                  </span>
-                  <span className="block text-sm text-subtle">
-                    {t(`hero.stats.${stat.key}`)}
-                  </span>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </motion.div>
-
       </div>
     </section>
   );

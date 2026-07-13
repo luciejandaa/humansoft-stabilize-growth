@@ -53,7 +53,7 @@ const ProcessSection = () => {
         </motion.div>
 
         {/* Mobile */}
-        <div className="md:hidden space-y-0">
+        <div className="lg:hidden space-y-0">
           {steps.map((step, index) => {
             const Icon = stepIcons[index];
             return (
@@ -75,7 +75,7 @@ const ProcessSection = () => {
         </div>
 
         {/* Desktop */}
-        <div className="hidden md:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
+        <div className="hidden lg:block relative mx-auto" style={{ width: `${size}px`, height: `${size}px` }}>
           <svg className="absolute inset-0 w-full h-full" viewBox={`0 0 ${size} ${size}`}>
             <motion.circle cx={cx} cy={cy} r={radius} fill="none" stroke="hsl(var(--primary))" strokeWidth="1.5" strokeOpacity="0.2" strokeDasharray="8 6" initial={{ pathLength: 0, opacity: 0 }} animate={isInView ? { pathLength: 1, opacity: 1 } : {}} transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }} />
           </svg>

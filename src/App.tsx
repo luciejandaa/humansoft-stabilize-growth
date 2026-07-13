@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
+import ProcessPage from "./pages/ProcessPage";
 import ReferencesPage from "./pages/ReferencesPage";
 import ContactPage from "./pages/ContactPage";
 import EvaluationPage from "./pages/EvaluationPage";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/sluzby" element={<ServicesPage />} />
+          <Route path="/proces" element={<ProcessPage />} />
           <Route path="/reference" element={<ReferencesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/hodnoceni" element={<EvaluationPage />} />

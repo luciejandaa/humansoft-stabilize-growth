@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import { Section } from "@/components/ui/section";
 
 const ContactSection = () => {
   const { t } = useTranslation();
+  const mailtoHref = `mailto:${t("contact.email")}?subject=${encodeURIComponent(t("contact.mailSubject"))}`;
 
   return (
     <Section id="kontakt" className="bg-primary text-primary-foreground relative overflow-hidden">
       {/* Subtle pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, hsl(0 0% 4%) 1px, transparent 0)`,
@@ -21,23 +23,30 @@ const ContactSection = () => {
           <h2 className="heading-lg mb-6">{t("contact.title")}</h2>
           <p className="body-lg opacity-70 mb-12">{t("contact.subtitle")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="secondary" 
+            <Button
+              variant="secondary"
               size="lg"
               className="bg-background text-foreground hover:bg-background/90"
+              asChild
             >
-              {t("contact.cta")}
-              <ArrowRight className="ml-2" size={18} />
+              <Link to="/hodnoceni">
+                {t("contact.cta")}
+                <ArrowRight className="ml-2" size={18} />
+              </Link>
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              asChild
             >
-              <Mail className="mr-2" size={18} />
-              {t("contact.writeUs")}
+              <a href={mailtoHref}>
+                <Mail className="mr-2" size={18} />
+                {t("contact.writeUs")}
+              </a>
             </Button>
           </div>
+          <p className="body-sm opacity-60 mt-6">{t("contact.responseNote")}</p>
         </div>
       </div>
     </Section>

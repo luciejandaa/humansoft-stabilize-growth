@@ -36,7 +36,7 @@ const ServicesPage = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <p className="body-base text-subtle text-center max-w-3xl mx-auto">
+              <p className="body-base text-subtle text-center max-w-3xl mx-auto whitespace-pre-line">
                 {t("servicesPage.intro2")}
               </p>
             </AnimatedSection>

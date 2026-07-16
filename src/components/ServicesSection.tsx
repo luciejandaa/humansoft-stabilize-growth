@@ -58,8 +58,8 @@ const ServicesSection = () => {
             const accent = cardAccents[index % cardAccents.length];
             const Icon = accent.icon;
             return (
-            <StaggerItem key={index}>
-              <div className={`editorial-card reveal-arrow group h-full flex flex-col ${accent.card}`}>
+            <StaggerItem key={index} className={index === sections.length - 1 ? "md:col-span-2 flex justify-center" : ""}>
+              <div className={`editorial-card reveal-arrow group h-full flex flex-col ${accent.card} ${index === sections.length - 1 ? "md:max-w-2xl w-full" : ""}`}>
                 <div className="mb-5">
                   <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${accent.chip}`}>
                     <Icon className="w-5 h-5" />

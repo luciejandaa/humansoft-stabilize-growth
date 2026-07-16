@@ -47,7 +47,7 @@ const HeroComposition = () => {
 
       {/* Centre — Smysl, the binding idea */}
       <motion.div
-        className="absolute left-[49%] top-[48%] -translate-x-1/2 -translate-y-1/2 z-10"
+        className="absolute left-[42%] top-[44%] -translate-x-1/2 -translate-y-1/2 z-10"
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
